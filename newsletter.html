@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>הניוזלטר של בזכות עצמך | הצטרפי לקהילה</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #6B2D7C;
+      --primary-dark: #4A1A57;
+      --primary-light: #9B5DAC;
+      --accent: #C9A84C;
+      --accent-dark: #A07830;
+      --bg: #FBF6FE;
+      --card-bg: #FFFFFF;
+      --text: #1A1A2E;
+      --text-muted: #6B6B8A;
+      --border: #E8DFF5;
+      --nav-h: 70px;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(107,45,124,0.10);
+      --shadow-hover: 0 8px 40px rgba(107,45,124,0.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Assistant', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; direction: rtl; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    header { position: fixed; top: 0; right: 0; left: 0; z-index: 100; height: var(--nav-h); background: transparent; transition: background .3s, box-shadow .3s; }
+    header.scrolled { background: rgba(255,255,255,0.97); box-shadow: 0 2px 20px rgba(107,45,124,0.12); backdrop-filter: blur(12px); }
+    nav { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; gap: 20px; }
+    .logo { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; color: #fff; transition: color .3s; }
+    header.scrolled .logo { color: var(--primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 4px; margin-right: auto; }
+    .nav-links a { padding: 8px 14px; border-radius: 8px; font-size: .9rem; font-weight: 600; color: rgba(255,255,255,0.85); transition: all .2s; }
+    header.scrolled .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover { background: rgba(107,45,124,0.1); color: var(--primary); }
+    .nav-cta { background: var(--accent) !important; color: #fff !important; border-radius: 50px !important; padding: 8px 20px !important; font-weight: 700 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: background .3s; }
+    header.scrolled .hamburger span { background: var(--primary); }
+    .mobile-menu { display: none; position: fixed; top: var(--nav-h); right: 0; left: 0; background: rgba(255,255,255,0.98); padding: 20px 24px; box-shadow: 0 8px 32px rgba(107,45,124,0.15); z-index: 99; flex-direction: column; gap: 8px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 12px 16px; border-radius: 10px; font-weight: 600; color: var(--text); }
+    .mobile-menu a:hover { background: #F0E8F8; color: var(--primary); }
+
+    /* HERO — fullscreen split */
+    .nl-hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1A0528 0%, #2D0A4A 45%, #0A1A35 100%);
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: var(--nav-h);
+      position: relative; overflow: hidden;
+    }
+    /* Animated envelope */
+    .hero-left {
+      display: flex; align-items: center; justify-content: center;
+      position: relative; padding: 60px 40px;
+    }
+    .envelope-wrap {
+      position: relative; display: flex; align-items: center; justify-content: center;
+      width: 320px; height: 320px;
+    }
+    .envelope {
+      font-size: 8rem; z-index: 2; position: relative;
+      animation: envFloat 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 40px rgba(201,168,76,0.4));
+    }
+    @keyframes envFloat { 0%,100%{transform:translateY(0) rotate(-3deg);} 50%{transform:translateY(-20px) rotate(3deg);} }
+    /* Orbiting icons */
+    .orbit-icon {
+      position: absolute; font-size: 1.6rem;
+      animation: orbit-slow 8s linear infinite;
+    }
+    .orbit-icon:nth-child(2) { animation-delay: -2s; font-size: 1.2rem; }
+    .orbit-icon:nth-child(3) { animation-delay: -4s; font-size: 1.8rem; }
+    .orbit-icon:nth-child(4) { animation-delay: -6s; font-size: 1.4rem; }
+    @keyframes orbit-slow { 0%{transform:rotate(0deg) translateX(120px) rotate(0deg);} 100%{transform:rotate(360deg) translateX(120px) rotate(-360deg);} }
+    /* Floating particles */
+    .hero-particle { position: absolute; opacity: 0.07; font-size: 2rem; animation: pFloat 9s ease-in-out infinite; }
+    .hero-particle:nth-child(6) { top:10%;right:5%;animation-delay:0s; }
+    .hero-particle:nth-child(7) { bottom:15%;left:8%;animation-delay:3s;font-size:1.5rem; }
+    .hero-particle:nth-child(8) { top:50%;right:2%;animation-delay:6s;font-size:2.5rem; }
+    @keyframes pFloat { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-20px);} }
+
+    /* Subscriber counter badge */
+    .subscriber-badge {
+      position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%);
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 50px; padding: 10px 20px; backdrop-filter: blur(8px);
+      display: flex; align-items: center; gap: 10px; white-space: nowrap;
+    }
+    .sb-avatars { display: flex; }
+    .sb-av { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); border: 2px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; font-size: .85rem; margin-right: -8px; }
+    .sb-text { color: #fff; font-size: .85rem; font-weight: 600; padding-right: 4px; }
+    .sb-text span { color: var(--accent); font-weight: 900; }
+
+    /* Right side — form */
+    .hero-right {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 60px 48px 60px 40px;
+    }
+    .hero-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.35); border-radius: 50px; padding: 7px 16px; color: var(--accent); font-size: .82rem; font-weight: 700; margin-bottom: 20px; width: fit-content; }
+    .hero-h1 { font-family: 'Heebo', sans-serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 16px; }
+    .hero-h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub { color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
+
+    /* Main subscription form */
+    .nl-main-form { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+    .nl-main-form input {
+      padding: 15px 18px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.2);
+      font-family: 'Assistant', sans-serif; font-size: 1rem;
+      background: rgba(255,255,255,0.1); color: #fff; direction: rtl;
+      transition: border-color .2s;
+    }
+    .nl-main-form input::placeholder { color: rgba(255,255,255,0.5); }
+    .nl-main-form input:focus { outline: none; border-color: var(--accent); }
+    .nl-submit {
+      padding: 16px; border-radius: 12px; border: none;
+      background: linear-gradient(135deg, var(--accent) 0%, #F0D080 50%, var(--accent) 100%);
+      background-size: 200% auto;
+      color: var(--primary-dark); font-family: 'Assistant', sans-serif;
+      font-weight: 900; font-size: 1.05rem; cursor: pointer;
+      transition: all .3s; box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+    }
+    .nl-submit:hover { background-position: right center; transform: translateY(-2px); box-shadow: 0 6px 28px rgba(201,168,76,0.6); }
+    .form-privacy { font-size: .78rem; color: rgba(255,255,255,0.45); text-align: center; display: flex; align-items: center; justify-content: center; gap: 5px; }
+    .nl-consent-wrap { text-align: right; margin: 4px 0; }
+    .nl-consent-wrap label { display: inline-flex; gap: 8px; align-items: flex-start; direction: rtl; font-size: .78rem; line-height: 1.55; color: rgba(255,255,255,0.55); cursor: pointer; }
+    .nl-consent-wrap input[type=checkbox] { margin-top: 3px; accent-color: var(--accent); flex-shrink: 0; width: 16px; height: 16px; cursor: pointer; }
+    .nl-consent-wrap label a { color: var(--accent); text-decoration: underline; }
+
+    /* What you get */
+    .get-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .get-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: .9rem; }
+    .get-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .get-check { width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: .7rem; flex-shrink: 0; }
+
+    .hero-wave { position: absolute; bottom: 0; right: 0; left: 0; }
+    .hero-wave svg { display: block; }
+
+    /* SUCCESS STATE */
+    .nl-success {
+      display: none; text-align: center; padding: 32px 20px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px; backdrop-filter: blur(8px);
+    }
+    .nl-success .s-icon { font-size: 3.5rem; display: block; margin-bottom: 14px; animation: successPop .5s ease; }
+    @keyframes successPop { 0%{transform:scale(0);} 70%{transform:scale(1.2);} 100%{transform:scale(1);} }
+    .nl-success h3 { font-family: 'Heebo', sans-serif; font-weight: 900; font-size: 1.4rem; color: #fff; margin-bottom: 8px; }
+    .nl-success p { color: rgba(255,255,255,0.7); font-size: .95rem; line-height: 1.6; }
+    .nl-success .s-btn { display: inline-block; margin-top: 20px; background: var(--accent); color: var(--primary-dark); border-radius: 50px; padding: 12px 28px; font-weight: 700; transition: all .2s; }
+    .nl-success .s-btn:hover { background: #F0D080; transform: translateY(-2px); }
+
+    /* WHAT'S INSIDE */
+    .inside-section { background: var(--card-bg); padding: 80px 24px; }
+    .inside-inner { max-width: 1100px; margin: 0 auto; }
+    .section-eyebrow { text-align: center; margin-bottom: 48px; }
+    .eyebrow-label { display: inline-block; background: #F0E8F8; color: var(--primary); font-size: .78rem; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 12px; letter-spacing: 1px; }
+    .eyebrow-title { font-family: 'Heebo', sans-serif; font-size: clamp(1.5rem,3vw,2rem); font-weight: 900; color: var(--text); margin-bottom: 10px; }
+    .eyebrow-divider { width: 60px; height: 3px; background: linear-gradient(90deg,var(--primary),var(--accent)); border-radius: 2px; margin: 0 auto 14px; }
+    .eyebrow-sub { color: var(--text-muted); font-size: .95rem; max-width: 500px; margin: 0 auto; }
+
+    .inside-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .inside-card {
+      background: var(--bg); border-radius: var(--radius);
+      padding: 28px 24px; text-align: center; border: 1px solid var(--border);
+      transition: all .3s;
+    }
+    .inside-card:hover { background: var(--card-bg); box-shadow: var(--shadow-hover); transform: translateY(-4px); border-color: #D8C8EF; }
+    .inside-icon { font-size: 2.8rem; display: block; margin-bottom: 14px; }
+    .inside-title { font-family: 'Heebo', sans-serif; font-weight: 900; font-size: 1.05rem; color: var(--text); margin-bottom: 8px; }
+    .inside-desc { color: var(--text-muted); font-size: .88rem; line-height: 1.65; }
+
+    /* NEWSLETTER PREVIEW */
+    .preview-section { padding: 80px 24px; background: #F0E8F8; }
+    .preview-inner { max-width: 1100px; margin: 0 auto; }
+    .preview-grid { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+    .preview-text .eyebrow-label { text-align: right; display: inline-block; }
+    .preview-text p { color: var(--text-muted); font-size: .95rem; line-height: 1.75; margin-bottom: 16px; }
+    .preview-highlights { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+    .ph-item { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; }
+    .ph-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); margin-top: 7px; flex-shrink: 0; }
+
+    /* Email mockup */
+    .email-mockup {
+      background: var(--card-bg); border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(107,45,124,0.15);
+      overflow: hidden; border: 1px solid var(--border);
+    }
+    .em-topbar {
+      background: linear-gradient(135deg, #2D0A4A, #4A1A57);
+      padding: 14px 18px; display: flex; align-items: center; gap: 10px;
+    }
+    .em-dots { display: flex; gap: 6px; }
+    .em-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .em-dot:nth-child(1) { background: #FF5F57; }
+    .em-dot:nth-child(2) { background: #FEBC2E; }
+    .em-dot:nth-child(3) { background: #28C840; }
+    .em-subject { color: rgba(255,255,255,0.7); font-size: .82rem; flex: 1; text-align: center; }
+    .em-body { padding: 0; }
+    .em-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2D0A4A 100%);
+      padding: 28px 24px; text-align: center;
+    }
+    .em-logo { font-family: 'Heebo', sans-serif; font-size: 1.2rem; font-weight: 900; color: #fff; margin-bottom: 6px; }
+    .em-logo span { color: var(--accent); }
+    .em-tagline { color: rgba(255,255,255,0.6); font-size: .78rem; }
+    .em-content { padding: 20px 22px; }
+    .em-greeting { font-size: .88rem; color: var(--text-muted); margin-bottom: 12px; }
+    .em-section { margin-bottom: 16px; padding: 14px; background: var(--bg); border-radius: 10px; border-right: 3px solid var(--primary); }
+    .em-section-label { font-size: .7rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .em-section-title { font-weight: 700; font-size: .88rem; color: var(--text); margin-bottom: 4px; }
+    .em-section-desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
+    .em-cta { display: block; text-align: center; background: var(--primary); color: #fff; border-radius: 8px; padding: 10px; font-weight: 700; font-size: .85rem; margin-top: 4px; }
+    .em-footer { padding: 14px 22px; text-align: center; border-top: 1px solid var(--border); }
+    .em-footer p { font-size: .72rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* TESTIMONIALS */
+    .testimonials-section { padding: 80px 24px; background: var(--card-bg); }
+    .testimonials-inner { max-width: 1100px; margin: 0 auto; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 40px; }
+    .testi-card {
+      background: var(--bg); border-radius: var(--radius);
+      padding: 24px; border: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    .testi-card:hover { box-shadow: var(--shadow-hover); }
+    .testi-stars { color: var(--accent); font-size: 1rem; letter-spacing: 2px; margin-bottom: 12px; }
+    .testi-text { color: var(--text); font-size: .92rem; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .testi-text::before { content: '"'; font-size: 1.5rem; color: var(--primary); line-height: 0; vertical-align: -8px; margin-left: 4px; }
+    .testi-text::after { content: '"'; font-size: 1.5rem; color: var(--primary); line-height: 0; vertical-align: -8px; margin-right: 4px; }
+    .testi-author { display: flex; align-items: center; gap: 10px; }
+    .testi-av { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,var(--primary),var(--primary-light)); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .testi-name { font-weight: 700; font-size: .88rem; color: var(--text); }
+    .testi-role { color: var(--text-muted); font-size: .78rem; }
+
+    /* FINAL CTA SECTION */
+    .final-cta {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, #1A0528 0%, #2D0A4A 50%, #0A1A35 100%);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .final-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(107,45,124,0.3), transparent 70%); }
+    .final-cta-inner { max-width: 580px; margin: 0 auto; position: relative; }
+    .final-cta h2 { font-family: 'Heebo', sans-serif; font-size: clamp(1.8rem,4vw,2.6rem); font-weight: 900; color: #fff; margin-bottom: 14px; }
+    .final-cta p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; line-height: 1.7; }
+    .final-form { display: flex; gap: 8px; max-width: 480px; margin: 0 auto 12px; }
+    .final-form input { flex: 1; padding: 15px 18px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; font-family: 'Assistant', sans-serif; font-size: 1rem; direction: rtl; }
+    .final-form input::placeholder { color: rgba(255,255,255,0.5); }
+    .final-form input:focus { outline: none; border-color: var(--accent); }
+    .final-form button { background: var(--accent); color: var(--primary-dark); border: none; border-radius: 12px; padding: 15px 22px; font-family: 'Assistant', sans-serif; font-weight: 900; font-size: .95rem; cursor: pointer; white-space: nowrap; transition: all .2s; }
+    .final-form button:hover { background: #F0D080; transform: translateY(-2px); }
+    .final-note { color: rgba(255,255,255,0.45); font-size: .78rem; }
+
+    /* FOOTER */
+    footer { background: linear-gradient(135deg,#1A0528 0%,#0D1040 100%); color: rgba(255,255,255,0.7); padding: 48px 24px 24px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Heebo', sans-serif; font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 12px; }
+    .footer-logo span { color: var(--accent); }
+    .footer-desc { font-size: .9rem; line-height: 1.7; margin-bottom: 16px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: background .2s; }
+    .social-btn:hover { background: var(--primary-light); }
+    .footer-col h4 { font-family: 'Heebo', sans-serif; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .9rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: .85rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.5); transition: color .2s; }
+
+    .scroll-top { position: fixed; bottom: 28px; left: 28px; z-index: 99; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; border: none; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2); opacity: 0; transition: opacity .3s, transform .3s; display: flex; align-items: center; justify-content: center; }
+    .scroll-top.visible { opacity: 1; }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .nl-hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { display: none; }
+      .hero-right { padding: 48px 28px; }
+      .inside-grid { grid-template-columns: 1fr 1fr; }
+      .preview-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .final-form { flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      .inside-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <!-- SEO Meta -->
+  <meta name="description" content="הצטרפי ל-4,800+ נשים יזמיות שמקבלות כתבות, כלים ועצות ישירות למייל. שיעור פתיחה 58%." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut-atzmech.co.il/newsletter.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="הצטרפי לניוזלטר | בזכות עצמך" />
+  <meta property="og:description" content="הצטרפי ל-4,800+ נשים יזמיות שמקבלות כתבות, כלים ועצות ישירות למייל. שיעור פתיחה 58%." />
+  <meta property="og:url" content="https://bezchut-atzmech.co.il/newsletter.html" />
+  <meta property="og:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="הצטרפי לניוזלטר | בזכות עצמך" />
+  <meta name="twitter:description" content="הצטרפי ל-4,800+ נשים יזמיות שמקבלות כתבות, כלים ועצות ישירות למייל. שיעור פתיחה 58%." />
+  <meta name="twitter:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span>עצמך</span></a>
+    <div class="nav-links">
+      <a href="esek-viyazmanut.html">עסקים</a>
+      <a href="kaspim-vefinansim.html">כספים</a>
+      <a href="marketing-digital.html">מרקטינג</a>
+      <a href="briut-veravaha.html">בריאות</a>
+      <a href="manhigut-nashit.html">מנהיגות</a>
+      <a href="lmida-vetzmikha.html">למידה</a>
+      <a href="resources.html">כלים</a>
+      <a href="newsletter.html" class="nav-cta">הצטרפי ✦</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="bezchut-atzmech.html">🏠 דף הבית</a>
+  <a href="esek-viyazmanut.html">💼 עסקים ויזמות</a>
+  <a href="kaspim-vefinansim.html">💰 כספים ופיננסים</a>
+  <a href="marketing-digital.html">📱 מרקטינג דיגיטלי</a>
+  <a href="briut-veravaha.html">🌿 בריאות ורווחה</a>
+  <a href="manhigut-nashit.html">👑 מנהיגות נשית</a>
+  <a href="lmida-vetzmikha.html">📚 למידה וצמיחה</a>
+  <a href="resources.html">🛠️ כלים ומשאבים</a>
+  <a href="about.html">💜 אודות</a>
+</div>
+
+<!-- HERO -->
+<section class="nl-hero">
+  <!-- Left — visual -->
+  <div class="hero-left">
+    <div class="envelope-wrap">
+      <span class="envelope">📩</span>
+      <span class="orbit-icon">💡</span>
+      <span class="orbit-icon">📚</span>
+      <span class="orbit-icon">✨</span>
+      <span class="orbit-icon">💪</span>
+    </div>
+    <span class="hero-particle">💼</span>
+    <span class="hero-particle">🌙</span>
+    <span class="hero-particle">🔥</span>
+    <div class="subscriber-badge">
+      <div class="sb-avatars">
+        <div class="sb-av">👩</div>
+        <div class="sb-av">👩‍💼</div>
+        <div class="sb-av">👩‍🎨</div>
+        <div class="sb-av">👩‍💻</div>
+      </div>
+      <span class="sb-text">הצטרפו <span>4,800+</span> יזמיות</span>
+    </div>
+  </div>
+
+  <!-- Right — form -->
+  <div class="hero-right">
+    <span class="hero-label">📩 הניוזלטר השבועי</span>
+    <h1 class="hero-h1">המייל שאת<br/><em>תחכי לו</em> כל שני</h1>
+    <p class="hero-sub">כל שבוע: כתבה מעמיקה אחת, כלי שימושי אחד, וטיפ מהיר ליזמיות — ישירות לתיבת הדואר שלך. ללא ספאם. ללא שטויות.</p>
+
+    <div class="get-list">
+      <div class="get-item"><span class="get-icon">✅</span>כתבה מעמיקה שנכתבה במיוחד למנויות</div>
+      <div class="get-item"><span class="get-icon">🛠️</span>כלי או אפליקציה שימושית שגילינו השבוע</div>
+      <div class="get-item"><span class="get-icon">💡</span>טיפ מהיר שניתן ליישם מיד</div>
+      <div class="get-item"><span class="get-icon">📚</span>המלצת ספר / פודקאסט / קורס חד-פעמית</div>
+      <div class="get-item"><span class="get-icon">🎁</span>הנחות בלעדיות לקורסים וכלים — לנרשמות בלבד</div>
+    </div>
+
+    <!-- Form -->
+    <div id="nl-form-wrap">
+      <div class="nl-main-form">
+        <input type="text" id="nl-name" placeholder="שם פרטי" />
+        <input type="email" id="nl-email" placeholder="כתובת המייל שלך" />
+        <div class="nl-consent-wrap">
+          <label><input type="checkbox" id="nl-consent" required />אני מסכימה לקבל תוכן שיווקי ועדכונים מבזכות עצמך בדוא"ל. ניתן לבטל בכל עת. <a href="privacy.html" target="_blank">מדיניות פרטיות</a></label>
+        </div>
+        <button class="nl-submit" onclick="subscribeNewsletter()">הצטרפי חינם — אני רוצה לצמוח! →</button>
+      </div>
+      <p class="form-privacy">🔒 המידע שלך מוגן. ביטול הרשמה בקליק אחד.</p>
+    </div>
+    <div class="nl-success" id="nl-success">
+      <span class="s-icon">🎉</span>
+      <h3>ברוכה הבאה למשפחה!</h3>
+      <p>תודה שהצטרפת. הניוזלטר הראשון שלך יגיע ביום שני הקרוב. בדקי את תיבת הספאם אם לא מצאת אותו.</p>
+      <a href="bezchut-atzmech.html" class="s-btn">חזרי לקריאה →</a>
+    </div>
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none" style="width:100%;height:80px">
+      <path d="M0,40 C400,80 800,0 1200,40 L1200,80 L0,80 Z" fill="#FBF6FE"/>
+    </svg>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside-section">
+  <div class="inside-inner">
+    <div class="section-eyebrow">
+      <div class="eyebrow-label">✦ מה תקבלי</div>
+      <h2 class="eyebrow-title">כל מה שצריכה יזמית חכמה</h2>
+      <div class="eyebrow-divider"></div>
+      <p class="eyebrow-sub">הניוזלטר מגיע כל יום שני בבוקר — מחכה לך עם קפה</p>
+    </div>
+    <div class="inside-grid">
+      <div class="inside-card">
+        <span class="inside-icon">📝</span>
+        <div class="inside-title">כתבה מעמיקה</div>
+        <div class="inside-desc">כל שבוע נכתוב עבורך כתבה מעמיקה שלא תמצאי בשום מקום אחר. מחקר, ראיונות, ניסיון אמיתי.</div>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">🛠️</span>
+        <div class="inside-title">כלי השבוע</div>
+        <div class="inside-desc">כלי דיגיטלי, אפליקציה, או קיצור דרך שניסינו ואוהבות — עם הסבר קצר ואיך מתחילים.</div>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">💡</span>
+        <div class="inside-title">טיפ שניתן ליישם</div>
+        <div class="inside-desc">טיפ אחד פרקטי שאפשר לעשות עם העסק שלך היום. לא תיאוריה — פעולה.</div>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">🎁</span>
+        <div class="inside-title">הנחות בלעדיות</div>
+        <div class="inside-desc">פעם בחודש: הנחה בלעדית לקורס, כלי, או שירות — לנרשמות בלבד. לא תמצאי את זה בשום מקום אחר.</div>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">📚</span>
+        <div class="inside-title">המלצת קריאה</div>
+        <div class="inside-desc">ספר, פודקאסט, או קורס שהפך שבוע של למידה לדרך חדשה לחשוב על העסק.</div>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">🌙</span>
+        <div class="inside-title">משפט השראה</div>
+        <div class="inside-desc">ציטוט אחד שיישאר איתך כל השבוע. לא קלישאות — מילים שמחברות אותך לסיבה שבחרת בדרך הזו.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW -->
+<section class="preview-section">
+  <div class="preview-inner">
+    <div class="preview-grid">
+      <div class="preview-text">
+        <div class="eyebrow-label">✦ תצוגה מקדימה</div>
+        <h2 class="eyebrow-title" style="text-align:right;margin-top:10px">ניוזלטר לדוגמה<br/>מהשבוע שעבר</h2>
+        <div class="eyebrow-divider" style="margin:16px 0"></div>
+        <p>כל ניוזלטר נכתב במיוחד — לא תוכן גנרי שעובר במאות רשימות. אנחנו כותבות לנשים יזמיות בישראל, עם הדוגמאות הנכונות ובשפה שמרגישה כמו שיחה עם חברה טובה.</p>
+        <p>4,800 נשים כבר מחכות לניוזלטר שלנו כל יום שני. לא מעט מהן אומרות שהוא "הראשון שהן פותחות".</p>
+        <div class="preview-highlights">
+          <div class="ph-item"><div class="ph-dot"></div><span>שיעור פתיחה ממוצע: <strong>58%</strong> (הממוצע בענף: 21%)</span></div>
+          <div class="ph-item"><div class="ph-dot"></div><span>שיעור קליקים: <strong>32%</strong></span></div>
+          <div class="ph-item"><div class="ph-dot"></div><span>שיעור ביטול הרשמה: <strong>0.3%</strong></span></div>
+        </div>
+      </div>
+
+      <!-- Email mockup -->
+      <div class="email-mockup">
+        <div class="em-topbar">
+          <div class="em-dots">
+            <div class="em-dot"></div><div class="em-dot"></div><div class="em-dot"></div>
+          </div>
+          <span class="em-subject">📩 גיליון #94 | 10 במרץ 2026</span>
+        </div>
+        <div class="em-body">
+          <div class="em-header">
+            <div class="em-logo">בזכות <span>עצמך</span></div>
+            <div class="em-tagline">הניוזלטר השבועי ליזמיות חכמות</div>
+          </div>
+          <div class="em-content">
+            <div class="em-greeting">שלום מיכל, שבוע טוב! ☀️</div>
+            <div class="em-section">
+              <div class="em-section-label">📝 כתבת השבוע</div>
+              <div class="em-section-title">5 ספרים שכל יזמית חייבת לקרוא</div>
+              <div class="em-section-desc">ריכזנו עבורך את הספרים שהכי השפיעו על יזמיות ישראליות. מ-Atomic Habits ועד Lean In...</div>
+              <a class="em-cta" href="post.html">קראי את הכתבה המלאה →</a>
+            </div>
+            <div class="em-section">
+              <div class="em-section-label">🛠️ כלי השבוע</div>
+              <div class="em-section-title">Notion AI — עוזרת כתיבה בחינם</div>
+              <div class="em-section-desc">Notion הוסיפה AI שיכול לכתוב, לסכם ולארגן. טריק שחסך לנו 3 שעות השבוע...</div>
+            </div>
+            <div class="em-section">
+              <div class="em-section-label">💡 טיפ השבוע</div>
+              <div class="em-section-title">שלחי חשבונית לפני הפגישה</div>
+              <div class="em-section-desc">לקוחות שמשלמים לפני — מגיעים מוכנים יותר. נסי את זה השבוע.</div>
+            </div>
+          </div>
+          <div class="em-footer">
+            <p>קיבלת מייל זה כי נרשמת לניוזלטר של בעלת עסק.<br/><a href="#" style="color:var(--primary)">הסירי אותי מהרשימה</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-eyebrow">
+      <div class="eyebrow-label">✦ מה אומרות המנויות</div>
+      <h2 class="eyebrow-title">4,800 נשים לא יכולות לטעות</h2>
+      <div class="eyebrow-divider"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">הניוזלטר של בזכות עצמך הוא הדבר הראשון שאני פותחת כל יום שני. הכתבות תמיד רלוונטיות, הכלים תמיד שימושיים. זה לא עוד ניוזלטר שיווקי.</div>
+        <div class="testi-author">
+          <div class="testi-av">👩</div>
+          <div>
+            <div class="testi-name">דנה ר.</div>
+            <div class="testi-role">מעצבת גרפית עצמאית, חיפה</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">הטיפ השבועי על תמחור שינה לי את חיי. פשוט, ישיר, ישים. מאז העלתי את המחיר שלי ב-40% ולא איבדתי לקוחות.</div>
+        <div class="testi-author">
+          <div class="testi-av">👩‍💼</div>
+          <div>
+            <div class="testi-name">ליאת מ.</div>
+            <div class="testi-role">מנחת קבוצות, תל אביב</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">מנויה כבר שנה וחצי. כל ניוזלטר מרגיש כאילו כתבו אותו בשבילי אישית. הכלים שגיליתי דרכו חסכו לי עשרות שעות.</div>
+        <div class="testi-author">
+          <div class="testi-av">👩‍🍳</div>
+          <div>
+            <div class="testi-name">שרי ב.</div>
+            <div class="testi-role">בזכות עצמך לאוכל בריא, ירושלים</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>מוכנה להצטרף?</h2>
+    <p>4,800 יזמיות כבר מקבלות כל שני את הניוזלטר שעוזר להן לצמוח. הצטרפי אלינו — חינמי לגמרי.</p>
+    <div class="final-form">
+      <input type="email" id="final-email" placeholder="המייל שלך..." />
+      <div class="nl-consent-wrap" style="flex-basis:100%">
+        <label><input type="checkbox" id="final-consent" required />אני מסכימה לקבל תוכן שיווקי ועדכונים מבזכות עצמך בדוא"ל. ניתן לבטל בכל עת. <a href="privacy.html" target="_blank">מדיניות פרטיות</a></label>
+      </div>
+      <button onclick="subscribeFinal()">הצטרפי →</button>
+    </div>
+    <p class="final-note">🔒 ביטול הרשמה בכל עת | ללא ספאם | ללא שיתוף עם צדדים שלישיים</p>
+  </div>
+</section>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">בזכות <span>עצמך</span></div>
+        <div class="footer-desc">פורטל התוכן המוביל לנשים יזמיות בישראל.</div>
+        <div class="footer-social">
+          <a class="social-btn" href="#">📸</a>
+          <a class="social-btn" href="#">👥</a>
+          <a class="social-btn" href="#">🎵</a>
+          <a class="social-btn" href="#">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>קטגוריות</h4>
+        <ul>
+          <li><a href="esek-viyazmanut.html">עסקים ויזמות</a></li>
+          <li><a href="kaspim-vefinansim.html">כספים ופיננסים</a></li>
+          <li><a href="marketing-digital.html">מרקטינג דיגיטלי</a></li>
+          <li><a href="briut-veravaha.html">בריאות ורווחה</a></li>
+          <li><a href="manhigut-nashit.html">מנהיגות נשית</a></li>
+          <li><a href="lmida-vetzmikha.html">למידה וצמיחה</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>פורטל</h4>
+        <ul>
+          <li><a href="resources.html">כלים ומשאבים</a></li>
+          <li><a href="machshevon-tmhur.html">🧮 מחשבון</a>
+      <a href="about.html">אודות</a></li>
+          <li><a href="about.html#contact">צרי קשר</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>ניוזלטר</h4>
+        <ul>
+          <li><a href="newsletter.html">הצטרפי חינם</a></li>
+          <li><a href="#">גיליונות קודמים</a></li>
+          <li><a href="#">ביטול הרשמה</a></li>
+          <li><a href="#">מדיניות פרטיות</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 בזכות עצמך. כל הזכויות שמורות.</span>
+      <div style="display:flex;gap:16px">
+        <a href="#">תנאי שימוש</a>
+        <a href="#">פרטיות</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ← הדביקי כאן את ה-Webhook URL מ-Make
+const NEWSLETTER_WEBHOOK_URL = '';
+
+async function sendToMake(name, email) {
+  if (!NEWSLETTER_WEBHOOK_URL) return true; // אם אין URL — עובר בשקט (לבדיקה)
+  const res = await fetch(NEWSLETTER_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, source: 'newsletter', timestamp: new Date().toISOString() })
+  });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  return true;
+}
+
+async function subscribeNewsletter() {
+  const name = document.getElementById('nl-name').value.trim();
+  const email = document.getElementById('nl-email').value.trim();
+  const consent = document.getElementById('nl-consent').checked;
+  if (!name || !email) { alert('נא למלא שם ומייל.'); return; }
+  if (!consent) { alert('יש לסמן את תיבת ההסכמה לקבלת דיוור לפי תיקון 13 לחוק התקשורת.'); return; }
+  const btn = document.querySelector('.nl-submit');
+  btn.textContent = '⏳ שולחת...';
+  btn.disabled = true;
+  try {
+    await sendToMake(name, email);
+    window.location.href = 'thank-you.html?source=newsletter';
+  } catch(e) {
+    alert('משהו השתבש, נסי שוב.');
+    btn.textContent = 'הצטרפי חינם — אני רוצה לצמוח! →';
+    btn.disabled = false;
+  }
+}
+
+async function subscribeFinal() {
+  const email = document.getElementById('final-email').value.trim();
+  const consent = document.getElementById('final-consent').checked;
+  if (!email) { alert('נא להזין כתובת מייל.'); return; }
+  if (!consent) { alert('יש לסמן את תיבת ההסכמה לקבלת דיוור לפי תיקון 13 לחוק התקשורת.'); return; }
+  const btn = document.querySelector('.final-form button');
+  btn.textContent = '⏳ שולחת...';
+  btn.disabled = true;
+  try {
+    await sendToMake('', email);
+    window.location.href = 'thank-you.html?source=newsletter-final';
+  } catch(e) {
+    alert('משהו השתבש, נסי שוב.');
+    btn.textContent = 'הצטרפי →';
+    btn.disabled = false;
+  }
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+  document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 300);
+});
+
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" dir="rtl" lang="he">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>גינות מור | תכנון והקמת גינות בחיפה והכרמל</title>
+<meta name="description" content="מומחה לתכנון וביצוע גינות בחיפה, הכרמל והקריות. 15+ שנות ניסיון בצמחייה ים-תיכונית ואבן טבעית. ייעוץ חינם בביתכם."/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#2d5214",
+          "primary-dark": "#1e3a0d",
+          "primary-light": "#4a7a26",
+          "primary-fixed": "#d9e8d1",
+          "primary-container": "#4a703b",
+          "on-primary": "#ffffff",
+          "accent": "#c8873a",
+          "accent-light": "#f0a85a",
+          "secondary": "#506169",
+          "on-surface": "#191c1b",
+          "on-surface-variant": "#42493e",
+          "surface": "#f8faf8",
+          "surface-container-low": "#f2f4f2",
+          "surface-container": "#eceeec",
+          "surface-container-high": "#e6e9e7",
+          "surface-container-highest": "#e1e3e1",
+          "surface-container-lowest": "#ffffff",
+          "outline": "#72796e",
+          "outline-variant": "#c2c9bb",
+          "error": "#ba1a1a",
+          "whatsapp": "#25D366",
+        },
+        fontFamily: {
+          "headline": ["Manrope", "sans-serif"],
+          "body": ["Manrope", "sans-serif"],
+        },
+        borderRadius: {
+          "DEFAULT": "0.125rem",
+          "lg": "0.5rem",
+          "xl": "1rem",
+          "2xl": "1.5rem",
+          "full": "9999px",
+        }
+      }
+    }
+  }
+</script>
+<style>
+  * { font-family: 'Manrope', sans-serif; }
+  body { background-color: #f8faf8; color: #191c1b; }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+
+  /* Nav */
+  .glass-nav {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Hero gradient overlay */
+  .hero-overlay {
+    background: linear-gradient(to left, rgba(255,255,255,0.96) 40%, rgba(255,255,255,0.6) 65%, rgba(0,0,0,0) 100%);
+  }
+  @media (max-width: 768px) {
+    .hero-overlay {
+      background: linear-gradient(to top, rgba(255,255,255,0.97) 50%, rgba(255,255,255,0.4) 80%, rgba(0,0,0,0) 100%);
+    }
+  }
+
+  /* Service card image zoom */
+  .service-card img { transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+  .service-card:hover img { transform: scale(1.07); }
+  .service-card .overlay { transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .service-card:hover .overlay { transform: translateY(-6px); }
+
+  /* Step number */
+  .step-number {
+    width: 2.75rem; height: 2.75rem;
+    background: #2d5214; color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* Testimonial stars */
+  .stars { color: #c8873a; }
+
+  /* WhatsApp float */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 100;
+    width: 3.5rem; height: 3.5rem;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.55);
+  }
+  .whatsapp-float svg { width: 1.75rem; height: 1.75rem; fill: white; }
+
+  /* Mobile menu */
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: flex; }
+
+  /* Scroll animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Form focus */
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d5214;
+  }
+
+  /* Accent CTA pulse */
+  @keyframes subtle-pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(200,135,58,0.3); }
+    50% { box-shadow: 0 4px 32px rgba(200,135,58,0.55); }
+  }
+  .cta-accent { animation: subtle-pulse 3s ease-in-out infinite; }
+</style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a class="whatsapp-float" href="https://wa.me/972500000000?text=שלום%20מור%2C%20אני%20מעוניין%2Fת%20בייעוץ%20לגינה" target="_blank" aria-label="שלחו הודעה בוואטסאפ">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.74.72 5.38 2.08 7.7L.5 31.5l8.06-2.06A15.44 15.44 0 0 0 16 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.22a13.68 13.68 0 0 1-6.92-1.87l-.5-.3-5.14 1.32 1.35-4.98-.33-.52A13.67 13.67 0 1 1 16 28.72zm7.47-10.22c-.41-.2-2.42-1.18-2.8-1.32-.37-.13-.64-.2-.91.2s-1.04 1.32-1.27 1.6c-.23.27-.47.3-.88.1-.41-.2-1.73-.63-3.3-2.02-1.22-1.08-2.04-2.42-2.28-2.83-.23-.4-.02-.62.18-.82.18-.18.4-.47.6-.7.2-.24.26-.4.4-.67.13-.27.07-.5-.03-.7-.1-.2-.91-2.17-1.24-2.97-.33-.8-.66-.68-.91-.7h-.77c-.27 0-.7.1-1.07.5-.37.4-1.41 1.38-1.41 3.37s1.44 3.9 1.64 4.17c.2.27 2.84 4.33 6.88 6.07.96.41 1.71.66 2.3.85.96.3 1.84.26 2.53.16.77-.12 2.42-.98 2.76-1.94.34-.95.34-1.77.24-1.94-.1-.17-.37-.27-.78-.47z"/>
+  </svg>
+</a>
+
+<!-- ===== NAV ===== -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+  <div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-screen-xl mx-auto">
+    <div class="text-2xl font-extrabold tracking-tight text-primary">גינות מור</div>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+      <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">אודות</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#services">שירותים</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#testimonials">לקוחות</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contact">צור קשר</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="hidden md:inline-flex bg-primary text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-primary-dark transition-colors duration-200">
+        שיחת ייעוץ חינם
+      </a>
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="md:hidden p-2 rounded-lg hover:bg-surface-container transition-colors" aria-label="תפריט">
+        <span class="material-symbols-outlined text-primary">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="flex-col bg-white border-t border-outline-variant/20 px-6 py-4 gap-4 md:hidden">
+    <a class="text-on-surface font-semibold py-2 border-b border-outline-variant/20" href="#about" onclick="closeMobileMenu()">אודות</a>
+    <a class="text-on-surface font-semibold py-2 border-b border-outline-variant/20" href="#services" onclick="closeMobileMenu()">שירותים</a>
+    <a class="text-on-surface font-semibold py-2 border-b border-outline-variant/20" href="#testimonials" onclick="closeMobileMenu()">לקוחות</a>
+    <a class="text-on-surface font-semibold py-2 border-b border-outline-variant/20" href="#contact" onclick="closeMobileMenu()">צור קשר</a>
+    <a href="#contact" class="bg-primary text-white text-center py-3 rounded-xl font-bold mt-2" onclick="closeMobileMenu()">שיחת ייעוץ חינם</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="relative min-h-screen flex items-end md:items-center pt-16 overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0 z-0">
+    <img
+      alt="גינה ים-תיכונית מרהיבה עם עצי זית ואבן טבעית בכרמל"
+      class="w-full h-full object-cover"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMNxzj4mTQAPwyQB0M3NfPeo2HakSbSjFoSVIJ-ht8AH710qokf7ssR_dwXd4S0m1ccsYAtw5nrm23CRE7rf2u_vqksIPVFvxj0aIXdASzonkL-sLutGKma2N11q-keBO-AMDFfRzKHPyZaJzlw8lYSpdtF7TzFObWM9L1LKOcbursKhBDc0jYE8X6__3BpQlSxQh3LhmnLH3iO4fJ7TE4jDPrf5rY_63B7NmESN2mWuVOrc9GiMiJJpQ70uzG7f_jnmHAYIoAkKAK"
+      loading="eager"
+    />
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+
+  <div class="container mx-auto px-6 md:px-10 relative z-10 py-24 md:py-0 md:min-h-screen flex items-center">
+    <div class="max-w-xl">
+      <span class="inline-block text-xs font-bold tracking-[0.2em] uppercase text-primary bg-primary-fixed px-3 py-1.5 rounded-full mb-5">
+        תכנון וביצוע גינות בחיפה והכרמל
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-primary leading-tight mb-6 tracking-tight">
+        הגינה שדמיינתם —<br/>בחצר שלכם
+      </h1>
+      <p class="text-base md:text-lg text-on-surface-variant leading-relaxed mb-8 font-medium max-w-lg">
+        הכרמל, שפלת החוף והקריות דורשים גינה שמבינה את האקלים הים-תיכוני: את חמסיני אוגוסט, את רוחות הים, ואת הקרקע הסלעית של המדרון. אנחנו מתכננים ובונים גינות שנראות יפות 12 חודשים בשנה — בלי בזבוז מים ובלי תחזוקה שאוכלת את הסופ"ש.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact"
+           class="cta-accent bg-accent text-white px-8 py-4 rounded-xl text-base font-bold text-center hover:bg-accent-light transition-colors duration-200 shadow-lg">
+          ייעוץ חינם בביתכם בחיפה — מקומות מוגבלים ←
+        </a>
+      </div>
+      <p class="text-xs text-outline mt-3 font-medium">ללא עלות וללא התחייבות · חוזרים תוך כמה שעות</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOCIAL PROOF BAR ===== -->
+<div class="bg-primary text-on-primary py-4">
+  <div class="max-w-screen-xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-6 text-sm font-semibold">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary-fixed text-lg" style="font-variation-settings:'FILL' 1">landscape</span>
+      <span>150+ גינות בחיפה והסביבה</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary-fixed text-lg" style="font-variation-settings:'FILL' 1">verified</span>
+      <span>15+ שנות ניסיון מקומי</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary-fixed text-lg" style="font-variation-settings:'FILL' 1">star</span>
+      <span>דירוג 5/5 מ-80 לקוחות</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary-fixed text-lg" style="font-variation-settings:'FILL' 1">eco</span>
+      <span>צמחייה ים-תיכונית חסכנית במים</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROBLEM SECTION ===== -->
+<section class="py-20 md:py-28 bg-surface-container-low" id="about">
+  <div class="container mx-auto px-6 md:px-10 max-w-5xl">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-7 reveal">
+        <span class="text-xs font-bold tracking-widest uppercase text-error mb-3 block">הבעיה שרובם לא מדברים עליה</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-6 leading-tight">
+          השקעתם בגינה ואחרי שנה היא נראית ממש כמו בהתחלה?
+        </h2>
+        <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+          הבעיה היא לא אתם — הבעיה היא שרוב הצמחים שמוכרים בגנניות לא מיועדים לתנאים של הכרמל: חמסינים שמייבשים כל שתיל רך, רוחות מערביות מהים שמטות עצים צעירים, ועלויות מים שמזנקות בקיץ. גינה שעובדת כאן צריכה להיות מתוכננת כאן — לא להעתיק מפינטרסט.
+        </p>
+      </div>
+      <div class="md:col-span-5 reveal">
+        <div class="bg-white rounded-2xl shadow-sm border-t-4 border-error/50 p-8">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="material-symbols-outlined text-error text-3xl">error_outline</span>
+            <h4 class="text-lg font-bold text-on-surface">טעויות נפוצות שעולות ביוקר:</h4>
+          </div>
+          <ul class="space-y-4 text-sm text-on-surface-variant font-medium">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error text-base mt-0.5 flex-shrink-0">close</span>
+              <span>שתילת צמחים רגישים לחמסין ורוח-ים שדורשים השקיה יומית וסיכוי נמוך לשרוד קיץ ישראלי</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error text-base mt-0.5 flex-shrink-0">close</span>
+              <span>עבודות אבן ועפר שלא מחושבות למדרון הכרמלי — ומתנדנדות אחרי גשמי חורף ראשונים</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error text-base mt-0.5 flex-shrink-0">close</span>
+              <span>מערכות השקיה כלליות שלא מותאמות לאזורי הצל והשמש — ומייצרות חצי-בצורת וחצי-ביצה</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS (PROCESS) ===== -->
+<section class="py-20 bg-surface-container-lowest">
+  <div class="container mx-auto px-6 md:px-10 max-w-4xl">
+    <div class="text-center mb-14 reveal">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-2 block">איך זה עובד</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-on-surface">מפגישה ראשונה לגינה מוכנה — 4 שלבים</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6 md:gap-4">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center reveal">
+        <div class="step-number mb-4">1</div>
+        <div class="w-px h-0 md:hidden"></div>
+        <h3 class="font-bold text-on-surface mb-2">ייעוץ בביתכם</h3>
+        <p class="text-sm text-on-surface-variant">מגיעים למגרש, רואים בעיניים, שומעים מה חשוב לכם</p>
+      </div>
+      <!-- Arrow (desktop only) -->
+      <div class="hidden md:flex items-start justify-center pt-5">
+        <div class="step-number mb-4">2</div>
+      </div>
+      <div class="flex flex-col items-center text-center reveal md:hidden">
+        <div class="step-number mb-4">2</div>
+        <h3 class="font-bold text-on-surface mb-2">תכנון אדריכלי</h3>
+        <p class="text-sm text-on-surface-variant">תוכנית מפורטת: צמחים, מבנה, השקיה, אבנים</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center text-center reveal md:col-start-3 hidden md:flex">
+        <div class="step-number mb-4">3</div>
+        <h3 class="font-bold text-on-surface mb-2">ביצוע מקצועי</h3>
+        <p class="text-sm text-on-surface-variant">הצוות שלנו בונה, שותל ומסיים עם ניקיון מלא</p>
+      </div>
+      <!-- Step 4 -->
+      <div class="flex flex-col items-center text-center reveal hidden md:flex">
+        <div class="step-number mb-4">4</div>
+        <h3 class="font-bold text-on-surface mb-2">גינה שמחייכת</h3>
+        <p class="text-sm text-on-surface-variant">כוס קפה בחוץ — וגינה שגדלה בלעדיכם</p>
+      </div>
+      <!-- Mobile steps 2–4 separate -->
+      <div class="flex flex-col items-center text-center reveal md:hidden">
+        <div class="step-number mb-4">2</div>
+        <h3 class="font-bold text-on-surface mb-2">תכנון אדריכלי</h3>
+        <p class="text-sm text-on-surface-variant">תוכנית מפורטת: צמחים, מבנה, השקיה, אבנים</p>
+      </div>
+      <div class="flex flex-col items-center text-center reveal md:hidden">
+        <div class="step-number mb-4">3</div>
+        <h3 class="font-bold text-on-surface mb-2">ביצוע מקצועי</h3>
+        <p class="text-sm text-on-surface-variant">הצוות שלנו בונה, שותל ומסיים עם ניקיון מלא</p>
+      </div>
+      <div class="flex flex-col items-center text-center reveal md:hidden">
+        <div class="step-number mb-4">4</div>
+        <h3 class="font-bold text-on-surface mb-2">גינה שמחייכת</h3>
+        <p class="text-sm text-on-surface-variant">כוס קפה בחוץ — וגינה שגדלה בלעדיכם</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="py-20 md:py-28 bg-surface" id="services">
+  <div class="container mx-auto px-6 md:px-10">
+    <div class="text-center mb-14 reveal">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-2 block">מה אנחנו עושים</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-on-surface">מהרעיון הראשון ועד הצמח האחרון בקרקע</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div class="service-card relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container-highest reveal">
+        <img
+          alt="תכנון אדריכלי של גינה ים-תיכונית"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1iNp2yA4TTvIjO19AI5C4KE3B3gJz-U56lT-_Q9ndc2-sOI76bGbpizBKRp-1LFohxg9FkMjJaIHytrDbkSrTyNUA4aPI0yuzB6NkMZf1C4o0mcn6OnRfW_Nfa5zQOU1iNFtxZ2srJKmADkC7b_X-Ncu2hbTkkarmRZdw-il3MfnJFtuSWgnHL5kHTCb2Qfj9ch7InvzHsKF6y3NVGCLpNfY_aMnsp93_8AU0SItstbrAVP6_mUJiiXAN9DpEcQB3Szn7uYG8SdO"
+        />
+        <div class="overlay absolute inset-x-0 bottom-0 p-7 bg-gradient-to-t from-primary/95 via-primary/65 to-transparent h-3/5 flex flex-col justify-end text-white">
+          <h3 class="text-xl font-bold mb-2">תכנון גינה מלא — מהדף הריק לתוכנית עבודה</h3>
+          <p class="text-sm opacity-90 leading-relaxed">יושבים אתכם, מבינים מה אתם רוצים לחוש בגינה, ובונים תוכנית מדויקת לפי כיווני האוויר והשמש של המגרש שלכם.</p>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container-highest md:translate-y-8 reveal">
+        <img
+          alt="ביצוע גינה - אבן טבעית, השקיה, שתילה"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0RbPC__4qtJIRJNzinYzTrAdSoTBCS8EuKm7OsIl8aMnRQyANBntYGpmQJsKwU-cawhRX9A-i9wT6EAfoqoitbU72INEAzm0kvgx_94g8XAejBKo7qoozBZVXFP-UwvCcrW0SjKoyfJiwfYAlHFnzrpei_xuXElFCK2KY3fxGPN5fdmCEjZlqU6dDvDdMEFLK6yOB6AFIxxevNrhg3uneIg_ITaVze4QNWIX9l_hiTb-432s1qqTaKIIElOI8kdtO6Fkor802nRkl"
+        />
+        <div class="overlay absolute inset-x-0 bottom-0 p-7 bg-gradient-to-t from-primary/95 via-primary/65 to-transparent h-3/5 flex flex-col justify-end text-white">
+          <h3 class="text-xl font-bold mb-2">ביצוע גינה — אבן, השקיה, שתילה</h3>
+          <p class="text-sm opacity-90 leading-relaxed">צוות ביצוע המתמחה באבן טבעית ישראלית, טרסות על מדרון, טפטוף חכם ושתילת עצים בוגרים. עבודה נגמרת עם ניקיון מלא.</p>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container-highest reveal">
+        <img
+          alt="גינה ים-תיכונית עם צמחי מקום חסכוניים במים"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtdVj-SyonePvdm3mFT0bAYyR5gJYNVWoY2gcDkUg_OksLqjtId1P2VbEODyIYxfXVKAWXpc6mfG-isNuZzLXvTh-JFq_FdGtsdWJ694efovhMQbIGL6BzwLv2HR6llqOJd6idT2ZHpTKF6QdOwrobPuK8_POP-MIvLF-aSpXPe614UlPeQtzKXSLBir0y0mLZ0JAdZDnZmdndYzgoJQIvZZskuvjSNfbkSVdnfO6Mj8dPPalKuCf5KQX05o0ylimMBsfmF2CEd3sG"
+        />
+        <div class="overlay absolute inset-x-0 bottom-0 p-7 bg-gradient-to-t from-primary/95 via-primary/65 to-transparent h-3/5 flex flex-col justify-end text-white">
+          <h3 class="text-xl font-bold mb-2">גינה ים-תיכונית חסכנית במים</h3>
+          <p class="text-sm opacity-90 leading-relaxed">לבנדר, רוזמרין, אגבה ואלה ארצישראלית — צמחי מקום שהתפתחו בדיוק לאקלים שלנו, בלי להגדיל את חשבון המים בקיץ.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST / AUTHORITY ===== -->
+<section class="py-20 md:py-28 bg-primary text-on-primary" id="trust">
+  <div class="container mx-auto px-6 md:px-10 max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+      <!-- Image -->
+      <div class="relative reveal">
+        <div class="w-full h-80 md:h-[440px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+          <img
+            alt="עץ זית עתיק בגינה מתוכננת מקצועית"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA12PjxazlkgMu4MUpXO8H70HlhrXPzHmxFUPnhW9pl7LIkDYDbj0Z8e9QlSha41nMZ4CHwv0A7aXKfYRorhrl8Xtcs6uEzW6LFUoVqqwxPPlmdzi-nPab_lkXk3SzlgWESGhHbmqKg0xF7bKkmM0vZS95b7jViQC4Fm4ydgz2FdzPBMC8DpS_YBwt486AXAK0n50IG_QH46towYp-_FyIUxt67MxUCmZwK5hUu3Z7mVXfqffc81498TsppA1I-QEsXeJe_MRt0unD"
+          />
+        </div>
+        <!-- Badge -->
+        <div class="absolute -bottom-5 -left-5 md:block hidden bg-white text-primary px-5 py-4 rounded-2xl shadow-2xl border border-outline-variant/30">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1">verified</span>
+            <div>
+              <div class="text-2xl font-extrabold leading-none">15+</div>
+              <div class="text-xs font-bold uppercase tracking-tight text-secondary">שנות ניסיון בחיפה</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="reveal">
+        <blockquote class="text-xl md:text-2xl font-bold italic leading-snug mb-10 border-r-4 border-primary-fixed/50 pr-5">
+          "אחרי 15 שנה של עבודה על מדרונות הכרמל ובשכונות הקריות, אני יודע בדיוק איזה צמח יפרח ואיזה ייבש — עוד לפני שנוגעים באדמה."
+        </blockquote>
+        <div class="space-y-7">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-on-primary text-lg">landscape</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">ידע עמוק של הטופוגרפיה המקומית</h4>
+              <p class="text-sm text-primary-fixed/90 leading-relaxed">מאות מגרשים בחיפה, הכרמל, נשר, קריית ביאליק וקריית מוצקין — אנחנו יודעים איך הקרקע מתנהגת בחורף ואיפה הרוח חזקה מדי.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-on-primary text-lg">eco</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">היכרות אמיתית עם צמחי האקלים הים-תיכוני</h4>
+              <p class="text-sm text-primary-fixed/90 leading-relaxed">לא עובדים עם קטלוג גנרי — בוחרים כל צמח לפי תנאי המגרש הספציפי שלכם: כמות שמש, רוח מהים, סוג קרקע.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-on-primary text-lg">handshake</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">שירות אישי — לא קבלן שנעלם אחרי הביצוע</h4>
+              <p class="text-sm text-primary-fixed/90 leading-relaxed">מור עצמו מגיע לייעוץ, עוקב אחרי הביצוע, וזמין לשאלות גם שישה חודשים אחרי שהגינה מוכנה.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="py-20 md:py-28 bg-surface-container-low" id="testimonials">
+  <div class="container mx-auto px-6 md:px-10 max-w-5xl">
+    <div class="text-center mb-14 reveal">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-2 block">מה אומרים הלקוחות</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-on-surface">גינות אמיתיות, לקוחות מרוצים</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-outline-variant/20 reveal">
+        <div class="stars flex gap-0.5 mb-4 text-xl">★★★★★</div>
+        <p class="text-sm text-on-surface-variant leading-relaxed mb-5 font-medium">
+          "המגרש שלנו בכרמל מרכזי היה אתגר — שיפוע תלול ואדמה סלעית. מור הפך אותו לגינה מדורגת מרהיבה עם טרסות אבן. לא האמנתי שזה אפשרי. כל האורחים שואלים מי עשה לנו את זה."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-outline-variant/20">
+          <div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-sm">ד</div>
+          <div>
+            <div class="font-bold text-sm text-on-surface">דנה ואיתמר כ.</div>
+            <div class="text-xs text-outline">כרמל מרכזי, חיפה</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-outline-variant/20 reveal">
+        <div class="stars flex gap-0.5 mb-4 text-xl">★★★★★</div>
+        <p class="text-sm text-on-surface-variant leading-relaxed mb-5 font-medium">
+          "אחרי שלושה גננים שהביאו לנו צמחים שמתו תוך שנה, מור הסביר בדיוק למה זה קרה וממה הגינה שלנו צריכה. שנה אחרי — הכל ירוק, לא השקינו כמעט ולא הוצאנו שקל על תחזוקה."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-outline-variant/20">
+          <div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-sm">ר</div>
+          <div>
+            <div class="font-bold text-sm text-on-surface">רותם ש.</div>
+            <div class="text-xs text-outline">קריית מוצקין</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-outline-variant/20 reveal">
+        <div class="stars flex gap-0.5 mb-4 text-xl">★★★★★</div>
+        <p class="text-sm text-on-surface-variant leading-relaxed mb-5 font-medium">
+          "הגינה שלנו בנשר הפכה לחלק מהבית שבו אנחנו מבלים הכי הרבה. ריח הרוזמרין בבוקר, עץ הלימון שכבר נותן פירות — מור ידע בדיוק מה לשים ואיפה. שווה כל שקל."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-outline-variant/20">
+          <div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-sm">י</div>
+          <div>
+            <div class="font-bold text-sm text-on-surface">יובל ומיכל א.</div>
+            <div class="text-xs text-outline">נשר</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="py-20 md:py-28 bg-surface-container-lowest" id="contact">
+  <div class="container mx-auto px-6 md:px-10 max-w-4xl">
+    <div class="text-center mb-12 reveal">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-3 block">מוכנים להתחיל?</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-primary tracking-tight mb-4">
+        הגינה שאתם רוצים לשבת בה בבוקר — בואו נבנה אותה ביחד
+      </h2>
+      <p class="text-base md:text-lg text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
+        פועלים בחיפה, הכרמל, הקריות ושפלת החוף. בפגישת הייעוץ נבוא למגרש שלכם, נראה את התנאים בעיניים, ונספר לכם בדיוק מה אפשר לעשות ובכמה — ללא עלות וללא התחייבות.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-xl shadow-primary/8 border border-outline-variant/20 p-8 md:p-12 max-w-2xl mx-auto reveal">
+      <form id="contact-form" class="text-right">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="flex flex-col">
+            <label class="text-sm font-bold text-on-surface-variant mb-2" for="name">שם מלא</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="איך קוראים לכם?"
+              class="bg-surface-container-low border border-outline-variant/40 rounded-xl h-14 px-4 text-on-surface text-sm focus:border-primary"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-sm font-bold text-on-surface-variant mb-2" for="phone">טלפון</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="מספר נייד ליצירת קשר"
+              class="bg-surface-container-low border border-outline-variant/40 rounded-xl h-14 px-4 text-on-surface text-sm focus:border-primary"
+              required
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-whatsapp text-white py-5 rounded-xl text-lg font-bold flex items-center justify-center gap-3 hover:opacity-90 transition-opacity shadow-lg shadow-green-500/20"
+        >
+          <svg class="w-6 h-6 fill-white flex-shrink-0" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.74.72 5.38 2.08 7.7L.5 31.5l8.06-2.06A15.44 15.44 0 0 0 16 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm7.47 17.5c-.41-.2-2.42-1.18-2.8-1.32-.37-.13-.64-.2-.91.2s-1.04 1.32-1.27 1.6c-.23.27-.47.3-.88.1-.41-.2-1.73-.63-3.3-2.02-1.22-1.08-2.04-2.42-2.28-2.83-.23-.4-.02-.62.18-.82.18-.18.4-.47.6-.7.2-.24.26-.4.4-.67.13-.27.07-.5-.03-.7-.1-.2-.91-2.17-1.24-2.97-.33-.8-.66-.68-.91-.7h-.77c-.27 0-.7.1-1.07.5-.37.4-1.41 1.38-1.41 3.37s1.44 3.9 1.64 4.17c.2.27 2.84 4.33 6.88 6.07.96.41 1.71.66 2.3.85.96.3 1.84.26 2.53.16.77-.12 2.42-.98 2.76-1.94.34-.95.34-1.77.24-1.94-.1-.17-.37-.27-.78-.47z"/>
+          </svg>
+          שלחו לי הודעת וואטסאפ — אחזור אליכם היום
+        </button>
+
+        <p class="text-xs text-outline text-center mt-5">
+          ללא עלות וללא התחייבות · חוזרים לכל פנייה תוך כמה שעות בימי עסקים
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-zinc-100 py-12 border-t border-outline-variant">
+  <div class="max-w-screen-xl mx-auto px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-right">
+        <div class="text-xl font-extrabold text-primary mb-1">גינות מור</div>
+        <div class="text-xs text-slate-500 mb-1">גינות שמכירות את הכרמל, הים והאקלים שלנו</div>
+        <div class="text-xs text-slate-400">© 2026 גינות מור — תכנון וביצוע גינות בחיפה והסביבה. כל הזכויות שמורות.</div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#about">אודות</a>
+        <a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#services">פרויקטים</a>
+        <a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#">פייסבוק</a>
+        <a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#">אינסטגרם</a>
+        <a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#contact">צור קשר</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Sticky nav background
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('shadow-md');
+    } else {
+      nav.classList.remove('shadow-md');
+    }
+  });
+
+  // Form submit → WhatsApp
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    if (!name || !phone) return;
+    const msg = encodeURIComponent(`שלום מור, שמי ${name} (${phone}). אשמח לייעוץ לגינה בחיפה/הסביבה.`);
+    window.open(`https://wa.me/972500000000?text=${msg}`, '_blank');
+  });
+</script>
+</body>
+</html>

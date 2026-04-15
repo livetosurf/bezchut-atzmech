@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>עסקים ויזמות | בזכות עצמך</title>
+  <meta name="description" content="מדריכים, טיפים וכלים לבניית עסק מצליח — קטגוריית עסקים ויזמות בפורטל בזכות עצמך">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ==================== VARIABLES (same as main site) ==================== */
+    :root {
+      --primary: #6B2D7C;
+      --primary-light: #9B59B6;
+      --primary-dark: #3D1A47;
+      --accent: #C9A84C;
+      --accent-light: #F0D080;
+      --lavender: #E8D5F5;
+      --dark: #1A0A2E;
+      --dark2: #2C1654;
+      --bg: #FBF6FE;
+      --bg2: #F0E8F8;
+      --text: #2C1654;
+      --text2: #6B5A7E;
+      --text3: #9985AA;
+      --white: #FFFFFF;
+      --border: rgba(107, 45, 124, 0.15);
+      --shadow: 0 4px 20px rgba(107, 45, 124, 0.12);
+      --shadow-hover: 0 8px 30px rgba(107, 45, 124, 0.22);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --nav-h: 72px;
+    }
+
+    /* ==================== RESET ==================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Assistant', 'Heebo', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      direction: rtl;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+    /* ==================== BUTTONS ==================== */
+    .btn-gold {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A84C 0%, #F0D080 50%, #C9A84C 100%);
+      background-size: 200% auto;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 28px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 14px rgba(201, 168, 76, 0.32);
+      font-family: inherit;
+    }
+    .btn-gold:hover { background-position: right center; transform: translateY(-2px); box-shadow: 0 6px 22px rgba(201, 168, 76, 0.48); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 11px 28px;
+      border-radius: 50px;
+      border: 2px solid var(--primary);
+      cursor: pointer;
+      transition: all 0.25s;
+      font-family: inherit;
+    }
+    .btn-outline:hover { background: var(--primary); color: var(--white); }
+
+    /* ==================== TYPE ==================== */
+    .section-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-family: 'Heebo', sans-serif;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 900;
+      color: var(--dark2);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .section-sub { color: var(--text2); font-size: 1rem; }
+    .divider {
+      width: 50px; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px;
+      margin: 12px 0 14px;
+    }
+
+    /* ==================== HEADER / NAV ==================== */
+    header {
+      position: fixed;
+      top: 0; right: 0; left: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      transition: background 0.35s, box-shadow 0.35s;
+    }
+    header.scrolled {
+      background: rgba(26, 10, 46, 0.96);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.35);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--nav-h);
+      padding: 0 32px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .logo { font-family: 'Heebo', sans-serif; font-size: 1.45rem; font-weight: 900; color: var(--white); letter-spacing: -0.5px; user-select: none; }
+    .logo .gold { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.82); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent-light); }
+    .nav-links .nav-cta { background: linear-gradient(135deg, var(--accent), #E8C86A); color: var(--dark) !important; font-weight: 700; padding: 10px 22px; border-radius: 50px; font-size: 0.9rem; }
+    .hamburger { display: none; background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; padding: 4px; line-height: 1; }
+    .mobile-nav { display: none; position: fixed; top: var(--nav-h); right: 0; left: 0; background: rgba(22, 8, 42, 0.98); backdrop-filter: blur(16px); padding: 16px 24px 24px; z-index: 199; flex-direction: column; border-top: 1px solid rgba(255,255,255,0.08); }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { color: rgba(255,255,255,0.88); font-size: 1.1rem; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); transition: color 0.2s; }
+    .mobile-nav a:hover { color: var(--accent-light); }
+    .mobile-nav a:last-child { border-bottom: none; color: var(--accent-light); font-weight: 700; }
+
+    /* ==================== CATEGORY HERO ==================== */
+    #cat-hero {
+      min-height: 52vh;
+      background: radial-gradient(ellipse at 30% 20%, #3D1A60 0%, #1A0A2E 45%, #0D0520 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--nav-h) + 50px) 24px 80px;
+    }
+    .stars { position: absolute; inset: 0; pointer-events: none; }
+    .star { position: absolute; background: white; border-radius: 50%; animation: twinkle var(--d,3s) ease-in-out infinite var(--delay,0s); }
+    @keyframes twinkle { 0%,100%{opacity:var(--min-op,.15);transform:scale(1)} 50%{opacity:1;transform:scale(1.3)} }
+    .mini-moon {
+      position: absolute;
+      top: 12%; right: 8%;
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 38% 38%, #FFFAE8 0%, #F0D080 35%, #C9A84C 68%, #9A6A28 100%);
+      box-shadow: 0 0 40px rgba(240,208,128,0.35), 0 0 80px rgba(240,208,128,0.15), inset -14px -12px 22px rgba(110,70,10,0.55);
+      animation: moonPulse 7s ease-in-out infinite;
+    }
+    @keyframes moonPulse {
+      0%,100%{box-shadow:0 0 40px rgba(240,208,128,0.35),0 0 80px rgba(240,208,128,0.15),inset -14px -12px 22px rgba(110,70,10,0.55)}
+      50%{box-shadow:0 0 60px rgba(240,208,128,0.55),0 0 120px rgba(240,208,128,0.25),inset -14px -12px 22px rgba(110,70,10,0.55)}
+    }
+    .hero-inner { z-index: 2; max-width: 620px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 22px; }
+    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent-light); }
+    .breadcrumb-sep { opacity: 0.4; font-size: 0.75rem; }
+    .breadcrumb .current { color: var(--accent-light); font-weight: 600; }
+    .cat-hero-icon { font-size: 3.5rem; display: block; margin-bottom: 14px; }
+    .cat-hero-title {
+      font-family: 'Heebo', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .cat-hero-title .gold-text {
+      background: linear-gradient(135deg, #C9A84C 0%, #F5E080 50%, #C9A84C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cat-hero-desc { font-size: 1.05rem; color: rgba(255,255,255,0.72); font-weight: 300; max-width: 480px; }
+    .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; line-height: 0; }
+    .hero-wave svg { width: 100%; display: block; }
+
+    /* ==================== MAIN LAYOUT ==================== */
+    #main-content { padding: 60px 0 80px; }
+    .content-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ==================== FEATURED POST ==================== */
+    .featured-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      margin-bottom: 36px;
+      cursor: pointer;
+      transition: all 0.28s;
+      min-height: 220px;
+    }
+    .featured-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .featured-body { padding: 28px 28px 24px; display: flex; flex-direction: column; justify-content: space-between; }
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, var(--accent), #E8C86A);
+      color: var(--dark);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .featured-body h2 { font-family: 'Heebo', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--dark2); line-height: 1.45; margin-bottom: 12px; }
+    .featured-body .excerpt { font-size: 0.9rem; color: var(--text2); line-height: 1.75; margin-bottom: 18px; flex: 1; }
+    .featured-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .featured-meta { display: flex; align-items: center; gap: 14px; font-size: 0.8rem; color: var(--text3); }
+    .featured-author { display: flex; align-items: center; gap: 7px; font-size: 0.85rem; font-weight: 600; color: var(--text2); }
+    .avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-light), var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 0.78rem; color: white; font-weight: 700; }
+    .featured-thumb {
+      background: linear-gradient(135deg, #3D1A47 0%, #6B2D7C 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .read-more { font-size: 0.83rem; font-weight: 700; color: var(--primary); transition: color 0.2s; }
+    .read-more:hover { color: var(--accent); }
+
+    /* ==================== FILTER TAGS ==================== */
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; align-items: center; }
+    .filter-label { font-size: 0.82rem; font-weight: 600; color: var(--text3); margin-left: 4px; white-space: nowrap; }
+    .tag-btn {
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 25px;
+      border: 1.5px solid var(--primary);
+      cursor: pointer;
+      transition: all 0.22s;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .tag-btn:hover { background: var(--lavender); }
+    .tag-btn.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+    /* ==================== BLOG GRID ==================== */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.28s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .blog-thumb { height: 170px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .blog-thumb-icon { font-size: 3.5rem; z-index: 1; }
+    .blog-cat-tag { position: absolute; top: 12px; right: 12px; background: var(--accent); color: var(--dark); font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; z-index: 2; }
+    .blog-body { padding: 18px 18px 16px; display: flex; flex-direction: column; flex: 1; }
+    .blog-meta { display: flex; gap: 12px; font-size: 0.76rem; color: var(--text3); margin-bottom: 8px; }
+    .blog-card h3 { font-size: 1rem; font-weight: 700; color: var(--dark2); line-height: 1.5; margin-bottom: 8px; }
+    .blog-excerpt { font-size: 0.84rem; color: var(--text2); line-height: 1.7; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
+    .blog-foot { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 12px; margin-top: auto; }
+    .blog-author { display: flex; align-items: center; gap: 7px; font-size: 0.8rem; font-weight: 600; color: var(--text2); }
+    .blog-card.hidden { display: none; }
+
+    /* ==================== LOAD MORE ==================== */
+    .load-more-wrap { text-align: center; margin-top: 32px; }
+    #noResults { display: none; text-align: center; padding: 48px 24px; color: var(--text3); font-style: italic; }
+    #noResults .no-res-icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+
+    /* ==================== SIDEBAR ==================== */
+    .sidebar { display: flex; flex-direction: column; gap: 22px; position: sticky; top: calc(var(--nav-h) + 20px); }
+    .sidebar-box {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+    }
+    .sidebar-title { font-family: 'Heebo', sans-serif; font-size: 1rem; font-weight: 800; color: var(--dark2); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+
+    /* Search */
+    .search-wrap { position: relative; }
+    .search-wrap input {
+      width: 100%;
+      padding: 11px 40px 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      direction: rtl;
+      transition: border-color 0.25s;
+    }
+    .search-wrap input:focus { border-color: var(--primary-light); }
+    .search-wrap input::placeholder { color: var(--text3); }
+    .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 1rem; opacity: 0.5; pointer-events: none; }
+
+    /* Newsletter mini */
+    .nl-mini {
+      background: linear-gradient(135deg, #3D1A47 0%, #6B2D7C 100%);
+      border: none;
+    }
+    .nl-mini .sidebar-title { color: var(--white); }
+    .nl-mini p { font-size: 0.84rem; color: rgba(255,255,255,0.68); margin-bottom: 14px; line-height: 1.55; }
+    .nl-mini input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      direction: rtl;
+      margin-bottom: 10px;
+      transition: border-color 0.25s;
+    }
+    .nl-mini input::placeholder { color: rgba(255,255,255,0.4); }
+    .nl-mini input:focus { border-color: var(--accent); }
+    .nl-mini button {
+      width: 100%;
+      padding: 11px;
+      background: linear-gradient(135deg, var(--accent), #E8C86A);
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.88rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.25s;
+    }
+    .nl-mini button:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(201,168,76,0.45); }
+    .nl-mini .nl-consent { display: flex; gap: 8px; align-items: flex-start; margin: 10px 0; }
+    .nl-mini .nl-consent input[type=checkbox] { margin-top: 3px; accent-color: var(--accent); flex-shrink: 0; width: 15px; height: 15px; cursor: pointer; }
+    .nl-mini .nl-consent label { font-size: .73rem; line-height: 1.5; color: rgba(255,255,255,0.5); cursor: pointer; }
+    .nl-mini .nl-consent label a { color: var(--accent); text-decoration: underline; }
+
+    /* Other categories */
+    .other-cats { display: flex; flex-direction: column; gap: 6px; }
+    .other-cat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: all 0.22s;
+      text-decoration: none;
+      color: var(--text2);
+    }
+    .other-cat:hover { background: var(--lavender); border-color: var(--border); color: var(--primary); }
+    .other-cat-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .other-cat-name { font-size: 0.88rem; font-weight: 600; flex: 1; }
+    .other-cat-count { font-size: 0.74rem; color: var(--text3); background: var(--bg2); padding: 2px 8px; border-radius: 10px; }
+
+    /* Popular posts */
+    .popular-list { display: flex; flex-direction: column; gap: 12px; }
+    .popular-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+    .popular-item:hover { background: var(--bg2); }
+    .popular-thumb { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+    .popular-info { flex: 1; min-width: 0; }
+    .popular-title { font-size: 0.84rem; font-weight: 600; color: var(--dark2); line-height: 1.4; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .popular-read { font-size: 0.74rem; color: var(--text3); margin-top: 3px; }
+
+    /* Affiliate spot */
+    .affiliate-box {
+      background: linear-gradient(135deg, var(--bg2), var(--lavender));
+      border: 1.5px solid var(--border);
+      position: relative;
+    }
+    .aff-badge {
+      position: absolute;
+      top: -10px; right: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    .aff-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+    .affiliate-box h4 { font-size: 0.95rem; font-weight: 700; color: var(--dark2); margin-bottom: 7px; }
+    .affiliate-box p { font-size: 0.82rem; color: var(--text2); line-height: 1.6; margin-bottom: 14px; }
+    .aff-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.82rem; font-weight: 700; color: var(--primary); border: 1.5px solid var(--primary); padding: 7px 16px; border-radius: 20px; transition: all 0.22s; }
+    .aff-link:hover { background: var(--primary); color: white; }
+
+    /* ==================== MODAL ==================== */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(13,5,32,0.88); z-index: 1000; backdrop-filter: blur(6px); animation: fadeOverlay 0.22s; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.open { display: flex; }
+    @keyframes fadeOverlay { from{opacity:0} to{opacity:1} }
+    .modal-box { background: var(--white); border-radius: 20px; max-width: 660px; width: 100%; max-height: 88vh; overflow-y: auto; animation: slideUpModal 0.28s ease; }
+    @keyframes slideUpModal { from{transform:translateY(22px);opacity:0} to{transform:translateY(0);opacity:1} }
+    .modal-head { padding: 38px 30px 28px; position: relative; }
+    .modal-close-btn { position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.22); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; font-size: 1rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+    .modal-close-btn:hover { background: rgba(255,255,255,0.35); }
+    .modal-head .cat-tag { display: inline-block; background: var(--accent); color: var(--dark); font-size: 0.74rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; }
+    .modal-head h2 { font-size: 1.45rem; font-weight: 800; color: white; line-height: 1.4; }
+    .modal-head .modal-meta { font-size: 0.82rem; color: rgba(255,255,255,0.58); margin-top: 10px; }
+    .modal-body-content { padding: 30px; }
+    .content-placeholder { background: linear-gradient(135deg, var(--bg2), var(--lavender)); border-radius: var(--radius-sm); padding: 40px 28px; text-align: center; color: var(--text3); font-style: italic; border: 2px dashed var(--border); }
+
+    /* ==================== FOOTER ==================== */
+    footer { background: #0D0520; color: rgba(255,255,255,0.6); padding: 60px 0 28px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+    .footer-brand .logo { display: block; margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.86rem; line-height: 1.75; color: rgba(255,255,255,0.4); max-width: 270px; }
+    .socials { display: flex; gap: 10px; margin-top: 20px; }
+    .social-btn { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.09); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; color: white; transition: background 0.22s; }
+    .social-btn:hover { background: var(--primary); }
+    .footer-col h4 { font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-light); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: rgba(255,255,255,0.45); font-size: 0.86rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent-light); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; font-size: 0.79rem; color: rgba(255,255,255,0.26); }
+
+    /* ==================== SCROLL TOP ==================== */
+    .scroll-top { position: fixed; bottom: 24px; left: 24px; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; border: none; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 16px rgba(107,45,124,0.42); transition: all 0.3s; opacity: 0; transform: translateY(12px); z-index: 99; }
+    .scroll-top.show { opacity: 1; transform: translateY(0); }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .content-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-thumb { height: 160px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .filter-bar { gap: 6px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+  <!-- SEO Meta -->
+  <meta name="description" content="מדריכים מעשיים לנשים יזמיות: פתיחת עסק, תמחור שירותים, ניהול לקוחות ותוכנית עסקית. 9 כתבות מקצועיות." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut-atzmech.co.il/esek-viyazmanut.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="עסקים ויזמות | בזכות עצמך" />
+  <meta property="og:description" content="מדריכים מעשיים לנשים יזמיות: פתיחת עסק, תמחור שירותים, ניהול לקוחות ותוכנית עסקית. 9 כתבות מקצועיות." />
+  <meta property="og:url" content="https://bezchut-atzmech.co.il/esek-viyazmanut.html" />
+  <meta property="og:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="עסקים ויזמות | בזכות עצמך" />
+  <meta name="twitter:description" content="מדריכים מעשיים לנשים יזמיות: פתיחת עסק, תמחור שירותים, ניהול לקוחות ותוכנית עסקית. 9 כתבות מקצועיות." />
+  <meta name="twitter:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"דף הבית","item":"https://bezchut-atzmech.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"עסקים ויזמות","item":"https://bezchut-atzmech.co.il/esek-viyazmanut.html"}]}</script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- ==================== HEADER ==================== -->
+<header id="mainHeader">
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span class="gold">עצמך</span> ✦</a>
+    <ul class="nav-links">
+      <li><a href="bezchut-atzmech.html#blog">בלוג</a></li>
+      <li><a href="bezchut-atzmech.html#categories">נושאים</a></li>
+      <li><a href="bezchut-atzmech.html#resources">כלים מומלצים</a></li>
+      <li><a href="bezchut-atzmech.html#about">אודות</a></li>
+      <li><a href="bezchut-atzmech.html#newsletter" class="nav-cta">הצטרפי לקהילה ✦</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="פתחי תפריט">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="bezchut-atzmech.html" onclick="closeMobileNav()">דף הבית</a>
+  <a href="bezchut-atzmech.html#blog" onclick="closeMobileNav()">בלוג</a>
+  <a href="bezchut-atzmech.html#categories" onclick="closeMobileNav()">נושאים</a>
+  <a href="bezchut-atzmech.html#resources" onclick="closeMobileNav()">כלים מומלצים</a>
+  <a href="bezchut-atzmech.html#newsletter" onclick="closeMobileNav()">הצטרפי לקהילה ✦</a>
+</div>
+
+<!-- ==================== CATEGORY HERO ==================== -->
+<section id="cat-hero">
+  <div class="stars" id="starsEl"></div>
+  <div class="mini-moon"></div>
+  <div class="hero-inner container">
+    <nav class="breadcrumb" aria-label="נתיב ניווט">
+      <a href="bezchut-atzmech.html">בית</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="current">עסקים ויזמות</span>
+    </nav>
+    <span class="cat-hero-icon">💼</span>
+    <h1 class="cat-hero-title">עסקים <span class="gold-text">ויזמות</span></h1>
+    <p class="cat-hero-desc">מדריכים מעשיים, טיפים חכמים וכלים לבניית עסק מצליח — כי את יכולה לעשות את זה</p>
+  </div>
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#FBF6FE" d="M0,56 C360,80 1080,20 1440,56 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<section id="main-content">
+  <div class="container">
+    <div class="content-layout">
+
+      <!-- ===== MAIN COLUMN ===== -->
+      <main>
+
+        <!-- FEATURED -->
+        <div class="featured-card" id="featuredCard" onclick="window.location='posts/esek-viyazmanut-1.html'" tabindex="0" role="button" aria-label="פתחי כתבה מוצגת">
+          <div class="featured-body">
+            <span class="featured-badge">✦ כתבה מובחרת</span>
+            <h2 id="featuredTitle">איך לבנות תכנית עסקית ב-60 דקות שתשנה את כל הכיוון שלך</h2>
+            <p class="excerpt" id="featuredExcerpt">רוב בעלות העסק דוחות את כתיבת תכנית עסקית כי זה נשמע מפחיד ומורכב. האמת? זה לא חייב להיות ככה. במדריך הזה תלמדי לכתוב תכנית עסקית שמתאימה בדיוק לך — ממוקדת, מעשית ופשוטה ליישום.</p>
+            <div class="featured-footer">
+              <div class="featured-author">
+                <div class="avatar">מ</div>
+                <span>מיכל לוי</span>
+              </div>
+              <div class="featured-meta">
+                <span>⏱ 8 דק׳ קריאה</span>
+                <span>📅 12 בינואר 2024</span>
+              </div>
+              <span class="read-more">קרא עוד →</span>
+            </div>
+          </div>
+          <div class="featured-thumb" style="background: linear-gradient(135deg, #2D1050 0%, #6B2D7C 100%)">
+            💼
+          </div>
+        </div>
+
+        <!-- FILTER TAGS -->
+        <div class="filter-bar">
+          <span class="filter-label">סננ לפי:</span>
+          <button class="tag-btn active" onclick="filterByTag('הכל', this)">הכל</button>
+          <button class="tag-btn" onclick="filterByTag('בניית עסק', this)">בניית עסק</button>
+          <button class="tag-btn" onclick="filterByTag('פיננסים', this)">פיננסים</button>
+          <button class="tag-btn" onclick="filterByTag('שיווק', this)">שיווק</button>
+          <button class="tag-btn" onclick="filterByTag('ניהול זמן', this)">ניהול זמן</button>
+          <button class="tag-btn" onclick="filterByTag('לקוחות', this)">לקוחות</button>
+        </div>
+
+        <!-- BLOG GRID -->
+        <div class="blog-grid" id="blogGrid"></div>
+
+        <!-- NO RESULTS -->
+        <div id="noResults">
+          <span class="no-res-icon">🔍</span>
+          <p>לא נמצאו כתבות בנושא זה</p>
+        </div>
+
+        <!-- LOAD MORE -->
+        <div class="load-more-wrap">
+          <button class="btn-outline" id="loadMoreBtn" onclick="loadMore()">טעני עוד כתבות ↓</button>
+        </div>
+
+      </main>
+
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar">
+
+        <!-- SEARCH -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">🔍 חיפוש כתבות</div>
+          <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="חפשי כתבה..." oninput="searchPosts(this.value)">
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <!-- NEWSLETTER MINI -->
+        <div class="sidebar-box nl-mini">
+          <div class="sidebar-title">📬 הצטרפי לניוזלטר</div>
+          <p>הצטרפי ל-5,000+ נשים יזמיות שמקבלות תוכן מעצים ישירות למייל</p>
+          <input type="email" id="sideNlEmail" placeholder="המייל שלך...">
+          <div class="nl-consent">
+            <input type="checkbox" id="sideNlConsent" />
+            <label for="sideNlConsent">אני מסכימה לקבל עדכונים ותוכן שיווקי. <a href="bezchut-atzmech.html#privacy" target="_blank">מדיניות פרטיות</a></label>
+          </div>
+          <button onclick="handleSideNl(event)">הצטרפי עכשיו ✦</button>
+        </div>
+
+        <!-- OTHER CATEGORIES -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">📂 קטגוריות נוספות</div>
+          <div class="other-cats">
+            <a href="kaspim-vefinansim.html" class="other-cat">
+              <span class="other-cat-icon">💰</span>
+              <span class="other-cat-name">כספים ופיננסים</span>
+              <span class="other-cat-count">8</span>
+            </a>
+            <a href="marketing-digital.html" class="other-cat">
+              <span class="other-cat-icon">📱</span>
+              <span class="other-cat-name">מרקטינג דיגיטלי</span>
+              <span class="other-cat-count">15</span>
+            </a>
+            <a href="briut-veravaha.html" class="other-cat">
+              <span class="other-cat-icon">🌿</span>
+              <span class="other-cat-name">בריאות ורווחה</span>
+              <span class="other-cat-count">10</span>
+            </a>
+            <a href="manhigut-nashit.html" class="other-cat">
+              <span class="other-cat-icon">✨</span>
+              <span class="other-cat-name">מנהיגות נשית</span>
+              <span class="other-cat-count">7</span>
+            </a>
+            <a href="lmida-vetzmikha.html" class="other-cat">
+              <span class="other-cat-icon">🎓</span>
+              <span class="other-cat-name">למידה וצמיחה</span>
+              <span class="other-cat-count">9</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- POPULAR POSTS -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">🔥 כתבות פופולריות</div>
+          <div class="popular-list" id="popularList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- AFFILIATE SPOT -->
+        <div class="sidebar-box affiliate-box">
+          <span class="aff-badge">✦ ממליצות</span>
+          <span class="aff-icon">📧</span>
+          <h4>כלי לניהול ניוזלטר</h4>
+          <p>הפלטפורמה שאנחנו משתמשות בה לניהול רשימות התפוצה שלנו. פשוטה, עוצמתית ועם גרסה חינמית מדהימה.</p>
+          <a href="#" class="aff-link">גלי עוד ←</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="bezchut-atzmech.html" class="logo">בזכות <span class="gold">עצמך</span> ✦</a>
+        <p>פורטל תוכן לנשים יזמיות בישראל. כי כל אישה יכולה להיות בזכות עצמך שחלמה עליו.</p>
+        <div class="socials">
+          <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="social-btn" aria-label="Facebook">👥</a>
+          <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>תוכן</h4>
+        <ul class="footer-links">
+          <li><a href="bezchut-atzmech.html#blog">בלוג</a></li>
+          <li><a href="bezchut-atzmech.html#categories">נושאים</a></li>
+          <li><a href="all-posts.html">מדריכים</a></li>
+          <li><a href="#">פודקאסט</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>כלים</h4>
+        <ul class="footer-links">
+          <li><a href="bezchut-atzmech.html#resources">כלים מומלצים</a></li>
+          <li><a href="resources.html">ספרים</a></li>
+          <li><a href="course.html">קורסים</a></li>
+          <li><a href="resources.html">תבניות חינם</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>אודות</h4>
+        <ul class="footer-links">
+          <li><a href="bezchut-atzmech.html#about">מי אנחנו</a></li>
+          <li><a href="#">צרי קשר</a></li>
+          <li><a href="#">כתבי עבורנו</a></li>
+          <li><a href="#">מדיניות פרטיות</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 בזכות עצמך · כל הזכויות שמורות</p>
+      <p>נבנה באהבה עבור נשים יזמיות ✦</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">↑</button>
+
+<!-- ==================== MODAL ==================== -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleModalClick(event)">
+  <div class="modal-box">
+    <div class="modal-head" id="modalHead">
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      <span class="cat-tag" id="mCat">עסקים ויזמות</span>
+      <h2 id="mTitle"></h2>
+      <p class="modal-meta" id="mMeta"></p>
+    </div>
+    <div class="modal-body-content">
+      <div class="content-placeholder" id="mBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+/* ---- ALL POSTS ---- */
+const allPosts = [
+  {
+    id: 1,
+    tags: ["בניית עסק"],
+    icon: "💼",
+    bg: "linear-gradient(135deg, #2D1050 0%, #6B2D7C 100%)",
+    title: "איך לבנות תכנית עסקית ב-60 דקות שתשנה את כל הכיוון שלך",
+    excerpt: "רוב בעלות העסק דוחות את כתיבת תכנית עסקית כי זה נשמע מפחיד. האמת? זה לא חייב להיות ככה. מדריך מעשי לכתיבת תכנית עסקית פשוטה ויעילה.",
+    author: "מיכל ל.",
+    read: "8 דק׳ קריאה",
+    date: "12 בינואר 2024",
+    featured: true,
+    content: `
+<h2>למה בכלל צריך תכנית עסקית?</h2>
+<p>בואי נדבר בגובה העיניים: רוב הנשים היזמיות שאני מכירה דוחות את כתיבת התכנית העסקית כי זה נשמע כמו משהו גדול, מפחיד ומסובך. אבל האמת? תכנית עסקית היא בסך הכל מפה. היא לא צריכה להיות מסמך של 50 עמודים — היא צריכה להיות כלי שעוזר לך להבין לאן את הולכת ואיך את מתכוונת להגיע לשם.</p>
+<p>תכנית עסקית טובה עושה שלושה דברים: היא <strong>מחדדת את החזון שלך</strong>, היא <strong>חושפת נקודות עיוורות</strong> שלא חשבת עליהן, והיא <strong>נותנת לך ביטחון</strong> כשמישהו שואל אותך "אז מה בדיוק את עושה?"</p>
+
+<h2>שלב 1: הגדרת הליבה — מי את ומה את מציעה (15 דקות)</h2>
+<p>קחי דף ריק ועני על השאלות הבאות בכתב יד, בלי לחשוב יותר מדי:</p>
+<p><strong>מה הבעיה שאת פותרת?</strong> לא "אני עושה עיצוב גרפי", אלא "אני עוזרת לבעלות עסק קטן להיראות מקצועיות ואמינות גם בלי תקציב ענק".</p>
+<p><strong>מי הלקוחה האידיאלית שלך?</strong> תארי אותה: גיל, מצב משפחתי, עיסוק, כאב מרכזי, חלום מרכזי. ככל שתהיי ספציפית יותר, כך השיווק שלך ידבר אליה.</p>
+<p><strong>מה הייחוד שלך?</strong> למה שמישהי תבחר בך ולא במתחרה? זה יכול להיות הניסיון, הגישה, הסגנון, השירות — כל דבר שהוא אותנטית שלך.</p>
+
+<h2>שלב 2: מודל ההכנסות — מאיפה מגיע הכסף (15 דקות)</h2>
+<p>רשמי את <strong>כל מקורות ההכנסה</strong> שלך — הקיימים והפוטנציאליים. לדוגמה: שירות אחד-על-אחד, קורס דיגיטלי, ייעוץ קבוצתי, מוצר פיזי, שותפויות.</p>
+<p>ליד כל מקור, רשמי: מחיר ממוצע, כמות לקוחות ריאלית לחודש, והכנסה חודשית צפויה. <strong>כן, גם אם המספרים קטנים</strong> — זו נקודת ההתחלה שלך.</p>
+<p>עכשיו שאלי את עצמך: האם את סומכת על מקור הכנסה אחד? אם כן — חשבי על דרך להוסיף לפחות מקור אחד נוסף. עסק בריא לא עומד על רגל אחת.</p>
+
+<h2>שלב 3: תכנית פעולה ל-90 יום (20 דקות)</h2>
+<p>שכחי מתכניות שנתיות — <strong>חשבי ב-90 יום</strong>. זה מספיק ארוך לראות תוצאות ומספיק קצר לשמור על מוטיבציה.</p>
+<p>בחרי <strong>3 יעדים מרכזיים</strong> ל-90 הימים הקרובים. לדוגמה: להשיק עמוד אינסטגרם מקצועי, לסגור 5 לקוחות חדשים, או לבנות רשימת תפוצה של 100 נרשמות.</p>
+<p>לכל יעד, פרקי <strong>צעדים שבועיים</strong>: מה את עושה בשבוע הראשון, השני, השלישי. ככה את יודעת בדיוק מה לעשות כל בוקר ראשון כשאת פותחת את המחשב.</p>
+
+<h2>שלב 4: סיכום ובדיקה (10 דקות)</h2>
+<p>קראי את מה שכתבת מההתחלה. שאלי את עצמך: <strong>האם זה מרגיש אמיתי?</strong> האם אני מתרגשת מהכיוון הזה? אם כן — את בדרך הנכונה.</p>
+<p>שלחי את התכנית לחברה קרובה, מנטורית או לקבוצת עסקים שלך. <strong>עין חיצונית</strong> יכולה לזהות הזדמנויות שפספסת או בעיות שלא ראית.</p>
+<p>וזכרי — תכנית עסקית היא <strong>מסמך חי</strong>. היא לא חקוקה בסלע. עדכני אותה כל 90 יום, ותראי איך כל רבעון את מתקדמת צעד נוסף קדימה.</p>
+`
+  },
+  {
+    id: 2,
+    tags: ["בניית עסק"],
+    icon: "🚀",
+    bg: "linear-gradient(135deg, #1A1050 0%, #4B2D8C 100%)",
+    title: "5 כלים דיגיטליים שכל בעלת עסק חייבת להכיר",
+    excerpt: "העולם הדיגיטלי מלא בכלים שיכולים לשנות את האופן שבו את מנהלת את העסק. ריכזנו את 5 הכלים שיחסכו לך שעות בשבוע.",
+    author: "שרה כ.",
+    read: "4 דק׳ קריאה",
+    date: "10 בינואר 2024",
+    content: `
+<h2>מבוא: הכלים שמשנים את כללי המשחק</h2>
+<p>אם את עדיין מנהלת את העסק שלך עם פתקים, קבוצות וואטסאפ ואקסל אחד עמוס — הגיע הזמן לשדרוג. הכלים הדיגיטליים של היום לא דורשים ידע טכני, לא עולים הון, והם יכולים <strong>לחסוך לך שעות של עבודה כל שבוע</strong>.</p>
+<p>ריכזתי עבורך 5 כלים שבעלות עסק מצליחות משתמשות בהם כל יום. כל אחד מהם פותר בעיה שונה — ויחד הם יוצרים מערכת שמאפשרת לך לעבוד חכם, לא קשה.</p>
+
+<h2>1. Canva — עיצוב מקצועי בלי מעצבת</h2>
+<p>Canva היא הכלי שהפך עיצוב גרפי לנגיש לכולן. את יכולה ליצור <strong>פוסטים לרשתות חברתיות, מצגות, הצעות מחיר ואפילו לוגו</strong> — הכל עם תבניות מוכנות שפשוט מתאימים לעסק שלך.</p>
+<p>הגרסה החינמית מספיקה לרוב הצרכים. אם את רוצה גישה לתמונות פרימיום ולכלי הסרת רקע — הגרסה בתשלום שווה כל שקל.</p>
+<p><strong>טיפ:</strong> צרי "ערכת מותג" עם הצבעים והפונטים שלך, וכל עיצוב חדש ייראה אחיד ומקצועי.</p>
+
+<h2>2. Notion — המוח השני שלך</h2>
+<p>Notion הוא שילוב של פנקס רעיונות, מנהל משימות ובסיס נתונים — הכל במקום אחד. את יכולה לנהל בו <strong>לוח תוכן, רשימת לקוחות, מעקב פרויקטים ותהליכי עבודה</strong>.</p>
+<p>מה שמיוחד ב-Notion הוא הגמישות: את בונה את המערכת בדיוק כמו שמתאים לך. יש אינסוף תבניות חינמיות להתחלה, ותוך שבוע את כבר לא מבינה איך הסתדרת בלעדיו.</p>
+<p><strong>טיפ:</strong> התחילי עם תבנית פשוטה ל-To Do, ורק אחרי שבועיים הוסיפי מורכבות. ככה לא תרגישי מוצפת.</p>
+
+<h2>3. Calendly — תיאום פגישות בלי פינג-פונג</h2>
+<p>כמה פעמים שלחת הודעה של "מתי מתאים לך?" ואז עוד אחת ועוד אחת? Calendly פותר את זה. את <strong>מגדירה חלונות זמן פנויים</strong>, שולחת קישור, והלקוחה קובעת לבד.</p>
+<p>הכלי מסתנכרן עם Google Calendar, שולח תזכורות אוטומטיות, ואפילו מאפשר לקבוע פגישות בתשלום. <strong>זה נראה מקצועי ברמה אחרת</strong> ללקוחות.</p>
+
+<h2>4. Monday.com — ניהול פרויקטים בצורה ויזואלית</h2>
+<p>אם את עובדת עם צוות, ספקים או פרילנסריות — Monday הוא הכלי שיביא סדר. את רואה <strong>בלוח אחד מי עושה מה, מה הסטטוס, ומה הדדליין</strong>.</p>
+<p>גם אם את עובדת לבד, Monday עוזר לנהל פרויקטים מורכבים כמו השקת קורס, אירוע או קמפיין שיווקי.</p>
+<p><strong>טיפ:</strong> השתמשי בתצוגת "טיימליין" כדי לראות את כל הפרויקטים שלך על ציר זמן — זה משנה את הפרספקטיבה.</p>
+
+<h2>5. ChatGPT / כלי AI — העוזרת הווירטואלית שלך</h2>
+<p>כלי בינה מלאכותית הם לא עתיד — <strong>הם הווה</strong>. את יכולה להשתמש בהם כדי לכתוב טיוטות למיילים, רעיונות לתוכן, סיכום פגישות, ניסוח הצעות מחיר ועוד.</p>
+<p>המפתח הוא ללמוד <strong>לשאול שאלות טובות</strong> (מה שנקרא "פרומפטים"). ככל שתהיי ספציפית יותר, התוצאה תהיה טובה יותר.</p>
+<p><strong>חשוב:</strong> השתמשי ב-AI ככלי עזר, לא כתחליף לקול האישי שלך. הלקוחות שלך אוהבות אותך בגלל <strong>מי שאת</strong> — לא בגלל טקסט גנרי.</p>
+
+<h2>לסיכום: התחילי עם כלי אחד</h2>
+<p>אל תנסי לאמץ את כל חמשת הכלים ביום אחד. <strong>בחרי את הכלי שפותר את הכאב הכי גדול שלך עכשיו</strong>, למדי אותו לעומק, ורק אחרי שהוא הפך לחלק מהשגרה — הוסיפי את הבא.</p>
+<p>טכנולוגיה צריכה לעבוד בשבילך, לא להפך. והכלים האלו, כשמשתמשים בהם נכון, באמת משנים את הדרך שבה את מנהלת את העסק. לעומק נוסף, ראי גם את המדריכים שלנו על <a href="marketing-digital.html" style="color:var(--primary);font-weight:600;">מרקטינג דיגיטלי</a>.</p>
+`
+  },
+  {
+    id: 3,
+    tags: ["פיננסים"],
+    icon: "💰",
+    bg: "linear-gradient(135deg, #1A3D3A 0%, #2D7C6B 100%)",
+    title: "איך לתמחר את השירות שלך נכון — מדריך מלא",
+    excerpt: "תמחור הוא אחד האתגרים הגדולים ביותר. מדריך שיעזור לך לקבוע מחיר שמשקף את הערך האמיתי שלך ולא מוריד ממנו.",
+    author: "מיכל ל.",
+    read: "7 דק׳ קריאה",
+    date: "8 בינואר 2024",
+    content: `
+<h2>הבעיה: למה תמחור זה כל כך קשה?</h2>
+<p>תמחור הוא אחד הנושאים שמעוררים הכי הרבה חרדה אצל בעלות עסק. את מרגישה שאם תבקשי יותר מדי — תפסידי לקוחות. ואם תבקשי מעט מדי — תשחקי את עצמך. <strong>שתי התחושות האלה אמיתיות</strong>, אבל שתיהן ניתנות לפתרון.</p>
+<p>הבעיה האמיתית היא שרוב הנשים היזמיות מתמחרות לפי מה שהן <strong>מרגישות</strong> שמגיע להן, ולא לפי מה שהשירות שלהן <strong>שווה</strong>. וההבדל בין השניים יכול להיות ענק.</p>
+
+<h2>עיקרון 1: תמחרי לפי ערך, לא לפי שעות</h2>
+<p>אם את מוכרת שעות — את מוגבלת. יש רק 24 שעות ביממה. אבל אם את מוכרת <strong>תוצאה</strong> — אין גבול.</p>
+<p>לדוגמה: מעצבת גרפית שמתמחרת לפי שעה עשויה לבקש 150 שקלים לשעה. אבל אם היא מתמחרת לפי "חבילת מיתוג שלמה שתביא לך לקוחות חדשים" — היא יכולה לבקש 5,000 שקלים, ושתי הצדדים יצאו מרוצים.</p>
+<p><strong>שאלי את עצמך:</strong> מה התוצאה שהלקוחה שלי מקבלת? כמה התוצאה הזו שווה לה?</p>
+
+<h2>עיקרון 2: הכירי את המספרים שלך</h2>
+<p>לפני שאת קובעת מחיר, את חייבת לדעת: <strong>כמה עולה לך לספק את השירות?</strong></p>
+<p>חשבי על: זמן עבודה ישיר, זמן הכנה, כלים ותוכנות, הוצאות קבועות (אינטרנט, חשמל, חשבונאית), מיסים, ובריאות נפשית — כן, גם שחיקה עולה כסף.</p>
+<p>אם אחרי כל ההוצאות נשאר לך פחות מ-50 שקלים לשעה — <strong>המחיר שלך נמוך מדי</strong>. וזו לא דעה, זו מתמטיקה.</p>
+
+<h2>עיקרון 3: בדקי את השוק — אבל אל תיתני לו לקבוע</h2>
+<p>כן, חשוב לדעת מה המתחרות גובות. אבל זה <strong>לא צריך להיות המחיר שלך</strong>. את לא צריכה להיות הכי זולה — את צריכה להיות הכי שווה.</p>
+<p>מחקר שוק טוב כולל: בדיקת 5-8 מתחרות ישירות, הבנת מה כלול בחבילות שלהן, וזיהוי מה <strong>מבדיל אותך</strong>. אם את מציעה יותר ערך — את יכולה לבקש יותר כסף.</p>
+
+<h2>עיקרון 4: בני חבילות, לא שירותים בודדים</h2>
+<p>חבילות עושות כמה דברים קסומים: הן <strong>מעלות את הערך הנתפס</strong>, הן נותנות ללקוחה תחושת "עסקה טובה", והן מאפשרות לך להרוויח יותר על אותו זמן.</p>
+<p>בני שלוש חבילות: בסיסית, מומלצת, ופרימיום. רוב האנשים יבחרו באמצעית — וזה בדיוק מה שרצית.</p>
+<p><strong>דוגמה:</strong> במקום "שיעור יוגה פרטי ב-200 שקלים", הציעי: "חבילת 4 שיעורים + תכנית אימונים אישית + מעקב בוואטסאפ — 700 שקלים". הערך קפץ, והלקוחה מרגישה שהיא מקבלת יותר.</p>
+
+<h2>עיקרון 5: תעלי מחיר כל שנה</h2>
+<p>אם לא העלית מחיר בשנה האחרונה — <strong>את למעשה הורדת מחיר</strong>. האינפלציה, הניסיון שצברת, המוניטין שבנית — כל אלה שווים כסף.</p>
+<p>העלאת מחיר של 10-15% בשנה היא סבירה ומקובלת. הודיעי ללקוחות קיימות חודש מראש, הסבירי את הערך המוסף שהן מקבלות, ותתפלאי כמה מעט אנשים עוזבים.</p>
+
+<h2>לסיכום: את שווה יותר ממה שאת חושבת</h2>
+<p>תמחור נכון הוא לא חמדנות — <strong>הוא כבוד עצמי עסקי</strong>. כשאת מתמחרת נכון, את יכולה לתת שירות טוב יותר, להשקיע בעצמך, ולבנות עסק שמפרנס אותך באמת.</p>
+<p>התחילי היום: קחי את השירות הכי פופולרי שלך, חשבי את כל ההוצאות, ובדקי — האם המחיר שלך באמת משקף את מה שאת נותנת? לעוד כלים וידע פיננסי, בקרי ב<a href="kaspim-vefinansim.html" style="color:var(--primary);font-weight:600;">כספים ופיננסים לעסק שלך</a>.</p>
+`
+  },
+  {
+    id: 4,
+    tags: ["ניהול זמן", "לקוחות"],
+    icon: "⏰",
+    bg: "linear-gradient(135deg, #471A3D 0%, #8C2D7C 100%)",
+    title: "גבולות בריאים בעסק: כן, זה אפשרי — ולא תאבדי לקוחות",
+    excerpt: "הקושי לומר 'לא' ללקוחות, לעבוד מסביב לשעון — הגיע הזמן לדבר על גבולות אמיתיים שמגינים עלייך וגם על העסק.",
+    author: "נועה ב.",
+    read: "5 דק׳ קריאה",
+    date: "5 בינואר 2024",
+    content: `
+<h2>למה גבולות בעסק הם לא מותרות — הם הכרח</h2>
+<p>בואי נתחיל עם האמת הלא נוחה: אם את עונה ללקוחות בשישי בערב, נותנת הנחות כי "מרחמת", ואומרת כן לכל בקשה — <strong>את לא נותנת שירות טוב. את שוחקת את עצמך</strong>.</p>
+<p>גבולות בריאים בעסק הם לא סימן של חוסר מקצועיות. להפך — <strong>הם הסימן הכי ברור למקצועיות</strong>. לקוחות מעריכים בעלת מקצוע שיודעת מה היא מציעה, מתי היא זמינה, ומה עולה כל שינוי.</p>
+
+<h2>גבול 1: שעות זמינות ברורות</h2>
+<p>קבעי שעות עבודה והודיעי עליהן. לדוגמה: "אני זמינה בימים א׳-ה׳ בין 9:00 ל-17:00. הודעות שיתקבלו מחוץ לשעות אלה ייענו ביום העסקים הבא."</p>
+<p>כן, יהיו לקוחות שישלחו הודעה ב-23:00. <strong>את לא חייבת לענות.</strong> ולאנ, הן לא יעזבו. הן ילמדו להתאים את עצמן — בדיוק כמו שהן עושות עם הרופאה, עורכת הדין או הרואה חשבון שלהן.</p>
+
+<h2>גבול 2: מה כלול ומה לא</h2>
+<p>אחד הדברים שהכי מתישים בעלות עסק הוא "scope creep" — כשלקוחה מבקשת "עוד דבר קטן" ו"עוד שינוי אחד" עד שאת עובדת כפול על חצי מהמחיר.</p>
+<p><strong>הפתרון:</strong> הגדירי בכתב, בהצעת המחיר או בחוזה, בדיוק מה כלול. כמה פגישות, כמה סבבי תיקונים, מה הזמנים. כל דבר מעבר — תוספת בתשלום.</p>
+<p>זה לא "חומד כסף". זה כבוד הדדי לזמן של שתיכן.</p>
+
+<h2>גבול 3: תנאי תשלום</h2>
+<p>אם את עדיין רודפת אחרי לקוחות שלא שילמו — <strong>חסר לך גבול קריטי</strong>. קבעי מדיניות תשלום ברורה: מקדמה לפני תחילת עבודה, תשלום מלא תוך X ימים, ריבית פיגורים.</p>
+<p>רשמי את זה בהסכם, שלחי חשבוניות בזמן, ואל תתביישי לשלוח תזכורת. את מנהלת עסק, לא עמותה.</p>
+
+<h2>גבול 4: איך אומרים "לא" בלי להרגיש רע</h2>
+<p>הנוסחה הכי פשוטה: <strong>"אני מעריכה את הפנייה, אבל זה לא מתאים ללוח הזמנים / לתחום ההתמחות שלי כרגע. אשמח להפנות אותך למישהי מעולה."</strong></p>
+<p>לומר "לא" לדבר לא נכון פותח מקום ל"כן" לדבר הנכון. כל פעם שאת אומרת כן למשהו שלא מתאים, את אומרת לא למשהו שכן.</p>
+
+<h2>גבול 5: הפרדה בין חיים אישיים לעסק</h2>
+<p>אם את עובדת מהבית — זה אתגר אמיתי. <strong>קבעי מקום עבודה מוגדר</strong>, שעת סיום ברורה, ויום אחד בשבוע שבו את לא נוגעת בעסק. גם אם זה קשה בהתחלה.</p>
+<p>שחיקה היא לא מדליה של כבוד. היא סימן שמשהו צריך להשתנות. והגבולות שתקבעי היום הם ההשקעה הכי טובה שתעשי לעסק שלך לטווח ארוך.</p>
+
+<h2>מה קורה כשמתחילים לשים גבולות?</h2>
+<p>בהתחלה — קצת לא נוח. יהיו לקוחות שיופתעו. אולי אחת או שתיים יעזבו. אבל <strong>מה שיקרה בפועל</strong>: הלקוחות שיישארו יכבדו אותך יותר, יעריכו את הזמן שלך, וישלמו בשמחה.</p>
+<p>ובמקום לעבוד 12 שעות ביום עם תחושת חנק — תעבדי 7 שעות ביום עם תחושת שליטה. <strong>זה ההבדל בין עסק שעובד עלייך לעסק שעובד בשבילך.</strong> לתכנים נוספים על שחיקה ורווחה, ראי את מדריכי <a href="briut-veravaha.html" style="color:var(--primary);font-weight:600;">בריאות ורווחה</a>.</p>
+`
+  },
+  {
+    id: 5,
+    tags: ["לקוחות"],
+    icon: "🤝",
+    bg: "linear-gradient(135deg, #1A3A47 0%, #2D6B7C 100%)",
+    title: "לקוחות קשים: איך מתמודדים בלי לאבד את שלמות הנפש",
+    excerpt: "כל בעלת עסק פגשה לקוח שגרם לה להטיל ספק בכל. אז מה עושים? מדריך מעשי להתמודדות חכמה עם לקוחות מאתגרים.",
+    author: "דנה מ.",
+    read: "6 דק׳ קריאה",
+    date: "3 בינואר 2024",
+    content: `
+<h2>בואי נודה באמת: לקוחות קשים הם חלק מהעסק</h2>
+<p>לא משנה כמה את מקצועית, כמה השירות שלך טוב, או כמה מדויק התיאום ציפיות — <strong>בשלב כלשהו תפגשי לקוח או לקוחה שיאתגרו אותך</strong>. זה לא אומר שעשית משהו לא בסדר. זה אומר שאת מנהלת עסק עם בני אדם.</p>
+<p>השאלה היא לא "איך למנוע את זה לגמרי" — אלא <strong>איך מתמודדים בצורה שמגנה על העסק ועל שלמות הנפש שלך</strong>.</p>
+
+<h2>סוג 1: הלקוחה שתמיד רוצה עוד</h2>
+<p>"רק עוד שינוי קטן", "את יכולה גם להסתכל על...", "חשבתי שזה כלול." מכירה? הלקוחה הזו לא בהכרח רעה — <strong>פשוט לא הוגדרו לה גבולות ברורים</strong>.</p>
+<p><strong>הפתרון:</strong> חזרי להצעת המחיר. הראי בנימוס מה כלול ומה לא. הציעי הצעת מחיר נפרדת לעבודה הנוספת. רוב הלקוחות יבינו ויכבדו — ואלה שלא, שווה לשחרר.</p>
+
+<h2>סוג 2: הלקוחה שמשנה דעה כל יום</h2>
+<p>היום היא רוצה כחול, מחר ורוד, ובשבוע הבא "בעצם בואי נתחיל מאפס." זה מתיש, יקר, ומוריד מוטיבציה.</p>
+<p><strong>הפתרון:</strong> הגדירי נקודות אישור (milestones). אחרי כל שלב — אישור בכתב. שינויים אחרי אישור עולים כסף. זה לא חוצפה — <strong>זו מקצועיות שמגנה על שתיכן</strong>.</p>
+
+<h2>סוג 3: הלקוחה שלא מרוצה לעולם</h2>
+<p>עשית הכל נכון, עמדת בכל מה שסוכם, אבל היא עדיין לא מרוצה. <strong>לפעמים הבעיה היא לא אצלך.</strong> יש אנשים שהציפיות שלהם לא ריאליסטיות, או שיש להם קושי כללי לקבל ולהעריך.</p>
+<p><strong>הפתרון:</strong> שאלי שאלות ספציפיות: "מה בדיוק לא עובד עבורך? מה היית רוצה לראות אחרת?" אם התשובות עמומות — הציעי סיום מכובד של ההתקשרות. עדיף לסיים בטוב מאשר להימשך בסבל.</p>
+
+<h2>סוג 4: הלקוחה שלא משלמת בזמן</h2>
+<p>זו לא לקוחה קשה — <strong>זו בעיה עסקית</strong> שדורשת מערכת. קבעי תנאי תשלום ברורים מראש: מקדמה, תשלום בסיום, מועד אחרון. שלחי תזכורות אוטומטיות. ואם אחרי שלוש תזכורות אין תשלום — עצרי עבודה והפני לטיפול מתאים.</p>
+
+<h2>הכלל הזהב: לא כל לקוח שווה להישאר</h2>
+<p>הנה חשבון פשוט שבעלות עסק מפספסות: לקוח שגורם לך לעבוד 30% יותר, מורידלך את המצב רוח, וגוזל אנרגיה — <strong>עולה לך יותר ממה שהוא משלם</strong>. גם אם הוא משלם סכום גבוה.</p>
+<p>שחררי לקוחות שלא מתאימים. עשי את זה בכבוד, עם המלצה למישהי אחרת, ותראי איך פתאום יש לך מקום ללקוחות חדשים ונפלאים.</p>
+
+<h2>איך שומרים על שלמות הנפש</h2>
+<p><strong>אל תיקחי את זה אישית.</strong> קל לומר, קשה לעשות — אבל לקוח קשה הוא לא שיקוף שלך. הוא שיקוף של מצב שלו.</p>
+<p>אחרי אינטראקציה מאתגרת: קחי הפסקה. צאי להליכה. דברי עם מישהי שמבינה. <strong>אל תכתבי תשובה כשאת כועסת</strong> — חכי לפחות שעה. התגובה שתשלחי ברוגע תהיה תמיד טובה יותר.</p>
+<p>וזכרי: על כל לקוח קשה, יש עשרות לקוחות שאוהבים את מה שאת עושה. <strong>אל תתני לאחד להאפיל על כל השאר.</strong></p>
+`
+  },
+  {
+    id: 6,
+    tags: ["בניית עסק"],
+    icon: "⚠️",
+    bg: "linear-gradient(135deg, #3A1A10 0%, #8C4A2D 100%)",
+    title: "7 טעויות שבעלות עסק עושות בשנה הראשונה — ואיך להימנע מהן",
+    excerpt: "שנה ראשונה בעסק היא מסע עם הרבה למידה. הנה 7 הטעויות הנפוצות ביותר שנשים יזמיות עושות — וטיפים קונקרטיים להימנע מהן.",
+    author: "שרה כ.",
+    read: "6 דק׳ קריאה",
+    date: "1 בינואר 2024",
+    content: `
+<h2>שנה ראשונה בעסק: שטח מוקשים — או הזדמנות ללמידה</h2>
+<p>השנה הראשונה בעסק היא תקופה מרגשת, אבל גם מלאת מלכודות. החדשות הטובות? <strong>רוב הטעויות האלה ניתנות למניעה</strong> — אם יודעים עליהן מראש. הנה 7 הטעויות הנפוצות ביותר, ולכל אחת פתרון מעשי.</p>
+
+<h2>טעות 1: להתחיל בלי תכנית</h2>
+<p>"אני פשוט אתחיל ואראה מה קורה" — משפט שנשמע אופטימי אבל מסתיים בבלבול. <strong>בלי תכנית בסיסית</strong>, את עובדת קשה בלי כיוון, ואחרי כמה חודשים מרגישה אבודה.</p>
+<p><strong>הפתרון:</strong> לא צריך תכנית של 50 עמודים. מספיקים עמוד אחד עם: מה את מוכרת, למי, במה את שונה, ומה היעדים ל-90 יום. זהו.</p>
+
+<h2>טעות 2: לתמחר נמוך מדי</h2>
+<p>הפחד מדחייה גורם לנשים רבות לקבוע מחירים נמוכים מדי. התוצאה? עבודה מסביב לשעון בשביל רווח מינימלי, <strong>ושחיקה שמביאה לסגירת העסק</strong>.</p>
+<p><strong>הפתרון:</strong> חשבי כמה את צריכה להרוויח בחודש, חלקי במספר הלקוחות שאת יכולה לקחת — וזה המחיר המינימלי שלך. עכשיו הוסיפי 20%. כן, באמת.</p>
+
+<h2>טעות 3: לנסות לעשות הכל לבד</h2>
+<p>את בעלת העסק, המנהלת, המעצבת, הכותבת, מנהלת הרשתות, ומנהלת החשבונות. <strong>זה לא גבורה — זו מתכון לקריסה.</strong></p>
+<p><strong>הפתרון:</strong> זהי את הדבר שלוקח לך הכי הרבה זמן ושאת הכי פחות טובה בו — ותמצאי עוזרת, פרילנסרית, או כלי אוטומטי שיעשה את זה במקומך. ההשקעה תחזיר את עצמה.</p>
+
+<h2>טעות 4: להתעלם מהמספרים</h2>
+<p>"אני לא אוהבת מספרים" היא אמירה שמותר לומר, אבל <strong>אסור לתת לה לנהל את העסק</strong>. אם את לא יודעת כמה נכנס, כמה יוצא, ומה הרווח בפועל — את מנהלת בעיניים עצומות.</p>
+<p><strong>הפתרון:</strong> פתחי אקסל פשוט (או השתמשי בכלי כמו Notion) ועקבי כל חודש: הכנסות, הוצאות, רווח. <strong>20 דקות בחודש</strong> שיכולות להציל את העסק. לעוד מדריכים על ניהול כספים, ראי את הקטגוריה <a href="kaspim-vefinansim.html" style="color:var(--primary);font-weight:600;">כספים ופיננסים לעסק שלך</a>.</p>
+
+<h2>טעות 5: לא להשקיע בשיווק</h2>
+<p>"הלקוחות יגיעו כי השירות שלי טוב." אמנם נחמד להאמין בזה, אבל <strong>אף אחד לא יכול לקנות ממך אם הוא לא יודע שאת קיימת</strong>.</p>
+<p><strong>הפתרון:</strong> הקדישי לפחות 30% מהזמן שלך לשיווק. זה יכול להיות תוכן ברשתות, שיתופי פעולה, שיווק מפה לאוזן, או פרסום ממומן. <strong>בחרי ערוץ אחד והתמקדי בו.</strong> לעוד טיפים ומדריכים, ראי את הקטגוריה שלנו על <a href="marketing-digital.html" style="color:var(--primary);font-weight:600;">שיווק דיגיטלי</a>.</p>
+
+<h2>טעות 6: לחקות מתחרות במקום למצוא את הקול שלך</h2>
+<p>נכנסת לאינסטגרם של מתחרה מצליחה והתחלת לעשות בדיוק מה שהיא עושה. הבעיה? <strong>את נשמעת כמו עותק חיוור שלה</strong>, ולקוחות מרגישים את זה.</p>
+<p><strong>הפתרון:</strong> למדי מאחרות, כן — אבל מצאי את הסיפור הייחודי שלך. מה הביא אותך לתחום הזה? מה הגישה שלך? מה הערכים שלך? <strong>האותנטיות שלך היא הנכס הכי גדול שיש לך.</strong></p>
+
+<h2>טעות 7: לא לבקש עזרה ותמיכה</h2>
+<p>יזמות יכולה להיות בודדה. בלי מסגרת של קולגות, בלי מנהל, בלי צוות — את לבד עם ההחלטות, הפחדים, והספקות.</p>
+<p><strong>הפתרון:</strong> הצטרפי לקהילה של בעלות עסק. מצאי מנטורית. הקיפי את עצמך באנשים שמבינים את מה שאת עוברת. <strong>זו לא חולשה — זו אסטרטגיה.</strong></p>
+
+<h2>לסיכום</h2>
+<p>טעויות הן חלק טבעי מהדרך. אבל טעויות שאפשר למנוע — <strong>שווה למנוע</strong>. קחי את הרשימה הזו, סמני את הטעויות שאת כבר עושה, ובחרי אחת לטפל בה השבוע. צעד אחד בכל פעם — ככה בונים עסק שמחזיק לאורך זמן.</p>
+`
+  },
+  {
+    id: 7,
+    tags: ["פיננסים"],
+    icon: "📊",
+    bg: "linear-gradient(135deg, #102D1A 0%, #2D7C4A 100%)",
+    title: "ניהול תזרים מזומנים — המדריך המלא לבעלות עסק קטן",
+    excerpt: "תזרים מזומנים הוא החמצן של העסק שלך. מדריך מקיף שיסביר לך בדיוק איך לנהל, לתכנן ולא להיתפס לא מוכנה בסוף חודש.",
+    author: "רחל א.",
+    read: "9 דק׳ קריאה",
+    date: "29 בדצמבר 2023",
+    content: `
+<h2>מה זה תזרים מזומנים ולמה זה חשוב?</h2>
+<p>תזרים מזומנים (Cash Flow) הוא פשוט: <strong>כמה כסף נכנס וכמה כסף יוצא מהעסק שלך בפרק זמן מסוים</strong>. זה לא אותו דבר כמו רווח — עסק יכול להיות רווחי על הנייר ועדיין להגיע לסוף חודש בלי כסף בחשבון.</p>
+<p>איך זה קורה? כי לקוחות משלמים באיחור, הוצאות מגיעות לפני ההכנסות, ולפעמים חודש טוב בא אחרי שני חודשים רזים. <strong>תזרים מזומנים הוא החמצן של העסק</strong> — בלעדיו, גם עסק מצליח יכול להיחנק.</p>
+
+<h2>שלב 1: מפי את כל ההכנסות וההוצאות</h2>
+<p>קחי גיליון אלקטרוני (אקסל, Google Sheets, או אפילו מחברת) ורשמי:</p>
+<p><strong>הכנסות קבועות:</strong> לקוחות בריטיינר, מנויים, תשלומים חודשיים קבועים.</p>
+<p><strong>הכנסות משתנות:</strong> פרויקטים חד-פעמיים, מכירות מוצרים, ייעוצים.</p>
+<p><strong>הוצאות קבועות:</strong> שכירות, תוכנות, חשבונאית, ביטוחים, הלוואות.</p>
+<p><strong>הוצאות משתנות:</strong> פרסום, חומרים, נסיעות, ספקים, פרילנסרים.</p>
+<p>רשמי הכל — גם דברים קטנים. <strong>הפתעות בתזרים מזומנים מגיעות תמיד מהדברים ה"קטנים"</strong> שנשכחים.</p>
+
+<h2>שלב 2: בני תחזית חודשית</h2>
+<p>עכשיו שיש לך את כל המספרים, בני <strong>תחזית ל-3 חודשים קדימה</strong>. לכל חודש, רשמי:</p>
+<p>הכנסות צפויות (רק מה שסגור או סביר מאוד) פחות הוצאות צפויות שווה <strong>תזרים נטו</strong>.</p>
+<p>אם התזרים הנטו שלילי — את צריכה לפעול עכשיו, לא בסוף החודש. אם הוא חיובי — מעולה, אבל שמרי רזרבה.</p>
+
+<h2>שלב 3: בני כרית ביטחון</h2>
+<p>כלל האצבע: שמרי בצד <strong>הוצאות של 3 חודשים</strong>. זה הבאפר שמגן עלייך כשלקוח מאחר בתשלום, כשיש חודש חלש, או כשמגיעה הוצאה בלתי צפויה.</p>
+<p>זה לא קורה ביום אחד. התחילי בלשים 10% מכל הכנסה בצד. <strong>אחרי שנה, תודי לעצמך.</strong></p>
+
+<h2>שלב 4: קצרי את זמן הגבייה</h2>
+<p>אחת הבעיות הנפוצות ביותר: את סיימת עבודה, שלחת חשבונית, והכסף מגיע אחרי 30, 45, או אפילו 60 יום. בינתיים, ההוצאות שלך לא מחכות.</p>
+<p><strong>פתרונות מעשיים:</strong></p>
+<p>גבי מקדמה של 50% לפני תחילת עבודה. הציעי הנחה קטנה (3-5%) לתשלום מיידי. שלחי חשבוניות <strong>ביום שסיימת</strong>, לא בסוף החודש. שלחי תזכורת נימוסית 3 ימים לפני מועד התשלום.</p>
+
+<h2>שלב 5: הקטיני הוצאות חכם</h2>
+<p>עברי על כל ההוצאות שלך ושאלי: <strong>האם זה באמת מכניס כסף או חוסך כסף?</strong> אם לא — שקלי לוותר.</p>
+<p>דוגמאות: תוכנה שאת משלמת עליה ולא משתמשת? בטלי. משרד יקר כשאת יכולה לעבוד מהבית? שקלי. פרסום שלא מביא תוצאות? עצרי ובדקי למה.</p>
+<p><strong>חיסכון של 500 שקלים בחודש = 6,000 שקלים בשנה.</strong> זה כסף אמיתי.</p>
+
+<h2>שלב 6: תכנני לעונתיות</h2>
+<p>רוב העסקים הקטנים הם עונתיים — גם אם לא מרגישים ככה. יש חודשים טובים (לפני חגים, תחילת שנה) וחודשים חלשים (קיץ, אוגוסט).</p>
+<p><strong>הפתרון:</strong> זהי את הדפוס שלך (אחרי שנה תראי אותו ברור), ותכנני קדימה. חודש טוב? שמרי יותר. חודש חלש צפוי? צמצמי הוצאות מראש והשקיעי בשיווק לפניו.</p>
+
+<h2>לסיכום: 20 דקות בשבוע שמצילות את העסק</h2>
+<p>ניהול תזרים מזומנים לא דורש להיות רואת חשבון. הוא דורש <strong>20 דקות בשבוע</strong> של התבוננות במספרים: מה נכנס, מה יוצא, ומה צפוי. זה הכלי הכי חשוב שיש לך כבעלת עסק.</p>
+<p>התחילי היום: פתחי גיליון חדש, רשמי את הנתונים של החודש הזה, ותבני תחזית ל-3 חודשים הבאים. <strong>את תופתעי כמה בהירות זה מביא.</strong> לעוד ידע פיננסי לבעלות עסק, ראי את מדריכי <a href="kaspim-vefinansim.html" style="color:var(--primary);font-weight:600;">כספים ופיננסים לעסק שלך</a>.</p>
+`
+  },
+  {
+    id: 8,
+    tags: ["לקוחות", "פיננסים"],
+    icon: "📋",
+    bg: "linear-gradient(135deg, #2D1A4A 0%, #5B3D8C 100%)",
+    title: "איך לכתוב הצעת מחיר שמנצחת את המתחרים",
+    excerpt: "הצעת מחיר טובה היא הרבה יותר מסכום. היא מסמך שמדבר על ערך, בונה אמון ומסביר ללקוח למה דווקא את. למדי לכתוב הצעות שמנצחות.",
+    author: "מיכל ל.",
+    read: "6 דק׳ קריאה",
+    date: "27 בדצמבר 2023",
+    content: `
+<h2>הצעת מחיר היא לא מסמך — היא שיחת מכירה בכתב</h2>
+<p>רוב בעלות העסק כותבות הצעת מחיר כאילו היא רשימת מכולת: שירות, מחיר, תנאים, חתימה. אבל הצעת מחיר טובה היא <strong>הרבה יותר מזה</strong>. היא ההזדמנות שלך לשכנע את הלקוחה שדווקא את היא הבחירה הנכונה.</p>
+<p>הצעת מחיר מנצחת עונה על שלוש שאלות: <strong>למה את?</strong> <strong>מה הלקוחה תקבל?</strong> <strong>למה עכשיו?</strong></p>
+
+<h2>מבנה הצעת מחיר מנצחת</h2>
+<p><strong>פתיחה אישית (2-3 משפטים):</strong> הראי שהקשבת. סכמי את הצורך של הלקוחה במילים שלך. "אחרי השיחה שלנו, הבנתי שאת מחפשת..." — זה מראה שאת לא שולחת תבנית גנרית.</p>
+<p><strong>הבעיה (פסקה אחת):</strong> תארי את המצב הנוכחי של הלקוחה ואת הכאב שהיא מרגישה. כשהיא קוראת את זה ומהנהנת — היא כבר חצי דרך לומר כן.</p>
+<p><strong>הפתרון שלך (הליבה):</strong> הסבירי מה את מציעה, <strong>אבל במונחים של תוצאות</strong>, לא במונחים של תהליך. לא "5 פגישות ייעוץ" אלא "תכנית פעולה ברורה שתביא לך 3 לקוחות חדשים בחודש."</p>
+<p><strong>חבילות (2-3 אפשרויות):</strong> תני ללקוחה לבחור. חבילה בסיסית, מומלצת, ופרימיום. <strong>רוב האנשים בוחרים באמצע</strong> — אז שימי שם את מה שבאמת רצית למכור.</p>
+
+<h2>5 טיפים שמעלים את אחוז הסגירה</h2>
+<p><strong>1. הוסיפי עדויות.</strong> ציטוט אחד מלקוחה מרוצה שווה יותר מעמוד שלם של הסברים. אם יש לך — שלבי 2-3 עדויות קצרות.</p>
+<p><strong>2. צרי דחיפות.</strong> "ההצעה בתוקף עד [תאריך]" או "יש לי מקום לפרויקט אחד נוסף החודש." <strong>דחיפות אמיתית</strong> (לא מזויפת) מזרזת החלטות.</p>
+<p><strong>3. פשטי את ההחלטה.</strong> אם ההצעה ארוכה מדי, מסובכת מדי, או עמוסה במידע — הלקוחה תדחה את ההחלטה. שמרי על פורמט נקי ובהיר.</p>
+<p><strong>4. הוסיפי FAQ.</strong> ענהי מראש על שאלות נפוצות: מה כלול? מה לוח הזמנים? מה קורה אם אני לא מרוצה? <strong>פחות ספקות = יותר סגירות.</strong></p>
+<p><strong>5. סיימי עם קריאה לפעולה ברורה.</strong> לא "צרי קשר אם מעוניינת" אלא "לחצי כאן כדי לקבוע שיחה של 15 דקות ונתחיל." ספציפי, קל, ללא מחויבות.</p>
+
+<h2>טעויות נפוצות בהצעות מחיר</h2>
+<p><strong>לשלוח מחיר בלבד.</strong> מחיר בלי הקשר הופך את השיחה ל"כמה זה עולה" במקום "כמה זה שווה." תמיד הציגי ערך לפני מחיר.</p>
+<p><strong>להתנצל על המחיר.</strong> משפטים כמו "אני יודעת שזה לא זול אבל..." הורסים את הביטחון שלך ושל הלקוחה. <strong>הציגי את המחיר בפשטות ובביטחון.</strong></p>
+<p><strong>לא לעקוב.</strong> שלחת הצעה ולא שמעת חזרה? 80% מהמכירות נסגרות אחרי מעקב. שלחי הודעה נימוסית אחרי 3 ימים: "רציתי לבדוק אם יש שאלות לגבי ההצעה."</p>
+
+<h2>תבנית מהירה להצעת מחיר</h2>
+<p>הנה מבנה שאת יכולה להשתמש בו כבר היום:</p>
+<p><strong>עמוד 1:</strong> פתיחה אישית + הבעיה + הפתרון שלך.</p>
+<p><strong>עמוד 2:</strong> חבילות (בסיסית / מומלצת / פרימיום) עם פירוט מה כלול בכל אחת.</p>
+<p><strong>עמוד 3:</strong> עדויות + FAQ + קריאה לפעולה.</p>
+<p>שלושה עמודים. זה הכל. <strong>פשוט, ממוקד, ומשכנע.</strong></p>
+
+<h2>לסיכום</h2>
+<p>הצעת מחיר טובה היא לא עניין של מזל — היא עניין של <strong>מבנה, ערך, ותקשורת ברורה</strong>. השקיעי שעה בבניית תבנית שמתאימה לך, ותשתמשי בה שוב ושוב. כל הצעה תהיה טובה יותר מהקודמת.</p>
+`
+  },
+  {
+    id: 9,
+    tags: ["שיווק"],
+    icon: "🗣️",
+    bg: "linear-gradient(135deg, #3D2D10 0%, #8C6B2D 100%)",
+    title: "שיווק מפה לאוזן — האסטרטגיה הכי זולה ואפקטיבית שיש",
+    excerpt: "לקוח שמגיע מהמלצה הוא שווה פי 3 מלקוח שמגיע מפרסום. למדי לבנות מערכת שמייצרת המלצות באופן עקבי ומדיד.",
+    author: "דנה מ.",
+    read: "5 דק׳ קריאה",
+    date: "25 בדצמבר 2023",
+    content: `
+<h2>למה שיווק מפה לאוזן עובד טוב יותר מכל פרסומת?</h2>
+<p>חשבי על הפעם האחרונה שקנית משהו בגלל המלצה של חברה. לא חשבת פעמיים, נכון? <strong>המלצה אישית היא הפרסומת הכי חזקה שיש</strong> — כי היא מגיעה עם אמון מובנה שאף קמפיין ממומן לא יכול לקנות.</p>
+<p>מחקרים מראים שלקוח שמגיע מהמלצה <strong>שווה פי 3 מלקוח רגיל</strong>: הוא מגיע עם אמון, מוכן לשלם יותר, ונשאר נאמן יותר זמן. והכי חשוב — הוא עצמו ממליץ הלאה.</p>
+
+<h2>הטעות הגדולה: לחכות שהמלצות יגיעו לבד</h2>
+<p>רוב בעלות העסק חושבות ששיווק מפה לאוזן "פשוט קורה" כשעושים עבודה טובה. זה נכון — אבל רק חלקית. <strong>עבודה טובה היא הבסיס, אבל בלי מערכת</strong> שמעודדת ומנתבת המלצות — את מפסידה פוטנציאל ענק.</p>
+<p>המעבר מ"אני מקווה שימליצו עליי" ל"אני בונה מערכת שמייצרת המלצות" — זה מה שמבדיל עסק שגדל לעסק שנתקע.</p>
+
+<h2>אסטרטגיה 1: בקשי המלצות בזמן הנכון</h2>
+<p>הזמן הכי טוב לבקש המלצה הוא <strong>ברגע שהלקוחה הכי מרוצה</strong>. לא שבוע אחרי, לא חודש אחרי — באותו רגע שהיא אומרת "וואו, תודה!"</p>
+<p>הנה משפט פשוט שעובד: <strong>"שמחה שאהבת! אם את מכירה מישהי שזה יכול לעזור לה — אשמח אם תשתפי אותה."</strong> זהו. לא צריך יותר.</p>
+<p>הפכי את זה לחלק מהתהליך: אחרי כל פרויקט מוצלח, אחרי כל משוב חיובי — המשפט הזה יוצא אוטומטית.</p>
+
+<h2>אסטרטגיה 2: בני תכנית שותפים פשוטה</h2>
+<p>הציעי תמריץ לכל מי שמפנה אלייך לקוחה חדשה. זה לא חייב להיות כסף — זה יכול להיות: <strong>הנחה על השירות הבא, שעת ייעוץ במתנה, מוצר דיגיטלי, או אפילו פינוק קטן שמראה שאת מעריכה</strong>.</p>
+<p>הכי חשוב: <strong>עשי את זה רשמי</strong>. שלחי הודעה ללקוחות הקיימות: "יש לי תכנית הפניות — על כל לקוחה חדשה שתגיע בזכותך, תקבלי [תמריץ]. הנה הלינק / הקוד / הדרך לעשות את זה."</p>
+
+<h2>אסטרטגיה 3: אספי עדויות ותשתמשי בהן</h2>
+<p>עדות כתובה מלקוחה מרוצה היא זהב שיווקי. <strong>אל תחכי שיכתבו לך — בקשי</strong>. אחרי כל פרויקט מוצלח, שלחי הודעה: "אשמח אם תכתבי 2-3 משפטים על החוויה שלך. זה עוזר לי מאוד."</p>
+<p>שימי את העדויות בכל מקום: באתר, באינסטגרם, בהצעות מחיר, בחתימת המייל. <strong>עדויות עובדות כי הן מוכיחות שמישהי אחרת כבר נתנה בך אמון</strong> — והצליחה.</p>
+
+<h2>אסטרטגיה 4: צרי חוויה שאי אפשר לא לספר עליה</h2>
+<p>אנשים מספרים על חוויות יוצאות דופן — לא על שירות "בסדר". מה את יכולה לעשות שיגרום ללקוחה לספר לחברות?</p>
+<p>דוגמאות: <strong>הודעת תודה אישית בכתב יד</strong>, מתנה קטנה ומפתיעה בסוף פרויקט, מעקב אישי שבועיים אחרי הסיום, תוכן בונוס שלא הבטחת.</p>
+<p>המפתח: לעשות משהו <strong>שהלקוחה לא ציפתה לו</strong>. ההפתעה היא מה שגורם לאנשים לדבר.</p>
+
+<h2>אסטרטגיה 5: הפכי לקוחות לשגרירות</h2>
+<p>הלקוחות הכי טובות שלך — אלה שתמיד חוזרות, תמיד מרוצות, תמיד אומרות דברים טובים — <strong>הן השגרירות שלך</strong>. תטפחי את הקשר איתן.</p>
+<p>שלחי להן עדכונים ראשונות, הציעי להן הטבות מיוחדות, שתפי אותן בהחלטות. כשהן מרגישות חלק מהסיפור שלך — <strong>הן ישווקו אותך בהתלהבות שאף סוכנות פרסום לא תייצר</strong>.</p>
+
+<h2>איך מודדים את זה?</h2>
+<p>שיווק מפה לאוזן לא חייב להיות עמום. <strong>מדדי את זה:</strong></p>
+<p>שאלי כל לקוחה חדשה "איך שמעת עליי?" ורשמי. עקבי אחרי קודי הפניה אם יש לך. בדקי כמה לקוחות חדשים מגיעים מהפניות לעומת פרסום. <strong>חשבי את העלות לרכישת לקוח</strong> בכל ערוץ — ותופתעי כמה שיווק מפה לאוזן זול.</p>
+
+<h2>לסיכום: בני מערכת, לא תקווה</h2>
+<p>שיווק מפה לאוזן הוא לא מזל ולא "זה פשוט קורה". <strong>הוא תוצאה של שירות מצוין בתוספת מערכת שמעודדת, מנתבת ומתגמלת המלצות.</strong></p>
+<p>התחילי היום: שלחי הודעה לשלוש הלקוחות הכי מרוצות שלך, בקשי המלצה, וספרי להן על תכנית ההפניות שלך. זה הצעד הראשון למנוע שיווקי שעובד בשבילך גם כשאת ישנה. לאסטרטגיות שיווק נוספות, ראי את מדריכי <a href="marketing-digital.html" style="color:var(--primary);font-weight:600;">שיווק דיגיטלי</a>.</p>
+`
+  }
+];
+
+/* ---- STATE ---- */
+let activeTag = 'הכל';
+let activeSearch = '';
+let shownCount = 6;
+
+/* ---- FILTER + SEARCH LOGIC ---- */
+function getFilteredPosts() {
+  return allPosts.filter(p => {
+    const matchTag = activeTag === 'הכל' || p.tags.includes(activeTag);
+    const matchSearch = !activeSearch || p.title.includes(activeSearch) || p.excerpt.includes(activeSearch);
+    return matchTag && matchSearch;
+  });
+}
+
+/* ---- RENDER ---- */
+function render() {
+  const filtered = getFilteredPosts();
+  const toShow = filtered.slice(0, shownCount);
+  const grid = document.getElementById('blogGrid');
+  const noRes = document.getElementById('noResults');
+  const loadBtn = document.getElementById('loadMoreBtn');
+
+  grid.innerHTML = toShow.map(p => `
+    <a class="blog-card" href="posts/esek-viyazmanut-${p.id}.html">
+      <div class="blog-thumb" style="background:${p.bg}">
+        <span class="blog-thumb-icon">${p.icon}</span>
+        <span class="blog-cat-tag">${p.tags[0]}</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span>📅 ${p.date}</span>
+          <span>⏱ ${p.read}</span>
+        </div>
+        <h3>${p.title}</h3>
+        <p class="blog-excerpt">${p.excerpt}</p>
+        <div class="blog-foot">
+          <div class="blog-author">
+            <div class="avatar">${p.author.charAt(0)}</div>
+            ${p.author}
+          </div>
+          <span class="read-more">קרא עוד →</span>
+        </div>
+      </div>
+    </a>
+  `).join('');
+
+  noRes.style.display = (toShow.length === 0) ? 'block' : 'none';
+  loadBtn.style.display = (filtered.length > shownCount) ? 'inline-block' : 'none';
+}
+
+/* ---- FILTER BY TAG ---- */
+function filterByTag(tag, btn) {
+  activeTag = tag;
+  activeSearch = '';
+  document.getElementById('searchInput').value = '';
+  shownCount = 6;
+  document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+
+/* ---- SEARCH ---- */
+function searchPosts(query) {
+  activeSearch = query.trim();
+  activeTag = 'הכל';
+  shownCount = 6;
+  document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.tag-btn').classList.add('active');
+  render();
+}
+
+/* ---- LOAD MORE ---- */
+function loadMore() {
+  shownCount += 3;
+  render();
+}
+
+/* ---- POPULAR POSTS ---- */
+function renderPopular() {
+  const popular = allPosts.slice(0, 4);
+  document.getElementById('popularList').innerHTML = popular.map(p => `
+    <a class="popular-item" href="posts/esek-viyazmanut-${p.id}.html">
+      <div class="popular-thumb" style="background:${p.bg}">${p.icon}</div>
+      <div class="popular-info">
+        <div class="popular-title">${p.title}</div>
+        <div class="popular-read">⏱ ${p.read}</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+/* ---- MODAL ---- */
+function openPost(id) {
+  window.location = 'posts/esek-viyazmanut-' + id + '.html';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function handleModalClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ---- STARS ---- */
+function createStars() {
+  const c = document.getElementById('starsEl');
+  for (let i = 0; i < 60; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const sz = Math.random() * 2.2 + 0.6;
+    s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${(Math.random()*3+2).toFixed(1)}s;--delay:${(Math.random()*4).toFixed(1)}s;--min-op:${(Math.random()*0.3+0.1).toFixed(2)};`;
+    c.appendChild(s);
+  }
+}
+
+/* ---- SCROLL ---- */
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  document.getElementById('mainHeader').classList.toggle('scrolled', y > 40);
+  document.getElementById('scrollTopBtn').classList.toggle('show', y > 350);
+}, { passive: true });
+
+/* ---- MOBILE NAV ---- */
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.toggle('open');
+});
+function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+/* ---- SIDEBAR NEWSLETTER ---- */
+function handleSideNl(event) {
+  event.preventDefault();
+  const btn = event.target;
+  const input = document.getElementById('sideNlEmail');
+  const consent = document.getElementById('sideNlConsent');
+  if (!input.value || !input.value.includes('@')) { input.style.borderColor = '#e74c3c'; return; }
+  if (!consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
+  input.style.borderColor = '';
+  btn.textContent = '✓ נרשמת!';
+  btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+  btn.disabled = true;
+  input.value = '';
+  setTimeout(() => { btn.textContent = 'הצטרפי עכשיו ✦'; btn.style.background = ''; btn.disabled = false; }, 4500);
+}
+
+/* ---- INIT ---- */
+document.addEventListener('DOMContentLoaded', () => {
+  createStars();
+  render();
+  renderPopular();
+});
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>

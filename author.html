@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מיכל לוי | בזכות עצמך</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #6B2D7C;
+      --primary-dark: #4A1A57;
+      --primary-light: #9B5DAC;
+      --accent: #C9A84C;
+      --bg: #FBF6FE;
+      --card-bg: #FFFFFF;
+      --text: #1A1A2E;
+      --text-muted: #6B6B8A;
+      --border: #E8DFF5;
+      --nav-h: 70px;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(107,45,124,0.10);
+      --shadow-hover: 0 8px 40px rgba(107,45,124,0.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Assistant', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; direction: rtl; min-height: 100vh; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    header { position: fixed; top: 0; right: 0; left: 0; z-index: 100; height: var(--nav-h); background: rgba(255,255,255,0.97); box-shadow: 0 2px 20px rgba(107,45,124,0.12); backdrop-filter: blur(12px); }
+    nav { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; gap: 20px; }
+    .logo { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 4px; margin-right: auto; }
+    .nav-links a { padding: 8px 14px; border-radius: 8px; font-size: .9rem; font-weight: 600; color: var(--text-muted); transition: all .2s; }
+    .nav-links a:hover { background: #F0E8F8; color: var(--primary); }
+    .nav-cta { background: var(--accent) !important; color: #fff !important; border-radius: 50px !important; padding: 8px 20px !important; font-weight: 700 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--primary); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: var(--nav-h); right: 0; left: 0; background: rgba(255,255,255,0.98); padding: 20px 24px; box-shadow: 0 8px 32px rgba(107,45,124,0.15); z-index: 99; flex-direction: column; gap: 8px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 12px 16px; border-radius: 10px; font-weight: 600; color: var(--text); }
+    .mobile-menu a:hover { background: #F0E8F8; color: var(--primary); }
+
+    /* HERO BANNER */
+    .author-hero {
+      background: linear-gradient(135deg, #1A0528 0%, #2D0A45 40%, #0D1040 100%);
+      padding: calc(var(--nav-h) + 60px) 24px 0;
+      position: relative; overflow: hidden;
+    }
+    .hero-stars { position: absolute; inset: 0; pointer-events: none; }
+    .star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle 3s ease-in-out infinite; }
+    @keyframes twinkle { 0%,100%{opacity:.2;transform:scale(1);} 50%{opacity:.8;transform:scale(1.3);} }
+
+    .hero-inner {
+      max-width: 900px; margin: 0 auto;
+      display: flex; align-items: flex-end; gap: 40px;
+      position: relative; z-index: 1;
+    }
+    .author-avatar-wrap { flex-shrink: 0; text-align: center; }
+    .author-avatar {
+      width: 140px; height: 140px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4.5rem; border: 4px solid rgba(255,255,255,0.2);
+      box-shadow: 0 0 40px rgba(201,168,76,0.4);
+      animation: avatarPulse 4s ease-in-out infinite;
+    }
+    @keyframes avatarPulse { 0%,100%{box-shadow:0 0 40px rgba(201,168,76,0.4);} 50%{box-shadow:0 0 60px rgba(201,168,76,0.7);} }
+    .author-verified {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.5);
+      border-radius: 50px; padding: 4px 12px; font-size: .78rem;
+      color: var(--accent); font-weight: 700; margin-top: 10px;
+    }
+
+    .author-info { flex: 1; padding-bottom: 32px; }
+    .author-breadcrumb { font-size: .82rem; color: rgba(255,255,255,0.5); margin-bottom: 10px; }
+    .author-breadcrumb a { color: rgba(255,255,255,0.5); transition: color .2s; }
+    .author-breadcrumb a:hover { color: #fff; }
+    .author-name {
+      font-family: 'Heebo', sans-serif; font-size: clamp(2rem,4vw,3rem);
+      font-weight: 900; color: #fff; margin-bottom: 4px;
+    }
+    .author-title { color: var(--accent); font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+    .author-bio-short { color: rgba(255,255,255,0.75); font-size: .95rem; max-width: 560px; line-height: 1.7; margin-bottom: 20px; }
+    .author-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .author-tag {
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px; padding: 5px 14px; font-size: .8rem;
+      color: rgba(255,255,255,0.8); font-weight: 600;
+    }
+    .author-socials { display: flex; gap: 10px; }
+    .social-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px; padding: 7px 16px; font-size: .82rem;
+      color: rgba(255,255,255,0.8); font-weight: 600; transition: all .2s; cursor: pointer;
+    }
+    .social-btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--card-bg); border-top: 3px solid var(--accent);
+      box-shadow: 0 4px 24px rgba(107,45,124,0.12);
+    }
+    .stats-inner {
+      max-width: 900px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item {
+      padding: 22px 16px; text-align: center; position: relative;
+    }
+    .stat-item:not(:last-child)::after {
+      content: ''; position: absolute; left: 0; top: 20%; bottom: 20%;
+      width: 1px; background: var(--border);
+    }
+    .stat-num {
+      font-family: 'Heebo', sans-serif; font-size: 1.7rem;
+      font-weight: 900; color: var(--primary); display: block;
+    }
+    .stat-label { font-size: .78rem; color: var(--text-muted); font-weight: 600; }
+
+    /* MAIN LAYOUT */
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; display: grid; grid-template-columns: 1fr 300px; gap: 40px; }
+
+    /* POSTS SECTION */
+    .section-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+    .section-heading { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--text); }
+    .section-heading span { color: var(--primary); }
+
+    /* Filter bar */
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; align-items: center; }
+    .filter-label { font-size: .82rem; color: var(--text-muted); font-weight: 600; }
+    .filter-pill {
+      padding: 7px 16px; border-radius: 50px; font-size: .83rem; font-weight: 600;
+      border: 2px solid var(--border); background: var(--card-bg); color: var(--text-muted);
+      cursor: pointer; transition: all .2s;
+    }
+    .filter-pill.active, .filter-pill:hover { border-color: var(--primary); background: var(--primary); color: #fff; }
+
+    /* Search in section */
+    .posts-search {
+      display: flex; background: var(--card-bg); border: 2px solid var(--border);
+      border-radius: 50px; overflow: hidden; margin-bottom: 24px; transition: border-color .2s;
+    }
+    .posts-search:focus-within { border-color: var(--primary); }
+    .posts-search input { flex: 1; padding: 11px 18px; border: none; font-family: 'Assistant', sans-serif; font-size: .93rem; background: transparent; color: var(--text); direction: rtl; }
+    .posts-search input:focus { outline: none; }
+    .posts-search button { background: var(--primary); color: #fff; border: none; padding: 11px 18px; cursor: pointer; font-size: .95rem; transition: background .2s; }
+    .posts-search button:hover { background: var(--primary-dark); }
+
+    /* Sort row */
+    .sort-row { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+    .sort-row label { font-size: .83rem; color: var(--text-muted); font-weight: 600; }
+    .sort-select {
+      padding: 8px 14px; border: 2px solid var(--border); border-radius: 50px;
+      font-family: 'Assistant', sans-serif; font-size: .83rem; color: var(--text);
+      background: var(--card-bg); cursor: pointer; transition: border-color .2s;
+    }
+    .sort-select:focus { outline: none; border-color: var(--primary); }
+
+    /* Cards grid */
+    .posts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+    .post-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      border: 1px solid var(--border); overflow: hidden;
+      box-shadow: var(--shadow); transition: all .25s; cursor: pointer;
+      display: flex; flex-direction: column;
+    }
+    .post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(107,45,124,0.3); }
+    .post-thumb {
+      height: 160px; display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; flex-shrink: 0; position: relative;
+    }
+    .post-cat-badge {
+      position: absolute; bottom: 10px; right: 10px;
+      background: rgba(0,0,0,0.5); color: #fff; font-size: .72rem; font-weight: 700;
+      border-radius: 50px; padding: 3px 10px; backdrop-filter: blur(6px);
+    }
+    .post-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+    .post-title { font-family: 'Heebo', sans-serif; font-size: .97rem; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.4; }
+    .post-excerpt { font-size: .84rem; color: var(--text-muted); line-height: 1.6; flex: 1; margin-bottom: 14px; }
+    .post-foot { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .post-read { font-size: .78rem; color: var(--text-muted); }
+    .post-date { font-size: .78rem; color: var(--text-muted); }
+    .post-dot { color: var(--border); }
+    .post-views { font-size: .78rem; color: var(--text-muted); margin-right: auto; }
+
+    /* No results */
+    .no-results { text-align: center; padding: 60px 24px; color: var(--text-muted); }
+    .no-results .no-icon { font-size: 3rem; margin-bottom: 12px; }
+    .no-results h3 { font-size: 1.1rem; color: var(--text); margin-bottom: 8px; }
+
+    /* Load more */
+    .load-more-wrap { text-align: center; margin-top: 32px; }
+    .btn-load {
+      background: transparent; color: var(--primary);
+      border: 2px solid var(--primary); border-radius: 50px;
+      padding: 12px 32px; font-family: 'Assistant', sans-serif;
+      font-weight: 700; font-size: .95rem; cursor: pointer; transition: all .2s;
+    }
+    .btn-load:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
+
+    /* --- SIDEBAR --- */
+    .sidebar { display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      border: 1px solid var(--border); padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .sidebar-title { font-family: 'Heebo', sans-serif; font-size: 1rem; font-weight: 900; color: var(--text); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+
+    /* About card */
+    .about-detail-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .about-detail-list li { display: flex; gap: 10px; align-items: flex-start; font-size: .88rem; color: var(--text-muted); }
+    .about-detail-list li span.icon { font-size: 1.1rem; flex-shrink: 0; }
+
+    /* Categories authored */
+    .cat-list { display: flex; flex-direction: column; gap: 8px; }
+    .cat-row {
+      display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+      border-radius: 10px; border: 1px solid var(--border); cursor: pointer;
+      transition: all .2s; text-decoration: none;
+    }
+    .cat-row:hover { border-color: var(--primary); background: #F8F0FF; }
+    .cat-row-icon { font-size: 1.2rem; }
+    .cat-row-name { font-size: .88rem; font-weight: 600; color: var(--text); flex: 1; }
+    .cat-row-count { font-size: .78rem; color: var(--text-muted); background: var(--bg); padding: 2px 8px; border-radius: 50px; }
+
+    /* Top posts in sidebar */
+    .top-posts-list { display: flex; flex-direction: column; gap: 14px; }
+    .top-post-item { display: flex; gap: 12px; align-items: center; cursor: pointer; }
+    .top-post-item:hover .top-post-title { color: var(--primary); }
+    .top-post-rank {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff; font-size: .78rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .top-post-title { font-size: .85rem; font-weight: 600; color: var(--text); line-height: 1.4; transition: color .2s; }
+    .top-post-read { font-size: .76rem; color: var(--text-muted); }
+
+    /* Newsletter sidebar */
+    .nl-card { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
+    .nl-card .sidebar-title { color: #fff; border-bottom-color: rgba(255,255,255,0.2); }
+    .nl-card p { font-size: .86rem; color: rgba(255,255,255,0.8); margin-bottom: 14px; }
+    .nl-input { width: 100%; padding: 10px 14px; border: none; border-radius: 8px; font-family: 'Assistant', sans-serif; font-size: .9rem; margin-bottom: 10px; direction: rtl; }
+    .nl-input:focus { outline: none; }
+    .nl-btn {
+      width: 100%; background: var(--accent); color: #fff; border: none; border-radius: 50px;
+      padding: 11px; font-family: 'Assistant', sans-serif; font-weight: 700; font-size: .9rem;
+      cursor: pointer; transition: all .2s;
+    }
+    .nl-btn:hover { filter: brightness(1.1); }
+
+    /* FOOTER */
+    footer { background: linear-gradient(135deg,#1A0528 0%,#0D1040 100%); color: rgba(255,255,255,0.5); padding: 40px 24px 20px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+    .footer-brand .logo { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 10px; display: block; }
+    .footer-brand .logo span { color: var(--accent); }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; max-width: 260px; }
+    .footer-col h4 { color: #fff; font-size: .9rem; font-weight: 700; margin-bottom: 14px; }
+    .footer-col a { display: block; font-size: .85rem; margin-bottom: 8px; color: rgba(255,255,255,0.5); transition: color .2s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { text-align: center; font-size: .82rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; }
+
+    @media (max-width: 900px) {
+      .hero-inner { flex-direction: column; align-items: center; text-align: center; }
+      .author-avatar-wrap { padding-bottom: 0; }
+      .author-socials { justify-content: center; }
+      .author-tags { justify-content: center; }
+      .stats-inner { grid-template-columns: repeat(2,1fr); }
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
+      .posts-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .stats-inner { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    }
+  </style>
+  <!-- SEO Meta -->
+  <meta name="description" content="מיכל לוי — מייסדת ועורכת ראשית. יזמית עם 10 שנות ניסיון, בנתה 2 עסקים וכותבת על יזמות נשים." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut-atzmech.co.il/author.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="מיכל לוי | בזכות עצמך" />
+  <meta property="og:description" content="מיכל לוי — מייסדת ועורכת ראשית. יזמית עם 10 שנות ניסיון, בנתה 2 עסקים וכותבת על יזמות נשים." />
+  <meta property="og:url" content="https://bezchut-atzmech.co.il/author.html" />
+  <meta property="og:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="מיכל לוי | בזכות עצמך" />
+  <meta name="twitter:description" content="מיכל לוי — מייסדת ועורכת ראשית. יזמית עם 10 שנות ניסיון, בנתה 2 עסקים וכותבת על יזמות נשים." />
+  <meta name="twitter:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<header>
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span>עצמך</span></a>
+    <div class="nav-links">
+      <a href="esek-viyazmanut.html">עסקים</a>
+      <a href="kaspim-vefinansim.html">כספים</a>
+      <a href="marketing-digital.html">מרקטינג</a>
+      <a href="resources.html">כלים</a>
+      <a href="machshevon-tmhur.html">🧮 מחשבון</a>
+      <a href="about.html">אודות</a>
+      <a href="newsletter.html" class="nav-cta">הצטרפי ✦</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="bezchut-atzmech.html">🏠 דף הבית</a>
+  <a href="esek-viyazmanut.html">💼 עסקים ויזמות</a>
+  <a href="kaspim-vefinansim.html">💰 כספים ופיננסים</a>
+  <a href="marketing-digital.html">📱 מרקטינג דיגיטלי</a>
+  <a href="briut-veravaha.html">🌿 בריאות ורווחה</a>
+  <a href="manhigut-nashit.html">👑 מנהיגות נשית</a>
+  <a href="lmida-vetzmikha.html">📚 למידה וצמיחה</a>
+  <a href="resources.html">🛠️ כלים ומשאבים</a>
+  <a href="about.html">💜 אודות</a>
+</div>
+
+<!-- HERO -->
+<div class="author-hero">
+  <canvas class="hero-stars" id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="author-avatar-wrap">
+      <div class="author-avatar">👩‍💼</div>
+      <div class="author-verified">✦ כותבת מאמתת</div>
+    </div>
+    <div class="author-info">
+      <div class="author-breadcrumb">
+        <a href="bezchut-atzmech.html">בית</a> / <a href="about.html">צוות</a> / מיכל לוי
+      </div>
+      <h1 class="author-name">מיכל לוי</h1>
+      <p class="author-title">מייסדת ועורכת ראשית | יזמת, מאמנת עסקית</p>
+      <p class="author-bio-short">מיכל מלווה נשים יזמיות כבר למעלה מ-10 שנים. היא בנתה ומכרה 2 עסקים, ומאמינה שכל אישה יכולה ליצור חיים מקצועיים שמשקפים את ערכיה. בפורטל היא כותבת על בניית עסק, פיננסים ומנהיגות נשית.</p>
+      <div class="author-tags">
+        <span class="author-tag">💼 בניית עסק</span>
+        <span class="author-tag">💰 פיננסים</span>
+        <span class="author-tag">👑 מנהיגות נשית</span>
+        <span class="author-tag">🌿 בריאות</span>
+        <span class="author-tag">📚 למידה</span>
+      </div>
+      <div class="author-socials">
+        <a class="social-btn" href="#">💼 LinkedIn</a>
+        <a class="social-btn" href="#">📸 Instagram</a>
+        <a class="social-btn" href="#">🐦 Twitter</a>
+        <a class="social-btn" href="about.html#contact">✉️ צרי קשר</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num" id="stat-posts">0</span>
+      <span class="stat-label">כתבות פורסמו</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">98K+</span>
+      <span class="stat-label">צפיות סה״כ</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">★ 4.9</span>
+      <span class="stat-label">דירוג ממוצע</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">10+</span>
+      <span class="stat-label">שנות ניסיון</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="page-wrap">
+
+  <!-- LEFT: POSTS -->
+  <div class="main-col">
+
+    <!-- Filter + search -->
+    <div class="section-top">
+      <h2 class="section-heading">הכתבות של <span>מיכל לוי</span></h2>
+    </div>
+
+    <div class="posts-search">
+      <input type="text" id="search-input" placeholder="חפשי בכתבות של מיכל..." oninput="doSearch(this.value)" />
+      <button onclick="doSearch(document.getElementById('search-input').value)">🔍</button>
+    </div>
+
+    <div class="filter-bar">
+      <span class="filter-label">קטגוריה:</span>
+      <button class="filter-pill active" onclick="filterCat('הכל', this)">הכל</button>
+      <button class="filter-pill" onclick="filterCat('עסקים ויזמות', this)">💼 עסקים</button>
+      <button class="filter-pill" onclick="filterCat('כספים ופיננסים', this)">💰 כספים</button>
+      <button class="filter-pill" onclick="filterCat('מנהיגות נשית', this)">👑 מנהיגות</button>
+      <button class="filter-pill" onclick="filterCat('בריאות ורווחה', this)">🌿 בריאות</button>
+      <button class="filter-pill" onclick="filterCat('למידה וצמיחה', this)">📚 למידה</button>
+    </div>
+
+    <div class="sort-row">
+      <label>מיון:</label>
+      <select class="sort-select" id="sort-select" onchange="doSort(this.value)">
+        <option value="newest">חדשות ראשון</option>
+        <option value="oldest">ישנות ראשון</option>
+        <option value="popular">הכי פופולריות</option>
+        <option value="short">קצרות ראשון</option>
+      </select>
+    </div>
+
+    <div class="posts-grid" id="posts-grid"></div>
+
+    <div class="no-results" id="no-results" style="display:none;">
+      <div class="no-icon">🔍</div>
+      <h3>לא נמצאו כתבות</h3>
+      <p>נסי לחפש במילים אחרות או בחרי קטגוריה אחרת</p>
+    </div>
+
+    <div class="load-more-wrap" id="load-more-wrap" style="display:none;">
+      <button class="btn-load" onclick="loadMore()">טעני עוד כתבות ↓</button>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- About detail -->
+    <div class="sidebar-card">
+      <div class="sidebar-title">על מיכל</div>
+      <ul class="about-detail-list">
+        <li><span class="icon">📍</span><span>תל אביב, ישראל</span></li>
+        <li><span class="icon">🎓</span><span>MBA מאוניברסיטת תל אביב + תואר בכלכלה</span></li>
+        <li><span class="icon">💼</span><span>10+ שנות ניסיון בליווי יזמיות</span></li>
+        <li><span class="icon">🏆</span><span>מייסדת שתי חברות שנמכרו בהצלחה</span></li>
+        <li><span class="icon">🎤</span><span>מרצה בכנסי יזמות ואיפה</span></li>
+        <li><span class="icon">📖</span><span>כותבת ומנחה ״מיינדסט ממון״</span></li>
+      </ul>
+    </div>
+
+    <!-- Categories -->
+    <div class="sidebar-card">
+      <div class="sidebar-title">קטגוריות</div>
+      <div class="cat-list" id="cat-list"></div>
+    </div>
+
+    <!-- Top posts -->
+    <div class="sidebar-card">
+      <div class="sidebar-title">הכתבות הפופולריות</div>
+      <div class="top-posts-list" id="top-posts-list"></div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="sidebar-card nl-card">
+      <div class="sidebar-title">קבלי עדכונים ממיכל</div>
+      <p>כתבות חדשות, טיפים ועצות מקצועיות ישירות למייל שלך.</p>
+      <input class="nl-input" type="email" id="nl-email" placeholder="המייל שלך..." />
+      <button class="nl-btn" onclick="subscribeNL()">הצטרפי ✦</button>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="bezchut-atzmech.html" class="logo">בזכות <span>עצמך</span></a>
+        <p>הפורטל המוביל לנשים יזמיות בישראל — כלים, ידע וקהילה לבניית עסק מצליח.</p>
+      </div>
+      <div class="footer-col">
+        <h4>קטגוריות</h4>
+        <a href="esek-viyazmanut.html">עסקים ויזמות</a>
+        <a href="kaspim-vefinansim.html">כספים ופיננסים</a>
+        <a href="marketing-digital.html">מרקטינג דיגיטלי</a>
+        <a href="briut-veravaha.html">בריאות ורווחה</a>
+        <a href="manhigut-nashit.html">מנהיגות נשית</a>
+        <a href="lmida-vetzmikha.html">למידה וצמיחה</a>
+      </div>
+      <div class="footer-col">
+        <h4>פורטל</h4>
+        <a href="all-posts.html">כל הכתבות</a>
+        <a href="resources.html">כלים מומלצים</a>
+        <a href="newsletter.html">ניוזלטר</a>
+        <a href="about.html">אודות</a>
+        <a href="about.html#contact">צרי קשר</a>
+      </div>
+      <div class="footer-col">
+        <h4>מידע</h4>
+        <a href="#">מדיניות פרטיות</a>
+        <a href="#">תנאי שימוש</a>
+        <a href="#">גילוי נאות</a>
+        <a href="#">מפת אתר</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 בזכות עצמך | כל הזכויות שמורות</div>
+  </div>
+</footer>
+
+<script>
+// ===== DATA =====
+const authorPosts = [
+  // עסקים ויזמות
+  { id:1, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'💼', bg:'linear-gradient(135deg,#6B2D7C,#3A0A5A)', title:'5 שאלות שכל יזמית חייבת לשאול לפני שפותחת עסק', excerpt:'לפני שקופצים למים — יש שאלות שמסדרות לך את הראש ומחסכות שנים של טעויות יקרות.', read:8, date:'2026-03-10', views:3200 },
+  { id:2, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'💼', bg:'linear-gradient(135deg,#5A2068,#2D0845)', title:'איך לתמחר את השירות שלך נכון ולהפסיק להוזיל עצמך', excerpt:'תמחור הוא כלי אסטרטגי — לא מה שמרגיש נוח. הנה השיטה שמשנה הכל.', read:10, date:'2026-02-28', views:5600 },
+  { id:3, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'💼', bg:'linear-gradient(135deg,#6B2D7C,#1A0050)', title:'7 טעויות שבעלות עסק עושות בשנה הראשונה', excerpt:'מניסיון עם מאות לקוחות — אלה הטעויות הכי נפוצות ואיך להימנע מהן מראש.', read:12, date:'2026-01-15', views:8100 },
+  // כספים ופיננסים
+  { id:4, cat:'כספים ופיננסים', catColor:'#1A6B3C', icon:'💰', bg:'linear-gradient(135deg,#1A6B3C,#0A3D20)', title:'ניהול תזרים מזומנים — המדריך המלא לבעלות עסק', excerpt:'תזרים בריא הוא הדם של העסק. כלים פשוטים לניהול נכון — גם בלי רואה חשבון.', read:15, date:'2026-02-20', views:6700 },
+  { id:5, cat:'כספים ופיננסים', catColor:'#1A6B3C', icon:'💰', bg:'linear-gradient(135deg,#0F5C34,#083522)', title:'איך לחסוך לפנסיה כשאת עצמאית: המדריך שאף אחד לא כתב לך', excerpt:'פנסיה לעצמאיות — בלבל, מורכב, חשוב. הנה המדריך בגובה עיניים.', read:11, date:'2026-01-30', views:4300 },
+  { id:6, cat:'כספים ופיננסים', catColor:'#1A6B3C', icon:'💰', bg:'linear-gradient(135deg,#1A6B3C,#2D4A0A)', title:'מה זה מיסוי עסק קטן — ומה שווה לדעת לפני פגישה עם רואה חשבון', excerpt:'מע״מ, מס הכנסה, ביטוח לאומי — בלבלת? קראי קודם.', read:9, date:'2025-12-10', views:3900 },
+  // מנהיגות נשית
+  { id:7, cat:'מנהיגות נשית', catColor:'#8B1A4A', icon:'👑', bg:'linear-gradient(135deg,#8B1A4A,#4A0A28)', title:'גבולות בריאים בעסק — איך להפסיק לאמר ״כן״ לכולם', excerpt:'הגבול הוא לא דחייה — הוא כבוד עצמי. כיצד להציב גבולות בלי אשמה.', read:7, date:'2026-03-05', views:4500 },
+  { id:8, cat:'מנהיגות נשית', catColor:'#8B1A4A', icon:'👑', bg:'linear-gradient(135deg,#7A1540,#3A0820)', title:'אנדרומינגמנט: למה נשים מנהיגות עדיין מוכרחות להוכיח את עצמן', excerpt:'2026 ועדיין. ניתוח של הפער, וכלים לבנות סמכות אותנטית בלי לאבד את עצמך.', read:13, date:'2026-02-14', views:7200 },
+  { id:9, cat:'מנהיגות נשית', catColor:'#8B1A4A', icon:'👑', bg:'linear-gradient(135deg,#8B1A4A,#2D0850)', title:'הסינדרום המתחזה: מי סובלת ממנו ואיך מתגברים', excerpt:'רוב היזמיות חוו את זה. הגיע הזמן לדבר על זה — ולשחרר.', read:8, date:'2026-01-20', views:9300 },
+  // בריאות ורווחה
+  { id:10, cat:'בריאות ורווחה', catColor:'#2A7A3B', icon:'🌿', bg:'linear-gradient(135deg,#2A7A3B,#0A4A1A)', title:'שחיקה יזמית: כיצד לזהות ולהתאושש לפני שזה מאוחר מדי', excerpt:'השחיקה מגיעה בשקט. הנה הסימנים המוקדמים — ו-5 כלים שמחזירים אנרגיה.', read:9, date:'2026-02-10', views:5800 },
+  { id:11, cat:'בריאות ורווחה', catColor:'#2A7A3B', icon:'🌿', bg:'linear-gradient(135deg,#1F6B30,#0A3D18)', title:'שגרת בוקר של יזמית מצליחה — שמתחילה את היום מכוונת', excerpt:'לא ״5 בבוקר קלאב״ — שגרה ריאלית שמכינה אותך ליום פרודוקטיבי.', read:6, date:'2026-01-05', views:4100 },
+  // למידה וצמיחה
+  { id:12, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'📚', bg:'linear-gradient(135deg,#007A8C,#003A45)', title:'5 ספרים שכל יזמית חייבת לקרוא לפני גיל 40', excerpt:'הספרים שהכי השפיעו על הדרך המקצועית שלי — ולמה כל אחד ביוגרפיה אמיתית.', read:7, date:'2026-03-01', views:6100 },
+  { id:13, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'📚', bg:'linear-gradient(135deg,#005F6B,#002A30)', title:'מנטורינג נשי: איך מוצאים מנטורית שמתאימה לך', excerpt:'מנטורית טובה שווה יותר מכל קורס. הנה איך מוצאים, ניגשים ומקיימים את הקשר.', read:10, date:'2026-02-05', views:3400 }
+];
+
+// ===== STATE =====
+let activeCat = 'הכל';
+let sortMode = 'newest';
+let searchQuery = '';
+let shownCount = 8;
+
+// ===== FILTER & SORT =====
+function getFiltered() {
+  let posts = [...authorPosts];
+  if (activeCat !== 'הכל') posts = posts.filter(p => p.cat === activeCat);
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    posts = posts.filter(p =>
+      p.title.toLowerCase().includes(q) ||
+      p.excerpt.toLowerCase().includes(q)
+    );
+  }
+  const sortFns = {
+    newest: (a,b) => b.date.localeCompare(a.date),
+    oldest: (a,b) => a.date.localeCompare(b.date),
+    popular: (a,b) => b.views - a.views,
+    short: (a,b) => a.read - b.read
+  };
+  return posts.sort(sortFns[sortMode] || sortFns.newest);
+}
+
+function renderPosts() {
+  const filtered = getFiltered();
+  const grid = document.getElementById('posts-grid');
+  const noRes = document.getElementById('no-results');
+  const loadWrap = document.getElementById('load-more-wrap');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    noRes.style.display = 'block';
+    loadWrap.style.display = 'none';
+    return;
+  }
+  noRes.style.display = 'none';
+
+  const shown = filtered.slice(0, shownCount);
+  grid.innerHTML = shown.map(p => `
+    <div class="post-card" onclick="window.location.href='post.html'">
+      <div class="post-thumb" style="background:${p.bg}">
+        ${p.icon}
+        <span class="post-cat-badge">${p.cat}</span>
+      </div>
+      <div class="post-body">
+        <h3 class="post-title">${p.title}</h3>
+        <p class="post-excerpt">${p.excerpt}</p>
+        <div class="post-foot">
+          <span class="post-read">⏱ ${p.read} דק׳</span>
+          <span class="post-dot">·</span>
+          <span class="post-date">${formatDate(p.date)}</span>
+          <span class="post-views">👁 ${p.views.toLocaleString('he-IL')}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  loadWrap.style.display = filtered.length > shownCount ? 'block' : 'none';
+  document.getElementById('stat-posts').textContent = authorPosts.length;
+}
+
+function formatDate(d) {
+  const date = new Date(d);
+  return date.toLocaleDateString('he-IL', { day:'numeric', month:'long', year:'numeric' });
+}
+
+function filterCat(cat, btn) {
+  activeCat = cat;
+  shownCount = 8;
+  document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPosts();
+}
+
+function doSearch(q) {
+  searchQuery = q;
+  shownCount = 8;
+  renderPosts();
+}
+
+function doSort(val) {
+  sortMode = val;
+  renderPosts();
+}
+
+function loadMore() {
+  shownCount += 4;
+  renderPosts();
+}
+
+// ===== SIDEBAR: CATEGORIES =====
+function renderCats() {
+  const catMap = {};
+  authorPosts.forEach(p => {
+    catMap[p.cat] = (catMap[p.cat] || 0) + 1;
+  });
+  const catLinks = {
+    'עסקים ויזמות': { icon: '💼', href: 'esek-viyazmanut.html' },
+    'כספים ופיננסים': { icon: '💰', href: 'kaspim-vefinansim.html' },
+    'מנהיגות נשית': { icon: '👑', href: 'manhigut-nashit.html' },
+    'בריאות ורווחה': { icon: '🌿', href: 'briut-veravaha.html' },
+    'למידה וצמיחה': { icon: '📚', href: 'lmida-vetzmikha.html' }
+  };
+  const list = document.getElementById('cat-list');
+  list.innerHTML = Object.entries(catMap).map(([cat, count]) => {
+    const meta = catLinks[cat] || { icon: '📝', href: '#' };
+    return `
+      <a class="cat-row" href="${meta.href}">
+        <span class="cat-row-icon">${meta.icon}</span>
+        <span class="cat-row-name">${cat}</span>
+        <span class="cat-row-count">${count}</span>
+      </a>`;
+  }).join('');
+}
+
+// ===== SIDEBAR: TOP POSTS =====
+function renderTopPosts() {
+  const top4 = [...authorPosts].sort((a,b) => b.views - a.views).slice(0,4);
+  document.getElementById('top-posts-list').innerHTML = top4.map((p,i) => `
+    <div class="top-post-item" onclick="window.location.href='post.html'">
+      <div class="top-post-rank">${i+1}</div>
+      <div>
+        <div class="top-post-title">${p.title}</div>
+        <div class="top-post-read">⏱ ${p.read} דק׳ · 👁 ${p.views.toLocaleString('he-IL')}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ===== NEWSLETTER =====
+function subscribeNL() {
+  const email = document.getElementById('nl-email').value.trim();
+  if (!email || !email.includes('@')) { alert('נא להזין כתובת מייל תקינה.'); return; }
+  document.getElementById('nl-email').value = '';
+  alert('תודה! נרשמת בהצלחה לעדכונים של מיכל 🎉');
+}
+
+// ===== STARS CANVAS =====
+function initStars() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+  const stars = Array.from({ length: 80 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.5 + 0.3,
+    a: Math.random(),
+    speed: Math.random() * 0.008 + 0.003,
+    phase: Math.random() * Math.PI * 2
+  }));
+  function draw(t) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(s => {
+      s.a = 0.2 + 0.6 * Math.abs(Math.sin(t * s.speed + s.phase));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${s.a})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+  window.addEventListener('resize', () => {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  });
+}
+
+// ===== MOBILE MENU =====
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  renderPosts();
+  renderCats();
+  renderTopPosts();
+  initStars();
+});
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>

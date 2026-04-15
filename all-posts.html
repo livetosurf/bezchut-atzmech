@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>כל הכתבות | בזכות עצמך</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #6B2D7C;
+      --primary-dark: #4A1A57;
+      --primary-light: #9B5DAC;
+      --accent: #C9A84C;
+      --accent-dark: #A07830;
+      --bg: #FBF6FE;
+      --card-bg: #FFFFFF;
+      --text: #1A1A2E;
+      --text-muted: #6B6B8A;
+      --border: #E8DFF5;
+      --nav-h: 70px;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(107,45,124,0.10);
+      --shadow-hover: 0 8px 40px rgba(107,45,124,0.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Assistant', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; direction: rtl; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    header { position: fixed; top: 0; right: 0; left: 0; z-index: 100; height: var(--nav-h); background: transparent; transition: background .3s, box-shadow .3s; }
+    header.scrolled { background: rgba(255,255,255,0.97); box-shadow: 0 2px 20px rgba(107,45,124,0.12); backdrop-filter: blur(12px); }
+    nav { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; gap: 20px; }
+    .logo { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; color: #fff; transition: color .3s; }
+    header.scrolled .logo { color: var(--primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 4px; margin-right: auto; }
+    .nav-links a { padding: 8px 14px; border-radius: 8px; font-size: .9rem; font-weight: 600; color: rgba(255,255,255,0.85); transition: all .2s; }
+    header.scrolled .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover { background: rgba(107,45,124,0.1); color: var(--primary); }
+    .nav-cta { background: var(--accent) !important; color: #fff !important; border-radius: 50px !important; padding: 8px 20px !important; font-weight: 700 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: background .3s; }
+    header.scrolled .hamburger span { background: var(--primary); }
+    .mobile-menu { display: none; position: fixed; top: var(--nav-h); right: 0; left: 0; background: rgba(255,255,255,0.98); padding: 20px 24px; box-shadow: 0 8px 32px rgba(107,45,124,0.15); z-index: 99; flex-direction: column; gap: 8px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 12px 16px; border-radius: 10px; font-weight: 600; color: var(--text); }
+    .mobile-menu a:hover { background: #F0E8F8; color: var(--primary); }
+
+    /* HERO */
+    .archive-hero {
+      background: linear-gradient(135deg, #1A0528 0%, #2D0A4A 50%, #0A1A35 100%);
+      padding: calc(var(--nav-h) + 48px) 24px 80px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .hero-bg-grid {
+      position: absolute; inset: 0; opacity: .04;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px),
+                        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px);
+    }
+    .archive-hero .breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); font-size: .82rem; margin-bottom: 18px; justify-content: center; }
+    .archive-hero .breadcrumb a { color: rgba(255,255,255,0.6); transition: color .2s; }
+    .archive-hero .breadcrumb a:hover { color: #fff; }
+    .archive-hero h1 { font-family: 'Heebo', sans-serif; font-size: clamp(2rem,5vw,3rem); font-weight: 900; color: #fff; margin-bottom: 12px; position: relative; }
+    .archive-hero p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; position: relative; }
+    /* Hero search */
+    .hero-search { display: flex; max-width: 520px; margin: 0 auto; background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 50px; overflow: hidden; backdrop-filter: blur(8px); }
+    .hero-search input { flex: 1; padding: 14px 20px; background: transparent; border: none; font-family: 'Assistant', sans-serif; font-size: 1rem; color: #fff; direction: rtl; }
+    .hero-search input::placeholder { color: rgba(255,255,255,0.5); }
+    .hero-search input:focus { outline: none; }
+    .hero-search button { padding: 14px 22px; background: var(--accent); border: none; color: #fff; font-family: 'Assistant', sans-serif; font-weight: 700; font-size: .95rem; cursor: pointer; transition: background .2s; }
+    .hero-search button:hover { background: var(--accent-dark); }
+    .hero-wave { position: absolute; bottom: 0; right: 0; left: 0; }
+    .hero-wave svg { display: block; }
+
+    /* LAYOUT */
+    .page-body { max-width: 1200px; margin: 0 auto; padding: 36px 24px 60px; display: grid; grid-template-columns: 260px 1fr; gap: 36px; align-items: start; }
+
+    /* SIDEBAR FILTERS */
+    .filter-sidebar { position: sticky; top: calc(var(--nav-h) + 16px); display: flex; flex-direction: column; gap: 20px; }
+    .filter-box { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; }
+    .filter-title { font-family: 'Heebo', sans-serif; font-size: .92rem; font-weight: 700; color: var(--text); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #F0E8F8; display: flex; justify-content: space-between; align-items: center; }
+    .filter-reset { font-size: .75rem; font-weight: 600; color: var(--primary); cursor: pointer; }
+    .filter-reset:hover { text-decoration: underline; }
+
+    /* Category checkboxes */
+    .cat-checks { display: flex; flex-direction: column; gap: 8px; }
+    .cat-check-item { display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 6px 8px; border-radius: 8px; transition: background .2s; }
+    .cat-check-item:hover { background: #F8F0FF; }
+    .cat-check-item input[type=checkbox] { appearance: none; width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 5px; cursor: pointer; transition: all .2s; flex-shrink: 0; position: relative; }
+    .cat-check-item input[type=checkbox]:checked { background: var(--primary); border-color: var(--primary); }
+    .cat-check-item input[type=checkbox]:checked::after { content: '✓'; position: absolute; color: #fff; font-size: .7rem; font-weight: 900; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .cat-check-label { display: flex; align-items: center; gap: 7px; font-size: .88rem; font-weight: 600; color: var(--text); flex: 1; cursor: pointer; }
+    .cat-check-count { margin-right: auto; background: #F0E8F8; color: var(--primary); font-size: .72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+
+    /* Sort */
+    .sort-select { width: 100%; padding: 9px 12px; border: 2px solid var(--border); border-radius: 10px; font-family: 'Assistant', sans-serif; font-size: .9rem; color: var(--text); background: var(--bg); cursor: pointer; direction: rtl; }
+    .sort-select:focus { outline: none; border-color: var(--primary); }
+
+    /* Read time filter */
+    .readtime-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rt-pill { border: 1.5px solid var(--border); border-radius: 50px; padding: 5px 12px; font-size: .8rem; font-weight: 600; color: var(--text-muted); cursor: pointer; transition: all .2s; background: var(--card-bg); }
+    .rt-pill:hover, .rt-pill.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    /* MAIN CONTENT */
+    .archive-main {}
+
+    /* Toolbar */
+    .archive-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+    .toolbar-left { display: flex; align-items: center; gap: 10px; }
+    .result-count { font-size: .9rem; color: var(--text-muted); }
+    .result-count strong { color: var(--text); }
+    .active-filters { display: flex; gap: 6px; flex-wrap: wrap; }
+    .active-filter-tag { display: flex; align-items: center; gap: 5px; background: var(--primary); color: #fff; border-radius: 50px; padding: 4px 12px; font-size: .78rem; font-weight: 600; }
+    .active-filter-tag button { background: none; border: none; color: rgba(255,255,255,0.7); cursor: pointer; font-size: .75rem; padding: 0 0 0 4px; display: flex; align-items: center; }
+    .active-filter-tag button:hover { color: #fff; }
+    .view-toggle { display: flex; gap: 4px; }
+    .view-btn { width: 34px; height: 34px; border: 1.5px solid var(--border); border-radius: 8px; background: var(--card-bg); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: .9rem; transition: all .2s; }
+    .view-btn.active, .view-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+    /* Posts grid */
+    .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+    .posts-grid.list-view { grid-template-columns: 1fr; }
+
+    /* Post card */
+    .post-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; cursor: pointer; transition: all .3s; }
+    .post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .pc-thumb { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; }
+    .pc-cat-badge { position: absolute; bottom: 8px; right: 10px; font-size: .7rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; background: rgba(255,255,255,0.9); }
+    .pc-body { padding: 15px 16px; }
+    .pc-title { font-family: 'Heebo', sans-serif; font-size: .95rem; font-weight: 700; line-height: 1.4; margin-bottom: 7px; }
+    .pc-excerpt { color: var(--text-muted); font-size: .82rem; line-height: 1.55; margin-bottom: 10px; }
+    .pc-meta { display: flex; align-items: center; gap: 8px; }
+    .pc-av { width: 24px; height: 24px; border-radius: 50%; background: #F0E8F8; display: flex; align-items: center; justify-content: center; font-size: .8rem; flex-shrink: 0; }
+    .pc-author { font-size: .78rem; font-weight: 600; color: var(--text); cursor: pointer; }
+    .pc-author:hover { color: var(--primary); }
+    .pc-dot { color: var(--border); }
+    .pc-info { font-size: .75rem; color: var(--text-muted); }
+
+    /* List view card */
+    .posts-grid.list-view .post-card { display: grid; grid-template-columns: 180px 1fr; }
+    .posts-grid.list-view .pc-thumb { height: 100%; min-height: 120px; }
+    .posts-grid.list-view .pc-title { font-size: 1rem; }
+    .posts-grid.list-view .pc-excerpt { display: block; }
+
+    /* Empty */
+    .no-posts { text-align: center; padding: 60px 24px; grid-column: 1/-1; color: var(--text-muted); }
+    .no-posts .no-icon { font-size: 3rem; display: block; margin-bottom: 14px; }
+    .no-posts h3 { font-family: 'Heebo', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; color: var(--text); }
+
+    /* PAGINATION */
+    .pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 48px; }
+    .pg-btn { width: 38px; height: 38px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--card-bg); font-family: 'Assistant', sans-serif; font-size: .9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; color: var(--text); }
+    .pg-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .pg-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .pg-btn.disabled { opacity: .4; cursor: not-allowed; }
+    .pg-dots { color: var(--text-muted); padding: 0 4px; }
+
+    /* FEATURED OF THE WEEK */
+    .featured-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #2D0A4A 100%);
+      border-radius: 20px; padding: 24px 28px; margin-bottom: 28px;
+      display: flex; gap: 20px; align-items: center; cursor: pointer;
+      transition: all .2s;
+    }
+    .featured-banner:hover { opacity: .95; transform: translateY(-2px); }
+    .fb-icon { font-size: 3rem; flex-shrink: 0; }
+    .fb-badge { font-size: .72rem; font-weight: 800; background: var(--accent); color: var(--primary-dark); padding: 3px 10px; border-radius: 50px; display: inline-block; margin-bottom: 8px; }
+    .fb-title { font-family: 'Heebo', sans-serif; font-weight: 900; font-size: 1.1rem; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+    .fb-meta { color: rgba(255,255,255,0.6); font-size: .82rem; }
+    .fb-cta { margin-right: auto; background: var(--accent); color: var(--primary-dark); border: none; border-radius: 50px; padding: 10px 20px; font-family: 'Assistant', sans-serif; font-weight: 700; font-size: .88rem; cursor: pointer; white-space: nowrap; transition: all .2s; flex-shrink: 0; }
+    .fb-cta:hover { background: #F0D080; }
+
+    /* NEWSLETTER SIDEBAR */
+    .nl-side { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border-radius: var(--radius); padding: 20px; color: #fff; }
+    .nl-side h3 { font-family: 'Heebo', sans-serif; font-size: .95rem; font-weight: 700; margin-bottom: 6px; }
+    .nl-side p { font-size: .82rem; opacity: .8; margin-bottom: 12px; line-height: 1.5; }
+    .nl-side input { width: 100%; padding: 9px 12px; border-radius: 8px; border: none; font-family: 'Assistant', sans-serif; font-size: .88rem; margin-bottom: 8px; direction: rtl; }
+    .nl-side input:focus { outline: 2px solid var(--accent); }
+    .nl-side button { width: 100%; background: var(--accent); color: var(--primary-dark); border: none; border-radius: 8px; padding: 9px; font-family: 'Assistant', sans-serif; font-weight: 700; font-size: .88rem; cursor: pointer; transition: background .2s; }
+    .nl-side button:hover { background: #F0D080; }
+
+    /* FOOTER */
+    footer { background: linear-gradient(135deg,#1A0528 0%,#0D1040 100%); color: rgba(255,255,255,0.7); padding: 48px 24px 24px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Heebo', sans-serif; font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 12px; }
+    .footer-logo span { color: var(--accent); }
+    .footer-desc { font-size: .9rem; line-height: 1.7; margin-bottom: 16px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: background .2s; }
+    .social-btn:hover { background: var(--primary-light); }
+    .footer-col h4 { font-family: 'Heebo', sans-serif; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .9rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: .85rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.5); transition: color .2s; }
+    .scroll-top { position: fixed; bottom: 28px; left: 28px; z-index: 99; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; border: none; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2); opacity: 0; transition: opacity .3s, transform .3s; display: flex; align-items: center; justify-content: center; }
+    .scroll-top.visible { opacity: 1; }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    @media (max-width: 960px) {
+      .page-body { grid-template-columns: 1fr; }
+      .filter-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; }
+      .posts-grid { grid-template-columns: repeat(2,1fr); }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .posts-grid.list-view .post-card { grid-template-columns: 130px 1fr; }
+    }
+    @media (max-width: 600px) {
+      .posts-grid, .posts-grid.list-view { grid-template-columns: 1fr; }
+      .filter-sidebar { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .posts-grid.list-view .post-card { grid-template-columns: 1fr; }
+      .posts-grid.list-view .pc-thumb { height: 140px; }
+    }
+  </style>
+  <!-- SEO Meta -->
+  <meta name="description" content="54 כתבות מקצועיות לנשים יזמיות: עסקים, כספים, שיווק דיגיטלי, בריאות ומנהיגות נשית." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut-atzmech.co.il/all-posts.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="כל הכתבות | בזכות עצמך" />
+  <meta property="og:description" content="54 כתבות מקצועיות לנשים יזמיות: עסקים, כספים, שיווק דיגיטלי, בריאות ומנהיגות נשית." />
+  <meta property="og:url" content="https://bezchut-atzmech.co.il/all-posts.html" />
+  <meta property="og:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="כל הכתבות | בזכות עצמך" />
+  <meta name="twitter:description" content="54 כתבות מקצועיות לנשים יזמיות: עסקים, כספים, שיווק דיגיטלי, בריאות ומנהיגות נשית." />
+  <meta name="twitter:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span>עצמך</span></a>
+    <div class="nav-links">
+      <a href="esek-viyazmanut.html">עסקים</a>
+      <a href="kaspim-vefinansim.html">כספים</a>
+      <a href="marketing-digital.html">מרקטינג</a>
+      <a href="briut-veravaha.html">בריאות</a>
+      <a href="manhigut-nashit.html">מנהיגות</a>
+      <a href="lmida-vetzmikha.html">למידה</a>
+      <a href="newsletter.html" class="nav-cta">הצטרפי ✦</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="bezchut-atzmech.html">🏠 דף הבית</a>
+  <a href="esek-viyazmanut.html">💼 עסקים ויזמות</a>
+  <a href="kaspim-vefinansim.html">💰 כספים ופיננסים</a>
+  <a href="marketing-digital.html">📱 מרקטינג דיגיטלי</a>
+  <a href="briut-veravaha.html">🌿 בריאות ורווחה</a>
+  <a href="manhigut-nashit.html">👑 מנהיגות נשית</a>
+  <a href="lmida-vetzmikha.html">📚 למידה וצמיחה</a>
+  <a href="resources.html">🛠️ כלים ומשאבים</a>
+  <a href="about.html">💜 אודות</a>
+</div>
+
+<!-- HERO -->
+<section class="archive-hero">
+  <div class="hero-bg-grid"></div>
+  <div class="breadcrumb">
+    <a href="bezchut-atzmech.html">בית</a>
+    <span>›</span>
+    <span>כל הכתבות</span>
+  </div>
+  <h1>כל הכתבות</h1>
+  <p>54 כתבות מקצועיות לנשים יזמיות — חפשי, סנני ומצאי בדיוק מה שאת צריכה</p>
+  <div class="hero-search">
+    <input type="text" id="hero-search" placeholder="חפשי כותרת, נושא, מחברת..." oninput="handleSearch()" />
+    <button onclick="handleSearch()">🔍 חיפוש</button>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" style="width:100%;height:60px">
+      <path d="M0,30 C300,60 900,0 1200,30 L1200,60 L0,60 Z" fill="#FBF6FE"/>
+    </svg>
+  </div>
+</section>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- FILTER SIDEBAR -->
+  <aside class="filter-sidebar">
+    <!-- Categories -->
+    <div class="filter-box">
+      <div class="filter-title">
+        קטגוריות
+        <span class="filter-reset" onclick="resetFilters()">נקי הכל</span>
+      </div>
+      <div class="cat-checks" id="cat-checks"></div>
+    </div>
+
+    <!-- Sort -->
+    <div class="filter-box">
+      <div class="filter-title">מיון</div>
+      <select class="sort-select" id="sort-select" onchange="renderPosts()">
+        <option value="newest">החדשות ביותר</option>
+        <option value="oldest">הישנות ביותר</option>
+        <option value="popular">הפופולריות</option>
+        <option value="short">קריאה קצרה קודם</option>
+      </select>
+    </div>
+
+    <!-- Read time -->
+    <div class="filter-box">
+      <div class="filter-title">זמן קריאה</div>
+      <div class="readtime-pills">
+        <span class="rt-pill active" data-rt="all" onclick="setReadTime('all', this)">הכל</span>
+        <span class="rt-pill" data-rt="short" onclick="setReadTime('short', this)">עד 5 דק׳</span>
+        <span class="rt-pill" data-rt="medium" onclick="setReadTime('medium', this)">5–10 דק׳</span>
+        <span class="rt-pill" data-rt="long" onclick="setReadTime('long', this)">10 דק׳+</span>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="nl-side">
+      <h3>📩 ניוזלטר שבועי</h3>
+      <p>קבלי כל שני כתבה מומלצת וטיפ ישים</p>
+      <input type="email" placeholder="המייל שלך" />
+      <button>הצטרפי →</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <!-- Featured of the week -->
+    <div class="featured-banner" onclick="window.location='post.html'">
+      <span class="fb-icon">📚</span>
+      <div>
+        <span class="fb-badge">✦ כתבת השבוע</span>
+        <div class="fb-title">5 ספרים שכל יזמית חייבת לקרוא לפני שהיא מוותרת</div>
+        <span class="fb-meta">מיכל לוי · 12 דק׳ קריאה · למידה וצמיחה</span>
+      </div>
+      <button class="fb-cta">קראי עכשיו →</button>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="archive-toolbar">
+      <div class="toolbar-left">
+        <span class="result-count" id="result-count">מציג <strong>0</strong> כתבות</span>
+        <div class="active-filters" id="active-filters"></div>
+      </div>
+      <div class="view-toggle">
+        <button class="view-btn active" id="grid-btn" onclick="setView('grid')" title="תצוגת רשת">⊞</button>
+        <button class="view-btn" id="list-btn" onclick="setView('list')" title="תצוגת רשימה">☰</button>
+      </div>
+    </div>
+
+    <!-- Posts grid -->
+    <div class="posts-grid" id="posts-grid"></div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+  </main>
+</div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">בזכות <span>עצמך</span></div>
+        <div class="footer-desc">פורטל התוכן המוביל לנשים יזמיות בישראל.</div>
+        <div class="footer-social">
+          <a class="social-btn" href="#">📸</a>
+          <a class="social-btn" href="#">👥</a>
+          <a class="social-btn" href="#">🎵</a>
+          <a class="social-btn" href="#">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>קטגוריות</h4>
+        <ul>
+          <li><a href="esek-viyazmanut.html">עסקים ויזמות</a></li>
+          <li><a href="kaspim-vefinansim.html">כספים ופיננסים</a></li>
+          <li><a href="marketing-digital.html">מרקטינג דיגיטלי</a></li>
+          <li><a href="briut-veravaha.html">בריאות ורווחה</a></li>
+          <li><a href="manhigut-nashit.html">מנהיגות נשית</a></li>
+          <li><a href="lmida-vetzmikha.html">למידה וצמיחה</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>פורטל</h4>
+        <ul>
+          <li><a href="all-posts.html">כל הכתבות</a></li>
+          <li><a href="resources.html">כלים ומשאבים</a></li>
+          <li><a href="newsletter.html">ניוזלטר</a></li>
+          <li><a href="machshevon-tmhur.html">🧮 מחשבון</a>
+      <a href="about.html">אודות</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>משפטי</h4>
+        <ul>
+          <li><a href="#">תנאי שימוש</a></li>
+          <li><a href="#">פרטיות</a></li>
+          <li><a href="#">נגישות</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 בזכות עצמך. כל הזכויות שמורות.</span>
+      <div style="display:flex;gap:16px">
+        <a href="#">תנאי שימוש</a>
+        <a href="#">פרטיות</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── ALL POSTS DATA ─────────────────────────────────
+const allPosts = [
+  // עסקים ויזמות
+  { id:1, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'💼', bg:'linear-gradient(135deg,#6B2D7C,#3A0A5A)', title:'5 שאלות שכל יזמית חייבת לשאול לפני שפותחת עסק', excerpt:'לפני שמשקיעות זמן וכסף, יש שאלות שאם תענו עליהן — תחסכו שנות כאב.', author:'רינת כהן', authorIcon:'👩‍💼', read:8, date:'2026-03-10', views:3200 },
+  { id:2, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'📋', bg:'linear-gradient(135deg,#4A1A57,#6B2D7C)', title:'איך לכתוב הצעת מחיר שלקוחות אומרים לה כן', excerpt:'הצעת מחיר היא לא רק מספרים — היא סיפור. כך תכתבי אחת שמוכרת.', author:'מיכל לוי', authorIcon:'👩', read:6, date:'2026-03-03', views:4800 },
+  { id:3, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'🤝', bg:'linear-gradient(135deg,#3A0A5A,#4A1A57)', title:'ניהול לקוחות קשים — מדריך הישרדות ליזמית', excerpt:'כל בעלת עסק תפגוש לקוח קשה. הנה איך מתמודדים בלי להרוס את הקשר.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:10, date:'2026-02-24', views:6100 },
+  { id:4, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'📈', bg:'linear-gradient(135deg,#6B2D7C,#9B5DAC)', title:'מה ההבדל בין פרילנסרית לבעלת עסק — ומדוע זה חשוב', excerpt:'שתיהן עובדות עצמאיות — אבל מנהלות את הכסף, הזמן והזהות העסקית בצורה שונה לחלוטין.', author:'רינת כהן', authorIcon:'👩‍💼', read:7, date:'2026-02-17', views:5500 },
+  { id:5, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'⏰', bg:'linear-gradient(135deg,#4A1A57,#2D0A4A)', title:'ניהול זמן לאמא יזמית: שיטות שבאמת עובדות', excerpt:'אין פתרון קסם — אבל יש שיטות שגרמו לנשים שנושאות עסק ומשפחה לנשום.', author:'מיכל לוי', authorIcon:'👩', read:9, date:'2026-02-10', views:7200 },
+  { id:6, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'💡', bg:'linear-gradient(135deg,#9B5DAC,#6B2D7C)', title:'מהרעיון לעסק: המדריך ל-90 הימים הראשונים', excerpt:'90 ימים. ככה בדיוק קוראים לתקופה שמכריעה אם עסק חדש שורד.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:12, date:'2026-02-03', views:4300 },
+  { id:7, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'🎯', bg:'linear-gradient(135deg,#2D0A4A,#4A1A57)', title:'איך להגדיר קהל יעד שמשלם — ולא רק עוקב', excerpt:'1,000 עוקבים שמשלמים שווים יותר מ-100,000 שרק לייקים. כך מוצאים אותם.', author:'נועה גורן', authorIcon:'👩‍💻', read:8, date:'2026-01-27', views:5800 },
+  { id:8, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'📊', bg:'linear-gradient(135deg,#6B2D7C,#4A1A57)', title:'דוח פעילות שבועי — כיצד לדעת אם העסק שלך בריא', excerpt:'3 מספרים שכל בעלת עסק חייבת לעקוב אחריהם כל שבוע — לא יותר.', author:'רינת כהן', authorIcon:'👩‍💼', read:5, date:'2026-01-20', views:3900 },
+  { id:9, cat:'עסקים ויזמות', catColor:'#6B2D7C', icon:'🌟', bg:'linear-gradient(135deg,#4A1A57,#9B5DAC)', title:'בניית שם מקצועי בלי תקציב שיווק', excerpt:'Personal branding לא עולה כסף — רק זמן, עקביות, ואמינות.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-01-13', views:4600 },
+
+  // כספים ופיננסים
+  { id:10, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'💰', bg:'linear-gradient(135deg,#1A6B4A,#0A3A25)', title:'תמחור שירותים — הנוסחה שתפסיקי להתבייש בה', excerpt:'נשים מתמחרות פחות ממה שמגיע להן. זה ממצא שמחקרים מוכיחים שוב ושוב. הנה איך משנים.', author:'ליאת יוסף', authorIcon:'👩', read:9, date:'2026-03-08', views:8200 },
+  { id:11, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'📊', bg:'linear-gradient(135deg,#0A3A25,#1A6B4A)', title:'תזרים מזומנים לעצמאיות: מה, איך ולמה', excerpt:'80% מהעסקים שנסגרים לא נסגרים בגלל חוסר ביקוש — אלא בגלל תזרים שלילי.', author:'ליאת יוסף', authorIcon:'👩', read:10, date:'2026-03-01', views:5400 },
+  { id:12, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'🏦', bg:'linear-gradient(135deg,#1A6B4A,#2D8A60)', title:'חיסכון לפרישה לעצמאית — כל מה שלא לימדו אותך', excerpt:'אין קרן פנסיה אוטומטית, אין מעסיק שתורם. הכל עליך — וזה פחות מפחיד ממה שנשמע.', author:'רינת כהן', authorIcon:'👩‍💼', read:11, date:'2026-02-22', views:4100 },
+  { id:13, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'💳', bg:'linear-gradient(135deg,#2D8A60,#1A6B4A)', title:'מע"מ, ביטוח לאומי ומס הכנסה — מדריך הישרדות', excerpt:'שלושת המסים שכל עצמאית חייבת להכיר — בלי שפה משפטית.', author:'ליאת יוסף', authorIcon:'👩', read:13, date:'2026-02-15', views:9300 },
+  { id:14, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'📈', bg:'linear-gradient(135deg,#0A3A25,#2D8A60)', title:'השקעות ראשונות: איפה מתחילות כשאין הרבה', excerpt:'1,000 ₪ ראשונים להשקעה — מה עושים איתם בישראל של 2026.', author:'רינת כהן', authorIcon:'👩‍💼', read:8, date:'2026-02-08', views:6700 },
+  { id:15, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'🎯', bg:'linear-gradient(135deg,#1A6B4A,#0A3A25)', title:'איך לתמחר עלייה במחיר בלי לאבד לקוחות', excerpt:'העלאת מחיר היא אחת ממיומנויות הליבה של בעלת עסק. הנה הסקריפט.', author:'מיכל לוי', authorIcon:'👩', read:7, date:'2026-02-01', views:5200 },
+  { id:16, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'💡', bg:'linear-gradient(135deg,#2D8A60,#0A3A25)', title:'הוצאות עסקיות שניתן לנכות — רשימה מלאה', excerpt:'ניכויים שהרבה עצמאיות מפספסות — ולכן משלמות מיסים גבוהים מדי.', author:'ליאת יוסף', authorIcon:'👩', read:9, date:'2026-01-25', views:7800 },
+  { id:17, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'🔄', bg:'linear-gradient(135deg,#0A3A25,#1A6B4A)', title:'מה עושים כשלקוח לא משלם — שלב אחר שלב', excerpt:'גבייה זה לא נעים, אבל זו מיומנות שכל יזמית חייבת. הנה הפרוטוקול.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:8, date:'2026-01-18', views:6400 },
+  { id:18, cat:'כספים ופיננסים', catColor:'#1A6B4A', icon:'🌱', bg:'linear-gradient(135deg,#1A6B4A,#2D8A60)', title:'תכנון כלכלי שנתי לעסק עצמאי — תבנית מוכנה', excerpt:'תבנית Excel פשוטה שיזמיות ישראליות השתמשו בה לתכנון 2026.', author:'ליאת יוסף', authorIcon:'👩', read:6, date:'2026-01-11', views:5900 },
+
+  // מרקטינג דיגיטלי
+  { id:19, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'📱', bg:'linear-gradient(135deg,#D64F8C,#8C1A50)', title:'אינסטגרם לעסקים ב-2026 — מה עובד עכשיו', excerpt:'האלגוריתם השתנה שוב. הנה מה שמביא תוצאות בפועל — לא מה שאומרים הגורואים.', author:'נועה גורן', authorIcon:'👩‍💻', read:8, date:'2026-03-09', views:7600 },
+  { id:20, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🎵', bg:'linear-gradient(135deg,#8C1A50,#D64F8C)', title:'TikTok לעסקים ישראלים — המדריך המלא', excerpt:'הפלטפורמה שיזמיות מפחדות ממנה — ואשר שינתה עסקים תוך 30 ימים.', author:'שירי ברק', authorIcon:'👩‍🎨', read:10, date:'2026-03-02', views:9100 },
+  { id:21, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'✍️', bg:'linear-gradient(135deg,#D64F8C,#6B0A40)', title:'כתיבת קופי שמוכר — 7 עקרונות שמשנים את המשחק', excerpt:'קופי לא עוסק בכתיבה — הוא עוסק בהבנת בני אדם. הנה מה שרוב הקורסים לא מלמדים.', author:'נועה גורן', authorIcon:'👩‍💻', read:11, date:'2026-02-23', views:6800 },
+  { id:22, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🔍', bg:'linear-gradient(135deg,#6B0A40,#D64F8C)', title:'SEO לוקאלי לעסקים קטנים — איך מופיעים בגוגל', excerpt:'אם את מתמחה בתל אביב ולא מופיעה בחיפוש גוגל — הנה למה וכיצד לשנות.', author:'שירי ברק', authorIcon:'👩‍🎨', read:9, date:'2026-02-16', views:5300 },
+  { id:23, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'📧', bg:'linear-gradient(135deg,#D64F8C,#8C1A50)', title:'ניהול רשימת תפוצה — הנכס הדיגיטלי שכולן מזניחות', excerpt:'רשימת תפוצה שייכת לך. פייסבוק, אינסטגרם — לא. הנה למה זה חשוב ואיך מתחילים.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-02-09', views:4700 },
+  { id:24, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🤖', bg:'linear-gradient(135deg,#8C1A50,#6B0A40)', title:'AI לשיווק — הכלים שחוסכים שעות כל שבוע', excerpt:'ChatGPT, Canva AI, Midjourney — מה בדיוק לעשות עם כל אחד ולמה זה לא מחליף אותך.', author:'שירי ברק', authorIcon:'👩‍🎨', read:8, date:'2026-02-02', views:8400 },
+  { id:25, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'📊', bg:'linear-gradient(135deg,#D64F8C,#6B0A40)', title:'מדידת תוצאות שיווק — מה לעקוב ואיך לפרש', excerpt:'לייקים הם לא תוצאות. הנה המדדים שבאמת אומרים אם השיווק שלך עובד.', author:'נועה גורן', authorIcon:'👩‍💻', read:9, date:'2026-01-26', views:5100 },
+  { id:26, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🎯', bg:'linear-gradient(135deg,#6B0A40,#8C1A50)', title:'פרסום ממומן בפייסבוק ב-₪500 — אפשרי?', excerpt:'תקציב קטן, מיקוד נכון, תוצאות אמיתיות. הנה הסטרטגיה שעבדה עבורנו.', author:'שירי ברק', authorIcon:'👩‍🎨', read:10, date:'2026-01-19', views:6200 },
+  { id:27, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'💬', bg:'linear-gradient(135deg,#D64F8C,#8C1A50)', title:'שיווק בוואטסאפ — הערוץ שיזמיות מישראל מפספסות', excerpt:'וואטסאפ לעסקים היא פלטפורמה עסקית שלמה. הנה איך מנצלים אותה נכון.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-01-12', views:7900 },
+
+  // בריאות ורווחה
+  { id:28, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'🌿', bg:'linear-gradient(135deg,#2D7A4F,#0A4A25)', title:'שחיקה — כיצד מזהים לפני שמתמוטטים', excerpt:'שחיקה לא מגיעה בין לילה. היא מתפתחת לאט — ויש סימני אזהרה שאפשר ללמוד לזהות.', author:'שירי ברק', authorIcon:'👩‍🎨', read:8, date:'2026-03-07', views:9800 },
+  { id:29, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'😴', bg:'linear-gradient(135deg,#0A4A25,#2D7A4F)', title:'שינה ועסקים — הקשר שאף גורו לא מספר לך עליו', excerpt:'מנהיגים ישנים פחות? לא. מחקרים מראים שהיפך הוא הנכון. הנה על מה שינה עושה למוח.', author:'מיכל לוי', authorIcon:'👩', read:7, date:'2026-02-28', views:6300 },
+  { id:30, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'🧘', bg:'linear-gradient(135deg,#2D7A4F,#1A5A35)', title:'מיינדפולנס לבעלות עסק — 5 דקות שמשנות את היום', excerpt:'לא צריך לשבת שעה. 5 דקות בבוקר עם תרגול נכון מספיקות.', author:'שירי ברק', authorIcon:'👩‍🎨', read:6, date:'2026-02-21', views:5700 },
+  { id:31, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'🏃', bg:'linear-gradient(135deg,#1A5A35,#2D7A4F)', title:'תנועה לאורך יום עבודה מהבית — איך שומרים על הגוף', excerpt:'ישיבה ממושכת היא הסכנה החדשה. הנה מה שעושים כשהמשרד הוא הספה.', author:'מיכל לוי', authorIcon:'👩', read:5, date:'2026-02-14', views:4400 },
+  { id:32, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'🍎', bg:'linear-gradient(135deg,#2D7A4F,#0A4A25)', title:'תזונה ביזמות — מה אוכלים כשאין זמן ויש לחץ', excerpt:'יזמיות רבות מדלגות על ארוחות. הנה מה שזה עושה לריכוז ולאנרגיה — ומה אפשר לעשות.', author:'שירי ברק', authorIcon:'👩‍🎨', read:7, date:'2026-02-07', views:5100 },
+  { id:33, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'💚', bg:'linear-gradient(135deg,#1A5A35,#0A4A25)', title:'גבולות בריאים עם לקוחות — בלי אשמה', excerpt:'הגבולות שאת מציבה ללקוחות מגדירים את איכות חייך. הנה איך עושים את זה בחמש.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:8, date:'2026-01-31', views:7400 },
+  { id:34, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'🌸', bg:'linear-gradient(135deg,#2D7A4F,#1A5A35)', title:'חרדה עסקית — מה היא, ואיך מפחיתים אותה', excerpt:'90% מהיזמיות חוות חרדה עסקית. זה לא חולשה — זה להיות אנושי. הנה מה שעוזר.', author:'מיכל לוי', authorIcon:'👩', read:10, date:'2026-01-24', views:8900 },
+  { id:35, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'🧠', bg:'linear-gradient(135deg,#0A4A25,#2D7A4F)', title:'מנוחה אקטיבית — הסוד של יזמיות שלא נשחקות', excerpt:'מנוחה היא לא עצלות. זו השקעה. הנה איך יזמיות מצליחות בונות מנוחה לתוך השגרה.', author:'שירי ברק', authorIcon:'👩‍🎨', read:6, date:'2026-01-17', views:4900 },
+  { id:36, cat:'בריאות ורווחה', catColor:'#2D7A4F', icon:'⚡', bg:'linear-gradient(135deg,#1A5A35,#2D7A4F)', title:'אנרגיה לאורך כל היום — שגרת הבוקר שעוזרת', excerpt:'הבוקר מכתיב את היום. הנה שגרה של 20 דקות שיזמיות מדווחות שהיא שינתה הכל.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:7, date:'2026-01-10', views:6600 },
+
+  // מנהיגות נשית
+  { id:37, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'👑', bg:'linear-gradient(135deg,#8B1A6B,#5A0A45)', title:'ביטחון עצמי ניתן לבנייה — ולא רק לחיכות', excerpt:'ביטחון הוא מיומנות — לא תכונת אופי. ואפשר לבנות אותו בשיטות מדויקות.', author:'מיכל לוי', authorIcon:'👩', read:9, date:'2026-03-06', views:8700 },
+  { id:38, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'🗣️', bg:'linear-gradient(135deg,#5A0A45,#8B1A6B)', title:'כיצד לדבר בפני קהל בלי להיות מדוגמת', excerpt:'דיבור בפני קהל הוא הפחד מספר 1 בעולם. הנה כיצד הופכים אותו לכוח.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:10, date:'2026-02-27', views:6200 },
+  { id:39, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'🌐', bg:'linear-gradient(135deg,#8B1A6B,#4A0A35)', title:'בניית רשת קשרים מקצועית — כשאת אישה', excerpt:'נטוורקינג עובד אחרת עבור נשים. הנה איך לגשת אליו בצורה שמתאימה לך.', author:'רינת כהן', authorIcon:'👩‍💼', read:8, date:'2026-02-20', views:5800 },
+  { id:40, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'⚖️', bg:'linear-gradient(135deg,#4A0A35,#8B1A6B)', title:'מנהיגות בלי תוקפנות — הסגנון שעובד', excerpt:'אפשר לנהל בחוזקה בלי להיות קשוחה. הנה מה זה אומר בפועל.', author:'מיכל לוי', authorIcon:'👩', read:9, date:'2026-02-13', views:7100 },
+  { id:41, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'💪', bg:'linear-gradient(135deg,#8B1A6B,#5A0A45)', title:'תסמונת המתחזה — מהי וכיצד מתגברים', excerpt:'60% מהנשים בעסקים מדווחות על תחושת מתחזה. את לא לבד — וזה אפשר לשנות.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:11, date:'2026-02-06', views:10200 },
+  { id:42, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'🤝', bg:'linear-gradient(135deg,#5A0A45,#4A0A35)', title:'שיתופי פעולה בין נשים יזמיות — למה ואיך', excerpt:'כשנשים עובדות יחד, כולן מרוויחות. הנה איך יוצרים שיתופי פעולה שמצמיחים.', author:'רינת כהן', authorIcon:'👩‍💼', read:7, date:'2026-01-30', views:5400 },
+  { id:43, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'🎤', bg:'linear-gradient(135deg,#8B1A6B,#4A0A35)', title:'האומץ לבקש — גיוס, העלאה ועזרה', excerpt:'נשים מבקשות פחות. וזה עולה להן הרבה. הנה המיומנות שניתן ללמוד.', author:'מיכל לוי', authorIcon:'👩', read:8, date:'2026-01-23', views:6800 },
+  { id:44, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'✨', bg:'linear-gradient(135deg,#4A0A35,#8B1A6B)', title:'להשפיע בלי להיות "הבוסית הרעה"', excerpt:'השפעה אמיתית לא באה מפחד. הנה מה שנשים מנהיגות עושות אחרת.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:9, date:'2026-01-16', views:5700 },
+  { id:45, cat:'מנהיגות נשית', catColor:'#8B1A6B', icon:'🌟', bg:'linear-gradient(135deg,#8B1A6B,#5A0A45)', title:'קהילת נשים — מדוע היא הנשק הסודי של יזמיות מצליחות', excerpt:'אישה עם קהילה חזקה מאחוריה לא נשחקת לבד. כך בונים קהילה שמחזיקה.', author:'רינת כהן', authorIcon:'👩‍💼', read:7, date:'2026-01-09', views:4900 },
+
+  // למידה וצמיחה
+  { id:46, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'📚', bg:'linear-gradient(135deg,#007A8C,#005A68)', title:'5 ספרים שכל יזמית חייבת לקרוא לפני שהיא מוותרת', excerpt:'ספרים שמשנים את הדרך שבה את רואה את העולם — ואת עצמך כיזמית.', author:'מיכל לוי', authorIcon:'👩', read:12, date:'2026-03-08', views:4820 },
+  { id:47, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'🎓', bg:'linear-gradient(135deg,#1A8C6B,#0A5A40)', title:'איך ללמוד דבר חדש בלי לוותר על השגרה', excerpt:'שיטת ה-micro-learning שעוזרת לאמהות ויזמיות לצמוח מבלי להישחק.', author:'רינת כהן', authorIcon:'👩‍💼', read:8, date:'2026-03-01', views:3900 },
+  { id:48, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'🤝', bg:'linear-gradient(135deg,#8C5A00,#5A3500)', title:'המדריך השלם לבחירת מנטורית עסקית', excerpt:'לא כל מנטורית מתאימה לכל יזמית. כך תמצאי את זאת שתוביל אותך קדימה.', author:'דפנה שפירא', authorIcon:'👩‍🎨', read:10, date:'2026-02-22', views:3100 },
+  { id:49, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'🎙️', bg:'linear-gradient(135deg,#6B2D7C,#3A0A5A)', title:'פודקאסטים לנשים בעסקים — הרשימה המלאה ל-2026', excerpt:'15 פודקאסטים מומלצים בעברית ואנגלית שישמרו אותך מעודכנת.', author:'אסתר מזרחי', authorIcon:'👩', read:7, date:'2026-02-15', views:4200 },
+  { id:50, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'⏱️', bg:'linear-gradient(135deg,#007A5A,#004A35)', title:'למידה מיקרו: 10 דקות ביום שמשנות הכל', excerpt:'לימוד קצר ועקבי אפקטיבי הרבה יותר מלימוד אינטנסיבי ונדיר.', author:'שירי ברק', authorIcon:'👩‍🎨', read:6, date:'2026-02-08', views:3600 },
+  { id:51, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'🤖', bg:'linear-gradient(135deg,#007A8C,#003A45)', title:'איך להשתמש ב-AI ללמידה ופיתוח עצמי', excerpt:'AI הוא מנטור זמין 24/7. כך תנצלי אותו נכון לצמיחה מקצועית ואישית.', author:'נועה גורן', authorIcon:'👩‍💻', read:9, date:'2026-02-01', views:5100 },
+  { id:52, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'🔄', bg:'linear-gradient(135deg,#6B3A2D,#3A1A0A)', title:'להפוך כישלון לשיעור: מתודולוגיה פרקטית', excerpt:'כל כישלון מכיל את הזרעים של ההצלחה הבאה — אם יודעות להסתכל נכון.', author:'רחל עמרני', authorIcon:'👩', read:11, date:'2026-01-25', views:4700 },
+  { id:53, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'🏆', bg:'linear-gradient(135deg,#8C7A00,#5A4A00)', title:'קורסים אונליין שווי כסף — כיצד לבחור', excerpt:'שוק הקורסים מוצף. כך תזהי קורסים שבאמת מלמדים.', author:'ליאת יוסף', authorIcon:'👩', read:8, date:'2026-01-18', views:3800 },
+  { id:54, cat:'למידה וצמיחה', catColor:'#007A8C', icon:'🌱', bg:'linear-gradient(135deg,#2D7A4F,#0A4A25)', title:'יצירת הרגל למידה יומי: השלבים שעובדים', excerpt:'הרגלים לא נוצרים ברצון — הם נוצרים בתכנון נכון. הנה הנוסחה.', author:'מיכל לוי', authorIcon:'👩', read:7, date:'2026-01-11', views:3400 }
+];
+
+// ── STATE ──────────────────────────────────────────
+const categories = ['עסקים ויזמות','כספים ופיננסים','מרקטינג דיגיטלי','בריאות ורווחה','מנהיגות נשית','למידה וצמיחה'];
+const catLinks = { 'עסקים ויזמות':'esek-viyazmanut.html','כספים ופיננסים':'kaspim-vefinansim.html','מרקטינג דיגיטלי':'marketing-digital.html','בריאות ורווחה':'briut-veravaha.html','מנהיגות נשית':'manhigut-nashit.html','למידה וצמיחה':'lmida-vetzmikha.html' };
+
+let selectedCats = new Set();
+let sortMode = 'newest';
+let readTimeFilter = 'all';
+let searchQuery = '';
+let currentPage = 1;
+let viewMode = 'grid';
+const PAGE_SIZE = 12;
+
+// ── INIT CHECKBOXES ───────────────────────────────
+function buildCatChecks() {
+  const catEmojis = { 'עסקים ויזמות':'💼','כספים ופיננסים':'💰','מרקטינג דיגיטלי':'📱','בריאות ורווחה':'🌿','מנהיגות נשית':'👑','למידה וצמיחה':'📚' };
+  document.getElementById('cat-checks').innerHTML = categories.map(c => {
+    const count = allPosts.filter(p => p.cat === c).length;
+    return `
+      <label class="cat-check-item">
+        <input type="checkbox" value="${c}" onchange="toggleCat('${c}')" />
+        <span class="cat-check-label">${catEmojis[c]} ${c} <span class="cat-check-count">${count}</span></span>
+      </label>`;
+  }).join('');
+}
+
+function toggleCat(cat) {
+  if (selectedCats.has(cat)) selectedCats.delete(cat);
+  else selectedCats.add(cat);
+  currentPage = 1;
+  renderAll();
+}
+
+// ── FILTERS ───────────────────────────────────────
+function setReadTime(rt, el) {
+  readTimeFilter = rt;
+  document.querySelectorAll('.rt-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  currentPage = 1;
+  renderAll();
+}
+
+function handleSearch() {
+  searchQuery = document.getElementById('hero-search').value.trim().toLowerCase();
+  currentPage = 1;
+  renderAll();
+}
+
+function resetFilters() {
+  selectedCats.clear();
+  document.querySelectorAll('.cat-check-item input').forEach(cb => cb.checked = false);
+  searchQuery = '';
+  document.getElementById('hero-search').value = '';
+  readTimeFilter = 'all';
+  document.querySelectorAll('.rt-pill').forEach(p => p.classList.remove('active'));
+  document.querySelector('[data-rt="all"]').classList.add('active');
+  currentPage = 1;
+  renderAll();
+}
+
+function setView(v) {
+  viewMode = v;
+  document.getElementById('grid-btn').classList.toggle('active', v === 'grid');
+  document.getElementById('list-btn').classList.toggle('active', v === 'list');
+  renderAll();
+}
+
+// ── GET FILTERED & SORTED ─────────────────────────
+function getFiltered() {
+  let posts = [...allPosts];
+  if (selectedCats.size > 0) posts = posts.filter(p => selectedCats.has(p.cat));
+  if (searchQuery) posts = posts.filter(p => p.title.toLowerCase().includes(searchQuery) || p.excerpt.toLowerCase().includes(searchQuery) || p.author.toLowerCase().includes(searchQuery));
+  if (readTimeFilter === 'short') posts = posts.filter(p => p.read <= 5);
+  else if (readTimeFilter === 'medium') posts = posts.filter(p => p.read > 5 && p.read <= 10);
+  else if (readTimeFilter === 'long') posts = posts.filter(p => p.read > 10);
+
+  const sortFn = { newest: (a,b) => b.date.localeCompare(a.date), oldest: (a,b) => a.date.localeCompare(b.date), popular: (a,b) => b.views - a.views, short: (a,b) => a.read - b.read };
+  return posts.sort(sortFn[sortMode] || sortFn.newest);
+}
+
+// ── RENDER ────────────────────────────────────────
+function renderAll() {
+  sortMode = document.getElementById('sort-select').value;
+  const filtered = getFiltered();
+  const total = filtered.length;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  if (currentPage > pages) currentPage = 1;
+  const pageItems = filtered.slice((currentPage-1)*PAGE_SIZE, currentPage*PAGE_SIZE);
+
+  // Count
+  document.getElementById('result-count').innerHTML = `מציג <strong>${total}</strong> כתבות`;
+
+  // Active filter tags
+  const af = document.getElementById('active-filters');
+  af.innerHTML = [...selectedCats].map(c =>
+    `<span class="active-filter-tag">${c} <button onclick="removeCat('${c}')">✕</button></span>`
+  ).join('') + (searchQuery ? `<span class="active-filter-tag">🔍 "${searchQuery}" <button onclick="clearSearch()">✕</button></span>` : '');
+
+  // Grid
+  const grid = document.getElementById('posts-grid');
+  grid.className = 'posts-grid' + (viewMode === 'list' ? ' list-view' : '');
+  if (pageItems.length === 0) {
+    grid.innerHTML = `<div class="no-posts"><span class="no-icon">🔍</span><h3>לא נמצאו כתבות</h3><p>נסי לשנות את הסינון או לחפש מילה אחרת.</p></div>`;
+  } else {
+    grid.innerHTML = pageItems.map(p => `
+      <div class="post-card" onclick="window.location='post.html'">
+        <div class="pc-thumb" style="background:${p.bg}">
+          ${p.icon}
+          <span class="pc-cat-badge" style="color:${p.catColor}">${p.cat}</span>
+        </div>
+        <div class="pc-body">
+          <div class="pc-title">${p.title}</div>
+          <div class="pc-excerpt">${p.excerpt}</div>
+          <div class="pc-meta">
+            <div class="pc-av">${p.authorIcon}</div>
+            <span class="pc-author" onclick="event.stopPropagation();window.location='author.html'">${p.author}</span>
+            <span class="pc-dot">·</span>
+            <span class="pc-info">${p.read} דק׳ · ${p.views.toLocaleString('he-IL')} צפ׳</span>
+          </div>
+        </div>
+      </div>`).join('');
+  }
+
+  // Pagination
+  renderPagination(pages);
+}
+
+function renderPagination(pages) {
+  if (pages <= 1) { document.getElementById('pagination').innerHTML = ''; return; }
+  let html = `<button class="pg-btn${currentPage===1?' disabled':''}" onclick="goPage(${currentPage-1})">→</button>`;
+  for (let i = 1; i <= pages; i++) {
+    if (i === 1 || i === pages || Math.abs(i - currentPage) <= 1) {
+      html += `<button class="pg-btn${i===currentPage?' active':''}" onclick="goPage(${i})">${i}</button>`;
+    } else if (Math.abs(i - currentPage) === 2) {
+      html += `<span class="pg-dots">…</span>`;
+    }
+  }
+  html += `<button class="pg-btn${currentPage===pages?' disabled':''}" onclick="goPage(${currentPage+1})">←</button>`;
+  document.getElementById('pagination').innerHTML = html;
+}
+
+function goPage(p) {
+  const filtered = getFiltered();
+  const pages = Math.ceil(filtered.length / PAGE_SIZE);
+  if (p < 1 || p > pages) return;
+  currentPage = p;
+  renderAll();
+  window.scrollTo({ top: document.querySelector('.page-body').offsetTop - 80, behavior: 'smooth' });
+}
+
+function removeCat(cat) {
+  selectedCats.delete(cat);
+  document.querySelectorAll('.cat-check-item input').forEach(cb => { if (cb.value === cat) cb.checked = false; });
+  currentPage = 1; renderAll();
+}
+
+function clearSearch() {
+  searchQuery = ''; document.getElementById('hero-search').value = '';
+  currentPage = 1; renderAll();
+}
+
+function renderPosts() { renderAll(); }
+
+// ── NAV ───────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+  document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 300);
+});
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+
+// ── INIT ──────────────────────────────────────────
+buildCatChecks();
+renderAll();
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>

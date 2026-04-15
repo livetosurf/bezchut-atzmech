@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block admin panel from indexing
+Disallow: /admin.html
+
+# Sitemap location
+Sitemap: https://bezchut-atzmech.co.il/sitemap.xml

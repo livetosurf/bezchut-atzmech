@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>כלים ומשאבים | בזכות עצמך</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #6B2D7C;
+      --primary-dark: #4A1A57;
+      --primary-light: #9B5DAC;
+      --accent: #C9A84C;
+      --accent-dark: #A07830;
+      --bg: #FBF6FE;
+      --card-bg: #FFFFFF;
+      --text: #1A1A2E;
+      --text-muted: #6B6B8A;
+      --border: #E8DFF5;
+      --nav-h: 70px;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(107,45,124,0.10);
+      --shadow-hover: 0 8px 40px rgba(107,45,124,0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Assistant', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; direction: rtl; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    header {
+      position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+      height: var(--nav-h); background: transparent;
+      transition: background .3s, box-shadow .3s;
+    }
+    header.scrolled {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 20px rgba(107,45,124,0.12);
+      backdrop-filter: blur(12px);
+    }
+    nav { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; gap: 20px; }
+    .logo { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; color: #fff; transition: color .3s; }
+    header.scrolled .logo { color: var(--primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 4px; margin-right: auto; }
+    .nav-links a { padding: 8px 14px; border-radius: 8px; font-size: .9rem; font-weight: 600; color: rgba(255,255,255,0.85); transition: all .2s; }
+    header.scrolled .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover { background: rgba(107,45,124,0.1); color: var(--primary); }
+    .nav-cta { background: var(--accent) !important; color: #fff !important; border-radius: 50px !important; padding: 8px 20px !important; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: background .3s; }
+    header.scrolled .hamburger span { background: var(--primary); }
+    .mobile-menu {
+      display: none; position: fixed; top: var(--nav-h); right: 0; left: 0;
+      background: rgba(255,255,255,0.98); padding: 20px 24px;
+      box-shadow: 0 8px 32px rgba(107,45,124,0.15); z-index: 99;
+      flex-direction: column; gap: 8px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 12px 16px; border-radius: 10px; font-weight: 600; color: var(--text); }
+    .mobile-menu a:hover { background: #F0E8F8; color: var(--primary); }
+
+    /* HERO */
+    .res-hero {
+      min-height: 46vh;
+      background: linear-gradient(135deg, #1A0528 0%, #2D0A4A 40%, #0A1A35 100%);
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: center; text-align: center;
+      padding: calc(var(--nav-h) + 40px) 24px 80px;
+      position: relative; overflow: hidden;
+    }
+    /* Floating tool icons */
+    .hero-tool {
+      position: absolute; font-size: 2.2rem; opacity: 0.1;
+      animation: toolFloat 8s ease-in-out infinite;
+    }
+    .hero-tool:nth-child(1) { top: 15%; right: 5%; animation-delay: 0s; }
+    .hero-tool:nth-child(2) { top: 60%; right: 12%; animation-delay: 2s; font-size: 1.8rem; }
+    .hero-tool:nth-child(3) { top: 10%; left: 7%; animation-delay: 4s; font-size: 2.8rem; }
+    .hero-tool:nth-child(4) { bottom: 20%; left: 15%; animation-delay: 1s; font-size: 1.5rem; }
+    .hero-tool:nth-child(5) { bottom: 35%; right: 20%; animation-delay: 3s; font-size: 2rem; }
+    .hero-tool:nth-child(6) { top: 40%; left: 5%; animation-delay: 5s; font-size: 1.6rem; }
+    @keyframes toolFloat {
+      0%, 100% { transform: translateY(0) rotate(-6deg); }
+      50% { transform: translateY(-16px) rotate(6deg); }
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); font-size: .85rem; margin-bottom: 20px; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); transition: color .2s; }
+    .breadcrumb a:hover { color: #fff; }
+    .res-hero h1 {
+      font-family: 'Heebo', sans-serif; font-size: clamp(2rem,5vw,3rem);
+      font-weight: 900; color: #fff; margin-bottom: 12px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .res-hero p { color: rgba(255,255,255,0.7); font-size: 1.05rem; max-width: 520px; margin-bottom: 28px; }
+
+    /* Hero search */
+    .hero-search {
+      display: flex; gap: 0; max-width: 500px; width: 100%;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px; overflow: hidden; backdrop-filter: blur(8px);
+    }
+    .hero-search input {
+      flex: 1; padding: 14px 20px; background: transparent; border: none;
+      font-family: 'Assistant', sans-serif; font-size: 1rem; color: #fff;
+      direction: rtl;
+    }
+    .hero-search input::placeholder { color: rgba(255,255,255,0.5); }
+    .hero-search input:focus { outline: none; }
+    .hero-search button {
+      padding: 14px 22px; background: var(--accent); border: none; color: #fff;
+      font-family: 'Assistant', sans-serif; font-weight: 700; font-size: .95rem;
+      cursor: pointer; border-radius: 0 50px 50px 0; transition: background .2s;
+    }
+    .hero-search button:hover { background: var(--accent-dark); }
+
+    .hero-wave { position: absolute; bottom: 0; right: 0; left: 0; }
+    .hero-wave svg { display: block; }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--primary);
+      padding: 14px 24px;
+    }
+    .stats-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; gap: 0; align-items: stretch; justify-content: center;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex; align-items: center; gap: 10px;
+      color: #fff; padding: 6px 28px;
+      border-left: 1px solid rgba(255,255,255,0.2);
+      white-space: nowrap;
+    }
+    .stat-item:last-child { border-left: none; }
+    .stat-num { font-family: 'Heebo', sans-serif; font-weight: 900; font-size: 1.3rem; }
+    .stat-label { font-size: .85rem; opacity: .8; }
+
+    /* MAIN LAYOUT */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+
+    /* CATEGORY FILTER */
+    .cat-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; align-items: center; }
+    .cat-filter-label { font-weight: 700; font-size: .9rem; color: var(--text-muted); margin-left: 6px; }
+    .cat-pill {
+      border: 2px solid var(--border); border-radius: 50px; padding: 8px 20px;
+      font-family: 'Assistant', sans-serif; font-size: .9rem; font-weight: 600;
+      background: var(--card-bg); color: var(--text-muted); cursor: pointer; transition: all .2s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .cat-pill:hover { border-color: var(--primary); color: var(--primary); }
+    .cat-pill.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    /* FEATURED STRIP */
+    .featured-strip {
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #2D0A4A 100%);
+      border-radius: 20px; padding: 28px 32px; color: #fff;
+      display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+    }
+    .strip-badge {
+      background: var(--accent); color: var(--primary-dark); font-size: .75rem;
+      font-weight: 900; padding: 5px 14px; border-radius: 50px; white-space: nowrap;
+      align-self: flex-start;
+    }
+    .strip-body h2 { font-family: 'Heebo', sans-serif; font-size: 1.3rem; font-weight: 900; margin-bottom: 6px; }
+    .strip-body p { font-size: .9rem; opacity: .8; }
+    .strip-cta {
+      background: var(--accent); color: var(--primary-dark); border: none;
+      border-radius: 50px; padding: 12px 24px; font-family: 'Assistant', sans-serif;
+      font-weight: 700; font-size: .95rem; cursor: pointer; transition: all .2s;
+      white-space: nowrap;
+    }
+    .strip-cta:hover { background: #F0D080; transform: translateY(-2px); }
+
+    /* SECTION TITLE */
+    .section-heading {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 2px solid #F0E8F8;
+    }
+    .section-heading h2 { font-family: 'Heebo', sans-serif; font-size: 1.2rem; font-weight: 900; }
+    .section-heading .count { color: var(--text-muted); font-size: .85rem; }
+
+    /* RESOURCES GRID */
+    .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 48px; }
+
+    /* RESOURCE CARD */
+    .res-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: var(--shadow); overflow: hidden;
+      transition: all .3s; display: flex; flex-direction: column;
+      border: 1px solid transparent;
+    }
+    .res-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: #E8DFF5; }
+    .res-card-thumb {
+      height: 130px; display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; position: relative;
+    }
+    .rec-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--accent); color: #fff; font-size: .7rem; font-weight: 800;
+      padding: 3px 10px; border-radius: 50px;
+    }
+    .new-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: #2D7A4F; color: #fff; font-size: .7rem; font-weight: 800;
+      padding: 3px 10px; border-radius: 50px;
+    }
+    .res-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .res-cat-tag {
+      display: inline-block; font-size: .74rem; font-weight: 700;
+      padding: 3px 10px; border-radius: 20px; margin-bottom: 8px;
+      background: #F0E8F8; color: var(--primary);
+    }
+    .res-card-name { font-family: 'Heebo', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .res-card-desc { color: var(--text-muted); font-size: .85rem; line-height: 1.55; margin-bottom: 12px; flex: 1; }
+
+    /* Stars */
+    .stars { color: var(--accent); font-size: .9rem; letter-spacing: 1px; margin-bottom: 12px; }
+    .stars .star-count { color: var(--text-muted); font-size: .8rem; margin-right: 4px; }
+
+    .res-card-foot { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); }
+    .res-price { font-weight: 700; font-size: .9rem; }
+    .res-price.free { color: #2D7A4F; }
+    .res-price.paid { color: var(--primary); }
+    .res-price.freemium { color: #8C5A00; }
+    .res-btn {
+      background: var(--primary); color: #fff; border: none; border-radius: 8px;
+      padding: 8px 16px; font-family: 'Assistant', sans-serif; font-weight: 700;
+      font-size: .85rem; cursor: pointer; transition: all .2s;
+    }
+    .res-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+    /* NO RESULTS */
+    .no-results { text-align: center; padding: 60px 16px; color: var(--text-muted); grid-column: 1/-1; }
+    .no-results .no-icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+
+    /* AFFILIATE DISCLOSURE */
+    .disclosure {
+      background: #FFF8E6; border: 1px solid #F0D080; border-radius: 12px;
+      padding: 14px 20px; margin-bottom: 32px;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .disclosure .d-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+    .disclosure p { font-size: .85rem; color: #7A5A00; line-height: 1.6; }
+
+    /* NEWSLETTER BANNER */
+    .nl-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 20px; padding: 36px 40px; color: #fff;
+      display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+      margin-bottom: 48px;
+    }
+    .nl-banner h2 { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 6px; }
+    .nl-banner p { opacity: .8; font-size: .95rem; }
+    .nl-form { display: flex; gap: 8px; }
+    .nl-form input {
+      padding: 12px 18px; border-radius: 10px; border: none;
+      font-family: 'Assistant', sans-serif; font-size: .95rem; width: 220px; direction: rtl;
+    }
+    .nl-form input:focus { outline: 2px solid var(--accent); }
+    .nl-form button {
+      background: var(--accent); color: #fff; border: none; border-radius: 10px;
+      padding: 12px 20px; font-family: 'Assistant', sans-serif; font-weight: 700;
+      font-size: .95rem; cursor: pointer; white-space: nowrap; transition: background .2s;
+    }
+    .nl-form button:hover { background: var(--accent-dark); }
+
+    /* FOOTER */
+    footer { background: linear-gradient(135deg, #1A0528 0%, #0D1040 100%); color: rgba(255,255,255,0.7); padding: 48px 24px 24px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Heebo', sans-serif; font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 12px; }
+    .footer-logo span { color: var(--accent); }
+    .footer-desc { font-size: .9rem; line-height: 1.7; margin-bottom: 16px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: background .2s; }
+    .social-btn:hover { background: var(--primary-light); }
+    .footer-col h4 { font-family: 'Heebo', sans-serif; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .9rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: .85rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.5); transition: color .2s; }
+    .footer-bottom a:hover { color: #fff; }
+
+    /* SCROLL TOP */
+    .scroll-top { position: fixed; bottom: 28px; left: 28px; z-index: 99; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; border: none; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2); opacity: 0; transition: opacity .3s, transform .3s; display: flex; align-items: center; justify-content: center; }
+    .scroll-top.visible { opacity: 1; }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .res-grid { grid-template-columns: repeat(2,1fr); }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .featured-strip { grid-template-columns: 1fr; gap: 12px; }
+      .strip-badge { align-self: auto; width: fit-content; }
+      .nl-banner { grid-template-columns: 1fr; }
+      .nl-form { flex-wrap: wrap; }
+      .nl-form input { width: 100%; }
+    }
+    @media (max-width: 600px) {
+      .res-grid { grid-template-columns: 1fr; }
+      .stats-inner { gap: 0; }
+      .stat-item { padding: 6px 14px; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 50%; justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <!-- SEO Meta -->
+  <meta name="description" content="הכלים הדיגיטליים, האפליקציות והשירותים שאנחנו ממליצות עליהם לנשים יזמיות — עם ביקורות כנות." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut-atzmech.co.il/resources.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="כלים ומשאבים מומלצים | בזכות עצמך" />
+  <meta property="og:description" content="הכלים הדיגיטליים, האפליקציות והשירותים שאנחנו ממליצות עליהם לנשים יזמיות — עם ביקורות כנות." />
+  <meta property="og:url" content="https://bezchut-atzmech.co.il/resources.html" />
+  <meta property="og:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="כלים ומשאבים מומלצים | בזכות עצמך" />
+  <meta name="twitter:description" content="הכלים הדיגיטליים, האפליקציות והשירותים שאנחנו ממליצות עליהם לנשים יזמיות — עם ביקורות כנות." />
+  <meta name="twitter:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span>עצמך</span></a>
+    <div class="nav-links">
+      <a href="esek-viyazmanut.html">עסקים</a>
+      <a href="kaspim-vefinansim.html">כספים</a>
+      <a href="marketing-digital.html">מרקטינג</a>
+      <a href="briut-veravaha.html">בריאות</a>
+      <a href="manhigut-nashit.html">מנהיגות</a>
+      <a href="lmida-vetzmikha.html">למידה</a>
+      <a href="resources.html" class="nav-cta">כלים מומלצים ✦</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="bezchut-atzmech.html">🏠 דף הבית</a>
+  <a href="esek-viyazmanut.html">💼 עסקים ויזמות</a>
+  <a href="kaspim-vefinansim.html">💰 כספים ופיננסים</a>
+  <a href="marketing-digital.html">📱 מרקטינג דיגיטלי</a>
+  <a href="briut-veravaha.html">🌿 בריאות ורווחה</a>
+  <a href="manhigut-nashit.html">👑 מנהיגות נשית</a>
+  <a href="lmida-vetzmikha.html">📚 למידה וצמיחה</a>
+  <a href="resources.html">🛠️ כלים ומשאבים</a>
+</div>
+
+<!-- HERO -->
+<section class="res-hero">
+  <span class="hero-tool">🛠️</span>
+  <span class="hero-tool">💻</span>
+  <span class="hero-tool">📊</span>
+  <span class="hero-tool">🎯</span>
+  <span class="hero-tool">💡</span>
+  <span class="hero-tool">📱</span>
+
+  <div class="breadcrumb">
+    <a href="bezchut-atzmech.html">בית</a>
+    <span>›</span>
+    <span>כלים ומשאבים</span>
+  </div>
+  <h1>כלים ומשאבים מומלצים</h1>
+  <p>הכלים, הספרים, הקורסים והאפליקציות שיזמיות ישראליות מצליחות משתמשות בהם — נבחרו ואושרו על ידי הצוות שלנו</p>
+  <div class="hero-search">
+    <input type="text" id="hero-search" placeholder="חפשי כלי, ספר, קורס..." oninput="filterResources()" />
+    <button onclick="filterResources()">חיפוש 🔍</button>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" style="width:100%;height:60px">
+      <path d="M0,30 C300,60 900,0 1200,30 L1200,60 L0,60 Z" fill="#FBF6FE"/>
+    </svg>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">40+</span>
+      <span class="stat-label">כלים נבחרו</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">6</span>
+      <span class="stat-label">קטגוריות</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">80%</span>
+      <span class="stat-label">חינמיים / פרימיום</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">★ 4.7</span>
+      <span class="stat-label">דירוג ממוצע</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="page-wrap">
+
+  <!-- Disclosure -->
+  <div class="disclosure">
+    <span class="d-icon">ℹ️</span>
+    <p>חלק מהקישורים בעמוד זה הם קישורי אפיליאציה — אם תרכשי דרכם, נקבל עמלה קטנה ללא עלות נוספת עבורך. זה עוזר לנו להמשיך לספק תוכן חינמי ואיכותי. אנחנו ממליצות אך ורק על מוצרים שניסינו ואוהבות.</p>
+  </div>
+
+  <!-- Featured Spotlight -->
+  <div class="featured-strip" id="spotlight">
+    <span class="strip-badge">✦ הכלי החם של החודש</span>
+    <div class="strip-body">
+      <h2>Canva Pro — עיצוב מקצועי בלי גרפיקאית</h2>
+      <p>הכלי שכל בעלת עסק חייבת: תבניות מוכנות לסושיאל, מצגות, לוגואים, פוסטים ועוד — בעברית, בדקות ספורות. 30 יום ניסיון חינם.</p>
+    </div>
+    <button class="strip-cta" onclick="alert('קישור אפיליאט לCanva')">לנסות חינם →</button>
+  </div>
+
+  <!-- Category Filter -->
+  <div class="cat-filter">
+    <span class="cat-filter-label">סנני לפי:</span>
+    <div id="filter-pills"></div>
+  </div>
+
+  <!-- Section heading -->
+  <div class="section-heading">
+    <h2 id="section-title">כל הכלים והמשאבים</h2>
+    <span class="count" id="result-count"></span>
+  </div>
+
+  <!-- Resources Grid -->
+  <div class="res-grid" id="res-grid"></div>
+
+  <!-- Newsletter Banner -->
+  <div class="nl-banner">
+    <div>
+      <h2>📩 רוצה לקבל המלצות כלים חדשות?</h2>
+      <p>מדי שבוע — כלי אחד מומלץ, טיפ שימושי וקישור בלעדי לנרשמות.</p>
+    </div>
+    <div class="nl-form">
+      <input type="email" placeholder="המייל שלך..." />
+      <button>הצטרפי →</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">בזכות <span>עצמך</span></div>
+        <div class="footer-desc">פורטל התוכן המוביל לנשים יזמיות בישראל. כתבות, כלים, השראה ועדכונים שיעזרו לך לבנות עסק שאת גאה בו.</div>
+        <div class="footer-social">
+          <a class="social-btn" href="#">📸</a>
+          <a class="social-btn" href="#">👥</a>
+          <a class="social-btn" href="#">🎵</a>
+          <a class="social-btn" href="#">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>קטגוריות</h4>
+        <ul>
+          <li><a href="esek-viyazmanut.html">עסקים ויזמות</a></li>
+          <li><a href="kaspim-vefinansim.html">כספים ופיננסים</a></li>
+          <li><a href="marketing-digital.html">מרקטינג דיגיטלי</a></li>
+          <li><a href="briut-veravaha.html">בריאות ורווחה</a></li>
+          <li><a href="manhigut-nashit.html">מנהיגות נשית</a></li>
+          <li><a href="lmida-vetzmikha.html">למידה וצמיחה</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>משאבים</h4>
+        <ul>
+          <li><a href="resources.html">כלים דיגיטליים</a></li>
+          <li><a href="resources.html">ספרים מומלצים</a></li>
+          <li><a href="resources.html">קורסים</a></li>
+          <li><a href="resources.html">אפליקציות</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>אודות</h4>
+        <ul>
+          <li><a href="#">מי אנחנו</a></li>
+          <li><a href="#">כתבי לנו</a></li>
+          <li><a href="#">פרסום</a></li>
+          <li><a href="#">פרטיות</a></li>
+          <li><a href="#">צרי קשר</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 בזכות עצמך. כל הזכויות שמורות.</span>
+      <div style="display:flex;gap:16px">
+        <a href="#">תנאי שימוש</a>
+        <a href="#">מדיניות פרטיות</a>
+        <a href="#">גילוי אפיליאציה</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── RESOURCES DATA ─────────────────────────────────
+const resources = [
+  // כלים דיגיטליים
+  {
+    id: 1, cat: 'כלים דיגיטליים', icon: '🎨',
+    bg: 'linear-gradient(135deg,#6B2D7C,#9B5DAC)',
+    name: 'Canva Pro', badge: 'ממליצות',
+    desc: 'עיצוב גרפי מקצועי בלי רקע בעיצוב. תבניות לסושיאל, מצגות, לוגואים ועוד.',
+    stars: 5, reviews: 2840, price: 'פרימיום', priceType: 'freemium',
+    priceLabel: '₪55/חודש (ניסיון חינם)'
+  },
+  {
+    id: 2, cat: 'כלים דיגיטליים', icon: '📊',
+    bg: 'linear-gradient(135deg,#1A6B4A,#2D8A60)',
+    name: 'Google Workspace', badge: null,
+    desc: 'Gmail, Drive, Docs, Sheets, Meet — הכלים של גוגל לניהול עסק מהיום הראשון.',
+    stars: 5, reviews: 5200, price: 'פרימיום', priceType: 'freemium',
+    priceLabel: '₪45/חודש לאחר ניסיון'
+  },
+  {
+    id: 3, cat: 'כלים דיגיטליים', icon: '📅',
+    bg: 'linear-gradient(135deg,#2D7ACC,#1A4A8C)',
+    name: 'Notion', badge: null,
+    desc: 'ניהול פרויקטים, מסמכים, ויקי עסקי ולו"ז — הכל במקום אחד. גרסה חינמית מצוינת.',
+    stars: 5, reviews: 1930, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי / ₪42/חודש Pro'
+  },
+  {
+    id: 4, cat: 'כלים דיגיטליים', icon: '✉️',
+    bg: 'linear-gradient(135deg,#F4A020,#C07010)',
+    name: 'Mailchimp', badge: null,
+    desc: 'שליחת ניוזלטרים, אוטומציות מייל ובניית רשימת תפוצה. עד 500 מנויים — חינם.',
+    stars: 4, reviews: 3100, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי עד 500 מנויים'
+  },
+  {
+    id: 5, cat: 'כלים דיגיטליים', icon: '📱',
+    bg: 'linear-gradient(135deg,#D64F8C,#8C1A50)',
+    name: 'Later', badge: null,
+    desc: 'תזמון פוסטים לאינסטגרם, פייסבוק, TikTok ולינקדאין. לוח תוכן חזותי וקל.',
+    stars: 4, reviews: 890, price: 'פרימיום', priceType: 'freemium',
+    priceLabel: 'חינמי (14 פוסטים/חודש)'
+  },
+  {
+    id: 6, cat: 'כלים דיגיטליים', icon: '🔗',
+    bg: 'linear-gradient(135deg,#007A8C,#004A58)',
+    name: 'Linktree', badge: 'חדש',
+    desc: 'דף ביו אחד עם כל הקישורים שלך — לאינסטגרם, אתר, וואטסאפ ושירותים.',
+    stars: 4, reviews: 2200, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי / Pro ₪25/חודש'
+  },
+
+  // אפליקציות
+  {
+    id: 7, cat: 'אפליקציות', icon: '⏱️',
+    bg: 'linear-gradient(135deg,#8B1A6B,#5A0A45)',
+    name: 'Toggl Track', badge: 'ממליצות',
+    desc: 'מעקב שעות עבודה לפי לקוח ופרויקט. דוחות אוטומטיים לחיוב לקוחות. חינמי לגמרי.',
+    stars: 5, reviews: 1560, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי לגמרי'
+  },
+  {
+    id: 8, cat: 'אפליקציות', icon: '🧘',
+    bg: 'linear-gradient(135deg,#2D7A4F,#0A4A28)',
+    name: 'Headspace', badge: null,
+    desc: 'מדיטציות קצרות, שינה טובה יותר, פחות חרדה. 10 דקות ביום שמשנות הכל.',
+    stars: 4, reviews: 4800, price: 'פרימיום', priceType: 'freemium',
+    priceLabel: '₪50/חודש'
+  },
+  {
+    id: 9, cat: 'אפליקציות', icon: '💰',
+    bg: 'linear-gradient(135deg,#1A6B4A,#0A3A25)',
+    name: 'Wave', badge: 'חדש',
+    desc: 'חשבונאות, חשבוניות, מעקב הוצאות וקבלת תשלומים — לעצמאיות ועסקים קטנים.',
+    stars: 4, reviews: 680, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי לגמרי'
+  },
+  {
+    id: 10, cat: 'אפליקציות', icon: '📝',
+    bg: 'linear-gradient(135deg,#CC6B00,#8C4500)',
+    name: 'Trello', badge: null,
+    desc: 'ניהול משימות בלוחות קנבן. אינטואיטיבי, חזותי, ומעולה לשיתוף פעולה עם לקוחות.',
+    stars: 4, reviews: 3300, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי / Business ₪60/חודש'
+  },
+
+  // ספרים
+  {
+    id: 11, cat: 'ספרים', icon: '📚',
+    bg: 'linear-gradient(135deg,#6B2D7C,#3A0A5A)',
+    name: 'Atomic Habits', badge: 'ממליצות',
+    desc: 'ג\'יימס קליר — הספר הטוב ביותר על בניית הרגלים. חובה לכל יזמית שרוצה לצמוח.',
+    stars: 5, reviews: 8900, price: 'ספר', priceType: 'paid',
+    priceLabel: '₪65–₪80 | גם כאודיובוק'
+  },
+  {
+    id: 12, cat: 'ספרים', icon: '💪',
+    bg: 'linear-gradient(135deg,#C9A84C,#8C6A20)',
+    name: 'Lean In', badge: null,
+    desc: 'שרי זנדברג — על שבירת תקרות זכוכית, מנהיגות נשית וניהול קריירה עם אומץ.',
+    stars: 5, reviews: 6400, price: 'ספר', priceType: 'paid',
+    priceLabel: '₪60 | Kindle ₪35'
+  },
+  {
+    id: 13, cat: 'ספרים', icon: '🧠',
+    bg: 'linear-gradient(135deg,#2D7ACC,#1A3A6B)',
+    name: 'Mindset', badge: null,
+    desc: 'קרול דווק — למה חלק מהאנשים גדלים מאתגרים ואחרים מתכווצים, ואיך לשנות.',
+    stars: 5, reviews: 7200, price: 'ספר', priceType: 'paid',
+    priceLabel: '₪65 | גרסה עברית זמינה'
+  },
+  {
+    id: 14, cat: 'ספרים', icon: '🔥',
+    bg: 'linear-gradient(135deg,#CC3A2D,#8C1A10)',
+    name: 'The E-Myth Revisited', badge: null,
+    desc: 'מייקל גרבר — מדוע 80% מהעסקים הקטנים נכשלים, ומה לעשות אחרת. ספר חובה.',
+    stars: 5, reviews: 5100, price: 'ספר', priceType: 'paid',
+    priceLabel: '₪70 | גם כאודיובוק'
+  },
+
+  // קורסים
+  {
+    id: 15, cat: 'קורסים', icon: '🎓',
+    bg: 'linear-gradient(135deg,#007A5A,#004A35)',
+    name: 'LinkedIn Learning', badge: 'ממליצות',
+    desc: 'אלפי קורסים בעברית ואנגלית: עיצוב, שיווק, Excel, מנהיגות ועוד. חודש חינם.',
+    stars: 5, reviews: 3800, price: 'פרימיום', priceType: 'freemium',
+    priceLabel: '₪90/חודש | חודש ראשון חינם'
+  },
+  {
+    id: 16, cat: 'קורסים', icon: '🌐',
+    bg: 'linear-gradient(135deg,#8C5A00,#5A3500)',
+    name: 'Udemy', badge: null,
+    desc: 'קורסים ב-₪35–₪120 בנושאים כמו: שיווק, WordPress, Canva, חשבונאות ועוד.',
+    stars: 4, reviews: 11000, price: 'פרימיום', priceType: 'paid',
+    priceLabel: '₪35–₪120 לקורס'
+  },
+  {
+    id: 17, cat: 'קורסים', icon: '🏫',
+    bg: 'linear-gradient(135deg,#2D7ACC,#0A4A8C)',
+    name: 'Coursera', badge: 'חדש',
+    desc: 'קורסים מאוניברסיטאות עולמיות: Stanford, Google, Meta. אפשרות ללמוד בחינם (ביקורת בתשלום).',
+    stars: 4, reviews: 6200, price: 'חינמי', priceType: 'freemium',
+    priceLabel: 'ניתן לצפייה חינם | תעודה בתשלום'
+  },
+
+  // שירותים
+  {
+    id: 18, cat: 'שירותים', icon: '🏦',
+    bg: 'linear-gradient(135deg,#1A6B4A,#0A3A25)',
+    name: 'PayPal עסקי', badge: null,
+    desc: 'קבלת תשלומים מלקוחות בארץ ובחו"ל. מהיר, בטוח ומקצועי. חשבון עסקי חינמי.',
+    stars: 4, reviews: 9200, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי + עמלה קטנה לעסקה'
+  },
+  {
+    id: 19, cat: 'שירותים', icon: '📄',
+    bg: 'linear-gradient(135deg,#6B2D7C,#4A1A57)',
+    name: 'iCount', badge: 'ממליצות',
+    desc: 'מערכת חשבונאות ישראלית: חשבוניות, דוחות, ניהול לקוחות ומע"מ. מותאמת לישראל.',
+    stars: 5, reviews: 1400, price: 'פרימיום', priceType: 'paid',
+    priceLabel: 'החל מ-₪49/חודש'
+  },
+  {
+    id: 20, cat: 'שירותים', icon: '🤖',
+    bg: 'linear-gradient(135deg,#007A8C,#003A45)',
+    name: 'Claude AI', badge: 'חדש',
+    desc: 'עוזרת AI לכתיבת תוכן, ניתוח נתונים, תכנון אסטרטגי ומענה ללקוחות. גרסה חינמית מצוינת.',
+    stars: 5, reviews: 2700, price: 'חינמי', priceType: 'free',
+    priceLabel: 'חינמי / Pro ₪90/חודש'
+  }
+];
+
+// ── STATE ──────────────────────────────────────────
+const categories = ['הכל', 'כלים דיגיטליים', 'אפליקציות', 'ספרים', 'קורסים', 'שירותים'];
+let activeCategory = 'הכל';
+
+function renderFilterPills() {
+  document.getElementById('filter-pills').innerHTML = categories.map(c => `
+    <button class="cat-pill ${c === activeCategory ? 'active' : ''}" onclick="setCategory('${c}')">
+      ${catEmoji(c)} ${c}
+    </button>
+  `).join('');
+}
+
+function catEmoji(c) {
+  const map = { 'הכל': '🔍', 'כלים דיגיטליים': '💻', 'אפליקציות': '📱', 'ספרים': '📚', 'קורסים': '🎓', 'שירותים': '🏷️' };
+  return map[c] || '';
+}
+
+function setCategory(cat) {
+  activeCategory = cat;
+  document.getElementById('hero-search').value = '';
+  renderFilterPills();
+  renderGrid();
+}
+
+function filterResources() {
+  const q = document.getElementById('hero-search').value.trim().toLowerCase();
+  activeCategory = 'הכל';
+  renderFilterPills();
+  renderGrid(q);
+}
+
+function getFiltered(q = '') {
+  return resources.filter(r => {
+    const matchCat = activeCategory === 'הכל' || r.cat === activeCategory;
+    const matchQ = !q || r.name.toLowerCase().includes(q) || r.desc.toLowerCase().includes(q) || r.cat.toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+}
+
+function starsHTML(n, total) {
+  const full = '★'.repeat(n) + '☆'.repeat(5 - n);
+  return `<span class="stars">${full} <span class="star-count">(${total.toLocaleString('he-IL')})</span></span>`;
+}
+
+function renderGrid(q = '') {
+  const filtered = getFiltered(q);
+  const grid = document.getElementById('res-grid');
+  const title = document.getElementById('section-title');
+  const count = document.getElementById('result-count');
+
+  count.textContent = `${filtered.length} תוצאות`;
+  title.textContent = activeCategory === 'הכל' ? 'כל הכלים והמשאבים' : activeCategory;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="no-results"><span class="no-icon">🔍</span><p>לא נמצאו תוצאות. נסי מילה אחרת.</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(r => `
+    <div class="res-card">
+      <div class="res-card-thumb" style="background:${r.bg}">
+        ${r.icon}
+        ${r.badge === 'ממליצות' ? '<span class="rec-badge">★ ממליצות</span>' : ''}
+        ${r.badge === 'חדש' ? '<span class="new-badge">חדש</span>' : ''}
+      </div>
+      <div class="res-card-body">
+        <span class="res-cat-tag">${r.cat}</span>
+        <div class="res-card-name">${r.name}</div>
+        <div class="res-card-desc">${r.desc}</div>
+        ${starsHTML(r.stars, r.reviews)}
+        <div class="res-card-foot">
+          <span class="res-price ${r.priceType}">${r.priceLabel}</span>
+          <button class="res-btn" onclick="handleClick('${r.name}')">לפרטים →</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function handleClick(name) {
+  // Placeholder for affiliate link navigation
+  alert(`מועברת לדף של ${name}...`);
+}
+
+// ── NAV SCROLL ────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+  document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 300);
+});
+
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// ── INIT ──────────────────────────────────────────
+renderFilterPills();
+renderGrid();
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>

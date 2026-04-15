@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 ספרים שכל יזמית חייבת לקרוא | בזכות עצמך</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #6B2D7C;
+      --primary-dark: #4A1A57;
+      --primary-light: #9B5DAC;
+      --accent: #C9A84C;
+      --accent-dark: #A07830;
+      --bg: #FBF6FE;
+      --card-bg: #FFFFFF;
+      --text: #1A1A2E;
+      --text-muted: #6B6B8A;
+      --border: #E8DFF5;
+      --nav-h: 70px;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(107,45,124,0.10);
+      --shadow-hover: 0 8px 40px rgba(107,45,124,0.18);
+      --cat: #007A8C;
+      --cat-light: #E0F4F7;
+      --cat-dark: #005A68;
+      --progress-color: #C9A84C;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Assistant', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; direction: rtl; }
+    a { text-decoration: none; color: inherit; }
+
+    /* READING PROGRESS BAR */
+    #progress-bar {
+      position: fixed; top: 0; right: 0; left: 0; z-index: 200;
+      height: 3px; background: transparent;
+    }
+    #progress-fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width .1s linear;
+    }
+
+    /* NAV */
+    header {
+      position: fixed; top: 3px; right: 0; left: 0; z-index: 100;
+      height: var(--nav-h); background: transparent;
+      transition: background .3s, box-shadow .3s;
+    }
+    header.scrolled {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 20px rgba(107,45,124,0.12);
+      backdrop-filter: blur(12px);
+    }
+    nav { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; gap: 16px; }
+    .logo { font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900; color: #fff; transition: color .3s; }
+    header.scrolled .logo { color: var(--primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 4px; margin-right: auto; }
+    .nav-links a { padding: 7px 13px; border-radius: 8px; font-size: .88rem; font-weight: 600; color: rgba(255,255,255,0.85); transition: all .2s; }
+    header.scrolled .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover { background: var(--cat-light); color: var(--cat-dark); }
+    .nav-cta { background: var(--accent) !important; color: #fff !important; border-radius: 50px !important; padding: 7px 18px !important; font-weight: 700 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: background .3s; }
+    header.scrolled .hamburger span { background: var(--primary); }
+    .mobile-menu {
+      display: none; position: fixed; top: calc(var(--nav-h) + 3px); right: 0; left: 0;
+      background: rgba(255,255,255,0.98); padding: 20px 24px;
+      box-shadow: 0 8px 32px rgba(107,45,124,0.15); z-index: 99; flex-direction: column; gap: 8px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 12px 16px; border-radius: 10px; font-weight: 600; color: var(--text); }
+    .mobile-menu a:hover { background: var(--cat-light); color: var(--cat-dark); }
+
+    /* POST HERO */
+    .post-hero {
+      min-height: 55vh;
+      background: linear-gradient(135deg, #0A2A30 0%, #0D1A35 50%, #1A0528 100%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: calc(var(--nav-h) + 40px) 24px 60px;
+      position: relative; overflow: hidden;
+    }
+    .post-hero-inner { max-width: 860px; margin: 0 auto; width: 100%; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); font-size: .82rem; margin-bottom: 16px; flex-wrap: wrap; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); transition: color .2s; }
+    .breadcrumb a:hover { color: #fff; }
+    .post-cat-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--cat); color: #fff;
+      font-size: .78rem; font-weight: 700; padding: 5px 14px; border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .post-hero h1 {
+      font-family: 'Heebo', sans-serif; font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 20px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .post-hero-meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .author-chip {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .author-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; border: 2px solid rgba(255,255,255,0.3);
+    }
+    .author-name { color: #fff; font-weight: 700; font-size: .9rem; }
+    .author-title { color: rgba(255,255,255,0.6); font-size: .78rem; }
+    .meta-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .meta-pill {
+      background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 50px;
+      padding: 5px 14px; font-size: .82rem; display: flex; align-items: center; gap: 5px;
+    }
+
+    /* Floating particles */
+    .hero-particle { position: absolute; opacity: 0.08; font-size: 2rem; animation: particleFloat 7s ease-in-out infinite; }
+    .hero-particle:nth-child(1) { top: 20%; right: 5%; animation-delay: 0s; }
+    .hero-particle:nth-child(2) { top: 50%; left: 5%; animation-delay: 2s; font-size: 1.5rem; }
+    .hero-particle:nth-child(3) { bottom: 30%; right: 15%; animation-delay: 4s; font-size: 2.5rem; }
+    @keyframes particleFloat { 0%,100%{transform:translateY(0) rotate(-5deg);} 50%{transform:translateY(-15px) rotate(5deg);} }
+
+    .hero-wave { position: absolute; bottom: 0; right: 0; left: 0; }
+    .hero-wave svg { display: block; }
+
+    /* LAYOUT */
+    .post-layout {
+      max-width: 1160px; margin: 0 auto; padding: 40px 24px 60px;
+      display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start;
+    }
+
+    /* ARTICLE BODY */
+    article {
+      background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 40px 44px;
+      font-family: 'Frank Ruhl Libre', 'Assistant', serif;
+    }
+
+    /* Typography */
+    article p { font-size: 1.05rem; line-height: 1.85; color: #2A2A40; margin-bottom: 22px; }
+    article h2 {
+      font-family: 'Heebo', sans-serif; font-size: 1.4rem; font-weight: 900;
+      color: var(--text); margin: 36px 0 14px; padding-top: 8px;
+      border-top: 2px solid var(--cat-light);
+    }
+    article h3 {
+      font-family: 'Heebo', sans-serif; font-size: 1.15rem; font-weight: 700;
+      color: var(--primary); margin: 24px 0 10px;
+    }
+    article ul, article ol { padding-right: 20px; margin-bottom: 22px; }
+    article li { font-size: 1.02rem; line-height: 1.8; margin-bottom: 8px; color: #2A2A40; }
+
+    /* Blockquote */
+    article blockquote {
+      border-right: 4px solid var(--accent); padding: 18px 20px;
+      background: linear-gradient(135deg, #FFFBF0, #FFF8E6);
+      border-radius: 0 12px 12px 0; margin: 24px 0;
+      font-style: italic; font-size: 1.08rem; color: #5A4A10;
+    }
+    article blockquote cite { display: block; margin-top: 8px; font-size: .85rem; font-style: normal; color: var(--text-muted); font-weight: 600; }
+
+    /* Tip box */
+    .tip-box {
+      background: var(--cat-light); border: 1px solid rgba(0,122,140,0.2);
+      border-radius: 12px; padding: 18px 20px; margin: 24px 0;
+      display: flex; gap: 12px;
+    }
+    .tip-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .tip-content strong { display: block; font-size: .95rem; color: var(--cat-dark); margin-bottom: 4px; font-family: 'Heebo', sans-serif; }
+    .tip-content p { font-size: .9rem; color: var(--cat-dark); margin: 0; line-height: 1.6; font-family: 'Assistant', sans-serif; }
+
+    /* Book highlight card */
+    .book-card {
+      background: var(--card-bg); border: 1.5px solid var(--border);
+      border-radius: var(--radius); padding: 20px 22px; margin: 24px 0;
+      display: flex; gap: 18px; align-items: flex-start;
+      transition: box-shadow .2s;
+    }
+    .book-card:hover { box-shadow: var(--shadow); }
+    .book-emoji { font-size: 2.5rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+    .book-info h4 { font-family: 'Heebo', sans-serif; font-weight: 900; font-size: 1.05rem; color: var(--text); margin-bottom: 4px; }
+    .book-info .book-by { color: var(--text-muted); font-size: .85rem; margin-bottom: 8px; font-family: 'Assistant', sans-serif; }
+    .book-info p { font-size: .9rem; color: #3A3A50; margin: 0; line-height: 1.6; font-family: 'Assistant', sans-serif; }
+    .book-num { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: .85rem; font-family: 'Heebo', sans-serif; flex-shrink: 0; }
+
+    /* Divider */
+    .article-divider { border: none; border-top: 1px dashed var(--border); margin: 32px 0; }
+
+    /* Tags line */
+    .article-tags { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .article-tags span { color: var(--text-muted); font-size: .85rem; }
+    .art-tag {
+      background: #F0E8F8; color: var(--primary); border-radius: 50px;
+      padding: 4px 12px; font-size: .82rem; font-weight: 600; font-family: 'Assistant', sans-serif;
+    }
+
+    /* Share bar inside article */
+    .share-bar {
+      display: flex; align-items: center; gap: 10px; margin-top: 24px;
+      padding: 18px 0; border-top: 1px solid var(--border);
+    }
+    .share-label { font-size: .88rem; color: var(--text-muted); font-family: 'Assistant', sans-serif; }
+    .share-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 8px; border: 1.5px solid var(--border);
+      font-family: 'Assistant', sans-serif; font-size: .85rem; font-weight: 600;
+      cursor: pointer; background: var(--card-bg); color: var(--text);
+      transition: all .2s;
+    }
+    .share-btn:hover { border-color: var(--primary); color: var(--primary); background: #F0E8F8; }
+    .share-btn.copy { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .share-btn.copy:hover { background: var(--primary-dark); }
+
+    /* Author bio */
+    .author-bio {
+      background: linear-gradient(135deg, #F8F0FF, #F0E8F8);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px 28px; margin-top: 32px;
+      display: flex; gap: 18px; align-items: flex-start;
+    }
+    .bio-avatar {
+      width: 68px; height: 68px; border-radius: 50%;
+      background: var(--primary); display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; flex-shrink: 0;
+    }
+    .bio-name { font-family: 'Heebo', sans-serif; font-weight: 900; font-size: 1.05rem; color: var(--text); margin-bottom: 3px; }
+    .bio-role { color: var(--primary); font-size: .82rem; font-weight: 600; margin-bottom: 8px; }
+    .bio-text { color: var(--text-muted); font-size: .88rem; line-height: 1.65; font-family: 'Assistant', sans-serif; }
+
+    /* SIDEBAR */
+    .post-sidebar { display: flex; flex-direction: column; gap: 24px; position: sticky; top: calc(var(--nav-h) + 16px); }
+    .sidebar-box { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
+    .sidebar-title { font-family: 'Heebo', sans-serif; font-size: .95rem; font-weight: 700; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--cat-light); }
+
+    /* ToC */
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .toc-link {
+      display: block; padding: 6px 10px; border-radius: 8px;
+      font-size: .85rem; color: var(--text-muted); font-family: 'Assistant', sans-serif;
+      transition: all .2s; border-right: 3px solid transparent; cursor: pointer;
+    }
+    .toc-link:hover { background: var(--cat-light); color: var(--cat-dark); border-right-color: var(--cat); }
+    .toc-link.active { background: var(--cat-light); color: var(--cat-dark); border-right-color: var(--cat); font-weight: 700; }
+
+    /* Social share sidebar */
+    .social-share { display: flex; flex-direction: column; gap: 8px; }
+    .social-share-btn {
+      display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+      border-radius: 10px; border: 1.5px solid var(--border);
+      font-family: 'Assistant', sans-serif; font-size: .88rem; font-weight: 600;
+      cursor: pointer; background: var(--card-bg); color: var(--text);
+      transition: all .2s;
+    }
+    .social-share-btn:hover { transform: translateX(-3px); }
+    .social-share-btn.wa { border-color: #25D366; }
+    .social-share-btn.wa:hover { background: #25D366; color: #fff; border-color: #25D366; }
+    .social-share-btn.fb { border-color: #1877F2; }
+    .social-share-btn.fb:hover { background: #1877F2; color: #fff; }
+    .social-share-btn.li { border-color: #0A66C2; }
+    .social-share-btn.li:hover { background: #0A66C2; color: #fff; }
+    .social-share-btn.cp:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    /* Related posts */
+    .related-list { display: flex; flex-direction: column; gap: 12px; }
+    .related-item { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+    .related-item:hover .related-title { color: var(--cat); }
+    .related-thumb { width: 50px; height: 50px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+    .related-title { font-weight: 600; font-size: .84rem; line-height: 1.4; margin-bottom: 3px; transition: color .2s; }
+    .related-read { color: var(--text-muted); font-size: .78rem; }
+
+    /* NEXT/PREV navigation */
+    .post-nav {
+      max-width: 1160px; margin: 0 auto; padding: 0 24px 60px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .post-nav-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 20px 24px;
+      border: 1px solid var(--border); transition: all .2s; cursor: pointer;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .post-nav-card:hover { box-shadow: var(--shadow-hover); border-color: var(--primary-light); transform: translateY(-2px); }
+    .post-nav-card.next { text-align: right; }
+    .nav-direction { font-size: .78rem; color: var(--text-muted); margin-bottom: 4px; }
+    .nav-title { font-family: 'Heebo', sans-serif; font-weight: 700; font-size: .95rem; line-height: 1.4; }
+    .nav-arrow { font-size: 1.5rem; color: var(--primary); flex-shrink: 0; }
+
+    /* FOOTER */
+    footer { background: linear-gradient(135deg, #1A0528 0%, #0D1040 100%); color: rgba(255,255,255,0.7); padding: 48px 24px 24px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Heebo', sans-serif; font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 12px; }
+    .footer-logo span { color: var(--accent); }
+    .footer-desc { font-size: .9rem; line-height: 1.7; margin-bottom: 16px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn-f { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: background .2s; }
+    .social-btn-f:hover { background: var(--primary-light); }
+    .footer-col h4 { font-family: 'Heebo', sans-serif; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .9rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: .85rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.5); transition: color .2s; }
+    .footer-bottom a:hover { color: #fff; }
+
+    /* SCROLL TOP */
+    .scroll-top { position: fixed; bottom: 28px; left: 28px; z-index: 99; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; border: none; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2); opacity: 0; transition: opacity .3s, transform .3s; display: flex; align-items: center; justify-content: center; }
+    .scroll-top.visible { opacity: 1; }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .post-layout { grid-template-columns: 1fr; }
+      .post-sidebar { position: static; }
+      article { padding: 28px 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .post-nav { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      article { padding: 20px 16px; }
+    }
+  </style>
+  <!-- SEO Meta -->
+  <meta name="description" content="מ-Atomic Habits ועד Lean In — 5 ספרים שמיכל לוי ממליצת לכל יזמית. סקירה מעמיקה עם הציטוטים שמשנים." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut-atzmech.co.il/post.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="5 ספרים שכל יזמית חייבת לקרוא | בזכות עצמך" />
+  <meta property="og:description" content="מ-Atomic Habits ועד Lean In — 5 ספרים שמיכל לוי ממליצת לכל יזמית. סקירה מעמיקה עם הציטוטים שמשנים." />
+  <meta property="og:url" content="https://bezchut-atzmech.co.il/post.html" />
+  <meta property="og:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="5 ספרים שכל יזמית חייבת לקרוא | בזכות עצמך" />
+  <meta name="twitter:description" content="מ-Atomic Habits ועד Lean In — 5 ספרים שמיכל לוי ממליצת לכל יזמית. סקירה מעמיקה עם הציטוטים שמשנים." />
+  <meta name="twitter:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"5 ספרים שכל יזמית חייבת לקרוא | בזכות עצמך","description":"מ-Atomic Habits ועד Lean In — 5 ספרים שמיכל לוי ממליצת לכל יזמית. סקירה מעמיקה עם הציטוטים שמשנים.","inLanguage":"he","url":"https://bezchut-atzmech.co.il/post.html","author":{"@type":"Person","name":"מיכל לוי"},"publisher":{"@type":"Organization","name":"בזכות עצמך","url":"https://bezchut-atzmech.co.il"}}</script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- READING PROGRESS -->
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span>עצמך</span></a>
+    <div class="nav-links">
+      <a href="esek-viyazmanut.html">עסקים</a>
+      <a href="kaspim-vefinansim.html">כספים</a>
+      <a href="marketing-digital.html">מרקטינג</a>
+      <a href="briut-veravaha.html">בריאות</a>
+      <a href="manhigut-nashit.html">מנהיגות</a>
+      <a href="lmida-vetzmikha.html">למידה</a>
+      <a href="resources.html" class="nav-cta">כלים ✦</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="bezchut-atzmech.html">🏠 דף הבית</a>
+  <a href="esek-viyazmanut.html">💼 עסקים ויזמות</a>
+  <a href="kaspim-vefinansim.html">💰 כספים ופיננסים</a>
+  <a href="marketing-digital.html">📱 מרקטינג דיגיטלי</a>
+  <a href="briut-veravaha.html">🌿 בריאות ורווחה</a>
+  <a href="manhigut-nashit.html">👑 מנהיגות נשית</a>
+  <a href="lmida-vetzmikha.html">📚 למידה וצמיחה</a>
+  <a href="resources.html">🛠️ כלים ומשאבים</a>
+</div>
+
+<!-- POST HERO -->
+<section class="post-hero">
+  <span class="hero-particle">📚</span>
+  <span class="hero-particle">✨</span>
+  <span class="hero-particle">💡</span>
+  <div class="post-hero-inner">
+    <div class="breadcrumb">
+      <a href="bezchut-atzmech.html">בית</a>
+      <span>›</span>
+      <a href="lmida-vetzmikha.html">למידה וצמיחה</a>
+      <span>›</span>
+      <span>5 ספרים שכל יזמית חייבת לקרוא</span>
+    </div>
+    <span class="post-cat-badge">📚 למידה וצמיחה</span>
+    <h1>5 ספרים שכל יזמית חייבת לקרוא לפני שהיא מוותרת</h1>
+    <div class="post-hero-meta">
+      <a class="author-chip" href="author.html" style="text-decoration:none;color:inherit;">
+        <div class="author-avatar">👩</div>
+        <div>
+          <div class="author-name">מיכל לוי</div>
+          <div class="author-title">עורכת ראשית, בזכות עצמך</div>
+        </div>
+      </a>
+      <div class="meta-pills">
+        <span class="meta-pill">📅 8 במרץ 2026</span>
+        <span class="meta-pill">⏱️ 12 דק׳ קריאה</span>
+        <span class="meta-pill">👁️ 4,820 צפיות</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" style="width:100%;height:60px">
+      <path d="M0,30 C300,60 900,0 1200,30 L1200,60 L0,60 Z" fill="#FBF6FE"/>
+    </svg>
+  </div>
+</section>
+
+<!-- POST LAYOUT -->
+<div class="post-layout">
+  <!-- ARTICLE -->
+  <article id="article-body">
+
+    <p>כשמדובר בבניית עסק, אין תחליף לניסיון — אבל יש קיצור דרך אחד שעובד תמיד: ללמוד מאנשים שכבר עברו את הדרך הזו. הספרים שאני עומדת לשתף איתך לא רק שינו את הדרך שבה אני מנהלת את העסק שלי — הם שינו את הדרך שבה אני חושבת על עצמי כיזמית.</p>
+
+    <blockquote>
+      "הקוראים הם המנהיגים — ולא בגלל שיש להם יותר כוח, אלא כי יש להם יותר נקודות מבט."
+      <cite>— הארי ס. טרומן</cite>
+    </blockquote>
+
+    <p>אבל בואי נהיה כנות: שוק הספרים העסקיים מוצף. על כל ספר טוב, יש עשרה ספרים שמבטיחים הכל ונותנים מעט. לכן לקחתי על עצמי לסנן, לקרוא ולבחור — ואלה הספרים שאני יכולה להמליץ עליהם בצורה הכי חמה שיש.</p>
+
+    <div class="tip-box">
+      <span class="tip-icon">💡</span>
+      <div class="tip-content">
+        <strong>טיפ לפני שמתחילים</strong>
+        <p>אל תקראי את כל הספרים בבת אחת. קראי ספר אחד, יישמי את מה שלמדת, ורק אז עברי לספר הבא. ידע ללא יישום הוא סתם בידור.</p>
+      </div>
+    </div>
+
+    <h2 id="s1">1. Atomic Habits — ג'יימס קליר</h2>
+
+    <div class="book-card">
+      <span class="book-num">1</span>
+      <span class="book-emoji">⚛️</span>
+      <div class="book-info">
+        <h4>Atomic Habits</h4>
+        <div class="book-by">ג'יימס קליר · 2018 · גם זמין בעברית</div>
+        <p>הספר הטוב ביותר על בניית הרגלים שקיים. קליר מסביר כיצד שיפורים קטנים ועקביים — 1% ביום — יוצרים תוצאות מדהימות לאורך זמן.</p>
+      </div>
+    </div>
+
+    <p>מה שאהבתי בספר הזה מעל לכל: הוא לא מבטיח שינוי מהיר. להיפך — קליר אומר בפה מלא שהרגלים טובים נבנים לאט, ושהמפתח הוא לעשות את הדבר הנכון אפילו כשאת לא מרגישה כמו כן. כבזכות עצמך, זה בדיוק מה שאני צריכה לשמוע.</p>
+
+    <p>העיקרון החשוב ביותר מהספר: <strong>הגדירי את הזהות שלך לפני שאת מגדירה את המטרות שלך.</strong> במקום לומר "אני רוצה לכתוב בלוג", אמרי "אני כותבת". ההרגל הופך לחלק ממי שאת, לא ממה שאת עושה.</p>
+
+    <h2 id="s2">2. Mindset — קרול דווק</h2>
+
+    <div class="book-card">
+      <span class="book-num">2</span>
+      <span class="book-emoji">🧠</span>
+      <div class="book-info">
+        <h4>Mindset: The New Psychology of Success</h4>
+        <div class="book-by">קרול דווק · 2006 · זמין בעברית: "חשיבה גדולה"</div>
+        <p>מחקר פורץ דרך על ההבדל בין "חשיבה קבועה" — שמאמינה שהכישורים נקבעים בלידה — לבין "חשיבה צמיחה" שמאמינה שניתן לפתח כל דבר.</p>
+      </div>
+    </div>
+
+    <p>דווק, פסיכולוגית מסטנפורד, הראתה במחקריה שהאמונה הכי חשובה שיש לנו היא האמונה בנוגע ליכולת שלנו ללמוד. יזמיות עם "growth mindset" מתמודדות אחרת עם כישלונות, מקבלות ביקורת אחרת, ומתמידות הרבה יותר זמן.</p>
+
+    <blockquote>
+      "לא מספיק רק לדעת שיש לך growth mindset — עליך להפעיל אותו בכל פעם שמשהו קשה."
+      <cite>— קרול דווק, Mindset</cite>
+    </blockquote>
+
+    <hr class="article-divider" />
+
+    <h2 id="s3">3. Lean In — שרי זנדברג</h2>
+
+    <div class="book-card">
+      <span class="book-num">3</span>
+      <span class="book-emoji">🚀</span>
+      <div class="book-info">
+        <h4>Lean In: Women, Work, and the Will to Lead</h4>
+        <div class="book-by">שרי זנדברג · 2013 · זמין בעברית</div>
+        <p>קריאת חובה לכל אישה שרוצה לנהל, לבנות, להשפיע. זנדברג מדברת בגובה העיניים על הדברים שנשים עושות לעצמן — ועל איך לשנות.</p>
+      </div>
+    </div>
+
+    <p>הספר הזה שנוי במחלוקת, ואני מבינה למה. זנדברג כותבת מנקודת מבט של אישה מאוד מאוד מועדפת. אבל בתוך הספר יש תובנות שלא נגעה בהן אף אחת לפניה: על "תסמונת המתחזה", על זה שנשים לא "לוקחות מקום" כמו גברים, ועל כך שלפעמים הבסיס לניהול טוב הוא להאמין שמגיע לנו.</p>
+
+    <div class="tip-box">
+      <span class="tip-icon">🎯</span>
+      <div class="tip-content">
+        <strong>שאלה לחשיבה</strong>
+        <p>מה היית עושה אחרת בעסק שלך אם ידעת שאת לא יכולה להיכשל? ענה על זה בכנות — זה מראה לך בדיוק לאן הפחד מונע אותך.</p>
+      </div>
+    </div>
+
+    <h2 id="s4">4. You Are a Badass — ג'ן סינסרו</h2>
+
+    <div class="book-card">
+      <span class="book-num">4</span>
+      <span class="book-emoji">💪</span>
+      <div class="book-info">
+        <h4>You Are a Badass: How to Stop Doubting Your Greatness</h4>
+        <div class="book-by">ג'ן סינסרו · 2013 · אנגלית</div>
+        <p>ספר מצחיק, כן ומעצים על כיצד להפסיק לחבל בעצמנו ולבנות חיים שאנחנו אוהבות. פחות תיאורטי, יותר "בואי תעשי משהו עם זה".</p>
+      </div>
+    </div>
+
+    <p>סינסרו כותבת בשפה של חברה טובה — לא של מרצה. הספר קל לקריאה, מצחיק ברגעים, וחוטף אותך ומזכיר לך שרוב הסיפורים שאת מספרת לעצמך על למה את לא יכולה — הם בדיוק זה: סיפורים.</p>
+
+    <hr class="article-divider" />
+
+    <h2 id="s5">5. The E-Myth Revisited — מייקל גרבר</h2>
+
+    <div class="book-card">
+      <span class="book-num">5</span>
+      <span class="book-emoji">🏗️</span>
+      <div class="book-info">
+        <h4>The E-Myth Revisited: Why Most Small Businesses Don't Work</h4>
+        <div class="book-by">מייקל גרבר · 1995 · זמין בעברית</div>
+        <p>הספר שמסביר מדוע 80% מהעסקים הקטנים נכשלים בתוך 5 שנים — ומה לעשות כדי להיות ב-20% שמצליחים.</p>
+      </div>
+    </div>
+
+    <p>גרבר מציג את "המיתוס היזמי" — ההנחה שמי שטובה בתחום מסוים יצליח להפוך אותו לעסק. אבל עסק הוא לא רק לעשות את מה שאת טובה בו — זה לנהל, לשווק, לתמחר, לגייס. ספר זה לימד אותי לחשוב על העסק שלי כמערכת, לא כעבודה.</p>
+
+    <div class="tip-box">
+      <span class="tip-icon">📌</span>
+      <div class="tip-content">
+        <strong>הרעיון המרכזי שתקחי מהספר</strong>
+        <p>בני את העסק שלך כאילו היית הולכת לפתוח ממנו 100 סניפים. גם אם לעולם לא תעשי את זה — התהליך מכריח אותך לבנות מערכות, לא להסתמך על עצמך בלבד.</p>
+      </div>
+    </div>
+
+    <h2 id="s6">לסיכום — מה עכשיו?</h2>
+
+    <p>אם קראת עד לכאן, כנראה שאת יזמית שרצינה לגבי הצמיחה שלה. אז הנה ה-takeaway שלי:</p>
+
+    <ul>
+      <li>בחרי <strong>ספר אחד</strong> מהרשימה — לא כל חמישה</li>
+      <li>קראי 20 דקות ביום, בעדיפות בוקר</li>
+      <li>כתבי <strong>תובנה אחת</strong> מכל פרק שקראת</li>
+      <li>שאלי את עצמך: "מה אני יכולה ליישם <em>השבוע</em> מהפרק הזה?"</li>
+    </ul>
+
+    <p>ידע שלא יושם הוא פשוט בידור. ולי? אין לי זמן לבידור — ולך?</p>
+
+    <div class="article-tags">
+      <span>תגיות:</span>
+      <span class="art-tag">ספרים</span>
+      <span class="art-tag">כישורים</span>
+      <span class="art-tag">למידה</span>
+      <span class="art-tag">צמיחה עצמית</span>
+    </div>
+
+    <div class="share-bar">
+      <span class="share-label">שתפי:</span>
+      <button class="share-btn" onclick="shareWA()">📱 וואטסאפ</button>
+      <button class="share-btn" onclick="shareFB()">👥 פייסבוק</button>
+      <button class="share-btn copy" id="copy-btn" onclick="copyLink()">🔗 העתיקי קישור</button>
+    </div>
+
+    <!-- Author bio -->
+    <a class="author-bio" href="author.html" style="text-decoration:none;color:inherit;display:flex;">
+      <div class="bio-avatar">👩</div>
+      <div>
+        <div class="bio-name">מיכל לוי</div>
+        <div class="bio-role">עורכת ראשית | בזכות עצמך</div>
+        <div class="bio-text">מיכל היא יזמית סדרתית עם 12 שנות ניסיון בבניית עסקים לנשים. היא מאמינה שכל אישה יכולה לבנות עסק מצליח — אם יש לה את הכלים, הידע והקהילה הנכונים. כותבת, מנחה ואמא לשלושה.</div>
+      </div>
+    </a>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="post-sidebar">
+    <!-- ToC -->
+    <div class="sidebar-box">
+      <div class="sidebar-title">📋 תוכן עניינים</div>
+      <ul class="toc-list" id="toc-list">
+        <li><span class="toc-link" onclick="scrollTo('s1')">1. Atomic Habits</span></li>
+        <li><span class="toc-link" onclick="scrollTo('s2')">2. Mindset</span></li>
+        <li><span class="toc-link" onclick="scrollTo('s3')">3. Lean In</span></li>
+        <li><span class="toc-link" onclick="scrollTo('s4')">4. You Are a Badass</span></li>
+        <li><span class="toc-link" onclick="scrollTo('s5')">5. The E-Myth Revisited</span></li>
+        <li><span class="toc-link" onclick="scrollTo('s6')">לסיכום</span></li>
+      </ul>
+    </div>
+
+    <!-- Social share -->
+    <div class="sidebar-box">
+      <div class="sidebar-title">🔗 שתפי את הכתבה</div>
+      <div class="social-share">
+        <button class="social-share-btn wa" onclick="shareWA()">📱 שתפי בוואטסאפ</button>
+        <button class="social-share-btn fb" onclick="shareFB()">👥 שתפי בפייסבוק</button>
+        <button class="social-share-btn li" onclick="shareLI()">💼 שתפי בלינקדאין</button>
+        <button class="social-share-btn cp" id="sb-copy-btn" onclick="copyLink()">🔗 העתיקי קישור</button>
+      </div>
+    </div>
+
+    <!-- Related posts -->
+    <div class="sidebar-box">
+      <div class="sidebar-title">📖 כתבות קשורות</div>
+      <div class="related-list">
+        <a class="related-item" href="post.html">
+          <div class="related-thumb" style="background:linear-gradient(135deg,#1A8C6B,#0A5A40)">🎓</div>
+          <div>
+            <div class="related-title">איך ללמוד דבר חדש בלי לוותר על השגרה</div>
+            <div class="related-read">8 דק׳ קריאה</div>
+          </div>
+        </a>
+        <a class="related-item" href="post.html">
+          <div class="related-thumb" style="background:linear-gradient(135deg,#007A5A,#004A35)">⏱️</div>
+          <div>
+            <div class="related-title">למידה מיקרו: 10 דקות ביום שמשנות הכל</div>
+            <div class="related-read">6 דק׳ קריאה</div>
+          </div>
+        </a>
+        <a class="related-item" href="post.html">
+          <div class="related-thumb" style="background:linear-gradient(135deg,#2D7A4F,#0A4A25)">🌱</div>
+          <div>
+            <div class="related-title">יצירת הרגל למידה יומי: השלבים שעובדים</div>
+            <div class="related-read">7 דק׳ קריאה</div>
+          </div>
+        </a>
+        <a class="related-item" href="post.html">
+          <div class="related-thumb" style="background:linear-gradient(135deg,#007A8C,#003A45)">🤖</div>
+          <div>
+            <div class="related-title">איך להשתמש ב-AI ללמידה ופיתוח עצמי</div>
+            <div class="related-read">9 דק׳ קריאה</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Back to category -->
+    <a href="lmida-vetzmikha.html" style="display:block;text-align:center;padding:14px;background:var(--cat-light);border-radius:var(--radius);color:var(--cat-dark);font-weight:700;font-size:.9rem;transition:all .2s"
+       onmouseover="this.style.background='var(--cat)';this.style.color='#fff'"
+       onmouseout="this.style.background='var(--cat-light)';this.style.color='var(--cat-dark)'">
+      ← חזרה לקטגוריה: למידה וצמיחה
+    </a>
+  </aside>
+</div>
+
+<!-- PREV / NEXT -->
+<div class="post-nav">
+  <div class="post-nav-card" onclick="window.location='post.html'">
+    <span class="nav-arrow">←</span>
+    <div>
+      <div class="nav-direction">הכתבה הקודמת</div>
+      <div class="nav-title">יצירת הרגל למידה יומי: השלבים שעובדים באמת</div>
+    </div>
+  </div>
+  <div class="post-nav-card next" onclick="window.location='post.html'" style="justify-content:flex-end">
+    <div>
+      <div class="nav-direction">הכתבה הבאה</div>
+      <div class="nav-title">המדריך השלם לבחירת מנטורית עסקית</div>
+    </div>
+    <span class="nav-arrow">→</span>
+  </div>
+</div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">בזכות <span>עצמך</span></div>
+        <div class="footer-desc">פורטל התוכן המוביל לנשים יזמיות בישראל. כתבות, כלים, השראה ועדכונים שיעזרו לך לבנות עסק שאת גאה בו.</div>
+        <div class="footer-social">
+          <a class="social-btn-f" href="#">📸</a>
+          <a class="social-btn-f" href="#">👥</a>
+          <a class="social-btn-f" href="#">🎵</a>
+          <a class="social-btn-f" href="#">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>קטגוריות</h4>
+        <ul>
+          <li><a href="esek-viyazmanut.html">עסקים ויזמות</a></li>
+          <li><a href="kaspim-vefinansim.html">כספים ופיננסים</a></li>
+          <li><a href="marketing-digital.html">מרקטינג דיגיטלי</a></li>
+          <li><a href="briut-veravaha.html">בריאות ורווחה</a></li>
+          <li><a href="manhigut-nashit.html">מנהיגות נשית</a></li>
+          <li><a href="lmida-vetzmikha.html">למידה וצמיחה</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>משאבים</h4>
+        <ul>
+          <li><a href="resources.html">כלים מומלצים</a></li>
+          <li><a href="machshevon-tmhur.html">🧮 מחשבון</a>
+      <a href="about.html">אודות</a></li>
+          <li><a href="about.html">צרי קשר</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>פרטיות</h4>
+        <ul>
+          <li><a href="#">תנאי שימוש</a></li>
+          <li><a href="#">מדיניות פרטיות</a></li>
+          <li><a href="#">גילוי אפיליאציה</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 בזכות עצמך. כל הזכויות שמורות.</span>
+      <div style="display:flex;gap:16px">
+        <a href="#">תנאי שימוש</a>
+        <a href="#">פרטיות</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── READING PROGRESS ───────────────────────────────
+function updateProgress() {
+  const art = document.getElementById('article-body');
+  const rect = art.getBoundingClientRect();
+  const artTop = art.offsetTop;
+  const artH = art.offsetHeight;
+  const scrolled = window.scrollY + window.innerHeight;
+  const pct = Math.min(100, Math.max(0, ((window.scrollY - artTop + 200) / (artH - 200)) * 100));
+  document.getElementById('progress-fill').style.width = pct + '%';
+}
+
+// ── TOC ACTIVE HIGHLIGHT ───────────────────────────
+const sections = ['s1','s2','s3','s4','s5','s6'];
+function updateToc() {
+  const scrollY = window.scrollY + 120;
+  let active = sections[0];
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollY) active = id;
+  });
+  document.querySelectorAll('.toc-link').forEach((link, i) => {
+    link.classList.toggle('active', sections[i] === active);
+  });
+}
+
+window.addEventListener('scroll', () => {
+  updateProgress();
+  updateToc();
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+  document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 300);
+});
+
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if (el) window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' });
+}
+
+// ── SHARE ─────────────────────────────────────────
+function shareWA() { window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(document.title + '\n' + location.href)); }
+function shareFB() { window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href)); }
+function shareLI() { window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(location.href)); }
+
+function copyLink() {
+  navigator.clipboard.writeText(location.href).then(() => {
+    ['copy-btn','sb-copy-btn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) { btn.textContent = '✓ הועתק!'; setTimeout(() => btn.textContent = (id === 'copy-btn' ? '🔗 העתיקי קישור' : '🔗 העתיקי קישור'), 2000); }
+    });
+  });
+}
+
+// ── NAV ───────────────────────────────────────────
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+
+// ── INIT ──────────────────────────────────────────
+updateProgress();
+updateToc();
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>

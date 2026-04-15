@@ -1,0 +1,5 @@
+node_modules/
+devtek/
+*.xlsx
+.DS_Store
+Thumbs.db

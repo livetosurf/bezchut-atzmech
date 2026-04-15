@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מרקטינג דיגיטלי | בזכות עצמך</title>
+  <meta name="description" content="אינסטגרם, פייסבוק, תוכן, SEO ופרסום ממומן — כל מה שצריך לשווק את העסק שלך ברשת">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6B2D7C;
+      --primary-light: #9B59B6;
+      --primary-dark: #3D1A47;
+      --accent: #C9A84C;
+      --accent-light: #F0D080;
+      --lavender: #E8D5F5;
+      --dark: #1A0A2E;
+      --dark2: #2C1654;
+      --bg: #FBF6FE;
+      --bg2: #F0E8F8;
+      --text: #2C1654;
+      --text2: #6B5A7E;
+      --text3: #9985AA;
+      --white: #FFFFFF;
+      --border: rgba(107, 45, 124, 0.15);
+      --shadow: 0 4px 20px rgba(107, 45, 124, 0.12);
+      --shadow-hover: 0 8px 30px rgba(107, 45, 124, 0.22);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --nav-h: 72px;
+      /* Category accent — coral / electric */
+      --cat: #D64F8C;
+      --cat-light: #E87AB0;
+      --cat-dark: #A03068;
+      --cat-bg: #FDF0F6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Assistant','Heebo',Arial,sans-serif; background: var(--bg); color: var(--text); direction: rtl; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+    /* BUTTONS */
+    .btn-gold { display: inline-block; background: linear-gradient(135deg,#C9A84C 0%,#F0D080 50%,#C9A84C 100%); background-size: 200% auto; color: var(--dark); font-weight: 700; font-size: 0.95rem; padding: 12px 28px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 14px rgba(201,168,76,0.32); font-family: inherit; }
+    .btn-gold:hover { background-position: right center; transform: translateY(-2px); box-shadow: 0 6px 22px rgba(201,168,76,0.48); }
+    .btn-outline { display: inline-block; background: transparent; color: var(--primary); font-weight: 700; font-size: 0.95rem; padding: 11px 28px; border-radius: 50px; border: 2px solid var(--primary); cursor: pointer; transition: all 0.25s; font-family: inherit; }
+    .btn-outline:hover { background: var(--primary); color: var(--white); }
+
+    /* TYPE */
+    .section-label { font-size: 0.76rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+    .section-title { font-family: 'Heebo',sans-serif; font-size: clamp(1.5rem,3.5vw,2rem); font-weight: 900; color: var(--dark2); line-height: 1.25; margin-bottom: 10px; }
+    .divider { width: 50px; height: 4px; background: linear-gradient(90deg,var(--primary),var(--accent)); border-radius: 2px; margin: 12px 0 14px; }
+
+    /* HEADER */
+    header { position: fixed; top: 0; right: 0; left: 0; z-index: 200; height: var(--nav-h); transition: background 0.35s, box-shadow 0.35s; }
+    header.scrolled { background: rgba(26,10,46,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.35); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); padding: 0 32px; max-width: 1300px; margin: 0 auto; }
+    .logo { font-family: 'Heebo',sans-serif; font-size: 1.45rem; font-weight: 900; color: var(--white); letter-spacing: -0.5px; user-select: none; }
+    .logo .gold { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.82); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent-light); }
+    .nav-links .nav-cta { background: linear-gradient(135deg,var(--accent),#E8C86A); color: var(--dark) !important; font-weight: 700; padding: 10px 22px; border-radius: 50px; font-size: 0.9rem; }
+    .hamburger { display: none; background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; padding: 4px; line-height: 1; }
+    .mobile-nav { display: none; position: fixed; top: var(--nav-h); right: 0; left: 0; background: rgba(22,8,42,0.98); backdrop-filter: blur(16px); padding: 16px 24px 24px; z-index: 199; flex-direction: column; border-top: 1px solid rgba(255,255,255,0.08); }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { color: rgba(255,255,255,0.88); font-size: 1.1rem; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); transition: color 0.2s; }
+    .mobile-nav a:hover { color: var(--accent-light); }
+    .mobile-nav a:last-child { border-bottom: none; color: var(--accent-light); font-weight: 700; }
+
+    /* HERO */
+    #cat-hero {
+      min-height: 52vh;
+      background: radial-gradient(ellipse at 20% 30%, #1A0A3E 0%, #0D0825 45%, #050312 100%);
+      display: flex; align-items: center; position: relative; overflow: hidden;
+      padding: calc(var(--nav-h) + 50px) 24px 80px;
+    }
+    .stars { position: absolute; inset: 0; pointer-events: none; }
+    .star { position: absolute; background: white; border-radius: 50%; animation: twinkle var(--d,3s) ease-in-out infinite var(--delay,0s); }
+    @keyframes twinkle { 0%,100%{opacity:var(--min-op,.15);transform:scale(1)} 50%{opacity:1;transform:scale(1.3)} }
+
+    /* Phone mockup */
+    .phone-mockup {
+      position: absolute;
+      top: 8%; right: 6%;
+      width: 90px; height: 160px;
+      border-radius: 16px;
+      border: 3px solid rgba(255,255,255,0.25);
+      background: linear-gradient(180deg, #1A0A3E 0%, #2D1060 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      padding: 12px 8px 8px;
+      box-shadow: 0 0 40px rgba(214,79,140,0.3), 0 0 80px rgba(214,79,140,0.1);
+      animation: phonePulse 4s ease-in-out infinite;
+      overflow: hidden;
+    }
+    @keyframes phonePulse {
+      0%,100%{box-shadow:0 0 40px rgba(214,79,140,0.3),0 0 80px rgba(214,79,140,0.1)}
+      50%{box-shadow:0 0 60px rgba(214,79,140,0.5),0 0 120px rgba(214,79,140,0.2)}
+    }
+    .phone-notch { width: 30px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.2); margin-bottom: 10px; }
+    .phone-post {
+      width: 100%; background: rgba(255,255,255,0.08); border-radius: 8px;
+      padding: 6px; margin-bottom: 6px; text-align: center; font-size: 1.4rem;
+    }
+    .phone-likes { font-size: 0.5rem; color: var(--cat-light); font-weight: 700; text-align: right; margin-top: 2px; }
+    .phone-bar { width: 100%; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-top: 4px; }
+    .phone-bar-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--cat), #9B59B6); animation: barFill 3s ease-in-out infinite; }
+    @keyframes barFill { 0%{width:20%} 50%{width:85%} 100%{width:20%} }
+
+    /* Floating social icons */
+    .float-social { position: absolute; opacity: 0; animation: floatSocial var(--fs-d,4s) ease-in-out infinite var(--fs-delay,0s); font-size: var(--fs-size,1.5rem); }
+    @keyframes floatSocial {
+      0%{opacity:0;transform:translateY(10px) scale(0.8)}
+      30%{opacity:0.8}
+      70%{opacity:0.5}
+      100%{opacity:0;transform:translateY(-60px) scale(1.1)}
+    }
+
+    .hero-inner { z-index: 2; max-width: 600px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 22px; }
+    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent-light); }
+    .breadcrumb-sep { opacity: 0.4; }
+    .breadcrumb .current { color: var(--cat-light); font-weight: 600; }
+    .cat-hero-icon { font-size: 3.5rem; display: block; margin-bottom: 14px; }
+    .cat-hero-title { font-family: 'Heebo',sans-serif; font-size: clamp(2.2rem,6vw,3.5rem); font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 14px; }
+    .cat-hero-title .pink-text {
+      background: linear-gradient(135deg, #D64F8C 0%, #FF8AC7 50%, #D64F8C 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .cat-hero-desc { font-size: 1.05rem; color: rgba(255,255,255,0.72); font-weight: 300; max-width: 480px; }
+    .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; line-height: 0; }
+    .hero-wave svg { width: 100%; display: block; }
+
+    /* PLATFORM PILLS */
+    .platform-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      overflow-x: auto;
+    }
+    .platform-inner { display: flex; gap: 10px; justify-content: center; padding: 0 24px; flex-wrap: wrap; }
+    .platform-pill {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 25px;
+      padding: 7px 16px;
+      font-size: 0.82rem; font-weight: 700; color: var(--text2);
+      white-space: nowrap; transition: all 0.22s; cursor: default;
+    }
+    .platform-pill:hover { border-color: var(--cat); color: var(--cat); background: var(--cat-bg); }
+    .platform-pill .pill-icon { font-size: 1rem; }
+    .platform-pill .pill-count { font-size: 0.72rem; color: var(--text3); font-weight: 400; }
+
+    /* MAIN */
+    #main-content { padding: 56px 0 80px; }
+    .content-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; }
+
+    /* FEATURED */
+    .featured-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 240px; margin-bottom: 32px; cursor: pointer; transition: all 0.28s; min-height: 210px; }
+    .featured-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .featured-body { padding: 26px 26px 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .featured-badge { display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg,var(--accent),#E8C86A); color: var(--dark); font-size: 0.72rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; width: fit-content; }
+    .featured-body h2 { font-family: 'Heebo',sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--dark2); line-height: 1.45; margin-bottom: 10px; }
+    .featured-body .excerpt { font-size: 0.88rem; color: var(--text2); line-height: 1.75; margin-bottom: 16px; flex: 1; }
+    .featured-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .featured-meta { display: flex; align-items: center; gap: 14px; font-size: 0.78rem; color: var(--text3); }
+    .featured-author { display: flex; align-items: center; gap: 7px; font-size: 0.84rem; font-weight: 600; color: var(--text2); }
+    .avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg,var(--primary-light),var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 0.78rem; color: white; font-weight: 700; }
+    .featured-thumb { display: flex; align-items: center; justify-content: center; font-size: 5rem; flex-shrink: 0; }
+    .read-more { font-size: 0.82rem; font-weight: 700; color: var(--primary); transition: color 0.2s; }
+    .read-more:hover { color: var(--accent); }
+
+    /* FILTER */
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; align-items: center; }
+    .filter-label { font-size: 0.82rem; font-weight: 600; color: var(--text3); margin-left: 4px; white-space: nowrap; }
+    .tag-btn { background: transparent; color: var(--primary); font-size: 0.82rem; font-weight: 600; padding: 7px 16px; border-radius: 25px; border: 1.5px solid var(--primary); cursor: pointer; transition: all 0.22s; font-family: inherit; white-space: nowrap; }
+    .tag-btn:hover { background: var(--lavender); }
+    .tag-btn.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+    /* BLOG GRID */
+    .blog-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .blog-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: all 0.28s; cursor: pointer; display: flex; flex-direction: column; }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .blog-thumb { height: 165px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .blog-thumb-icon { font-size: 3.2rem; z-index: 1; }
+    .blog-cat-tag { position: absolute; top: 12px; right: 12px; background: var(--accent); color: var(--dark); font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; z-index: 2; }
+    .blog-body { padding: 16px 18px 14px; display: flex; flex-direction: column; flex: 1; }
+    .blog-meta { display: flex; gap: 12px; font-size: 0.75rem; color: var(--text3); margin-bottom: 8px; }
+    .blog-card h3 { font-size: 0.97rem; font-weight: 700; color: var(--dark2); line-height: 1.5; margin-bottom: 8px; }
+    .blog-excerpt { font-size: 0.83rem; color: var(--text2); line-height: 1.7; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
+    .blog-foot { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 11px; margin-top: auto; }
+    .blog-author { display: flex; align-items: center; gap: 7px; font-size: 0.78rem; font-weight: 600; color: var(--text2); }
+
+    .load-more-wrap { text-align: center; margin-top: 30px; }
+    #noResults { display: none; text-align: center; padding: 44px 24px; color: var(--text3); font-style: italic; }
+    #noResults .no-res-icon { font-size: 2.8rem; display: block; margin-bottom: 10px; }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: calc(var(--nav-h) + 20px); }
+    .sidebar-box { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px 18px; }
+    .sidebar-title { font-family: 'Heebo',sans-serif; font-size: 0.98rem; font-weight: 800; color: var(--dark2); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+
+    /* Search */
+    .search-wrap { position: relative; }
+    .search-wrap input { width: 100%; padding: 10px 38px 10px 12px; border: 1.5px solid var(--border); border-radius: 10px; background: var(--bg); color: var(--text); font-size: 0.88rem; font-family: inherit; outline: none; direction: rtl; transition: border-color 0.25s; }
+    .search-wrap input:focus { border-color: var(--primary-light); }
+    .search-wrap input::placeholder { color: var(--text3); }
+    .search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; opacity: 0.45; pointer-events: none; }
+
+    /* POST IDEA GENERATOR */
+    .idea-box {
+      background: linear-gradient(135deg, #1A0835 0%, #3D1A6B 100%);
+      border: none;
+    }
+    .idea-box .sidebar-title { color: var(--white); }
+    .idea-box .idea-sub { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 14px; line-height: 1.5; }
+    .idea-platforms { display: flex; gap: 7px; margin-bottom: 14px; flex-wrap: wrap; }
+    .idea-platform-btn {
+      background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.75); font-size: 0.75rem; font-weight: 600;
+      padding: 5px 12px; border-radius: 20px; cursor: pointer;
+      transition: all 0.2s; font-family: inherit;
+    }
+    .idea-platform-btn.active { background: var(--cat); border-color: var(--cat); color: white; }
+    .idea-gen-btn {
+      width: 100%; padding: 11px;
+      background: linear-gradient(135deg, var(--cat), #FF8AC7);
+      color: white; font-weight: 700; font-size: 0.9rem;
+      border: none; border-radius: 10px; cursor: pointer;
+      font-family: inherit; transition: all 0.25s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .idea-gen-btn:hover { transform: translateY(-1px); box-shadow: 0 5px 18px rgba(214,79,140,0.4); }
+    .idea-result {
+      background: rgba(255,255,255,0.1); border-radius: 10px;
+      padding: 14px; margin-top: 12px; display: none;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .idea-result.show { display: block; }
+    .idea-result-text { font-size: 0.85rem; color: var(--white); line-height: 1.6; font-style: italic; }
+    .idea-result-tag { font-size: 0.72rem; color: var(--cat-light); font-weight: 700; margin-top: 8px; display: block; }
+    .idea-copy-btn {
+      margin-top: 10px; padding: 6px 14px;
+      background: transparent; border: 1px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.7); font-size: 0.75rem; font-weight: 600;
+      border-radius: 8px; cursor: pointer; font-family: inherit;
+      transition: all 0.2s; width: 100%;
+    }
+    .idea-copy-btn:hover { background: rgba(255,255,255,0.12); }
+
+    /* Newsletter mini */
+    .nl-mini { background: linear-gradient(135deg,#3D1A47 0%,#6B2D7C 100%); border: none; }
+    .nl-mini .sidebar-title { color: var(--white); }
+    .nl-mini p { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-bottom: 12px; line-height: 1.55; }
+    .nl-mini input { width: 100%; padding: 10px 12px; border: 1.5px solid rgba(255,255,255,0.22); border-radius: 8px; background: rgba(255,255,255,0.1); color: var(--white); font-size: 0.86rem; font-family: inherit; outline: none; direction: rtl; margin-bottom: 9px; transition: border-color 0.25s; }
+    .nl-mini input::placeholder { color: rgba(255,255,255,0.38); }
+    .nl-mini input:focus { border-color: var(--accent); }
+    .nl-mini button { width: 100%; padding: 10px; background: linear-gradient(135deg,var(--accent),#E8C86A); color: var(--dark); font-weight: 700; font-size: 0.86rem; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.25s; }
+    .nl-mini button:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(201,168,76,0.45); }
+    .nl-mini .nl-consent { display: flex; gap: 8px; align-items: flex-start; margin: 10px 0; }
+    .nl-mini .nl-consent input[type=checkbox] { margin-top: 3px; accent-color: var(--accent); flex-shrink: 0; width: 15px; height: 15px; cursor: pointer; }
+    .nl-mini .nl-consent label { font-size: .73rem; line-height: 1.5; color: rgba(255,255,255,0.5); cursor: pointer; }
+    .nl-mini .nl-consent label a { color: var(--accent); text-decoration: underline; }
+
+    /* Other cats */
+    .other-cats { display: flex; flex-direction: column; gap: 5px; }
+    .other-cat { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; border: 1.5px solid transparent; cursor: pointer; transition: all 0.22s; color: var(--text2); }
+    .other-cat:hover { background: var(--lavender); border-color: var(--border); color: var(--primary); }
+    .other-cat-icon { font-size: 1.15rem; flex-shrink: 0; }
+    .other-cat-name { font-size: 0.86rem; font-weight: 600; flex: 1; }
+    .other-cat-count { font-size: 0.72rem; color: var(--text3); background: var(--bg2); padding: 2px 8px; border-radius: 10px; }
+
+    /* Popular */
+    .popular-list { display: flex; flex-direction: column; gap: 10px; }
+    .popular-item { display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 5px; border-radius: 10px; transition: background 0.2s; }
+    .popular-item:hover { background: var(--bg2); }
+    .popular-thumb { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+    .popular-info { flex: 1; min-width: 0; }
+    .popular-title { font-size: 0.82rem; font-weight: 600; color: var(--dark2); line-height: 1.4; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .popular-read { font-size: 0.72rem; color: var(--text3); margin-top: 2px; }
+
+    /* Affiliate */
+    .affiliate-box { background: linear-gradient(135deg,var(--bg2),var(--lavender)); border: 1.5px solid var(--border); position: relative; }
+    .aff-badge { position: absolute; top: -10px; right: 16px; background: linear-gradient(135deg,var(--primary),var(--primary-light)); color: white; font-size: 0.67rem; font-weight: 700; padding: 3px 12px; border-radius: 20px; }
+    .aff-icon { font-size: 1.9rem; margin-bottom: 9px; display: block; }
+    .affiliate-box h4 { font-size: 0.93rem; font-weight: 700; color: var(--dark2); margin-bottom: 6px; }
+    .affiliate-box p { font-size: 0.8rem; color: var(--text2); line-height: 1.6; margin-bottom: 12px; }
+    .aff-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8rem; font-weight: 700; color: var(--primary); border: 1.5px solid var(--primary); padding: 6px 15px; border-radius: 20px; transition: all 0.22s; }
+    .aff-link:hover { background: var(--primary); color: white; }
+
+    /* MODAL */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(13,5,32,0.88); z-index: 1000; backdrop-filter: blur(6px); animation: fadeOverlay 0.22s; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.open { display: flex; }
+    @keyframes fadeOverlay { from{opacity:0}to{opacity:1} }
+    .modal-box { background: var(--white); border-radius: 20px; max-width: 660px; width: 100%; max-height: 88vh; overflow-y: auto; animation: slideUpModal 0.28s ease; }
+    @keyframes slideUpModal { from{transform:translateY(22px);opacity:0}to{transform:translateY(0);opacity:1} }
+    .modal-head { padding: 36px 28px 26px; position: relative; }
+    .modal-close-btn { position: absolute; top: 14px; left: 14px; background: rgba(255,255,255,0.22); border: none; color: white; width: 34px; height: 34px; border-radius: 50%; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+    .modal-close-btn:hover { background: rgba(255,255,255,0.35); }
+    .modal-head .cat-tag { display: inline-block; background: var(--accent); color: var(--dark); font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+    .modal-head h2 { font-size: 1.4rem; font-weight: 800; color: white; line-height: 1.4; }
+    .modal-head .modal-meta { font-size: 0.8rem; color: rgba(255,255,255,0.56); margin-top: 9px; }
+    .modal-body-content { padding: 28px; }
+    .content-placeholder { background: linear-gradient(135deg,var(--bg2),var(--lavender)); border-radius: var(--radius-sm); padding: 36px 24px; text-align: center; color: var(--text3); font-style: italic; border: 2px dashed var(--border); }
+
+    /* FOOTER */
+    footer { background: #0D0520; color: rgba(255,255,255,0.6); padding: 58px 0 26px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
+    .footer-brand .logo { display: block; margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.84rem; line-height: 1.75; color: rgba(255,255,255,0.38); max-width: 260px; }
+    .socials { display: flex; gap: 9px; margin-top: 18px; }
+    .social-btn { width: 35px; height: 35px; border-radius: 50%; background: rgba(255,255,255,0.09); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: white; transition: background 0.22s; }
+    .social-btn:hover { background: var(--primary); }
+    .footer-col h4 { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-light); margin-bottom: 14px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-links a { color: rgba(255,255,255,0.43); font-size: 0.84rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent-light); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+    .scroll-top { position: fixed; bottom: 24px; left: 24px; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg,var(--primary),var(--primary-light)); color: white; border: none; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 16px rgba(107,45,124,0.42); transition: all 0.3s; opacity: 0; transform: translateY(12px); z-index: 99; }
+    .scroll-top.show { opacity: 1; transform: translateY(0); }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .content-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-thumb { height: 150px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px; }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .filter-bar { gap: 6px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+  <!-- SEO Meta -->
+  <meta name="description" content="שיווק דיגיטלי לנשים יזמיות ב-2026: אינסטגרם, TikTok, SEO לוקאלי, ניוזלטר ו-AI לשיווק. מדריכים מעשיים." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut-atzmech.co.il/marketing-digital.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="מרקטינג דיגיטלי | בזכות עצמך" />
+  <meta property="og:description" content="שיווק דיגיטלי לנשים יזמיות ב-2026: אינסטגרם, TikTok, SEO לוקאלי, ניוזלטר ו-AI לשיווק. מדריכים מעשיים." />
+  <meta property="og:url" content="https://bezchut-atzmech.co.il/marketing-digital.html" />
+  <meta property="og:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="מרקטינג דיגיטלי | בזכות עצמך" />
+  <meta name="twitter:description" content="שיווק דיגיטלי לנשים יזמיות ב-2026: אינסטגרם, TikTok, SEO לוקאלי, ניוזלטר ו-AI לשיווק. מדריכים מעשיים." />
+  <meta name="twitter:image" content="https://bezchut-atzmech.co.il/og-image.jpg" />
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"דף הבית","item":"https://bezchut-atzmech.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מרקטינג דיגיטלי","item":"https://bezchut-atzmech.co.il/marketing-digital.html"}]}</script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header id="mainHeader">
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span class="gold">עצמך</span> ✦</a>
+    <ul class="nav-links">
+      <li><a href="bezchut-atzmech.html#blog">בלוג</a></li>
+      <li><a href="bezchut-atzmech.html#categories">נושאים</a></li>
+      <li><a href="bezchut-atzmech.html#resources">כלים מומלצים</a></li>
+      <li><a href="bezchut-atzmech.html#about">אודות</a></li>
+      <li><a href="bezchut-atzmech.html#newsletter" class="nav-cta">הצטרפי לקהילה ✦</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="פתחי תפריט">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="bezchut-atzmech.html" onclick="closeMobileNav()">דף הבית</a>
+  <a href="bezchut-atzmech.html#blog" onclick="closeMobileNav()">בלוג</a>
+  <a href="bezchut-atzmech.html#categories" onclick="closeMobileNav()">נושאים</a>
+  <a href="bezchut-atzmech.html#resources" onclick="closeMobileNav()">כלים מומלצים</a>
+  <a href="bezchut-atzmech.html#newsletter" onclick="closeMobileNav()">הצטרפי לקהילה ✦</a>
+</div>
+
+<!-- HERO -->
+<section id="cat-hero">
+  <div class="stars" id="starsEl"></div>
+
+  <!-- Phone mockup -->
+  <div class="phone-mockup">
+    <div class="phone-notch"></div>
+    <div class="phone-post">📸</div>
+    <div class="phone-likes">❤️ 1,204 לייקים</div>
+    <div class="phone-post" style="margin-top:4px">🎥</div>
+    <div class="phone-likes">❤️ 3,867 לייקים</div>
+    <div class="phone-bar"><div class="phone-bar-fill"></div></div>
+  </div>
+
+  <!-- Floating social icons -->
+  <span class="float-social" style="bottom:25%;right:22%;--fs-d:3.8s;--fs-delay:0.2s;--fs-size:1.6rem">📸</span>
+  <span class="float-social" style="bottom:35%;right:30%;--fs-d:4.2s;--fs-delay:1.5s;--fs-size:1.2rem">👥</span>
+  <span class="float-social" style="bottom:20%;right:38%;--fs-d:3.2s;--fs-delay:0.8s;--fs-size:1.4rem">🎵</span>
+  <span class="float-social" style="bottom:40%;right:16%;--fs-d:5s;--fs-delay:2s;--fs-size:1rem">💼</span>
+
+  <div class="hero-inner container">
+    <nav class="breadcrumb" aria-label="נתיב ניווט">
+      <a href="bezchut-atzmech.html">בית</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="current">מרקטינג דיגיטלי</span>
+    </nav>
+    <span class="cat-hero-icon">📱</span>
+    <h1 class="cat-hero-title">מרקטינג <span class="pink-text">דיגיטלי</span></h1>
+    <p class="cat-hero-desc">כל מה שצריך לדעת כדי לשווק את העסק שלך ברשת — בלי לבזבז כסף ובלי לפחד מהמסך</p>
+  </div>
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#FBF6FE" d="M0,40 C360,85 720,5 1080,55 C1260,75 1380,35 1440,48 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- PLATFORM PILLS -->
+<div class="platform-strip">
+  <div class="platform-inner">
+    <div class="platform-pill"><span class="pill-icon">📸</span> אינסטגרם <span class="pill-count">6 כתבות</span></div>
+    <div class="platform-pill"><span class="pill-icon">👥</span> פייסבוק <span class="pill-count">4 כתבות</span></div>
+    <div class="platform-pill"><span class="pill-icon">🎵</span> טיקטוק <span class="pill-count">3 כתבות</span></div>
+    <div class="platform-pill"><span class="pill-icon">🔍</span> SEO <span class="pill-count">2 כתבות</span></div>
+    <div class="platform-pill"><span class="pill-icon">💰</span> פרסום ממומן <span class="pill-count">2 כתבות</span></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<section id="main-content">
+  <div class="container">
+    <div class="content-layout">
+
+      <main>
+        <!-- FEATURED -->
+        <div class="featured-card" onclick="window.location='posts/marketing-digital-1.html'" tabindex="0" role="button">
+          <div class="featured-body">
+            <span class="featured-badge">✦ כתבה מובחרת</span>
+            <h2>אינסטגרם לעסקים: 10 טיפים שיסדרו לך את הראש ויביאו לקוחות אמיתיים</h2>
+            <p class="excerpt">איך להפוך את האינסטגרם שלך ממשהו שמציק לך לכלי שמביא לקוחות אמיתיים? המדריך שמסביר בדיוק מה לפרסם, מתי לפרסם, ואיך לכתוב קפשן שאנשים מגיבים עליו.</p>
+            <div class="featured-footer">
+              <div class="featured-author"><div class="avatar">ד</div><span>דנה מ.</span></div>
+              <div class="featured-meta"><span>⏱ 6 דק׳ קריאה</span><span>📅 8 בינואר 2024</span></div>
+              <span class="read-more">קרא עוד →</span>
+            </div>
+          </div>
+          <div class="featured-thumb" style="background:linear-gradient(135deg,#1A0835 0%,#D64F8C 100%)">📱</div>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filter-bar">
+          <span class="filter-label">סינון:</span>
+          <button class="tag-btn active" onclick="filterByTag('הכל',this)">הכל</button>
+          <button class="tag-btn" onclick="filterByTag('אינסטגרם',this)">אינסטגרם</button>
+          <button class="tag-btn" onclick="filterByTag('פייסבוק',this)">פייסבוק</button>
+          <button class="tag-btn" onclick="filterByTag('תוכן',this)">תוכן</button>
+          <button class="tag-btn" onclick="filterByTag('SEO',this)">SEO</button>
+          <button class="tag-btn" onclick="filterByTag('פרסום ממומן',this)">פרסום ממומן</button>
+        </div>
+
+        <div class="blog-grid" id="blogGrid"></div>
+        <div id="noResults"><span class="no-res-icon">🔍</span><p>לא נמצאו כתבות בנושא זה</p></div>
+        <div class="load-more-wrap">
+          <button class="btn-outline" id="loadMoreBtn" onclick="loadMore()">טעני עוד כתבות ↓</button>
+        </div>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- SEARCH -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">🔍 חיפוש</div>
+          <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="חפשי כתבה..." oninput="searchPosts(this.value)">
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <!-- POST IDEA GENERATOR -->
+        <div class="sidebar-box idea-box">
+          <div class="sidebar-title">✨ מחולל רעיונות לפוסטים</div>
+          <p class="idea-sub">בחרי פלטפורמה וקבלי רעיון מיידי לפוסט הבא שלך</p>
+          <div class="idea-platforms">
+            <button class="idea-platform-btn active" data-platform="instagram" onclick="selectPlatform(this)">📸 אינסטגרם</button>
+            <button class="idea-platform-btn" data-platform="facebook" onclick="selectPlatform(this)">👥 פייסבוק</button>
+            <button class="idea-platform-btn" data-platform="tiktok" onclick="selectPlatform(this)">🎵 טיקטוק</button>
+          </div>
+          <button class="idea-gen-btn" onclick="generateIdea()">
+            <span>🎲</span> תני לי רעיון!
+          </button>
+          <div class="idea-result" id="ideaResult">
+            <p class="idea-result-text" id="ideaText"></p>
+            <span class="idea-result-tag" id="ideaTag"></span>
+            <button class="idea-copy-btn" onclick="copyIdea()">📋 העתיקי את הרעיון</button>
+          </div>
+        </div>
+
+        <!-- NEWSLETTER MINI -->
+        <div class="sidebar-box nl-mini">
+          <div class="sidebar-title">📬 טיפים שיווקיים במייל</div>
+          <p>קבלי טיפ שיווקי שבועי שיעזור לך לגדול בדיגיטל</p>
+          <input type="email" id="sideNlEmail" placeholder="המייל שלך...">
+          <div class="nl-consent">
+            <input type="checkbox" id="sideNlConsent" />
+            <label for="sideNlConsent">אני מסכימה לקבל עדכונים ותוכן שיווקי. <a href="bezchut-atzmech.html#privacy" target="_blank">מדיניות פרטיות</a></label>
+          </div>
+          <button onclick="handleSideNl(event)">הצטרפי עכשיו ✦</button>
+        </div>
+
+        <!-- OTHER CATS -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">📂 קטגוריות נוספות</div>
+          <div class="other-cats">
+            <a href="esek-viyazmanut.html" class="other-cat"><span class="other-cat-icon">💼</span><span class="other-cat-name">עסקים ויזמות</span><span class="other-cat-count">12</span></a>
+            <a href="kaspim-vefinansim.html" class="other-cat"><span class="other-cat-icon">💰</span><span class="other-cat-name">כספים ופיננסים</span><span class="other-cat-count">8</span></a>
+            <a href="briut-veravaha.html" class="other-cat"><span class="other-cat-icon">🌿</span><span class="other-cat-name">בריאות ורווחה</span><span class="other-cat-count">10</span></a>
+            <a href="manhigut-nashit.html" class="other-cat"><span class="other-cat-icon">✨</span><span class="other-cat-name">מנהיגות נשית</span><span class="other-cat-count">7</span></a>
+            <a href="lmida-vetzmikha.html" class="other-cat"><span class="other-cat-icon">🎓</span><span class="other-cat-name">למידה וצמיחה</span><span class="other-cat-count">9</span></a>
+          </div>
+        </div>
+
+        <!-- POPULAR -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">🔥 הכי נקראות</div>
+          <div class="popular-list" id="popularList"></div>
+        </div>
+
+        <!-- AFFILIATE -->
+        <div class="sidebar-box affiliate-box">
+          <span class="aff-badge">✦ ממליצות</span>
+          <span class="aff-icon">🎨</span>
+          <h4>כלי עיצוב לרשתות</h4>
+          <p>יוצרות גרפיקה מקצועית לפוסטים, סטוריז ותמונות בפחות מ-5 דקות — ללא ניסיון בעיצוב.</p>
+          <a href="#" class="aff-link">גלי עוד ←</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="bezchut-atzmech.html" class="logo">בזכות <span class="gold">עצמך</span> ✦</a>
+        <p>פורטל תוכן לנשים יזמיות בישראל. כי כל אישה יכולה להיות בזכות עצמך שחלמה עליו.</p>
+        <div class="socials">
+          <a href="#" class="social-btn">📸</a>
+          <a href="#" class="social-btn">👥</a>
+          <a href="#" class="social-btn">🎵</a>
+          <a href="#" class="social-btn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>תוכן</h4><ul class="footer-links"><li><a href="bezchut-atzmech.html#blog">בלוג</a></li><li><a href="bezchut-atzmech.html#categories">נושאים</a></li><li><a href="all-posts.html">מדריכים</a></li><li><a href="#">פודקאסט</a></li></ul></div>
+      <div class="footer-col"><h4>כלים</h4><ul class="footer-links"><li><a href="bezchut-atzmech.html#resources">כלים מומלצים</a></li><li><a href="resources.html">ספרים</a></li><li><a href="course.html">קורסים</a></li><li><a href="resources.html">תבניות חינם</a></li></ul></div>
+      <div class="footer-col"><h4>אודות</h4><ul class="footer-links"><li><a href="bezchut-atzmech.html#about">מי אנחנו</a></li><li><a href="#">צרי קשר</a></li><li><a href="#">כתבי עבורנו</a></li><li><a href="#">מדיניות פרטיות</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 בזכות עצמך · כל הזכויות שמורות</p>
+      <p>נבנה באהבה עבור נשים יזמיות ✦</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleModalClick(event)">
+  <div class="modal-box">
+    <div class="modal-head" id="modalHead">
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      <span class="cat-tag" id="mCat">מרקטינג דיגיטלי</span>
+      <h2 id="mTitle"></h2>
+      <p class="modal-meta" id="mMeta"></p>
+    </div>
+    <div class="modal-body-content">
+      <div class="content-placeholder" id="mBody"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---- POSTS ---- */
+const allPosts = [
+  { id:1, tags:["אינסטגרם","תוכן"], icon:"📱", bg:"linear-gradient(135deg,#1A0835 0%,#D64F8C 100%)", title:"אינסטגרם לעסקים: 10 טיפים שיסדרו לך את הראש", excerpt:"מה לפרסם, מתי, ואיך לכתוב קפשן שאנשים מגיבים עליו. המדריך המלא לאינסטגרם עסקי שעובד.", author:"דנה מ.", read:"6 דק׳ קריאה", date:"8 בינואר 2024", featured:true, content:`<h2>למה אינסטגרם הוא המקום שלך</h2><p>אם את בעלת עסק קטן או בינוני, אינסטגרם הוא אחד הכלים הכי חזקים שיש לך היום. מעל 2 מיליון ישראלים פעילים בפלטפורמה, ורובם גוללים את הפיד שלהם כל יום. הנה 10 טיפים שיעזרו לך להפוך את הפרופיל העסקי שלך למכונה שמייצרת לקוחות.</p><h2>1. עברי לפרופיל עסקי — עכשיו</h2><p>פרופיל עסקי נותן לך גישה לאינסייטס, אפשרות להוסיף כפתור יצירת קשר, וקטגוריה עסקית. אם את עדיין בפרופיל אישי, את מפסידה מידע קריטי על הקהל שלך.</p><h2>2. הביו הוא דף הנחיתה שלך</h2><p>יש לך 150 תווים לשכנע מישהי לעקוב. כתבי בדיוק מה את עושה, למי, ומה הערך. הוסיפי קריאה לפעולה וקישור. אל תבזבזי את השורה הזאת על ציטוט מעורפל.</p><h2>3. קובעות נוכחות — לפחות 4 פוסטים בשבוע</h2><p>עקביות חשובה יותר מושלמות. האלגוריתם מתגמל חשבונות שמפרסמים באופן קבוע. תכנני מראש, השתמשי בכלי תזמון, ואל תחכי להשראה — צרי מערכת.</p><h2>4. סטוריז כל יום — בלי תירוצים</h2><p>סטוריז הם המקום שבו בונים קשר אישי. שתפי מאחורי הקלעים, שאלות, סקרים, ותגובות ללקוחות. סטוריז לא צריכים להיות מושלמים — הם צריכים להיות אמיתיים.</p><h2>5. רילס הם המלך</h2><p>אינסטגרם דוחפת רילס יותר מכל פורמט אחר. סרטון קצר של 15-30 שניות עם טיפ מהיר, הצצה מאחורי הקלעים, או תשובה לשאלה נפוצה — יכול להגיע לאלפי אנשים שלא מכירים אותך.</p><h2>6. כתבי קפשנים שמזמינים תגובות</h2><p>שאלי שאלות, בקשי דעות, ספרי סיפור אישי. קפשן שנגמר בשאלה פתוחה מקבל בממוצע 40% יותר תגובות. תגובות = מעורבות = חשיפה.</p><h2>7. השתמשי בהאשטגים בחוכמה</h2><p>5-10 האשטגים ממוקדים עדיפים על 30 גנריים. שלבי האשטגים של הנישה שלך, של המיקום, ושל הקהל. בדקי מה המתחרות שלך משתמשות — ותעשי יותר טוב.</p><h2>8. תעשי שיתופי פעולה</h2><p>מצאי בעלות עסקים משלימות ותעשו לייב, פוסט משותף או giveaway יחד. שיתוף פעולה חושף אותך לקהל חדש באופן אורגני ובלי עלות. לטיפים נוספים על הרחבת העסק שלך, ראי גם את המדריכים שלנו ב<a href="esek-viyazmanut.html" style="color:var(--primary);font-weight:600;">עסקים ויזמות</a>.</p><h2>9. תגיבי, תשתפי, תהיי חלק מהקהילה</h2><p>אינסטגרם היא רשת חברתית — לא לוח מודעות. הקדישי 15 דקות ביום לתגובות על פוסטים של אחרים בתחום שלך. ככל שתהיי פעילה יותר, האלגוריתם יאהב אותך יותר.</p><h2>10. נתחי ותתאימי</h2><p>כנסי לאינסייטס פעם בשבוע. ראי אילו פוסטים עבדו הכי טוב, באיזה שעות הקהל שלך פעיל, ומאיפה מגיעים העוקבים. נתונים הם לא רק מספרים — הם המצפן שלך. תני לנתונים להנחות אותך, ותראי שהתוצאות ישתנו. מיומנויות הצגה עצמית ומיתוג אישי הן חלק בלתי נפרד מזה — קראי עוד על <a href="manhigut-nashit.html" style="color:var(--primary);font-weight:600;">מנהיגות נשית</a> ועל פיתוח הקול המנהיגותי שלך.</p><p><strong>שורה תחתונה:</strong> אינסטגרם דורש עבודה, אבל זו עבודה שמחזירה את עצמה. התחילי מטיפ אחד, יישמי אותו השבוע, והוסיפי עוד טיפ בשבוע הבא. לאט לאט — תבני נוכחות שמביאה לקוחות.</p>` },
+  { id:2, tags:["תוכן"], icon:"✍️", bg:"linear-gradient(135deg,#1A0A3E 0%,#5B2D8C 100%)", title:"איך לכתוב קפשן שמביא לייקים, תגובות — ולקוחות", excerpt:"קפשן טוב הוא הרבה יותר מתיאור התמונה. זאת שיחה עם הקהל שלך. למדי את הנוסחה שעובדת.", author:"שרה כ.", read:"5 דק׳ קריאה", date:"6 בינואר 2024", content:`<h2>קפשן טוב = שיחה טובה</h2><p>רוב בעלות העסקים מפרסמות תמונה יפה ואז כותבות משפט אחד סתמי. הבעיה? אף אחד לא מגיב, לא שומר, ולא שולח הודעה. קפשן הוא לא תיאור — הוא ההזדמנות שלך לפתוח שיחה עם אנשים שיכולים להפוך ללקוחות.</p><h2>הנוסחה שעובדת: Hook, Story, CTA</h2><p>כל קפשן מצליח בנוי מ-3 חלקים. <strong>Hook</strong> — משפט פתיחה שעוצר את האגודל. <strong>Story</strong> — גוף הטקסט שנותן ערך, מספר סיפור או חולק תובנה. <strong>CTA</strong> — קריאה לפעולה שאומרת לקורא מה לעשות עכשיו.</p><h2>5 סוגי Hook שעובדים</h2><p><strong>1. השאלה:</strong> "את יודעת מה ההבדל בין פוסט שמקבל 5 לייקים לפוסט שמקבל 500?" — שאלות יוצרות סקרנות מיידית.</p><p><strong>2. הטענה הנועזת:</strong> "90% מבעלות העסקים כותבות קפשנים לא נכון" — מעוררת תגובה רגשית.</p><p><strong>3. הסיפור האישי:</strong> "לפני שנה פרסמתי פוסט שהביא לי 47 לקוחות חדשות" — מספרים ותוצאות מושכים תשומת לב.</p><p><strong>4. ההדרכה:</strong> "3 דברים שכל קפשן חייב לכלול" — הבטחה לערך מעשי מיידי.</p><p><strong>5. ההזדהות:</strong> "גם את יושבת 20 דקות מול מסך ריק ולא יודעת מה לכתוב?" — הקוראת מרגישה שמבינים אותה.</p><h2>גוף הקפשן — איפה הקסם קורה</h2><p>אחרי ה-Hook, הגיע הזמן לתת ערך אמיתי. ספרי סיפור קצר, חלקי טיפ מעשי, או הסבירי רעיון. חשוב: כתבי כאילו את מדברת עם חברה. השתמשי ב"את" ולא ב"לקוחות". פסקאות קצרות. אימוג\'ים במינון — כן, אבל אל תגזימי.</p><p>אורך אידיאלי? בין 80 ל-200 מילים. מספיק ארוך כדי לתת ערך, מספיק קצר כדי שלא יוותרו באמצע.</p><h2>קריאה לפעולה — אל תשכחי את זה</h2><p>כל קפשן חייב להסתיים במשהו שמזמין תגובה. "מה את חושבת?" זה בסדר, אבל "כתבי לי בתגובות את הטיפ הכי טוב שקיבלת" — זה יותר טוב. תני להם משימה קטנה וספציפית.</p><p>דוגמאות לקריאות לפעולה שעובדות: "שמרי את הפוסט הזה לפעם הבאה שתכתבי קפשן", "תייגי חברה שצריכה לשמוע את זה", "כתבי לי + בתגובה ואשלח לך את התבנית".</p><h2>טעויות נפוצות שצריך להימנע מהן</h2><p>לכתוב רק "קישור בביו" בלי הקשר. להשתמש ב-30 האשטגים בגוף הקפשן במקום בתגובה הראשונה. לכתוב קפשן גנרי שמתאים לכל עסק — הייחודיות שלך היא הנשק הסודי. אם את רוצה לפתח את הקול האישי שלך עוד יותר, ראי את הכתבות שלנו על <a href="manhigut-nashit.html" style="color:var(--primary);font-weight:600;">מנהיגות נשית</a> ועל בניית מותג אישי. רוצה ללמוד כלים נוספים לכתיבת תוכן? כנסי למדריכים שלנו על <a href="lmida-vetzmikha.html" style="color:var(--primary);font-weight:600;">למידה וצמיחה</a>.</p><p><strong>התחילי היום:</strong> קחי פוסט שכבר פרסמת, שכתבי את הקפשן לפי הנוסחה הזאת, ותראי מה קורה. לפעמים שינוי של כמה שורות טקסט יכול להכפיל את המעורבות שלך.</p>` },
+  { id:3, tags:["SEO"], icon:"🔍", bg:"linear-gradient(135deg,#0A2D1A 0%,#1A6B4A 100%)", title:"SEO לעסקים קטנים — המדריך שמתחיל מאפס", excerpt:"SEO לא חייב להיות מסובך. כך עושים את הצעדים הראשונים שיגרמו לגוגל למצוא אתכן.", author:"מיכל ל.", read:"9 דק׳ קריאה", date:"4 בינואר 2024", content:`<h2>מה זה SEO ולמה את צריכה את זה</h2><p>SEO — קידום אתרים אורגני — זה בעצם לגרום לגוגל להציג את האתר שלך כשמישהי מחפשת את מה שאת מציעה. בניגוד לפרסום ממומן, תנועה אורגנית היא חינמית ומגיעה מאנשים שכבר מחפשים את מה שיש לך. זה לא קסם שחור ולא רק לטכנולוגיסטים — כל בעלת עסק יכולה להתחיל.</p><h2>שלב 1: מחקר מילות מפתח</h2><p>לפני שכותבים מילה, צריך להבין מה אנשים מחפשים. השתמשי בכלים חינמיים כמו Google Keyword Planner, Ubersuggest או אפילו השלמה אוטומטית בגוגל. חפשי מילים שקשורות לתחום שלך ובדקי כמה אנשים מחפשים אותן בחודש.</p><p>דוגמה: אם את מעצבת פנים, אל תתמקדי רק ב"עיצוב פנים" — חפשי גם "עיצוב סלון קטן", "רעיונות לעיצוב חדר שינה", "מעצבת פנים מחירים". מילות מפתח ארוכות (Long Tail) קלות יותר לדירוג ומביאות לקוחות ממוקדים.</p><h2>שלב 2: אופטימיזציה של העמודים</h2><p><strong>כותרת העמוד (Title Tag):</strong> זו השורה הכחולה שמופיעה בגוגל. היא חייבת לכלול את מילת המפתח ולהיות עד 60 תווים. כתבי אותה כך שמישהי שרואה אותה תרצה ללחוץ.</p><p><strong>תיאור מטא (Meta Description):</strong> 2-3 משפטים שמופיעים מתחת לכותרת בגוגל. זו ההזדמנות שלך לשכנע — כתבי מה הגולשת תקבל אם תלחץ.</p><p><strong>כותרות H1, H2, H3:</strong> סדרי את התוכן בהיררכיה ברורה. H1 — כותרת ראשית אחת בלבד. H2 — כותרות משנה. H3 — תתי-סעיפים. גוגל קורא את המבנה הזה כדי להבין על מה הדף.</p><h2>שלב 3: תוכן שנותן ערך אמיתי</h2><p>גוגל מדרגת גבוה תוכן שעונה על שאלות של אנשים בצורה מקיפה ומועילה. כתבי מאמרים של 800 מילים ומעלה, עני על שאלות נפוצות, הוסיפי דוגמאות מעשיות. ככל שהתוכן שלך יותר מפורט ומדויק, גוגל תאהב אותך יותר.</p><p>טיפ חשוב: כתבי לאנשים, לא למנועי חיפוש. אם הטקסט מרגיש מלאכותי ודחוס במילות מפתח — זה יזיק לך. כתבי טבעי, שלבי מילות מפתח בצורה אורגנית.</p><h2>שלב 4: טכני בסיסי</h2><p><strong>מהירות אתר:</strong> אתר איטי = גולשים בורחים = גוגל מורידה אותך. בדקי את המהירות ב-Google PageSpeed Insights ותקני מה שצריך.</p><p><strong>מותאם למובייל:</strong> מעל 70% מהגלישה בישראל היא מהטלפון. אם האתר שלך לא נראה טוב במובייל, את מפסידה את רוב הקהל.</p><p><strong>אבטחה (HTTPS):</strong> ודאי שיש לך תעודת SSL ושהאתר פועל ב-HTTPS. גוגל מעדיפה אתרים מאובטחים.</p><h2>שלב 5: Google Business Profile</h2><p>אם יש לך עסק מקומי, פתחי פרופיל עסקי בגוגל (בחינם). מלאי את כל הפרטים, העלי תמונות, בקשי חוות דעת מלקוחות. זה מה שמופיע כשמחפשים "מעצבת פנים תל אביב" — והתוצאות בולטות יותר מתוצאות רגילות.</p><h2>שלב 6: קישורים — הדלק של SEO</h2><p>קישורים מאתרים אחרים לאתר שלך אומרים לגוגל "האתר הזה אמין". התחילי בדברים פשוטים: הירשמי לספריות עסקיות, כתבי פוסט אורח בבלוג רלוונטי, שתפי מאמרים ברשתות. כל קישור איכותי מחזק אותך. לרעיונות כיצד לקדם את העסק שלך גם מחוץ לגוגל, ראי את הכתבות שלנו על <a href="esek-viyazmanut.html" style="color:var(--primary);font-weight:600;">עסקים ויזמות</a>.</p><p><strong>טעות נפוצה:</strong> לקנות קישורים ממקומות מפוקפקים. גוגל יודעת לזהות את זה והעונש כואב. עדיף 5 קישורים טבעיים מ-500 מזויפים.</p><h2>סיכום — מה לעשות השבוע</h2><p>עשי מחקר מילות מפתח אחד לתחום שלך. עדכני את כותרות העמודים והתיאורים באתר. כתבי מאמר אחד שעונה על שאלה נפוצה של הלקוחות שלך. את לא צריכה לעשות הכל ביום אחד — אבל את צריכה להתחיל. כל שבוע שעובר בלי SEO הוא שבוע שלקוחות פוטנציאליות מוצאות את המתחרות שלך במקום אותך. מומלץ גם ללמוד כלים וטכניקות נוספות — עברי למדריכים שלנו על <a href="lmida-vetzmikha.html" style="color:var(--primary);font-weight:600;">למידה וצמיחה</a>.</p>` },
+  { id:4, tags:["פרסום ממומן","פייסבוק"], icon:"💰", bg:"linear-gradient(135deg,#1A1A0A 0%,#6B5A2D 100%)", title:"פרסום ממומן בפייסבוק: מאיפה מתחילות ואיך לא לשרוף כסף", excerpt:"פרסום ממומן יכול להביא תוצאות נהדרות — אם יודעים מה עושים. מדריך מעשי לפרסום ראשון שעובד.", author:"דנה מ.", read:"7 דק׳ קריאה", date:"2 בינואר 2024", content:`<h2>פרסום ממומן — למה דווקא עכשיו</h2><p>החשיפה האורגנית בפייסבוק צנחה ל-2-5% בממוצע. זה אומר שמתוך 1,000 עוקבים, רק 20-50 רואים את הפוסט שלך. פרסום ממומן הוא הדרך להגיע לקהל רחב וממוקד — אבל רק אם עושים את זה נכון. יותר מדי בעלות עסקים לוחצות "קדמי פוסט", שורפות 200 שקל ומתאכזבות. הנה איך לעשות את זה אחרת.</p><h2>הכנה לפני שמוציאים שקל</h2><p><strong>הגדירי מטרה ברורה:</strong> מה את רוצה מהמודעה? תנועה לאתר? הרשמה לניוזלטר? רכישה? הודעות בוואטסאפ? כל מטרה דורשת הגדרה שונה בתוך מנהל המודעות.</p><p><strong>הכירי את הקהל:</strong> מי הלקוחה האידיאלית? בת כמה, מאיפה, מה מעניין אותה? ככל שתדייקי יותר, הכסף יעבוד חזק יותר.</p><p><strong>הכיני את דף הנחיתה:</strong> אם את שולחת אנשים לאתר, ודאי שהעמוד טוען מהר, ברור, ויש בו קריאה לפעולה בולטת. מודעה מעולה שמובילה לדף גרוע = כסף לפח.</p><h2>מנהל המודעות — לא להיבהל</h2><p>אל תשתמשי בכפתור "קדמי פוסט". תמיד עברי דרך <strong>Meta Ads Manager</strong> (מנהל המודעות). כן, יש שם יותר אפשרויות, אבל בדיוק בגלל זה התוצאות טובות יותר.</p><p>בחרי קמפיין לפי המטרה: "תנועה" אם את רוצה כניסות לאתר, "לידים" אם את רוצה פרטים, "מכירות" אם יש לך חנות אונליין. כל בחירה אחרת היא בזבוז.</p><h2>תקציב — כמה באמת צריך</h2><p>אפשר להתחיל עם 20-30 שקל ליום. זה מספיק כדי ללמוד מה עובד. <strong>אל תשימי 500 שקל ביום הראשון.</strong> התחילי קטן, בדקי תוצאות אחרי 3-4 ימים, ואז תגדילי את מה שעובד. ניהול תקציב פרסום הוא חלק מניהול הכספים הכולל של העסק — ראי את המדריכים שלנו על <a href="kaspim-vefinansim.html" style="color:var(--primary);font-weight:600;">ניהול כספים לעסק</a>.</p><p>כלל אצבע: תני לקמפיין לרוץ לפחות 3 ימים לפני שמשנים משהו. האלגוריתם צריך זמן ללמוד.</p><h2>קהל יעד — איפה הזהב</h2><p><strong>קהל חם:</strong> אנשים שכבר ביקרו באתר שלך, צפו בסרטון, או קיימו אינטראקציה עם הדף. זה הקהל הכי זול והכי ממיר. התקיני פיקסל של מטא באתר כדי לאסוף אותם.</p><p><strong>קהל דומה (Lookalike):</strong> פייסבוק יכולה ליצור קהל של אנשים שדומים ללקוחות הקיימות שלך. זה אחד הכלים החזקים ביותר.</p><p><strong>קהל קר:</strong> אנשים שלא מכירים אותך. כאן הטירגוט צריך להיות מדויק — גיל, מיקום, תחומי עניין. אל תטרגטי "כולם".</p><h2>הקריאייטיב — מה אנשים רואים</h2><p>תמונה או סרטון? שניהם עובדים, אבל סרטון קצר (15-30 שניות) מביא בדרך כלל עלות נמוכה יותר לקליק. הכותרת צריכה לפנות ישירות לכאב או לרצון של הלקוחה. "את בעלת עסק שמרגישה שהפרסום לא עובד?" — עדיף מ"שירותי שיווק דיגיטלי".</p><h2>מה עושים עם התוצאות</h2><p>אחרי שבוע, בדקי: כמה אנשים ראו (חשיפות), כמה לחצו (CTR), כמה זה עלה לך לכל תוצאה (CPA). אם ה-CTR מתחת ל-1% — הקריאייטיב לא עובד. אם אנשים לוחצים אבל לא ממירים — הבעיה בדף הנחיתה.</p><p><strong>הכלל החשוב:</strong> אל תפחדי לכבות קמפיין שלא עובד. עדיף להפסיד 100 שקל על ניסוי כושל מאשר 1,000 שקל על עקשנות. למדי, תקני, נסי שוב. ככה כל המפרסמות המוצלחות התחילו. לתובנות נוספות על בניית עסק חכם, כנסי לכתבות שלנו על <a href="esek-viyazmanut.html" style="color:var(--primary);font-weight:600;">עסקים ויזמות</a>.</p>` },
+  { id:5, tags:["תוכן"], icon:"📅", bg:"linear-gradient(135deg,#2D1A0A 0%,#8C5A2D 100%)", title:"תוכנית תוכן חודשית ב-2 שעות — תבנית חינמית", excerpt:"במקום לחשוב כל יום מה לפרסם, שבי פעם בחודש ותכנני הכל. כך תחסכי זמן ותפרסמי עקבית.", author:"נועה ב.", read:"4 דק׳ קריאה", date:"30 בדצמבר 2023", content:`<h2>למה את צריכה תוכנית תוכן</h2><p>כמה פעמים פתחת את אינסטגרם, ידעת שצריך לפרסם, אבל לא היה לך מושג מה? את לא לבד. זו אחת הסיבות הנפוצות ביותר שבעלות עסקים מפסיקות לפרסם — לא חוסר רצון, אלא חוסר תכנון. תוכנית תוכן חודשית פותרת את זה. פעם בחודש, שעתיים של עבודה ממוקדת, ויש לך לוח שנה שלם שמחכה לך.</p><h2>שלב 1: הגדרת עמודי תוכן (30 דקות)</h2><p>עמודי תוכן הם 3-5 נושאים קבועים שסביבם נבנה כל התוכן שלך. דוגמה לבעלת סטודיו ליוגה: (1) טיפים לתרגול, (2) סיפורים אישיים, (3) מידע על שיעורים, (4) השראה ומוטיבציה, (5) מאחורי הקלעים.</p><p>למה זה חשוב? כי זה מונע מצב שהפיד שלך נראה כמו ערבוביה. הקהל יודע מה לצפות, ואת יודעת מה לכתוב.</p><h2>שלב 2: בחירת פורמטים (15 דקות)</h2><p>לכל פלטפורמה יש פורמטים שעובדים טוב יותר. באינסטגרם: רילס, קרוסלה, סטורי, פוסט תמונה. בפייסבוק: פוסט טקסט ארוך, סרטון, שיתוף מאמר. קבעי לכל יום איזה פורמט — זה חוסך זמן החלטה.</p><p>תבנית לדוגמה: ראשון — רילס (טיפ מהיר), שלישי — קרוסלה (מדריך), חמישי — סטורי עם שאלה לקהל.</p><h2>שלב 3: סיעור מוחות רעיונות (30 דקות)</h2><p>שבי עם דף ריק ו-30 דקות של טיימר. כתבי כל רעיון שעולה לך — בלי פילטרים. שאלות שלקוחות שואלות, דברים שראית ברשת, טרנדים, סיפורים אישיים, טיפים, טעויות נפוצות.</p><p>מקורות השראה: תגובות של לקוחות, שאלות נפוצות בגוגל, מה מתחרות מפרסמות, נושאים עונתיים (חגים, מבצעים, אירועים).</p><p>מטרה: רשימה של 20-30 רעיונות. לא כולם יהיו מעולים, אבל תמיד תוכלי לסנן.</p><h2>שלב 4: מילוי לוח השנה (30 דקות)</h2><p>קחי את הרעיונות ושבצי אותם ביומן. לכל יום — נושא, פורמט, עמוד תוכן שהוא שייך אליו. הוסיפי תאריכים מיוחדים: חגים, השקות, מבצעים. השאירי מקום לגמישות — דברים אקטואליים שצצים במהלך החודש.</p><p><strong>כלים חינמיים שעוזרים:</strong> Google Sheets (פשוט ויעיל), Notion (יפה ומסודר), Later או Buffer (מאפשרים תזמון מראש). לסקירות מקיפות על כלים דיגיטליים לעסק, ראי את המדריכים שלנו על <a href="lmida-vetzmikha.html" style="color:var(--primary);font-weight:600;">למידה וצמיחה</a>.</p><h2>שלב 5: הכנה מרוכזת (15 דקות תכנון + ביצוע פרוס על החודש)</h2><p>עכשיו שיש לך תוכנית, הקדישי בלוק זמן שבועי של שעה-שעתיים ליצירה בפועל. כתבי 3-4 קפשנים, צלמי כמה תמונות, הכיני רילס. ביום הפרסום — רק מעלים. בלי לחץ, בלי "מה לפרסם היום".</p><h2>התבנית שלך — חינם</h2><p>הנה מבנה פשוט ליומן תוכן חודשי שאפשר להעתיק ל-Google Sheets:</p><p><strong>עמודות:</strong> תאריך | יום | פלטפורמה | פורמט | עמוד תוכן | נושא/רעיון | סטטוס (תכנון/כתיבה/מוכן/פורסם)</p><p><strong>טיפ אחרון:</strong> אל תנסי להיות מושלמת. תוכנית של 80% עדיפה פי אלף מאף תוכנית. גם אם לא עמדת בכל מה שתכננת — פרסמת יותר ממה שהיית מפרסמת בלי תוכנית. וזה מה שחשוב. תוכנית תוכן עסקית היא גם חלק מניהול עסק מוצלח — קראי עוד על <a href="esek-viyazmanut.html" style="color:var(--primary);font-weight:600;">עסקים ויזמות</a>.</p>` },
+  { id:6, tags:["אינסטגרם"], icon:"🎵", bg:"linear-gradient(135deg,#0A0A1A 0%,#1A1A6B 100%)", title:"טיקטוק לעסקים — כן, גם את יכולה (ומה שיש שם יפתיע אותך)", excerpt:"טיקטוק הוא לא רק לבני נוער. עסקים קטנים צמחו שם פי 10 בחודש. הנה איך להתחיל.", author:"שרה כ.", read:"5 דק׳ קריאה", date:"28 בדצמבר 2023", content:`<h2>טיקטוק — לא מה שחשבת</h2><p>בואי נפרק מיתוס: טיקטוק הוא לא רק ריקודים של בני 16. הפלטפורמה הזאת הפכה לאחד ממנועי הצמיחה הכי חזקים לעסקים קטנים בעולם, וגם בישראל. בעלות עסקים שמפרסמות שם מדווחות על חשיפה אורגנית שאינסטגרם ופייסבוק יכולים רק לחלום עליה. סרטון אחד יכול להגיע ל-100,000 צפיות — בלי לשלם שקל.</p><h2>למה דווקא טיקטוק</h2><p>האלגוריתם של טיקטוק הוא דמוקרטי. בניגוד לאינסטגרם, שבו חשיפה תלויה במספר העוקבים שלך, בטיקטוק גם חשבון עם 0 עוקבים יכול לקבל מיליון צפיות. האלגוריתם בוחן את הסרטון עצמו — כמה אנשים צפו עד הסוף, האם שיתפו, הגיבו, עשו לייק. אם הסרטון טוב — הוא נדחף הלאה.</p><h2>מה לפרסם — 5 רעיונות שעובדים</h2><p><strong>1. טיפ מהיר בתחום שלך:</strong> 30 שניות, את מדברת למצלמה, נותנת טיפ אחד מעשי. "3 דברים שצריך לדעת לפני שבוחרים רואה חשבון." פשוט, ערכי, אמין.</p><p><strong>2. מאחורי הקלעים:</strong> יום בעסק שלך — אריזת הזמנות, הכנה לפגישה, סידור המשרד. אנשים אוהבים לראות את ה"מאחורי" כי זה בונה אמון.</p><p><strong>3. לפני ואחרי:</strong> עובד כמעט בכל תחום. עיצוב פנים, קוסמטיקה, אימון, ניקיון, אפילו ייעוץ עסקי. "ככה העסק של הלקוחה שלי נראה לפני 3 חודשים — וככה היום."</p><p><strong>4. תגובה לשאלה נפוצה:</strong> קחי שאלה שלקוחות שואלות אותך כל הזמן ועני עליה בסרטון. זה גם בונה מומחיות וגם חוסך לך שיחות טלפון.</p><p><strong>5. טרנדים עם טוויסט:</strong> קחי סאונד או פורמט שעולה כרגע והתאימי אותו לתחום שלך. לא חייבים לרקוד — אפשר להשתמש בטרנד כ"עטיפה" לתוכן מקצועי.</p><h2>כללים לסרטון מוצלח</h2><p><strong>3 שניות ראשונות:</strong> אם לא תפסת את הצופה — הלך. תפתחי עם משפט שעוצר: "הטעות הכי גדולה שבעלות עסקים עושות באינסטגרם", "אל תעשי את זה אם את עצמאית", "מה שגיליתי אחרי 5 שנים בעסק".</p><p><strong>אורך:</strong> התחילי עם 15-30 שניות. ככל שתצברי ביטחון, תעלי ל-60 שניות. מעל דקה — רק אם התוכן באמת שווה.</p><p><strong>כיתוב:</strong> תמיד הוסיפי כתוביות. רוב האנשים צופים בלי סאונד. טיקטוק מאפשרת הוספת טקסט על הסרטון — השתמשי בזה.</p><h2>ציוד — פחות ממה שחושבים</h2><p>טלפון, אור טבעי (חלון), ונקודה שקטה. זה הכל. סרטונים "ביתיים" עובדים בטיקטוק יותר טוב מסרטונים מלוטשים. אותנטיות מנצחת הפקה. אל תחכי שיהיה לך מצלמה מקצועית — תתחילי עם מה שיש.</p><h2>מתי ואיך להתחיל</h2><p>הורידי את האפליקציה, פתחי חשבון עסקי, צפי בסרטונים בתחום שלך שבוע, ואז — פרסמי סרטון ראשון. הוא לא צריך להיות מושלם. הסרטון הראשון תמיד מביך, אבל הסרטון ה-10 כבר ירגיש טבעי. העיקר — להתחיל.</p><p><strong>שורה תחתונה:</strong> טיקטוק נותנת לעסקים קטנים הזדמנות שלא הייתה קיימת לפני 3 שנים. חשיפה אורגנית ענקית, קהל שרעב לתוכן אמיתי, ואלגוריתם שמתגמל ערך ולא כסף. השאלה היא לא "האם זה מתאים לי" — השאלה היא "כמה לקוחות אני מפסידה כל יום שאני לא שם". בניית נוכחות ברשתות היא גם עניין של <a href="manhigut-nashit.html" style="color:var(--primary);font-weight:600;">מנהיגות נשית</a> — המיתוג האישי שלך הוא הנכס החזק ביותר. לתובנות על בניית עסק דיגיטלי חכם, ראי גם את <a href="esek-viyazmanut.html" style="color:var(--primary);font-weight:600;">עסקים ויזמות</a>.</p>` },
+  { id:7, tags:["פייסבוק"], icon:"👥", bg:"linear-gradient(135deg,#1A0A2D 0%,#3D2D7C 100%)", title:"איך לבנות דף עסקי בפייסבוק שאנשים רוצים לעקוב אחריו", excerpt:"הפרופיל, הכיסוי, הביו, הפוסטים הראשונים — כל מה שצריך כדי שהדף שלך ייראה מקצועי מהיום הראשון.", author:"מיכל ל.", read:"5 דק׳ קריאה", date:"26 בדצמבר 2023", content:`<h2>דף עסקי — הוויטרינה הדיגיטלית שלך</h2><p>דף עסקי בפייסבוק הוא הרבה פעמים הרושם הראשון שלקוחה פוטנציאלית מקבלת ממך. אם הדף נראה ריק, לא מעודכן, או לא מקצועי — היא תמשיך הלאה. החדשות הטובות? לבנות דף עסקי שנראה ומרגיש מקצועי זה עניין של שעה-שעתיים של עבודה ממוקדת.</p><h2>תמונת פרופיל — הפנים שלך</h2><p>אם את עסק של אדם אחד (פרילנסרית, מאמנת, יועצת) — שימי תמונה שלך. תמונה חדה, חיוך, רקע נקי. אם יש לך לוגו מקצועי — השתמשי בו, אבל רק אם הוא באמת נראה טוב בגודל קטן. תמונה מטושטשת או חתוכה לא נכון — זה כמו ללחוץ יד רפה.</p><h2>תמונת כיסוי — הנדל"ן הכי יקר</h2><p>תמונת הכיסוי היא הבאנר הגדול שלך. זה המקום להעביר מסר: מה את עושה, למי, ומה הערך. השתמשי בקאנווה ליצירת כיסוי מקצועי — יש שם תבניות בחינם בדיוק בגודל הנכון (820x312 פיקסלים). שני כללים: טקסט גדול וקריא, ועיצוב שמתאים לזהות המותגית שלך.</p><h2>מידע עסקי — מלאי הכל</h2><p>שעות פעילות, כתובת (אם רלוונטי), טלפון, אתר, כתובת מייל. ככל שיש יותר מידע, גם גוגל וגם פייסבוק מתייחסים לדף שלך ברצינות. <strong>קטע "אודות":</strong> כתבי 2-3 משפטים שמסבירים מי את, מה את עושה, ולמה כדאי לעקוב. דברי ישירות ללקוחה — לא בגוף שלישי.</p><h2>כפתור פעולה — אל תשכחי</h2><p>פייסבוק מאפשרת להוסיף כפתור CTA בדף: "צרי קשר", "שלחי הודעה", "הזמיני עכשיו", "הירשמי". בחרי את מה שהכי רלוונטי לעסק שלך. אם את מוכרת שירותים — "שלחי הודעה" עובד מצוין. אם יש לך חנות — "קני עכשיו".</p><h2>5 הפוסטים הראשונים</h2><p>לפני שמזמינים אנשים לעקוב, הדף צריך תוכן. הנה 5 פוסטים שכל דף עסקי חדש צריך:</p><p><strong>1. פוסט היכרות:</strong> מי את, מה הסיפור שלך, למה פתחת את העסק. אישי, אמיתי, עם תמונה שלך.</p><p><strong>2. פוסט ערך:</strong> טיפ מעשי אחד בתחום שלך. משהו שהקוראת יכולה ליישם מיד.</p><p><strong>3. עדות לקוחה:</strong> צילום מסך של הודעת תודה (בהסכמה) או ציטוט מלקוחה מרוצה.</p><p><strong>4. מאחורי הקלעים:</strong> תמונה מסביבת העבודה שלך, ממוצר בתהליך, מפגישה. אנשים רוצים לראות את האנושי.</p><p><strong>5. הצעת ערך:</strong> מה את מציעה? שירותים, מוצרים, ייעוץ? פוסט ברור עם קריאה לפעולה.</p><h2>עיצוב עקבי — מותג שנזכרים בו</h2><p>בחרי 2-3 צבעים קבועים ופונט אחד. כל הפוסטים, הסטוריז, ותמונות הכיסוי — באותו סגנון. את לא צריכה מעצב גרפי — קאנווה עם Brand Kit (אפילו בחינם) מספיקה. עקביות ויזואלית גורמת לאנשים לזהות אותך ברגע שהם גוללים בפיד.</p><h2>לא לשכוח: הדף הוא לא הבית — הוא הדלת</h2><p>מטרת הדף היא לא רק "נוכחות". המטרה היא להביא אנשים לשלב הבא — שיחת טלפון, הודעה, כניסה לאתר, רכישה. כל פוסט, כל עיצוב, כל מילה — צריכים לשרת את המטרה הזאת. בני את הדף כמו חלון ראווה: מושך, מקצועי, וגורם לאנשים להיכנס פנימה. לבניית מותג אישי חזק, ראי גם את הכתבות שלנו על <a href="manhigut-nashit.html" style="color:var(--primary);font-weight:600;">מנהיגות נשית</a>. ורוצה לקחת את העסק צעד קדימה? קראי על <a href="esek-viyazmanut.html" style="color:var(--primary);font-weight:600;">עסקים ויזמות</a>.</p>` },
+  { id:8, tags:["תוכן"], icon:"🎨", bg:"linear-gradient(135deg,#2D0A1A 0%,#8C2D5A 100%)", title:"קאנווה למתחילות: יצירת גרפיקה מקצועית בלי מעצב", excerpt:"קאנווה שינתה את חוקי המשחק לבעלות עסק קטן. מדריך פעולה לעיצוב פוסטים, סטוריז ולוגו.", author:"דנה מ.", read:"6 דק׳ קריאה", date:"24 בדצמבר 2023", content:`<h2>קאנווה — המעצבת הגרפית שלא תחליפי</h2><p>פעם, כדי ליצור גרפיקה מקצועית היית צריכה מעצב, תוכנות יקרות, ושעות של עבודה. היום יש קאנווה (Canva) — פלטפורמה חינמית שמאפשרת לכל אחת ליצור עיצובים שנראים כאילו יצאו מסטודיו מקצועי. אם עדיין לא ניסית — הכתבה הזאת תשנה את הדרך שבה את מנהלת את התוכן הוויזואלי של העסק.</p><h2>פתיחת חשבון והתמצאות</h2><p>כנסי ל-canva.com והירשמי (חינם). בדף הבית תראי אלפי תבניות מוכנות, מסודרות לפי קטגוריות: פוסט אינסטגרם, סטורי, מצגת, כרטיס ביקור, פלייר ועוד. בחרי את הגודל שמתאים למה שתרצי ליצור — ותתחילי.</p><p><strong>ממשק קאנווה:</strong> בצד ימין — אזור העיצוב. בצד שמאל — תפריט עם תבניות, אלמנטים (צורות, אייקונים, קווים), טקסט, תמונות, ורקעים. גררי, שני גודל, החליפי צבעים — הכל בלחיצות.</p><h2>עקרון 1: התחילי מתבנית</h2><p>אל תתחילי מדף ריק. בחרי תבנית שמתאימה לסגנון שלך והתאימי אותה. שני את הטקסט, החליפי את התמונות, עדכני צבעים למותג שלך. עיצוב מאפס לוקח 10 פעמים יותר זמן ולא בהכרח ייראה יותר טוב.</p><h2>עקרון 2: פחות זה יותר</h2><p>הטעות הכי נפוצה של מתחילות — לדחוס הכל. יותר מדי טקסט, יותר מדי צבעים, יותר מדי אלמנטים. שימרי על מרחב נשימה (white space). הגבילי את עצמך ל-2 פונטים, 2-3 צבעים, ומסר אחד ברור לכל עיצוב.</p><h2>עקרון 3: Brand Kit — המותג שלך בלחיצה</h2><p>גם בגרסה החינמית אפשר לשמור צבעים קבועים. בגרסת Pro (יש תקופת ניסיון חינמית) — אפשר לשמור לוגו, פונטים וצבעים כ-Brand Kit. זה אומר שכל עיצוב חדש מתחיל עם הזהות שלך, בלי לזכור קודים של צבעים.</p><h2>מה אפשר ליצור בקאנווה</h2><p><strong>פוסטים לרשתות:</strong> אינסטגרם, פייסבוק, לינקדאין — בגודל המדויק של כל פלטפורמה. קרוסלות מרובות סלידים, ציטוטים, אינפוגרפיקה.</p><p><strong>סטוריז:</strong> תבניות אנימטיביות עם טקסט מונפש — בלחיצה אחת.</p><p><strong>מצגות:</strong> במקום PowerPoint, צרי מצגות מעוצבות בקאנווה עם אנימציות. מושלם לוובינרים ושיחות מכירה.</p><p><strong>חומרים מודפסים:</strong> כרטיסי ביקור, פלייר, תפריט, ברושור. אפשר להזמין הדפסה ישירות מקאנווה.</p><p><strong>לוגו בסיסי:</strong> אם אין לך תקציב למעצב, קאנווה מאפשרת ליצור לוגו פשוט שנראה נקי ומקצועי.</p><h2>טיפים מתקדמים</h2><p><strong>הורדה בפורמט נכון:</strong> לרשתות — PNG. לתמונות עם רקע שקוף — PNG עם רקע שקוף (Pro). להדפסה — PDF.</p><p><strong>שכפול עיצובים:</strong> יצרת פוסט שאהבת? לחצי "שכפל" ושני רק את הטקסט. ככה כל הפוסטים נראים אחיד בלי מאמץ.</p><p><strong>תיקיות:</strong> סדרי את העיצובים בתיקיות — לפי חודש, לפי פלטפורמה, או לפי סוג תוכן. כשיש לך 100 עיצובים, תודי לעצמך.</p><h2>חינם מול Pro — מה באמת צריך</h2><p>הגרסה החינמית מספיקה ברוב המקרים. תקבלי אלפי תבניות, מיליוני תמונות ואלמנטים. הגרסת Pro (כ-50 שקל לחודש) מוסיפה: מחיקת רקע בלחיצה, Brand Kit מלא, גישה לכל התמונות והאלמנטים, ואפשרות לשנות גודל עיצוב בלחיצה אחת. אם את מפרסמת כל יום — Pro משתלם מהחודש הראשון.</p><p><strong>התחילי עכשיו:</strong> פתחי קאנווה, בחרי תבנית לפוסט הבא שלך, והתאימי אותה תוך 10 דקות. אחרי שתראי כמה זה קל, לא תחזרי למצב של "אין לי מעצב". קאנווה היא רק אחד מהכלים שיכולים לשדרג את העסק שלך — גלי עוד כלים וטכניקות במדריכים על <a href="lmida-vetzmikha.html" style="color:var(--primary);font-weight:600;">למידה וצמיחה</a>.</p>` },
+  { id:9, tags:["אינסטגרם","SEO"], icon:"📊", bg:"linear-gradient(135deg,#0A1A2D 0%,#2D5A8C 100%)", title:"ניתוח תוצאות: מה האינסייטס אומרים ולמה זה משנה", excerpt:"לייקים זה נחמד, אבל הנתונים שבאמת חשובים נמצאים מאחורי הקלעים. כך קוראים ומפרשים את האינסייטס.", author:"רחל א.", read:"7 דק׳ קריאה", date:"22 בדצמבר 2023", content:`<h2>למה נתונים חשובים יותר מלייקים</h2><p>הרבה בעלות עסקים מודדות הצלחה בלייקים. "הפוסט קיבל 50 לייקים — מעולה!" אבל האם הלייקים האלה הביאו לקוחות? האם מישהי לחצה על הקישור, שלחה הודעה, או נכנסה לאתר? אינסייטס (Insights) הם הנתונים שמספרים לך את הסיפור האמיתי — מה באמת עובד, מה לא, ומה לשנות.</p><h2>איפה מוצאים את האינסייטס</h2><p><strong>אינסטגרם:</strong> כנסי לפרופיל העסקי שלך, לחצי על "לוח בקרה מקצועי" (Professional Dashboard) ואז "אינסייטס". תראי נתונים על חשבונות שהגעת אליהם, מעורבות, ועוקבים.</p><p><strong>פייסבוק:</strong> בדף העסקי, לחצי על "תובנות" (Insights) בתפריט הצדדי. יש שם מידע על חשיפה, מעורבות, ודמוגרפיה של הקהל.</p><p><strong>Google Analytics:</strong> אם יש לך אתר, זה הכלי שמראה כמה אנשים נכנסים, מאיפה הם מגיעים, ומה הם עושים באתר. חינמי ומשנה חיים.</p><h2>המדדים שבאמת חשובים</h2><p><strong>חשיפה (Reach):</strong> כמה אנשים ייחודיים ראו את התוכן שלך. אם החשיפה יורדת — משהו צריך להשתנות.</p><p><strong>מעורבות (Engagement Rate):</strong> סכום הלייקים, תגובות, שיתופים ושמירות חלקי מספר העוקבים. מעורבות של 3-5% נחשבת טובה. מעורבות גבוהה אומרת שהתוכן שלך מדבר לאנשים.</p><p><strong>שמירות (Saves):</strong> מדד שרוב האנשים מתעלמים ממנו, אבל הוא קריטי. שמירה אומרת "הערך הזה שווה לחזור אליו". אם פוסט מקבל הרבה שמירות — עשי עוד כאלה.</p><p><strong>קליקים לקישור (Link Clicks):</strong> כמה אנשים לחצו על הקישור בביו או במודעה. זה המדד שקרוב ביותר לפעולה עסקית — כניסה לאתר, מילוי טופס, רכישה.</p><p><strong>צמיחת עוקבים:</strong> לא רק כמה עוקבים חדשים, אלא גם כמה עזבו. אם את מאבדת עוקבים אחרי סוג מסוים של תוכן — שימי לב.</p><h2>איך לנתח — 3 שאלות פשוטות</h2><p><strong>1. מה עבד הכי טוב?</strong> הסתכלי על 5 הפוסטים עם הביצועים הכי גבוהים בחודש האחרון. מה המשותף ביניהם? פורמט? נושא? שעת פרסום? סגנון כתיבה?</p><p><strong>2. מה לא עבד?</strong> באותה מידה, הסתכלי על הפוסטים שקיבלו הכי פחות. מה הבעיה? אולי הנושא לא רלוונטי, אולי הגרפיקה לא בולטת, אולי פרסמת בזמן לא טוב.</p><p><strong>3. מה הקהל שלי רוצה?</strong> הסתכלי על השאלות שמגיעות בתגובות ובהודעות. על מה אנשים מגיבים ביותר? זה מראה לך מה הכאבים והצרכים של הקהל — ומאפשר לך ליצור תוכן שפוגע בול.</p><h2>מתי לבדוק</h2><p>קבעי יום קבוע בשבוע — 15 דקות מספיקות. ראשון בבוקר, למשל. בדקי את המספרים של השבוע שעבר, כתבי את 3 התובנות העיקריות, והתאימי את תוכנית התוכן של השבוע הבא.</p><p>פעם בחודש — עשי סקירה מעמיקה יותר. השווי חודש לחודש: האם החשיפה עלתה? המעורבות השתפרה? יותר אנשים מגיעים לאתר?</p><h2>טעויות נפוצות בקריאת נתונים</h2><p><strong>להשוות יום ליום:</strong> יש תנודות טבעיות. השוואי שבוע לשבוע או חודש לחודש כדי לראות מגמות אמיתיות.</p><p><strong>להתעלם מהקשר:</strong> פוסט קיבל חשיפה נמוכה? אולי פרסמת בשישי אחרי הצהריים כשכולם כבר סגרו טלפון. הנתונים צריכים הקשר.</p><p><strong>לשנות הכל בבת אחת:</strong> שני דבר אחד בכל פעם. ככה תדעי מה גרם לשינוי. אם שינית גם את הגרפיקה, גם את השעה וגם את סוג התוכן — לא תדעי מה עבד.</p><p><strong>סיכום:</strong> נתונים הם לא רק מספרים על מסך — הם הקול של הקהל שלך. הם אומרים לך "תני לי עוד מזה" ו"את מפספסת פה". הקדישי 15 דקות בשבוע להקשיב, ותראי שהתוכן שלך נהיה חד יותר, ממוקד יותר — ומביא יותר לקוחות. ניתוח נתונים חכם קשור גם לניהול כלכלי נבון — למידע על תקצוב וניהול כספים בעסק, ראי את מדריכי <a href="kaspim-vefinansim.html" style="color:var(--primary);font-weight:600;">ניהול כספים לעסק</a>. ולהעמקה נוספת בבניית אסטרטגיה עסקית, כנסי לכתבות על <a href="esek-viyazmanut.html" style="color:var(--primary);font-weight:600;">עסקים ויזמות</a>.</p>` }
+];
+
+/* ---- IDEA GENERATOR ---- */
+const ideas = {
+  instagram: [
+    { text: "שתפי סיפור 'לפני ואחרי' — לקוח שבא אלייך עם בעיה ועזרת לו לפתור אותה. אנשים אוהבים טרנספורמציות אמיתיות.", tag: "#שיתוף_אישי #לקוחות" },
+    { text: "פרסמי 3 טעויות שעשית בתחילת הדרך העסקית — ומה למדת מהן. אמינות מביאה עוקבים אמיתיים.", tag: "#טעויות_שמלמדות #יזמות" },
+    { text: "שאלה פתוחה לקהל: 'מה האתגר הכי גדול שלך בעסק עכשיו?' — תגובות = מעורבות + מחקר שוק חינמי.", tag: "#שאלה #קהילה" },
+    { text: "צלמי את סביבת העבודה שלך ושתפי 3 כלים שאת לא יכולה לעבוד בלעדיהם. פוסט שמזמין תגובות.", tag: "#כלים_שאני_אוהבת #מאחורי_הקלעים" },
+    { text: "שתפי ציטוט מעצים שמלווה אותך — עם רקע אסתטי. פוסטי ציטוטים מקבלים שיתופים גבוהים.", tag: "#השראה #עסקים" },
+    { text: "פרסמי תמונה 'יום בחיים' עם 3-5 סלידים שמציגים את הרוטינה שלך — אנשים אוהבים הצצה לפנים.", tag: "#יום_בחיים #אותנטיות" },
+  ],
+  facebook: [
+    { text: "פרסמי מאמר קצר (300 מילה) עם טיפ שימושי לתחום שלך — פייסבוק מקדם תוכן שאנשים נשארים לקרוא.", tag: "תוכן ממוקד ערך" },
+    { text: "שאלי את הקהל לבחור בין שתי אופציות — 'A או B?' — ותסבירי מה את מעדיפה ולמה. מזמין שיחה.", tag: "פוסט A/B פשוט" },
+    { text: "שתפי עדות של לקוחה מרוצה — בהסכמתה — עם תמונה. הוכחה חברתית היא כלי המכירה הכי חזק.", tag: "המלצה של לקוחה" },
+    { text: "פרסמי 'Q&A' — שאלי את הקהל לשאול אותך שאלות ועני על 5 מהן בפוסט שני. בונה מומחיות.", tag: "Q&A עם הקהל" },
+    { text: "שתפי כתבה חיצונית מעניינת מתחומך ותוסיפי את הדעה שלך בפסקה קצרה. קל, מהיר, ערכי.", tag: "שיתוף + דעה אישית" },
+  ],
+  tiktok: [
+    { text: "סרטון 'הסוד שאף אחד לא אמר לי לפני שפתחתי עסק' — כנות + ערך + hook חזק = צפיות גבוהות.", tag: "#עסקים #יזמות_נשית" },
+    { text: "תגני 3 כלים דיגיטליים שאת משתמשת בהם + מה כל אחד עושה — 60 שניות, quick tips, עובד מצוין.", tag: "#כלים_לעסק #טיפים" },
+    { text: "פוסט POV: 'יום כבזכות עצמך עצמאי' — ראה מה קורה מהבוקר ועד הערב בצורה מהירה ואמיתית.", tag: "#pov #עצמאית" },
+    { text: "ענה על שאלה נפוצה בתחומך ב-30 שניות — הHook: 'שאלתם אותי מליון פעם — הנה התשובה האמיתית'.", tag: "#שאלות_ותשובות #מומחיות" },
+    { text: "טרנד קיים + תחום שלך = תוכן ויראלי. קחי טרנד שעולה ותתאימי אותו לעסק שלך.", tag: "#טרנד #יזמות" },
+  ]
+};
+
+let activePlatform = 'instagram';
+let lastIdea = '';
+
+function selectPlatform(btn) {
+  document.querySelectorAll('.idea-platform-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activePlatform = btn.dataset.platform;
+  document.getElementById('ideaResult').classList.remove('show');
+}
+
+function generateIdea() {
+  const pool = ideas[activePlatform];
+  let idea;
+  do { idea = pool[Math.floor(Math.random() * pool.length)]; }
+  while (idea.text === lastIdea && pool.length > 1);
+  lastIdea = idea.text;
+  document.getElementById('ideaText').textContent = idea.text;
+  document.getElementById('ideaTag').textContent = idea.tag;
+  document.getElementById('ideaResult').classList.add('show');
+}
+
+function copyIdea() {
+  const text = document.getElementById('ideaText').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.idea-copy-btn');
+    btn.textContent = '✓ הועתק!';
+    setTimeout(() => { btn.textContent = '📋 העתיקי את הרעיון'; }, 2500);
+  });
+}
+
+/* ---- FILTER / SEARCH / RENDER ---- */
+let activeTag = 'הכל', activeSearch = '', shownCount = 6;
+
+function getFiltered() {
+  return allPosts.filter(p => {
+    const matchTag = activeTag === 'הכל' || p.tags.includes(activeTag);
+    const matchSearch = !activeSearch || p.title.includes(activeSearch) || p.excerpt.includes(activeSearch);
+    return matchTag && matchSearch;
+  });
+}
+
+function render() {
+  const filtered = getFiltered();
+  const toShow = filtered.slice(0, shownCount);
+  document.getElementById('blogGrid').innerHTML = toShow.map(p => `
+    <article class="blog-card" onclick="openPost(${p.id})" tabindex="0" role="button">
+      <div class="blog-thumb" style="background:${p.bg}">
+        <span class="blog-thumb-icon">${p.icon}</span>
+        <span class="blog-cat-tag">${p.tags[0]}</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta"><span>📅 ${p.date}</span><span>⏱ ${p.read}</span></div>
+        <h3>${p.title}</h3>
+        <p class="blog-excerpt">${p.excerpt}</p>
+        <div class="blog-foot">
+          <div class="blog-author"><div class="avatar">${p.author.charAt(0)}</div>${p.author}</div>
+          <span class="read-more">קרא עוד →</span>
+        </div>
+      </div>
+    </a>
+  `).join('');
+  document.getElementById('noResults').style.display = toShow.length === 0 ? 'block' : 'none';
+  document.getElementById('loadMoreBtn').style.display = filtered.length > shownCount ? 'inline-block' : 'none';
+}
+
+function filterByTag(tag, btn) {
+  activeTag = tag; activeSearch = ''; shownCount = 6;
+  document.getElementById('searchInput').value = '';
+  document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+
+function searchPosts(q) {
+  activeSearch = q.trim(); activeTag = 'הכל'; shownCount = 6;
+  document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.tag-btn').classList.add('active');
+  render();
+}
+
+function loadMore() { shownCount += 3; render(); }
+
+function renderPopular() {
+  document.getElementById('popularList').innerHTML = allPosts.slice(0, 4).map(p => `
+    <a class="popular-item" href="posts/marketing-digital-${p.id}.html">
+      <div class="popular-thumb" style="background:${p.bg}">${p.icon}</div>
+      <div class="popular-info">
+        <div class="popular-title">${p.title}</div>
+        <div class="popular-read">⏱ ${p.read}</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+/* ---- MODAL ---- */
+function openPost(id) {
+  window.location = 'posts/marketing-digital-' + id + '.html';
+}
+function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow = ''; }
+function handleModalClick(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ---- STARS ---- */
+function createStars() {
+  const c = document.getElementById('starsEl');
+  for (let i = 0; i < 60; i++) {
+    const s = document.createElement('div'); s.className = 'star';
+    const sz = Math.random() * 2.2 + 0.6;
+    s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${(Math.random()*3+2).toFixed(1)}s;--delay:${(Math.random()*4).toFixed(1)}s;--min-op:${(Math.random()*0.3+0.1).toFixed(2)};`;
+    c.appendChild(s);
+  }
+}
+
+/* ---- SCROLL ---- */
+window.addEventListener('scroll', () => {
+  document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 40);
+  document.getElementById('scrollTopBtn').classList.toggle('show', window.scrollY > 350);
+}, { passive: true });
+
+document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('mobileNav').classList.toggle('open'); });
+function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+function handleSideNl(event) {
+  event.preventDefault();
+  const btn = event.target, input = document.getElementById('sideNlEmail');
+  const consent = document.getElementById('sideNlConsent');
+  if (!input.value || !input.value.includes('@')) { input.style.borderColor = '#e74c3c'; return; }
+  if (!consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
+  input.style.borderColor = '';
+  btn.textContent = '✓ נרשמת!';
+  btn.style.background = 'linear-gradient(135deg,#4CAF50,#45a049)';
+  btn.disabled = true; input.value = '';
+  setTimeout(() => { btn.textContent = 'הצטרפי עכשיו ✦'; btn.style.background = ''; btn.disabled = false; }, 4500);
+}
+
+document.addEventListener('DOMContentLoaded', () => { createStars(); render(); renderPopular(); });
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>
