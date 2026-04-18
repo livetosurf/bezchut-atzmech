@@ -985,7 +985,9 @@ renderGrid();
 renderPopular();
 recommendBook();
 
-function handleLmidaNl(event) {
+const SIDE_WEBHOOK = 'https://hook.eu2.make.com/x24lzo2tn7xuvrvyp18b24pwbp77zj7d';
+
+async function handleLmidaNl(event) {
   event.preventDefault();
   const btn = event.target;
   const input = document.getElementById('lmidaNlEmail');
@@ -993,9 +995,18 @@ function handleLmidaNl(event) {
   if (!input.value || !input.value.includes('@')) { input.style.outline = '2px solid #e74c3c'; return; }
   if (!consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
   input.style.outline = '';
+  btn.textContent = '⏳ שולחת...';
+  btn.disabled = true;
+  try {
+    await fetch(SIDE_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: input.value, source: 'sidebar-lmida-vetzmikha', timestamp: new Date().toISOString() })
+    });
+  } catch(e) {}
+  input.value = '';
   btn.textContent = '✓ נרשמת!';
   btn.style.background = 'linear-gradient(135deg,#4CAF50,#45a049)';
-  btn.disabled = true; input.value = '';
   setTimeout(() => { btn.textContent = 'הצטרפי חינם →'; btn.style.background = ''; btn.disabled = false; }, 4500);
 }
 </script>
