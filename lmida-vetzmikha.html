@@ -1005,9 +1005,7 @@ async function handleLmidaNl(event) {
     });
   } catch(e) {}
   input.value = '';
-  btn.textContent = '✓ נרשמת!';
-  btn.style.background = 'linear-gradient(135deg,#4CAF50,#45a049)';
-  setTimeout(() => { btn.textContent = 'הצטרפי חינם →'; btn.style.background = ''; btn.disabled = false; }, 4500);
+  window.location.href = 'thank-you-learning.html';
 }
 </script>
 <!-- UserWay Accessibility Widget -->

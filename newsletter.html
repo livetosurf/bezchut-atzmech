@@ -675,7 +675,7 @@ async function subscribeNewsletter() {
   btn.disabled = true;
   try {
     await sendToMake(name, email);
-    window.location.href = 'thank-you.html?source=newsletter';
+    window.location.href = 'thank-you-newsletter.html';
   } catch(e) {
     alert('משהו השתבש, נסי שוב.');
     btn.textContent = 'הצטרפי חינם — אני רוצה לצמוח! →';
@@ -693,7 +693,7 @@ async function subscribeFinal() {
   btn.disabled = true;
   try {
     await sendToMake('', email);
-    window.location.href = 'thank-you.html?source=newsletter-final';
+    window.location.href = 'thank-you-newsletter.html';
   } catch(e) {
     alert('משהו השתבש, נסי שוב.');
     btn.textContent = 'הצטרפי →';

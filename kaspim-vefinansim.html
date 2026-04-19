@@ -1082,9 +1082,7 @@ async function handleSideNl(event) {
     });
   } catch(e) {}
   input.value = '';
-  btn.textContent = '✓ נרשמת!';
-  btn.style.background = 'linear-gradient(135deg,#4CAF50,#45a049)';
-  setTimeout(() => { btn.textContent = 'הצטרפי עכשיו ✦'; btn.style.background = ''; btn.disabled = false; }, 4500);
+  window.location.href = 'thank-you-finance.html';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
