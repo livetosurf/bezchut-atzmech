@@ -594,6 +594,7 @@
       <h3>📩 ניוזלטר שבועי</h3>
       <p>המלצות קריאה, קורסים ופודקאסטים — ישירות למייל שלך</p>
       <div class="nl-form">
+        <input type="text" id="lmidaNlName" placeholder="שם פרטי..." />
         <input type="email" id="lmidaNlEmail" placeholder="המייל שלך" />
         <div class="nl-consent">
           <input type="checkbox" id="lmidaNlConsent" />
@@ -990,10 +991,13 @@ const SIDE_WEBHOOK = 'https://hook.eu2.make.com/x24lzo2tn7xuvrvyp18b24pwbp77zj7d
 async function handleLmidaNl(event) {
   event.preventDefault();
   const btn = event.target;
+  const nameInput = document.getElementById('lmidaNlName');
   const input = document.getElementById('lmidaNlEmail');
   const consent = document.getElementById('lmidaNlConsent');
+  if (!nameInput.value.trim()) { nameInput.style.outline = '2px solid #e74c3c'; return; }
   if (!input.value || !input.value.includes('@')) { input.style.outline = '2px solid #e74c3c'; return; }
   if (!consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
+  nameInput.style.outline = '';
   input.style.outline = '';
   btn.textContent = '⏳ שולחת...';
   btn.disabled = true;
@@ -1001,9 +1005,10 @@ async function handleLmidaNl(event) {
     await fetch(SIDE_WEBHOOK, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: input.value, source: 'sidebar-lmida-vetzmikha', timestamp: new Date().toISOString() })
+      body: JSON.stringify({ name: nameInput.value.trim(), email: input.value, source: 'sidebar-lmida-vetzmikha', timestamp: new Date().toISOString() })
     });
   } catch(e) {}
+  nameInput.value = '';
   input.value = '';
   window.location.href = 'thank-you-learning.html';
 }

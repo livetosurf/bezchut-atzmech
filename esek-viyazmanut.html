@@ -629,6 +629,7 @@
         <div class="sidebar-box nl-mini">
           <div class="sidebar-title">📬 הצטרפי לניוזלטר</div>
           <p>הצטרפי ל-5,000+ נשים יזמיות שמקבלות תוכן מעצים ישירות למייל</p>
+          <input type="text" id="sideNlName" placeholder="שם פרטי...">
           <input type="email" id="sideNlEmail" placeholder="המייל שלך...">
           <div class="nl-consent">
             <input type="checkbox" id="sideNlConsent" />
@@ -1295,10 +1296,13 @@ const SIDE_WEBHOOK = 'https://hook.eu2.make.com/x24lzo2tn7xuvrvyp18b24pwbp77zj7d
 async function handleSideNl(event) {
   event.preventDefault();
   const btn = event.target;
+  const nameInput = document.getElementById('sideNlName');
   const input = document.getElementById('sideNlEmail');
   const consent = document.getElementById('sideNlConsent');
+  if (!nameInput.value.trim()) { nameInput.style.borderColor = '#e74c3c'; return; }
   if (!input.value || !input.value.includes('@')) { input.style.borderColor = '#e74c3c'; return; }
   if (!consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
+  nameInput.style.borderColor = '';
   input.style.borderColor = '';
   btn.textContent = '⏳ שולחת...';
   btn.disabled = true;
@@ -1306,9 +1310,10 @@ async function handleSideNl(event) {
     await fetch(SIDE_WEBHOOK, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: input.value, source: 'sidebar-esek-viyazmanut', timestamp: new Date().toISOString() })
+      body: JSON.stringify({ name: nameInput.value.trim(), email: input.value, source: 'sidebar-esek-viyazmanut', timestamp: new Date().toISOString() })
     });
   } catch(e) {}
+  nameInput.value = '';
   input.value = '';
   window.location.href = 'thank-you-esek.html';
 }
