@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NGFRBXF3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מוסך ורכב לנשים | בזכות עצמך</title>
+  <meta name="description" content="כי כל אישה מגיעה לדעת על הרכב שלה — בלי לשלם יותר, בלי לסמוך על אחרים. מדריכים על מוסך, ביטוח, טיפול שוטף וזכויות הצרכן.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#6B2D7C; --primary-light:#9B59B6; --primary-dark:#3D1A47;
+      --accent:#C9A84C; --accent-light:#F0D080;
+      --lavender:#E8D5F5; --dark:#1A0A2E; --dark2:#2C1654;
+      --bg:#FBF6FE; --bg2:#F0E8F8;
+      --text:#2C1654; --text2:#6B5A7E; --text3:#9985AA;
+      --white:#FFFFFF; --border:rgba(107,45,124,0.15);
+      --shadow:0 4px 20px rgba(107,45,124,0.12);
+      --shadow-hover:0 8px 30px rgba(107,45,124,0.22);
+      --radius:16px; --radius-sm:8px; --nav-h:72px;
+      --cat:#C94A04; --cat-light:#FF8C5A; --cat-dark:#A33A00; --cat-bg:#FFF0E8;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Assistant','Heebo',Arial,sans-serif;background:var(--bg);color:var(--text);direction:rtl;font-size:16px;line-height:1.7;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+    .btn-outline{display:inline-block;background:transparent;color:var(--primary);font-weight:700;font-size:0.95rem;padding:11px 28px;border-radius:50px;border:2px solid var(--primary);cursor:pointer;transition:all 0.25s;font-family:inherit}
+    .btn-outline:hover{background:var(--primary);color:var(--white)}
+    .divider{width:50px;height:4px;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:2px;margin:12px 0 14px}
+
+    /* NAV */
+    header{position:fixed;top:0;right:0;left:0;z-index:200;height:var(--nav-h);transition:background 0.35s,box-shadow 0.35s}
+    header.scrolled{background:rgba(26,10,46,0.96);backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(0,0,0,0.35)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);padding:0 32px;max-width:1300px;margin:0 auto}
+    .logo{font-family:'Heebo',sans-serif;font-size:1.45rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;user-select:none}
+    .logo .gold{color:var(--accent)}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.82);font-weight:500;font-size:0.95rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--accent-light)}
+    .nav-links .nav-cta{background:linear-gradient(135deg,var(--accent),#E8C86A);color:var(--dark)!important;font-weight:700;padding:10px 22px;border-radius:50px;font-size:0.9rem}
+    .hamburger{display:none;background:none;border:none;color:white;font-size:1.6rem;cursor:pointer;padding:4px;line-height:1}
+    .mobile-nav{display:none;position:fixed;top:var(--nav-h);right:0;left:0;background:rgba(22,8,42,0.98);backdrop-filter:blur(16px);padding:16px 24px 24px;z-index:199;flex-direction:column;border-top:1px solid rgba(255,255,255,0.08)}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{color:rgba(255,255,255,0.88);font-size:1.1rem;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);transition:color 0.2s}
+    .mobile-nav a:last-child{border-bottom:none;color:var(--accent-light);font-weight:700}
+
+    /* HERO */
+    #cat-hero{min-height:52vh;background:radial-gradient(ellipse at 30% 20%,#2E1000 0%,#1A0800 50%,#0D0400 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:calc(var(--nav-h) + 50px) 24px 80px}
+    .stars{position:absolute;inset:0;pointer-events:none}
+    .star{position:absolute;background:white;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite var(--delay,0s)}
+    @keyframes twinkle{0%,100%{opacity:var(--min-op,.15);transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+
+    .hero-icon-float{position:absolute;top:8%;right:5%;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:7rem;animation:iconFloat 5s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(201,74,4,0.5))}
+    @keyframes iconFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+
+    .float-item{position:absolute;opacity:0;animation:floatUp var(--ft-d,6s) ease-in-out infinite var(--ft-delay,0s);font-size:var(--ft-size,1.2rem)}
+    @keyframes floatUp{0%{opacity:0;transform:translateY(-10px) rotate(0deg)}20%{opacity:0.7}80%{opacity:0.3}100%{opacity:0;transform:translateY(60px) rotate(45deg)}}
+
+    .hero-inner{z-index:2;max-width:600px}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:22px}
+    .breadcrumb a{color:rgba(255,255,255,0.55);transition:color 0.2s}
+    .breadcrumb a:hover{color:var(--accent-light)}
+    .breadcrumb-sep{opacity:0.4}
+    .breadcrumb .current{color:#FF8C5A;font-weight:600}
+    .cat-hero-icon{font-size:3.5rem;display:block;margin-bottom:14px}
+    .cat-hero-title{font-family:'Heebo',sans-serif;font-size:clamp(2.2rem,6vw,3.5rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:14px}
+    .orange-text{background:linear-gradient(135deg,#FF8C5A 0%,#FFD4B8 50%,#FF8C5A 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .cat-hero-desc{font-size:1.05rem;color:rgba(255,255,255,0.72);font-weight:300;max-width:480px}
+    .hero-wave{position:absolute;bottom:-2px;left:0;right:0;line-height:0}
+    .hero-wave svg{width:100%;display:block}
+
+    /* AUTO STRIP */
+    .auto-strip{background:var(--cat-bg);border-bottom:1px solid rgba(201,74,4,0.15);padding:14px 0}
+    .auto-inner{display:flex;gap:0;justify-content:center;max-width:900px;margin:0 auto;padding:0 24px;flex-wrap:wrap}
+    .auto-item{display:flex;align-items:center;gap:8px;padding:10px 24px;border-left:1px solid rgba(201,74,4,0.15);font-size:0.85rem;font-weight:600;color:var(--cat-dark)}
+    .auto-item:last-child{border-left:none}
+    .auto-item span:first-child{font-size:1.2rem}
+
+    /* MAIN */
+    #main-content{padding:56px 0 80px}
+    .content-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+
+    /* FEATURED */
+    .featured-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 240px;margin-bottom:32px;cursor:pointer;transition:all 0.28s;min-height:210px}
+    .featured-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+    .featured-body{padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:space-between}
+    .featured-badge{display:inline-flex;align-items:center;gap:5px;background:linear-gradient(135deg,var(--accent),#E8C86A);color:var(--dark);font-size:0.72rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:12px;width:fit-content}
+    .featured-body h2{font-family:'Heebo',sans-serif;font-size:1.3rem;font-weight:800;color:var(--dark2);line-height:1.45;margin-bottom:10px}
+    .featured-body .excerpt{font-size:0.88rem;color:var(--text2);line-height:1.75;margin-bottom:16px;flex:1}
+    .featured-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .featured-meta{display:flex;align-items:center;gap:14px;font-size:0.78rem;color:var(--text3)}
+    .featured-author{display:flex;align-items:center;gap:7px;font-size:0.84rem;font-weight:600;color:var(--text2)}
+    .avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--cat),var(--accent));display:flex;align-items:center;justify-content:center;font-size:0.78rem;color:white;font-weight:700}
+    .featured-thumb{display:flex;align-items:center;justify-content:center;font-size:5rem;flex-shrink:0}
+    .read-more{font-size:0.82rem;font-weight:700;color:var(--primary);transition:color 0.2s}
+    .read-more:hover{color:var(--accent)}
+
+    /* FILTER */
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px;align-items:center}
+    .filter-label{font-size:0.82rem;font-weight:600;color:var(--text3);margin-left:4px;white-space:nowrap}
+    .tag-btn{background:transparent;color:var(--cat);font-size:0.82rem;font-weight:600;padding:7px 16px;border-radius:25px;border:1.5px solid var(--cat);cursor:pointer;transition:all 0.22s;font-family:inherit;white-space:nowrap}
+    .tag-btn:hover{background:var(--cat-bg)}
+    .tag-btn.active{background:var(--cat);color:var(--white);border-color:var(--cat)}
+
+    /* GRID */
+    .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .blog-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.28s;cursor:pointer;display:flex;flex-direction:column}
+    .blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+    .blog-thumb{height:165px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .blog-thumb-icon{font-size:3.2rem;z-index:1}
+    .blog-cat-tag{position:absolute;top:12px;right:12px;background:var(--accent);color:var(--dark);font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:20px;z-index:2}
+    .blog-body{padding:16px 18px 14px;display:flex;flex-direction:column;flex:1}
+    .blog-meta{display:flex;gap:12px;font-size:0.75rem;color:var(--text3);margin-bottom:8px}
+    .blog-card h3{font-size:0.97rem;font-weight:700;color:var(--dark2);line-height:1.5;margin-bottom:8px}
+    .blog-excerpt{font-size:0.83rem;color:var(--text2);line-height:1.7;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+    .blog-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:11px;margin-top:auto}
+    .blog-author{display:flex;align-items:center;gap:7px;font-size:0.78rem;font-weight:600;color:var(--text2)}
+    .load-more-wrap{text-align:center;margin-top:30px}
+    #noResults{display:none;text-align:center;padding:44px 24px;color:var(--text3);font-style:italic}
+    #noResults .no-res-icon{font-size:2.8rem;display:block;margin-bottom:10px}
+
+    /* SIDEBAR */
+    .sidebar{display:flex;flex-direction:column;gap:20px;position:sticky;top:calc(var(--nav-h) + 20px)}
+    .sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 18px}
+    .sidebar-title{font-family:'Heebo',sans-serif;font-size:0.98rem;font-weight:800;color:var(--dark2);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .search-wrap{position:relative}
+    .search-wrap input{width:100%;padding:10px 38px 10px 12px;border:1.5px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-size:0.88rem;font-family:inherit;outline:none;direction:rtl;transition:border-color 0.25s}
+    .search-wrap input:focus{border-color:var(--cat-light)}
+    .search-wrap input::placeholder{color:var(--text3)}
+    .search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:0.95rem;opacity:0.45;pointer-events:none}
+
+    /* WEEKLY TIP BOX */
+    .tip-box{border:none}
+    .tip-box .sidebar-title{color:white}
+
+    /* Newsletter mini */
+    .nl-mini{background:linear-gradient(135deg,#3D1A47 0%,#6B2D7C 100%);border:none}
+    .nl-mini .sidebar-title{color:var(--white)}
+    .nl-mini p{font-size:0.82rem;color:rgba(255,255,255,0.65);margin-bottom:12px;line-height:1.55}
+    .nl-mini input{width:100%;padding:10px 12px;border:1.5px solid rgba(255,255,255,0.22);border-radius:8px;background:rgba(255,255,255,0.1);color:var(--white);font-size:0.86rem;font-family:inherit;outline:none;direction:rtl;margin-bottom:9px;transition:border-color 0.25s}
+    .nl-mini input::placeholder{color:rgba(255,255,255,0.38)}
+    .nl-mini input:focus{border-color:var(--accent)}
+    .nl-mini button{width:100%;padding:10px;background:linear-gradient(135deg,var(--accent),#E8C86A);color:var(--dark);font-weight:700;font-size:0.86rem;border:none;border-radius:8px;cursor:pointer;font-family:inherit;transition:all 0.25s}
+    .nl-mini button:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(201,168,76,0.45)}
+    .nl-mini .nl-consent{display:flex;gap:8px;align-items:flex-start;margin:10px 0}
+    .nl-mini .nl-consent input[type=checkbox]{margin-top:3px;accent-color:var(--accent);flex-shrink:0;width:15px;height:15px;cursor:pointer}
+    .nl-mini .nl-consent label{font-size:.73rem;line-height:1.5;color:rgba(255,255,255,0.5);cursor:pointer}
+    .nl-mini .nl-consent label a{color:var(--accent);text-decoration:underline}
+
+    /* Other cats */
+    .other-cats{display:flex;flex-direction:column;gap:5px}
+    .other-cat{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;border:1.5px solid transparent;cursor:pointer;transition:all 0.22s;color:var(--text2)}
+    .other-cat:hover{background:var(--lavender);border-color:var(--border);color:var(--primary)}
+    .other-cat-icon{font-size:1.15rem;flex-shrink:0}
+    .other-cat-name{font-size:0.86rem;font-weight:600;flex:1}
+    .other-cat-count{font-size:0.72rem;color:var(--text3);background:var(--bg2);padding:2px 8px;border-radius:10px}
+
+    /* Popular */
+    .popular-list{display:flex;flex-direction:column;gap:10px}
+    .popular-item{display:flex;align-items:center;gap:10px;padding:5px;border-radius:10px;transition:background 0.2s;text-decoration:none}
+    .popular-item:hover{background:var(--bg2)}
+    .popular-thumb{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+    .popular-info{flex:1;min-width:0}
+    .popular-title{font-size:0.82rem;font-weight:600;color:var(--dark2);line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+    .popular-read{font-size:0.72rem;color:var(--text3);margin-top:2px}
+
+    /* MODAL */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(13,5,32,0.88);z-index:1000;backdrop-filter:blur(6px);animation:fadeOverlay 0.22s;align-items:center;justify-content:center;padding:20px}
+    .modal-overlay.open{display:flex}
+    @keyframes fadeOverlay{from{opacity:0}to{opacity:1}}
+    .modal-box{background:var(--white);border-radius:20px;max-width:660px;width:100%;max-height:88vh;overflow-y:auto;animation:slideUpModal 0.28s ease}
+    @keyframes slideUpModal{from{transform:translateY(22px);opacity:0}to{transform:translateY(0);opacity:1}}
+    .modal-head{padding:36px 28px 26px;position:relative}
+    .modal-close-btn{position:absolute;top:14px;left:14px;background:rgba(255,255,255,0.22);border:none;color:white;width:34px;height:34px;border-radius:50%;font-size:0.95rem;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center}
+    .modal-close-btn:hover{background:rgba(255,255,255,0.35)}
+    .modal-head .cat-tag{display:inline-block;background:var(--accent);color:var(--dark);font-size:0.72rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+    .modal-head h2{font-size:1.4rem;font-weight:800;color:white;line-height:1.4}
+    .modal-head .modal-meta{font-size:0.8rem;color:rgba(255,255,255,0.56);margin-top:9px}
+    .modal-body-content{padding:28px}
+    .content-placeholder{background:linear-gradient(135deg,var(--cat-bg),#FFE0CC);border-radius:var(--radius-sm);padding:36px 24px;text-align:center;color:var(--text3);font-style:italic;border:2px dashed rgba(201,74,4,0.25)}
+
+    /* FOOTER */
+    footer{background:#0D0520;color:rgba(255,255,255,0.6);padding:58px 0 26px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+    .footer-brand .logo{display:block;margin-bottom:12px}
+    .footer-brand p{font-size:0.84rem;line-height:1.75;color:rgba(255,255,255,0.38);max-width:260px}
+    .socials{display:flex;gap:9px;margin-top:18px}
+    .social-btn{width:35px;height:35px;border-radius:50%;background:rgba(255,255,255,0.09);display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:white;transition:background 0.22s}
+    .social-btn:hover{background:var(--primary)}
+    .footer-col h4{font-size:0.74rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-light);margin-bottom:14px}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .footer-links a{color:rgba(255,255,255,0.43);font-size:0.84rem;transition:color 0.2s}
+    .footer-links a:hover{color:var(--accent-light)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:rgba(255,255,255,0.25)}
+
+    .scroll-top{position:fixed;bottom:24px;left:24px;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--cat),var(--cat-light));color:white;border:none;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 16px rgba(201,74,4,0.42);transition:all 0.3s;opacity:0;transform:translateY(12px);z-index:99}
+    .scroll-top.show{opacity:1;transform:translateY(0)}
+    .scroll-top:hover{transform:translateY(-3px)}
+
+    @media(max-width:900px){.nav-links{display:none}.hamburger{display:block}.content-layout{grid-template-columns:1fr}.sidebar{position:static}.featured-card{grid-template-columns:1fr}.featured-thumb{height:150px}.footer-grid{grid-template-columns:1fr 1fr;gap:26px}.auto-item{padding:8px 14px}}
+    @media(max-width:600px){.blog-grid{grid-template-columns:1fr}.filter-bar{gap:6px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:8px;text-align:center}}
+  </style>
+  <!-- SEO Meta -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bezchut.co.il/mosach-nashim.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="מוסך ורכב לנשים | בזכות עצמך" />
+  <meta property="og:description" content="כי כל אישה מגיעה לדעת על הרכב שלה — בלי לשלם יותר, בלי לסמוך על אחרים. מדריכים על מוסך, ביטוח, טיפול שוטף וזכויות הצרכן." />
+  <meta property="og:url" content="https://bezchut.co.il/mosach-nashim.html" />
+  <meta property="og:image" content="https://bezchut.co.il/og-image.jpg" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="בזכות עצמך" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="מוסך ורכב לנשים | בזכות עצמך" />
+  <meta name="twitter:description" content="כי כל אישה מגיעה לדעת על הרכב שלה — בלי לשלם יותר, בלי לסמוך על אחרים." />
+  <meta name="twitter:image" content="https://bezchut.co.il/og-image.jpg" />
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"דף הבית","item":"https://bezchut.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מוסך ורכב לנשים","item":"https://bezchut.co.il/mosach-nashim.html"}]}</script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGFRBXF3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<header id="mainHeader">
+  <nav>
+    <a href="bezchut-atzmech.html" class="logo">בזכות <span class="gold">עצמך</span> ✦</a>
+    <ul class="nav-links">
+      <li><a href="bezchut-atzmech.html#blog">בלוג</a></li>
+      <li><a href="bezchut-atzmech.html#categories">נושאים</a></li>
+      <li><a href="mosach-nashim.html">מוסך ורכב</a></li>
+      <li><a href="bezchut-atzmech.html#resources">כלים מומלצים</a></li>
+      <li><a href="bezchut-atzmech.html#about">אודות</a></li>
+      <li><a href="bezchut-atzmech.html#newsletter" class="nav-cta">הצטרפי לקהילה ✦</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="bezchut-atzmech.html" onclick="closeMobileNav()">דף הבית</a>
+  <a href="bezchut-atzmech.html#blog" onclick="closeMobileNav()">בלוג</a>
+  <a href="bezchut-atzmech.html#categories" onclick="closeMobileNav()">נושאים</a>
+  <a href="mosach-nashim.html" onclick="closeMobileNav()">מוסך ורכב</a>
+  <a href="bezchut-atzmech.html#resources" onclick="closeMobileNav()">כלים מומלצים</a>
+  <a href="bezchut-atzmech.html#newsletter" onclick="closeMobileNav()">הצטרפי לקהילה ✦</a>
+</div>
+
+<section id="cat-hero">
+  <div class="stars" id="starsEl"></div>
+  <div class="hero-icon-float">🔧</div>
+  <span class="float-item" style="top:20%;right:28%;--ft-d:5s;--ft-delay:0s;--ft-size:1.4rem">🔩</span>
+  <span class="float-item" style="top:35%;right:20%;--ft-d:4s;--ft-delay:1.8s;--ft-size:1rem">🛞</span>
+  <span class="float-item" style="top:15%;right:40%;--ft-d:6s;--ft-delay:0.9s;--ft-size:1.6rem">🚗</span>
+  <div class="hero-inner container">
+    <nav class="breadcrumb">
+      <a href="bezchut-atzmech.html">בית</a><span class="breadcrumb-sep">›</span>
+      <span class="current">מוסך ורכב</span>
+    </nav>
+    <span class="cat-hero-icon">🔧</span>
+    <h1 class="cat-hero-title">מוסך ורכב — <span class="orange-text">לנשים</span></h1>
+    <p class="cat-hero-desc">כי כל אישה מגיעה לדעת על הרכב שלה — בלי לשלם יותר, בלי לסמוך על אחרים</p>
+  </div>
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#FBF6FE" d="M0,60 C480,20 960,80 1440,45 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+</section>
+
+<div class="auto-strip">
+  <div class="auto-inner">
+    <div class="auto-item"><span>🔧</span><span>טיפול שוטף</span></div>
+    <div class="auto-item"><span>💰</span><span>חיסכון בעלויות</span></div>
+    <div class="auto-item"><span>⚖️</span><span>זכויות הצרכן</span></div>
+    <div class="auto-item"><span>🛞</span><span>בטיחות בדרך</span></div>
+    <div class="auto-item"><span>🔍</span><span>לא להישדד</span></div>
+  </div>
+</div>
+
+<section id="main-content">
+  <div class="container">
+    <div class="content-layout">
+      <main>
+        <!-- FEATURED CARD: Article 1 -->
+        <a href="posts/mosach-nashim-1.html" class="featured-card" tabindex="0" role="button" style="text-decoration:none">
+          <div class="featured-body">
+            <span class="featured-badge">✦ כתבה מובחרת</span>
+            <h2>איך לא להישדד במוסך: המדריך לאישה שיודעת מה מגיע לה</h2>
+            <p class="excerpt">כולנו הרגשנו את זה — הכניסה למוסך, הבטה של המכונאי שאומרת "היא לא מבינה כלום", וחשבון שמרגיש כמו שוד בצהרי היום. הנה הכלים שישנו את זה לתמיד.</p>
+            <div class="featured-footer">
+              <div class="featured-author"><div class="avatar">מ</div><span>מערכת בזכות עצמך</span></div>
+              <div class="featured-meta"><span>⏱ 8 דק׳ קריאה</span><span>📅 ינואר 2024</span></div>
+              <span class="read-more">קרא עוד →</span>
+            </div>
+          </div>
+          <div class="featured-thumb" style="background:linear-gradient(135deg,#2E1000 0%,#C94A04 100%)">🔧</div>
+        </a>
+
+        <div class="filter-bar">
+          <span class="filter-label">סינון:</span>
+          <button class="tag-btn active" data-tag="הכל">הכל</button>
+          <button class="tag-btn" data-tag="מוסך">מוסך</button>
+          <button class="tag-btn" data-tag="ביטוח">ביטוח</button>
+          <button class="tag-btn" data-tag="טיפול שוטף">טיפול שוטף</button>
+          <button class="tag-btn" data-tag="זכויות">זכויות</button>
+          <button class="tag-btn" data-tag="בטיחות">בטיחות</button>
+        </div>
+
+        <div class="blog-grid" id="blogGrid">
+          <!-- Article 2 -->
+          <article class="blog-card" data-tags="מוסך,זכויות" onclick="window.location='posts/mosach-nashim-2.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1A0800,#8B3200)">
+              <span class="blog-thumb-icon">❓</span>
+              <span class="blog-cat-tag">מוסך</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 5 דק׳ קריאה</span></div>
+              <h3>10 שאלות שחובה לשאול במוסך לפני שמשלמים</h3>
+              <p class="blog-excerpt">אישה אחת שאלה את השאלה הנכונה וחסכה 500 ₪. הנה 10 השאלות שמשנות הכל — פשוטות, ישירות, ומוכיחות שאת יודעת בדיוק מה מגיע לך.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card" data-tags="טיפול שוטף" onclick="window.location='posts/mosach-nashim-3.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1E0E00,#A03D00)">
+              <span class="blog-thumb-icon">📋</span>
+              <span class="blog-cat-tag">טיפול שוטף</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 6 דק׳ קריאה</span></div>
+              <h3>טיפול שוטף לרכב — מה חייבים לעשות ומתי</h3>
+              <p class="blog-excerpt">הרכב שלך הוא הדבר השני הכי יקר שיש לך אחרי הבית. לוח הזמנים הפשוט שיחסוך לך אלפי שקלים בתיקונים מיותרים.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card" data-tags="בטיחות,מוסך" onclick="window.location='posts/mosach-nashim-4.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#2A1000,#B04500)">
+              <span class="blog-thumb-icon">🔍</span>
+              <span class="blog-cat-tag">בטיחות</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 5 דק׳ קריאה</span></div>
+              <h3>מה זה טסט ואיך עוברים אותו בקלות</h3>
+              <p class="blog-excerpt">הטסט מגיע כל שנה כמו שוקולד מר — בלתי נמנע, קצת מעצבן, אבל הרבה פחות מפחיד ממה שנראה. הנה בדיוק מה לבדוק ומה לצפות.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-card" data-tags="זכויות,מוסך" onclick="window.location='posts/mosach-nashim-5.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1A0A00,#7A2D00)">
+              <span class="blog-thumb-icon">⚖️</span>
+              <span class="blog-cat-tag">זכויות</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 7 דק׳ קריאה</span></div>
+              <h3>זכויות הצרכן במוסך — מה מגיע לך על פי חוק</h3>
+              <p class="blog-excerpt">הזכויות שלך במוסך הן חזקות יותר מאשר כמעט בכל עסק אחר. הבעיה היא שרוב הנשים לא יודעות אותן — ולכן לא מנצלות אותן. עד עכשיו.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="blog-card" data-tags="מוסך" onclick="window.location='posts/mosach-nashim-6.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#2E1000,#C94A04)">
+              <span class="blog-thumb-icon">✅</span>
+              <span class="blog-cat-tag">מוסך</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 6 דק׳ קריאה</span></div>
+              <h3>איך לבחור מוסך מהימן — 7 סימנים שלא יטעו אותך</h3>
+              <p class="blog-excerpt">מוסך טוב הוא כמו רופא טוב — ברגע שמצאת אחד, מחזיקים בו בשתי ידיים. אבל איך מוצאים אחד כזה בפעם הראשונה? 7 הסימנים שיחסכו לך שנים של ניסוי וטעייה.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 7 -->
+          <article class="blog-card" data-tags="מוסך,טיפול שוטף" onclick="window.location='posts/mosach-nashim-7.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1A0800,#8B3200)">
+              <span class="blog-thumb-icon">🔩</span>
+              <span class="blog-cat-tag">מוסך</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 5 דק׳ קריאה</span></div>
+              <h3>חלפים מקוריים לעומת חלופיים — מה ההבדל ומה לבחור</h3>
+              <p class="blog-excerpt">"מקורי או חלופי?" — שאלה שנשים רבות שומעות ולא בטוחות מה לענות. הנה המדריך הפשוט שיגרום לך להבין בדיוק במה מדובר — ולחסוך כסף בפעם הבאה.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 8 -->
+          <article class="blog-card" data-tags="טיפול שוטף" onclick="window.location='posts/mosach-nashim-8.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1E0E00,#A03D00)">
+              <span class="blog-thumb-icon">💰</span>
+              <span class="blog-cat-tag">טיפול שוטף</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 5 דק׳ קריאה</span></div>
+              <h3>תקציב תחזוקת רכב: כמה לחסוך כל חודש ולמה</h3>
+              <p class="blog-excerpt">הרכב לא מתקלקל בזמן נוח. הוא מתקלקל כשהחשבון שלך ריק. המדריך הזה יעזור לך לוודא שיש לך תמיד כרית ביטחון — בלי לוותר על שום דבר.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 9 -->
+          <article class="blog-card" data-tags="בטיחות" onclick="window.location='posts/mosach-nashim-9.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#2A1000,#B04500)">
+              <span class="blog-thumb-icon">🚨</span>
+              <span class="blog-cat-tag">בטיחות</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 6 דק׳ קריאה</span></div>
+              <h3>מה לעשות כשהרכב מתקלקל בדרך — מדריך צעד אחר צעד</h3>
+              <p class="blog-excerpt">אין רגע יותר מפחיד מהמנוע שנכבה פתאום על כביש מהיר. הכתבה הזו נכתבה כדי שברגע הזה — תדעי בדיוק מה לעשות, צעד אחרי צעד.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 10 -->
+          <article class="blog-card" data-tags="ביטוח" onclick="window.location='posts/mosach-nashim-10.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1A0A00,#7A2D00)">
+              <span class="blog-thumb-icon">🛡️</span>
+              <span class="blog-cat-tag">ביטוח</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 7 דק׳ קריאה</span></div>
+              <h3>ביטוח רכב — המדריך לאישה שרוצה לשלם פחות</h3>
+              <p class="blog-excerpt">ביטוח רכב הוא אחת ההוצאות הכי גדולות על הרכב — ואחת הכי פחות מובנות. הנה איך לשלם פחות מבלי לוותר על ההגנה שמגיעה לך.</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 11 -->
+          <article class="blog-card" data-tags="זכויות,מוסך" onclick="window.location='posts/mosach-nashim-11.html'" tabindex="0" role="button">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#2E0A00,#9B3500)">
+              <span class="blog-thumb-icon">📊</span>
+              <span class="blog-cat-tag">זכויות</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span>📅 ינואר 2024</span><span>⏱ 6 דק׳ קריאה</span></div>
+              <h3>אפליה במוסך: האם נשים משלמות יותר? ומה לעשות</h3>
+              <p class="blog-excerpt">מחקרים בינלאומיים מצאו שנשים משלמות בממוצע 8–11% יותר על שירותי רכב זהים. האם זה קורה לך? כיצד יודעים? ומה אפשר לעשות עכשיו?</p>
+              <div class="blog-foot">
+                <div class="blog-author"><div class="avatar" style="background:linear-gradient(135deg,#C94A04,#FF8C5A)">מ</div>מערכת בזכות עצמך</div>
+                <span class="read-more">קרא עוד →</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="noResults" style="display:none;text-align:center;padding:44px 24px;color:var(--text3);font-style:italic">
+          <span style="font-size:2.8rem;display:block;margin-bottom:10px">🔧</span>
+          <p>לא נמצאו כתבות בנושא זה</p>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <div class="sidebar-title">🔍 חיפוש</div>
+          <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="חפשי כתבה..." oninput="searchCards(this.value)">
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <!-- WEEKLY TIP BOX -->
+        <div class="sidebar-box tip-box" style="background:linear-gradient(135deg,#2E1000 0%,#7A2D00 100%);border:none">
+          <div class="sidebar-title" style="color:white">💡 הידעת?</div>
+          <p style="font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:12px">חוק הגנת הצרכן מחייב מוסך לתת לך הצעת מחיר בכתב לפני ביצוע עבודה. אם לא עשו זאת — את לא חייבת לשלם יותר מהמחיר שסוכם.</p>
+          <a href="posts/mosach-nashim-5.html" style="color:#FF8C5A;font-weight:700;font-size:0.82rem">קראי עוד על זכויותיך ←</a>
+        </div>
+
+        <div class="sidebar-box nl-mini">
+          <div class="sidebar-title">📬 טיפים לרכב במייל</div>
+          <p>קבלי טיפ שבועי על רכב, זכויות וחיסכון — לנשים שיודעות מה מגיע להן</p>
+          <input type="text" id="sideNlName" placeholder="שם פרטי...">
+          <input type="email" id="sideNlEmail" placeholder="המייל שלך...">
+          <div class="nl-consent">
+            <input type="checkbox" id="sideNlConsent" />
+            <label for="sideNlConsent">אני מסכימה לקבל עדכונים ותוכן שיווקי. <a href="bezchut-atzmech.html#privacy" target="_blank">מדיניות פרטיות</a></label>
+          </div>
+          <button onclick="handleSideNl(event)">הצטרפי עכשיו ✦</button>
+        </div>
+
+        <div class="sidebar-box">
+          <div class="sidebar-title">📂 קטגוריות נוספות</div>
+          <div class="other-cats">
+            <a href="esek-viyazmanut.html" class="other-cat"><span class="other-cat-icon">💼</span><span class="other-cat-name">עסקים ויזמות</span><span class="other-cat-count">12</span></a>
+            <a href="kaspim-vefinansim.html" class="other-cat"><span class="other-cat-icon">💰</span><span class="other-cat-name">כספים ופיננסים</span><span class="other-cat-count">8</span></a>
+            <a href="marketing-digital.html" class="other-cat"><span class="other-cat-icon">📱</span><span class="other-cat-name">מרקטינג דיגיטלי</span><span class="other-cat-count">15</span></a>
+            <a href="manhigut-nashit.html" class="other-cat"><span class="other-cat-icon">✨</span><span class="other-cat-name">מנהיגות נשית</span><span class="other-cat-count">7</span></a>
+            <a href="briut-veravaha.html" class="other-cat"><span class="other-cat-icon">🌿</span><span class="other-cat-name">בריאות ורווחה</span><span class="other-cat-count">9</span></a>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <div class="sidebar-title">🔥 הכי נקראות</div>
+          <div class="popular-list">
+            <a class="popular-item" href="posts/mosach-nashim-1.html">
+              <div class="popular-thumb" style="background:linear-gradient(135deg,#2E1000,#C94A04)">🔧</div>
+              <div class="popular-info"><div class="popular-title">איך לא להישדד במוסך</div><div class="popular-read">⏱ 8 דק׳ קריאה</div></div>
+            </a>
+            <a class="popular-item" href="posts/mosach-nashim-5.html">
+              <div class="popular-thumb" style="background:linear-gradient(135deg,#1A0A00,#7A2D00)">⚖️</div>
+              <div class="popular-info"><div class="popular-title">זכויות הצרכן במוסך</div><div class="popular-read">⏱ 7 דק׳ קריאה</div></div>
+            </a>
+            <a class="popular-item" href="posts/mosach-nashim-10.html">
+              <div class="popular-thumb" style="background:linear-gradient(135deg,#1A0A00,#7A2D00)">🛡️</div>
+              <div class="popular-info"><div class="popular-title">ביטוח רכב — המדריך לנשים</div><div class="popular-read">⏱ 7 דק׳ קריאה</div></div>
+            </a>
+            <a class="popular-item" href="posts/mosach-nashim-9.html">
+              <div class="popular-thumb" style="background:linear-gradient(135deg,#2A1000,#B04500)">🚨</div>
+              <div class="popular-info"><div class="popular-title">מה לעשות כשהרכב מתקלקל</div><div class="popular-read">⏱ 6 דק׳ קריאה</div></div>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="bezchut-atzmech.html" class="logo">בזכות <span class="gold">עצמך</span> ✦</a>
+        <p>פורטל תוכן לנשים יזמיות בישראל. כי כל אישה יכולה להיות בזכות עצמך שחלמה עליו.</p>
+        <div class="socials"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">👥</a><a href="#" class="social-btn">🎵</a><a href="#" class="social-btn">💼</a></div>
+      </div>
+      <div class="footer-col"><h4>תוכן</h4><ul class="footer-links"><li><a href="bezchut-atzmech.html#blog">בלוג</a></li><li><a href="bezchut-atzmech.html#categories">נושאים</a></li><li><a href="all-posts.html">מדריכים</a></li></ul></div>
+      <div class="footer-col"><h4>כלים</h4><ul class="footer-links"><li><a href="bezchut-atzmech.html#resources">כלים מומלצים</a></li><li><a href="resources.html">ספרים</a></li><li><a href="course.html">קורסים</a></li><li><a href="resources.html">תבניות חינם</a></li></ul></div>
+      <div class="footer-col"><h4>אודות</h4><ul class="footer-links"><li><a href="bezchut-atzmech.html#about">מי אנחנו</a></li><li><a href="about.html">צרי קשר</a></li><li><a href="privacy.html">מדיניות פרטיות</a></li><li><a href="donate.html">❤️ תרומות</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 בזכות עצמך · כל הזכויות שמורות</p><p>נבנה באהבה עבור נשים יזמיות ✦</p></div>
+  </div>
+</footer>
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* ---- FILTER CARDS ---- */
+let activeTag = 'הכל';
+
+function filterCards(tag, btn) {
+  activeTag = tag;
+  document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilter();
+}
+
+function searchCards(q) {
+  const term = q.trim().toLowerCase();
+  document.querySelectorAll('#blogGrid .blog-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(term) ? '' : 'none';
+  });
+  const visible = [...document.querySelectorAll('#blogGrid .blog-card')].filter(c => c.style.display !== 'none');
+  document.getElementById('noResults').style.display = visible.length === 0 ? 'block' : 'none';
+}
+
+function applyFilter() {
+  document.querySelectorAll('#blogGrid .blog-card').forEach(card => {
+    if (activeTag === 'הכל') {
+      card.style.display = '';
+    } else {
+      const tags = (card.dataset.tags || '').split(',');
+      card.style.display = tags.includes(activeTag) ? '' : 'none';
+    }
+  });
+  const visible = [...document.querySelectorAll('#blogGrid .blog-card')].filter(c => c.style.display !== 'none');
+  document.getElementById('noResults').style.display = visible.length === 0 ? 'block' : 'none';
+}
+
+document.querySelectorAll('.tag-btn').forEach(btn => {
+  btn.addEventListener('click', () => filterCards(btn.dataset.tag, btn));
+});
+
+/* ---- STARS ---- */
+function createStars() {
+  const c = document.getElementById('starsEl');
+  for (let i = 0; i < 60; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const sz = Math.random() * 2.2 + 0.6;
+    s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${(Math.random()*3+2).toFixed(1)}s;--delay:${(Math.random()*4).toFixed(1)}s;--min-op:${(Math.random()*0.3+0.1).toFixed(2)};`;
+    c.appendChild(s);
+  }
+}
+
+/* ---- SCROLL / NAV ---- */
+window.addEventListener('scroll', () => {
+  document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 40);
+  document.getElementById('scrollTopBtn').classList.toggle('show', window.scrollY > 350);
+}, {passive: true});
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.toggle('open');
+});
+
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+/* ---- NEWSLETTER SIDEBAR ---- */
+const SIDE_WEBHOOK = 'https://hook.eu2.make.com/x24lzo2tn7xuvrvyp18b24pwbp77zj7d';
+async function handleSideNl(event) {
+  event.preventDefault();
+  const btn = event.target;
+  const nameInput = document.getElementById('sideNlName');
+  const input = document.getElementById('sideNlEmail');
+  const consent = document.getElementById('sideNlConsent');
+  if (!nameInput.value.trim()) { nameInput.style.borderColor = '#e74c3c'; return; }
+  if (!input.value || !input.value.includes('@')) { input.style.borderColor = '#e74c3c'; return; }
+  if (!consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
+  nameInput.style.borderColor = '';
+  input.style.borderColor = '';
+  btn.textContent = '⏳ שולחת...';
+  btn.disabled = true;
+  try {
+    await fetch(SIDE_WEBHOOK, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({name: nameInput.value.trim(), email: input.value, source: 'sidebar-mosach-nashim', timestamp: new Date().toISOString()})
+    });
+  } catch(e) {}
+  nameInput.value = '';
+  input.value = '';
+  window.location.href = 'thank-you.html';
+}
+
+document.addEventListener('DOMContentLoaded', () => { createStars(); });
+</script>
+<!-- UserWay Accessibility Widget -->
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-account','YOUR_USERWAY_ACCOUNT_ID');s.setAttribute('src','https://cdn.userway.org/widget.js');(d.body||d.head).appendChild(s);})(document);</script>
+</body>
+</html>

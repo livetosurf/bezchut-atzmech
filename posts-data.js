@@ -1878,6 +1878,20 @@ var ALL_POSTS = [
 ` }
 ];
 
+  // מוסך ורכב
+  { id:55, cat:'מוסך ורכב', catColor:'#C94A04', icon:'🔧', bg:'linear-gradient(135deg,#2E1000,#C94A04)', title:'איך לא להישדד במוסך: המדריך לאישה שיודעת מה מגיע לה', excerpt:'גם אם לא מכירות את הרכב לעומק — יש דברים שכל אישה חייבת לדעת לפני שהיא נכנסת למוסך. המדריך שישמור על הכסף שלך.', author:'רינת כהן', authorIcon:'👩‍🔧', read:8, date:'2026-05-16', views:0, content:`` },
+  { id:56, cat:'מוסך ורכב', catColor:'#C94A04', icon:'❓', bg:'linear-gradient(135deg,#1A0800,#8B3200)', title:'10 שאלות שחובה לשאול במוסך לפני שמשלמים', excerpt:'לפני שאת מאשרת תיקון אחד, שאלי את 10 השאלות האלה. הן יחסכו לך כסף, עגמת נפש — ואולי גם מריבה.', author:'רינת כהן', authorIcon:'👩‍🔧', read:6, date:'2026-05-16', views:0, content:`` },
+  { id:57, cat:'מוסך ורכב', catColor:'#C94A04', icon:'📋', bg:'linear-gradient(135deg,#1E0E00,#A03D00)', title:'טיפול שוטף לרכב — מה חייבים לעשות ומתי', excerpt:'רשימת תיוג מלאה לתחזוקת רכב לפי תדירות — שבועי, חודשי, שנתי. כי מניעה תמיד זולה יותר מתיקון.', author:'רינת כהן', authorIcon:'👩‍🔧', read:7, date:'2026-05-16', views:0, content:`` },
+  { id:58, cat:'מוסך ורכב', catColor:'#C94A04', icon:'🔍', bg:'linear-gradient(135deg,#2A1000,#B04500)', title:'מה זה טסט ואיך עוברים אותו בקלות', excerpt:'כל מה שצריך לדעת על בדיקת הרכב השנתית — מה בודקים, כמה עולה, ואיך לעבור בלי הפתעות יקרות.', author:'רינת כהן', authorIcon:'👩‍🔧', read:5, date:'2026-05-16', views:0, content:`` },
+  { id:59, cat:'מוסך ורכב', catColor:'#C94A04', icon:'⚖️', bg:'linear-gradient(135deg,#1A0A00,#7A2D00)', title:'זכויות הצרכן במוסך — מה מגיע לך על פי חוק', excerpt:'חוק הגנת הצרכן נותן לך כוחות שרוב הנשים לא יודעות שיש להן. מה מגיע לך לפני, במהלך ואחרי ביקור במוסך.', author:'רינת כהן', authorIcon:'👩‍🔧', read:7, date:'2026-05-16', views:0, content:`` },
+  { id:60, cat:'מוסך ורכב', catColor:'#C94A04', icon:'✅', bg:'linear-gradient(135deg,#2E1000,#C94A04)', title:'איך לבחור מוסך מהימן — 7 סימנים שלא יטעו אותך', excerpt:'לא כל מוסך שווה. 7 סימנים שיעזרו לך לזהות מוסך מקצועי ואמין — לפני שהרכב שלך בפנים.', author:'רינת כהן', authorIcon:'👩‍🔧', read:6, date:'2026-05-16', views:0, content:`` },
+  { id:61, cat:'מוסך ורכב', catColor:'#C94A04', icon:'🔩', bg:'linear-gradient(135deg,#1A0800,#8B3200)', title:'חלפים מקוריים לעומת חלופיים — מה ההבדל ומה לבחור', excerpt:'המוסך מציע חלפים "חלופיים" בחצי מחיר — זה טוב או לא? המדריך שיעזור לך לקבל החלטה מושכלת.', author:'רינת כהן', authorIcon:'👩‍🔧', read:6, date:'2026-05-16', views:0, content:`` },
+  { id:62, cat:'מוסך ורכב', catColor:'#C94A04', icon:'💰', bg:'linear-gradient(135deg,#1E0E00,#A03D00)', title:'תקציב תחזוקת רכב: כמה לחסוך כל חודש ולמה', excerpt:'תחזוקת רכב היא הוצאה שניתן לתכנן — אם יודעים איך. מסגרת תקציב מעשית לכל סוג רכב.', author:'רינת כהן', authorIcon:'👩‍🔧', read:6, date:'2026-05-16', views:0, content:`` },
+  { id:63, cat:'מוסך ורכב', catColor:'#C94A04', icon:'🚨', bg:'linear-gradient(135deg,#2A1000,#B04500)', title:'מה לעשות כשהרכב מתקלקל בדרך — מדריך צעד אחר צעד', excerpt:'פנצ׳ר, מנוע שנכבה, אקו שלא עולה — המדריך המלא לכל תקלה בדרך, כולל מה לא לעשות.', author:'רינת כהן', authorIcon:'👩‍🔧', read:6, date:'2026-05-16', views:0, content:`` },
+  { id:64, cat:'מוסך ורכב', catColor:'#C94A04', icon:'🛡️', bg:'linear-gradient(135deg,#1A0A00,#7A2D00)', title:'ביטוח רכב — המדריך לאישה שרוצה לשלם פחות', excerpt:'ביטוח חובה, ביטוח מקיף, צד ג׳ — מה ההבדלים, מה חובה בחוק, ואיך לבחור ולחסוך אלפי שקלים.', author:'רינת כהן', authorIcon:'👩‍🔧', read:7, date:'2026-05-16', views:0, content:`` },
+  { id:65, cat:'מוסך ורכב', catColor:'#C94A04', icon:'📊', bg:'linear-gradient(135deg,#2E0A00,#9B3500)', title:'אפליה במוסך: האם נשים משלמות יותר? ומה לעשות', excerpt:'מחקרים מראים שנשים משלמות יותר במוסכים. למה זה קורה, מה המחקרים אומרים, ואיך מתמודדות עם זה.', author:'רינת כהן', authorIcon:'👩‍🔧', read:7, date:'2026-05-16', views:0, content:`` }
+];
+
 // Category metadata
 var CAT_META = {
   'עסקים ויזמות':   { color:'#6B2D7C', icon:'💼', href:'esek-viyazmanut.html' },
@@ -1885,5 +1899,6 @@ var CAT_META = {
   'מרקטינג דיגיטלי':{ color:'#D64F8C', icon:'📱', href:'marketing-digital.html' },
   'בריאות ורווחה':  { color:'#2D7A4F', icon:'🌿', href:'briut-veravaha.html' },
   'מנהיגות נשית':   { color:'#8B1A6B', icon:'👑', href:'manhigut-nashit.html' },
-  'למידה וצמיחה':   { color:'#007A8C', icon:'📚', href:'lmida-vetzmikha.html' }
+  'למידה וצמיחה':   { color:'#007A8C', icon:'📚', href:'lmida-vetzmikha.html' },
+  'מוסך ורכב':      { color:'#C94A04', icon:'🔧', href:'mosach-nashim.html' }
 };
