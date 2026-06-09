@@ -74,7 +74,8 @@
       "Bash(grep -c \"content:\\\\\\\\\\\\`\" \"c:\\\\Users\\\\tomer\\\\challange\\\\manhigut-nashit.html\")",
       "Bash(grep -c \"content:\\\\`\" \"c:\\\\Users\\\\tomer\\\\challange\\\\esek-viyazmanut.html\")",
       "Bash(node _check_bt.js)",
-      "Bash(rm _check_bt.js)"
+      "Bash(rm _check_bt.js)",
+      "Bash(cp /root/.claude/uploads/7af76625-58b2-5f5a-b0c3-b0f76c9e34cc/5714b85b-SKILL.md /home/user/bezchut-atzmech/.claude/skills/ad-copywriter/SKILL.md)"
     ]
   }
 }
