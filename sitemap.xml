@@ -502,4 +502,48 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- אשכול פרסום ממומן בפייסבוק -->
+  <url>
+    <loc>https://bezchut-atzmech.co.il/prsum-memumam-facebook.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bezchut-atzmech.co.il/posts/marketing-digital-28.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bezchut-atzmech.co.il/posts/marketing-digital-29.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bezchut-atzmech.co.il/posts/marketing-digital-30.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bezchut-atzmech.co.il/posts/marketing-digital-31.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bezchut-atzmech.co.il/posts/marketing-digital-32.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bezchut-atzmech.co.il/posts/marketing-digital-33.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
