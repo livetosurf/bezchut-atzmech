@@ -5,4 +5,4 @@ Allow: /
 Disallow: /admin.html
 
 # Sitemap location
-Sitemap: https://bezchut-atzmech.co.il/sitemap.xml
+Sitemap: https://bezchut.co.il/sitemap.xml
