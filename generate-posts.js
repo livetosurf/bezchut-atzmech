@@ -79,7 +79,43 @@ const CAT = {
     ],
     altPrefix: 'למידה וצמיחה',
   },
+  'מוסך ורכב': {
+    slug: 'mosach-nashim', page: 'mosach-nashim.html',
+    color: '#C94A04', light: '#FFF0E8', dark: '#A33A00',
+    images: [
+      'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=1200&q=80',
+      'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1200&q=80',
+      'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da05?w=1200&q=80',
+    ],
+    altPrefix: 'מוסך ורכב',
+  },
+  'הסבה מקצועית': {
+    slug: 'hasava-miktzoit', page: 'hasava-miktzoit.html',
+    color: '#2563AB', light: '#EAF2FC', dark: '#153E70',
+    images: [
+      'https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=1200&q=80',
+      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80',
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80',
+    ],
+    altPrefix: 'הסבה מקצועית',
+  },
+  'גירושין ועצמאות כלכלית': {
+    slug: 'gerushin-atzmaut', page: 'gerushin-atzmaut.html',
+    color: '#7A1F3D', light: '#FBEAEF', dark: '#4A1224',
+    images: [
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80',
+      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&q=80',
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80',
+    ],
+    altPrefix: 'גירושין ועצמאות כלכלית',
+  },
 };
+
+// Slug: prefer explicit url field (hand-written posts use per-cluster numbering)
+function postSlug(post, cat) {
+  if (post.url) return path.basename(post.url, '.html');
+  return `${cat.slug}-${post.id}`;
+}
 
 // ── HELPERS ──────────────────────────────────────────────────────────────────
 function esc(s) {
@@ -323,17 +359,24 @@ footer{background:linear-gradient(135deg,#1A0528 0%,#0D1040 100%);color:rgba(255
 }
 `;
 
-fs.writeFileSync(path.join(postsDir, 'posts.css'), SHARED_CSS, 'utf-8');
-console.log('✓ נכתב posts/posts.css');
+// posts.css on disk is newer than the embedded copy (supports tip-box, tables etc.) —
+// only write it when missing, never overwrite the live stylesheet.
+const cssPath = path.join(postsDir, 'posts.css');
+if (!fs.existsSync(cssPath)) {
+  fs.writeFileSync(cssPath, SHARED_CSS, 'utf-8');
+  console.log('✓ נכתב posts/posts.css');
+} else {
+  console.log('· posts/posts.css קיים — לא נדרס');
+}
 
 // ── GENERATE HTML PER POST ───────────────────────────────────────────────────
 function generateHTML(post, allPosts) {
   const cat = CAT[post.cat];
   if (!cat) { console.warn(`קטגוריה לא מוכרת: ${post.cat}`); return null; }
 
-  const slug     = `${cat.slug}-${post.id}`;
-  const url      = `https://bezchut-atzmech.co.il/posts/${slug}.html`;
-  const imgUrl   = cat.images[post.id % cat.images.length];
+  const slug     = postSlug(post, cat);
+  const url      = `https://bezchut.co.il/posts/${slug}.html`;
+  const imgUrl   = post.image || cat.images[post.id % cat.images.length];
   const imgAlt   = `${cat.altPrefix} — ${post.title}`;
   const dateFmt  = formatDate(post.date);
   const content  = addH2Ids(post.content || '');
@@ -346,7 +389,7 @@ function generateHTML(post, allPosts) {
   const sameCat = allPosts.filter(p => p.cat === post.cat);
   const related = sameCat.filter(p => p.id !== post.id).slice(0, 3);
   const relatedHTML = related.map(r => {
-    const rSlug = `${cat.slug}-${r.id}`;
+    const rSlug = postSlug(r, cat);
     return `
         <a class="related-item" href="${rSlug}.html">
           <div class="related-thumb" style="background:${r.bg}">${r.icon}</div>
@@ -362,13 +405,13 @@ function generateHTML(post, allPosts) {
   const prev    = catIdx > 0 ? sameCat[catIdx - 1] : null;
   const next    = catIdx < sameCat.length - 1 ? sameCat[catIdx + 1] : null;
   const prevH   = prev
-    ? `<div class="post-nav-card" onclick="window.location='${cat.slug}-${prev.id}.html'">
+    ? `<div class="post-nav-card" onclick="window.location='${postSlug(prev, cat)}.html'">
     <span class="nav-arrow">←</span>
     <div><div class="nav-direction">הכתבה הקודמת</div><div class="nav-title">${esc(prev.title)}</div></div>
   </div>`
     : '<div></div>';
   const nextH   = next
-    ? `<div class="post-nav-card next" onclick="window.location='${cat.slug}-${next.id}.html'" style="justify-content:flex-end">
+    ? `<div class="post-nav-card next" onclick="window.location='${postSlug(next, cat)}.html'" style="justify-content:flex-end">
     <div><div class="nav-direction">הכתבה הבאה</div><div class="nav-title">${esc(next.title)}</div></div>
     <span class="nav-arrow">→</span>
   </div>`
@@ -381,16 +424,20 @@ function generateHTML(post, allPosts) {
     inLanguage: "he", url, image: imgUrl,
     datePublished: post.date, dateModified: post.date,
     author: { "@type":"Person", name: post.author },
-    publisher: { "@type":"Organization", name:"בזכות עצמך", url:"https://bezchut-atzmech.co.il" }
+    publisher: { "@type":"Organization", name:"בזכות עצמך", url:"https://bezchut.co.il" }
   });
   const breadcrumbLD = JSON.stringify({
     "@context":"https://schema.org","@type":"BreadcrumbList",
     itemListElement:[
-      { "@type":"ListItem", position:1, name:"בית", item:"https://bezchut-atzmech.co.il/bezchut-atzmech.html" },
-      { "@type":"ListItem", position:2, name: post.cat, item:`https://bezchut-atzmech.co.il/${cat.page}` },
+      { "@type":"ListItem", position:1, name:"בית", item:"https://bezchut.co.il/bezchut-atzmech.html" },
+      { "@type":"ListItem", position:2, name: post.cat, item:`https://bezchut.co.il/${cat.page}` },
       { "@type":"ListItem", position:3, name: post.title, item: url }
     ]
   });
+  // Extra structured data preserved from hand-written articles (FAQPage / HowTo / ItemList)
+  const extraLD = (post.ld || [])
+    .map(block => `  <script type="application/ld+json">${block}<\/script>`)
+    .join('\n');
 
   return `<!DOCTYPE html>
 <html lang="he" dir="rtl">
@@ -427,6 +474,7 @@ function generateHTML(post, allPosts) {
   <meta name="twitter:image" content="${imgUrl}" />
   <script type="application/ld+json">${articleLD}<\/script>
   <script type="application/ld+json">${breadcrumbLD}<\/script>
+${extraLD}
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -462,6 +510,9 @@ function generateHTML(post, allPosts) {
   <a href="../briut-veravaha.html">🌿 בריאות ורווחה</a>
   <a href="../manhigut-nashit.html">👑 מנהיגות נשית</a>
   <a href="../lmida-vetzmikha.html">📚 למידה וצמיחה</a>
+  <a href="../mosach-nashim.html">🔧 מוסך ורכב</a>
+  <a href="../hasava-miktzoit.html">🧭 הסבה מקצועית</a>
+  <a href="../gerushin-atzmaut.html">🔑 גירושין ועצמאות</a>
   <a href="../resources.html">🛠️ כלים ומשאבים</a>
 </div>
 
@@ -489,8 +540,8 @@ function generateHTML(post, allPosts) {
       </a>
       <div class="meta-pills">
         <span class="meta-pill">📅 ${dateFmt}</span>
-        <span class="meta-pill">⏱️ ${post.read} דק׳ קריאה</span>
-        <span class="meta-pill">👁️ ${post.views.toLocaleString('he-IL')} צפיות</span>
+        <span class="meta-pill">⏱️ ${post.read} דק׳ קריאה</span>${post.views > 0 ? `
+        <span class="meta-pill">👁️ ${post.views.toLocaleString('he-IL')} צפיות</span>` : ''}
       </div>
     </div>
   </div>
@@ -601,6 +652,9 @@ function generateHTML(post, allPosts) {
           <li><a href="../briut-veravaha.html">בריאות ורווחה</a></li>
           <li><a href="../manhigut-nashit.html">מנהיגות נשית</a></li>
           <li><a href="../lmida-vetzmikha.html">למידה וצמיחה</a></li>
+          <li><a href="../mosach-nashim.html">מוסך ורכב</a></li>
+          <li><a href="../hasava-miktzoit.html">הסבה מקצועית</a></li>
+          <li><a href="../gerushin-atzmaut.html">גירושין ועצמאות כלכלית</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -676,13 +730,13 @@ function copyLink() {
 // NAV
 function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
 
-// NEWSLETTER — עדכני את ה-URL להook של Make.com שלך
+// NEWSLETTER — Make.com webhook (feeds Smoove list + Google Sheets)
 function submitNewsletter(e) {
   e.preventDefault();
   const consent = document.getElementById('nl-consent');
   if (!consent || !consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
   const email = document.getElementById('nl-email').value;
-  const WEBHOOK = 'REPLACE_WITH_MAKE_WEBHOOK_URL'; // ← הכניסי את ה-Webhook URL של Make.com
+  const WEBHOOK = 'https://hook.eu2.make.com/62wrowj8d0ym9rgwt1kqkuptld9fcrft';
   fetch(WEBHOOK, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -707,7 +761,11 @@ const slugs = [];
 ALL_POSTS.forEach(post => {
   const cat = CAT[post.cat];
   if (!cat) return;
-  const slug = `${cat.slug}-${post.id}`;
+  if (!post.content || !post.content.trim()) {
+    console.warn(`⚠ id ${post.id} "${post.title.slice(0, 40)}" — אין תוכן, מדולג (לא נוצר עמוד ריק)`);
+    return;
+  }
+  const slug = postSlug(post, cat);
   const html = generateHTML(post, ALL_POSTS);
   if (!html) return;
   fs.writeFileSync(path.join(postsDir, `${slug}.html`), html, 'utf-8');
@@ -717,28 +775,30 @@ ALL_POSTS.forEach(post => {
 
 console.log(`✓ נוצרו ${count} קבצי HTML ב-posts/`);
 
-// ── UPDATE SITEMAP.XML ────────────────────────────────────────────────────────
+// ── UPDATE SITEMAP.XML (non-destructive merge) ───────────────────────────────
+// Existing entries are kept as-is; only posts missing from the sitemap are appended.
 const sitemapPath = path.join(__dirname, 'sitemap.xml');
 let sitemap = fs.readFileSync(sitemapPath, 'utf-8');
 
-// Remove old post entries if any
-sitemap = sitemap.replace(/\s*<!-- Blog Posts -->[^]*?(?=\s*<\/urlset>)/, '');
+const existingLocs = new Set(
+  [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])
+);
+const missing = slugs.filter(({ slug }) =>
+  !existingLocs.has(`https://bezchut.co.il/posts/${slug}.html`)
+);
 
-// Build new post entries
-const postEntries = slugs.map(({ slug, date }) => `
+if (missing.length) {
+  const postEntries = missing.map(({ slug, date }) => `
   <url>
-    <loc>https://bezchut-atzmech.co.il/posts/${slug}.html</loc>
+    <loc>https://bezchut.co.il/posts/${slug}.html</loc>
     <lastmod>${date}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
-
-sitemap = sitemap.replace('</urlset>', `
-  <!-- Blog Posts -->${postEntries}
+  sitemap = sitemap.replace('</urlset>', `${postEntries}
 
 </urlset>`);
-
-fs.writeFileSync(sitemapPath, sitemap, 'utf-8');
-console.log(`✓ עודכן sitemap.xml עם ${slugs.length} פוסטים`);
-console.log('\n🎉 סיום! הרץ את האתר ובדוק posts/esek-viyazmanut-1.html');
-console.log('⚠️  זכרי לעדכן את REPLACE_WITH_MAKE_WEBHOOK_URL בקוד הניוזלטר');
+  fs.writeFileSync(sitemapPath, sitemap, 'utf-8');
+}
+console.log(`✓ sitemap.xml: ${missing.length} פוסטים חדשים נוספו (${slugs.length - missing.length} כבר היו קיימים)`);
+console.log('\n🎉 סיום! הרץ node tools/validate-articles.js לאימות');

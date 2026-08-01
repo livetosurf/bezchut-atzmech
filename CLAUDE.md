@@ -68,17 +68,18 @@ Defined in `CAT_META` at the bottom of [posts-data.js](posts-data.js). Each cate
 
 ## Content workflow (articles)
 
-Articles in `posts/` are currently written as full standalone HTML files (copy the structure of an existing article in the same category). Every new article also requires: a `posts-data.js` entry (with `url` field), a `sitemap.xml` entry, and a card on the category hub page. Full checklist lives in `.claude/skills/verify-article/SKILL.md`.
-
-**Always validate after article work:**
+**posts-data.js is the single source of truth.** Every article's full body (`content`), featured image (`image`), extra structured data (`ld`), and file path (`url`) live there. The HTML pages in `posts/` are build artifacts:
 
 ```bash
-node tools/validate-articles.js
+node generate-posts.js          # rebuild all article pages from posts-data.js
+node tools/validate-articles.js # must pass with zero errors before done
 ```
 
-Checks JSON-LD validity, tag balance, internal links, and posts-data/sitemap consistency. Must pass with zero errors before work is considered done.
+To add an article: add a posts-data.js entry (next id, cat, url, image, content, optional ld), run the generator, link it from the category hub page, validate. Full checklist: `.claude/skills/verify-article/SKILL.md`.
 
-**⚠️ Do not run `generate-posts.js` blindly** — articles with ids 72+ were written by hand and have empty `content` fields in posts-data.js; regenerating would overwrite them with empty pages.
+**Never edit files in `posts/` by hand** — the next generator run would overwrite the edit. Global changes (nav, footer, webhook, layout) go in the template inside `generate-posts.js`, once.
+
+The generator skips posts with empty `content` (currently ids 66-71, the Facebook-ads cluster) instead of creating empty pages, merges the sitemap non-destructively, and never overwrites `posts/posts.css`.
 
 ## Newsletter forms
 

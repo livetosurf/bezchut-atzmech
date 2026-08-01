@@ -35,23 +35,33 @@ The script exits non-zero on any failure. **If it fails — fix the issue and re
 
 ## Checklist for a NEW article (all must be true before done)
 
-- [ ] HTML file created in `posts/` following the structure of an existing article in the same category
-- [ ] Entry added to `posts-data.js` (next sequential `id`, correct `cat`, `catColor`, `url`)
-- [ ] `<url>` entry added to `sitemap.xml`
+**Do NOT write article HTML by hand.** posts-data.js is the single source of truth;
+`node generate-posts.js` builds the HTML pages from it.
+
+- [ ] Entry added to `posts-data.js`: next sequential `id`, correct `cat`, `catColor`,
+      `url` (e.g. `posts/<category-slug>-<n>.html`), `image` (Unsplash URL), full
+      article body in `content` (HTML: p/h2/h3/ul/table/tip-box/article-key/article-cta),
+      and optional `ld` array with FAQPage/HowTo JSON-LD strings
+- [ ] `node generate-posts.js` run — creates the HTML page and appends the sitemap entry
 - [ ] Category hub page links to the article (card + popular list if relevant)
-- [ ] Newsletter form `source` field updated to the article's slug
 - [ ] `node tools/validate-articles.js` passes with zero errors
 
 ## Checklist for a NEW category
 
 - [ ] Hub page created (copy structure from `hasava-miktzoit.html`, change `--cat*` colors)
 - [ ] `CAT_META` entry added in `posts-data.js`
+- [ ] `CAT` config entry added in `generate-posts.js` (slug, page, colors, images, altPrefix)
 - [ ] Category card added to homepage `bezchut-atzmech.html` #categories grid
 - [ ] Cross-links added in sibling category sidebars ("קטגוריות נוספות")
 - [ ] sitemap entry for the hub page
 
-## Warning
+## Notes on the generator
 
-Do **not** run `generate-posts.js` without checking first: articles created by hand
-(ids 72+) have empty `content` fields in posts-data.js, so regenerating would
-overwrite the hand-written HTML with empty articles.
+- `generate-posts.js` skips posts with empty `content` (prints a warning) — it never
+  creates empty pages. The Facebook-ads cluster (ids 66-71) is skipped until content
+  is written for it.
+- Sitemap updates are non-destructive: existing entries are kept, only missing posts
+  are appended.
+- `posts/posts.css` is never overwritten if it exists.
+- For a global change (nav, footer, webhook, layout of all articles) — edit the
+  template inside `generate-posts.js` once and rerun it, instead of touching 98 files.
