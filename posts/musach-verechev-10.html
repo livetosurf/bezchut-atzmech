@@ -291,7 +291,7 @@ function shareFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+e
 function shareLI(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href));}
 function copyLink(){navigator.clipboard.writeText(location.href).then(()=>{['copy-btn','sb-copy-btn'].forEach(id=>{const b=document.getElementById(id);if(b){b.textContent='✓ הועתק!';setTimeout(()=>b.textContent='🔗 העתיקי קישור',2000);}});});}
 function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open');}
-function submitNewsletter(e){e.preventDefault();const email=document.getElementById('nl-email').value;const W='REPLACE_WITH_MAKE_WEBHOOK_URL';fetch(W,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,source:'musach-verechev-10',page:location.href})}).then(()=>{document.querySelector('.newsletter-form').innerHTML='<p style="color:#C9A84C;font-weight:700;font-size:1.1rem">✓ נרשמת! נתראה במייל 💌</p>';}).catch(()=>{window.location.href='../newsletter.html';});}
+function submitNewsletter(e){e.preventDefault();const email=document.getElementById('nl-email').value;const W='https://hook.eu2.make.com/62wrowj8d0ym9rgwt1kqkuptld9fcrft';fetch(W,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,source:'musach-verechev-10',page:location.href})}).then(()=>{document.querySelector('.newsletter-form').innerHTML='<p style="color:#C9A84C;font-weight:700;font-size:1.1rem">✓ נרשמת! נתראה במייל 💌</p>';}).catch(()=>{window.location.href='../newsletter.html';});}
 updateProgress();updateToc();
 </script>
 </body>

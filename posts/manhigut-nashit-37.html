@@ -353,7 +353,7 @@ function submitNewsletter(e) {
   const consent = document.getElementById('nl-consent');
   if (!consent || !consent.checked) { alert('יש לסמן הסכמה לקבלת דיוור (תיקון 13).'); return; }
   const email = document.getElementById('nl-email').value;
-  const WEBHOOK = 'REPLACE_WITH_MAKE_WEBHOOK_URL'; // ← הכניסי את ה-Webhook URL של Make.com
+  const WEBHOOK = 'https://hook.eu2.make.com/62wrowj8d0ym9rgwt1kqkuptld9fcrft'; // ← הכניסי את ה-Webhook URL של Make.com
   fetch(WEBHOOK, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
