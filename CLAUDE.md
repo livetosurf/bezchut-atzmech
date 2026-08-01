@@ -59,4 +59,27 @@ node generate-sheets.js
 
 - [sitemap.xml](sitemap.xml), [robots.txt](robots.txt) — standard SEO files, update manually when adding pages
 - [og-image.svg](og-image.svg) / [og-image-gen.html](og-image-gen.html) — Open Graph image assets
-- `.md` cluster files (`cluster-1-beaches.md` etc.) — SEO content outlines for a surf beginners topic cluster (content research, not rendered pages)
+- `.md` cluster files (`cluster-*.md`) — SEO content plans per topic cluster (research/planning docs, not rendered pages)
+
+## Categories (current)
+
+Defined in `CAT_META` at the bottom of [posts-data.js](posts-data.js). Each category has a hub page:
+עסקים ויזמות, כספים ופיננסים, מרקטינג דיגיטלי, בריאות ורווחה, מנהיגות נשית, למידה וצמיחה, מוסך ורכב ([mosach-nashim.html](mosach-nashim.html)), הסבה מקצועית ([hasava-miktzoit.html](hasava-miktzoit.html)), גירושין ועצמאות כלכלית ([gerushin-atzmaut.html](gerushin-atzmaut.html)).
+
+## Content workflow (articles)
+
+Articles in `posts/` are currently written as full standalone HTML files (copy the structure of an existing article in the same category). Every new article also requires: a `posts-data.js` entry (with `url` field), a `sitemap.xml` entry, and a card on the category hub page. Full checklist lives in `.claude/skills/verify-article/SKILL.md`.
+
+**Always validate after article work:**
+
+```bash
+node tools/validate-articles.js
+```
+
+Checks JSON-LD validity, tag balance, internal links, and posts-data/sitemap consistency. Must pass with zero errors before work is considered done.
+
+**⚠️ Do not run `generate-posts.js` blindly** — articles with ids 72+ were written by hand and have empty `content` fields in posts-data.js; regenerating would overwrite them with empty pages.
+
+## Newsletter forms
+
+All signup forms across the site (category sidebars + article footers) POST to a single Make.com webhook (`hook.eu2.make.com/62wrowj8d0ym9rgwt1kqkuptld9fcrft`), which feeds Smoove list 1153937 ("בזכותי") and a Google Sheet. Each form sends a `source` field identifying the page.
