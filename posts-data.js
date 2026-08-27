@@ -2486,12 +2486,127 @@ var ALL_POSTS = [
     <p>השווי מחירים משניים-שלושה מוסכים לפני שאת מגיעה, וצייני כבר בפתיחת השיחה שאת משווה הצעות. בניסוי בריטי, משפט פשוט כמו ״כבר קיבלתי הצעה ממוסך אחר״ הוריד את הפער מ-13% ל-3% בלבד. בקשי גם פירוט בכתב ושאלי שאלות ספציפיות על החלק וזמן העבודה.</p>` },
 
   // מרקטינג דיגיטלי
-  { id:66, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'💰', bg:'linear-gradient(135deg,#1A0835,#D64F8C)', title:'כמה עולה פרסום ממומן בפייסבוק בישראל?', excerpt:'פירוק עלויות אמיתי — CPC, CPL ותקציב יומי מומלץ לפי תחום. כמה באמת צריך כדי לראות תוצאה.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, content:`` },
-  { id:67, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🎯', bg:'linear-gradient(135deg,#1A0A3E,#5B2D8C)', title:'טירגוט קהל יעד בפייסבוק — המדריך המעשי', excerpt:'קהל חם, קהל דומה וקהל קר — איך לבחור את מי שבאמת קונה ולא לבזבז תקציב.', author:'נועה גורן', authorIcon:'👩‍💻', read:8, date:'2026-06-18', views:0, content:`` },
-  { id:68, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'📊', bg:'linear-gradient(135deg,#0A1A3E,#2D5B8C)', title:'פיקסל פייסבוק (Meta Pixel) — התקנה ושימוש', excerpt:'מה זה, למה הוא חיוני לפרסום ממומן, ואיך מתקינים אותו באתר שלב אחר שלב כדי למדוד תוצאות.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, content:`` },
-  { id:69, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🔁', bg:'linear-gradient(135deg,#0A2D1A,#1A6B4A)', title:'ריטרגטינג בפייסבוק — איך מחזירים לקוחות שכמעט קנו', excerpt:'הקמפיין הכי משתלם שיש — איך מחזירים מבקרים ונוטשי עגלה דרך רימרקטינג חכם.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, content:`` },
-  { id:70, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🛠️', bg:'linear-gradient(135deg,#3E0A1A,#8C2D5B)', title:'למה הקמפיין שלי בפייסבוק לא עובד? 7 טעויות נפוצות', excerpt:'7 הטעויות שמבזבזות תקציב בפרסום ממומן — ואיך לתקן כל אחת מהן צעד אחר צעד.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, content:`` },
-  { id:71, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'✍️', bg:'linear-gradient(135deg,#1A0A3E,#5B2D8C)', title:'כתיבת קופי למודעות פייסבוק שממירות', excerpt:'כותרת, גוף מודעה וקריאה לפעולה שגורמים לאנשים ללחוץ ולקנות. נוסחאות ודוגמאות מעשיות.', author:'נועה גורן', authorIcon:'👩‍💻', read:8, date:'2026-06-18', views:0, content:`` },
+  { id:66, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'💰', bg:'linear-gradient(135deg,#1A0835,#D64F8C)', title:'כמה עולה פרסום ממומן בפייסבוק בישראל?', excerpt:'פירוק עלויות אמיתי — CPC, CPL ותקציב יומי מומלץ לפי תחום. כמה באמת צריך כדי לראות תוצאה.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, url:'posts/marketing-digital-28.html', image:'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80', ld:['{"@context":"https://schema.org","@graph":[\r\n  {"@type":"Article","headline":"כמה עולה פרסום ממומן בפייסבוק בישראל?","description":"פירוק עלויות אמיתי של פרסום ממומן בפייסבוק — CPC, CPL ותקציב מומלץ לפי תחום.","inLanguage":"he","url":"https://bezchut.co.il/posts/marketing-digital-28.html","image":"https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80","datePublished":"2026-06-18","author":{"@type":"Person","name":"נועה גורן"},"publisher":{"@type":"Organization","name":"בזכות עצמך","url":"https://bezchut.co.il"}},\r\n  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://bezchut.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מרקטינג דיגיטלי","item":"https://bezchut.co.il/marketing-digital.html"},{"@type":"ListItem","position":3,"name":"כמה עולה פרסום ממומן בפייסבוק","item":"https://bezchut.co.il/posts/marketing-digital-28.html"}]},\r\n  {"@type":"FAQPage","mainEntity":[\r\n  {"@type":"Question","name":"מה התקציב המינימלי לפרסום ממומן בפייסבוק?","acceptedAnswer":{"@type":"Answer","text":"אפשר להתחיל מ-20–30 ש״ח ליום. זה מספיק כדי לאסוף נתונים ולהבין מה עובד לפני שמגדילים."}},\r\n  {"@type":"Question","name":"כמה עולה קליק בפייסבוק בישראל?","acceptedAnswer":{"@type":"Answer","text":"עלות לקליק (CPC) בישראל נעה בדרך כלל בין כמה אגורות לכמה שקלים, תלוי בתחום, בקהל ובאיכות המודעה. מודעה רלוונטית ומעניינת מורידה את העלות."}}\r\n  ]}\r\n  ]}'], content:`<p>"כמה עולה לי פרסום ממומן בפייסבוק?" — זו השאלה הראשונה של כמעט כל בעלת עסק. התשובה הכנה: זה תלוי, אבל אפשר להתחיל ממש בקטן. בכתבה הזו נפרק את העלויות האמיתיות — מה משלמים, על מה, וכמה תקציב צריך באמת כדי לראות תוצאה. זהו חלק מתוך <a href="../prsum-memumam-facebook.html" style="color:var(--primary);font-weight:600;">המדריך המלא לפרסום ממומן בפייסבוק</a>.</p>
+
+    <h2 id="s1">אין מחיר קבוע — יש מודל מכרז</h2>
+    <p>פייסבוק לא גובה מחיר אחיד. כל הצגת מודעה נקבעת ב<strong>מכרז</strong> בזמן אמת בין מפרסמים. את לא משלמת על "מקום" אלא על תוצאה — קליק, חשיפה או המרה. לכן אותו תקציב יכול להביא תוצאות שונות לחלוטין בין שני עסקים, תלוי באיכות המודעה ובדיוק הקהל.</p>
+
+    <h2 id="s2">התקציב המינימלי כדי להתחיל</h2>
+    <p>אפשר לפתוח קמפיין ב-<strong>20–30 ₪ ליום</strong>. זה לא יהפוך אותך לויראלית, אבל זה מספיק כדי לאסוף נתונים ולהבין מה עובד. הטעות הנפוצה היא להשקיע 500 ₪ ביום הראשון — לפני שיודעים אם המודעה והקהל בכלל מתאימים.</p>
+
+    <h2 id="s3">שלושת המספרים שקובעים אם זה משתלם</h2>
+    <table class="fb-table">
+      <tr><th>מדד</th><th>מה זה אומר</th></tr>
+      <tr><td>CPC — עלות לקליק</td><td>כמה את משלמת על כל לחיצה על המודעה</td></tr>
+      <tr><td>CPL — עלות לליד</td><td>כמה עולה לך כל פנייה או הרשמה</td></tr>
+      <tr><td>CPA / ROAS</td><td>עלות לרכישה / כמה החזר קיבלת על כל שקל</td></tr>
+    </table>
+    <p>המספר היחיד שבאמת חשוב הוא <strong>עלות התוצאה</strong>, לא סך התקציב. אם השקעת 300 ₪ והבאת 10 לקוחות ששילמו 200 ₪ כל אחת — לא משנה שזה "הרבה כסף", זה היה רווחי מאוד.</p>
+
+    <h2 id="s4">כמה תקציב צריך לפי מטרה</h2>
+    <p><strong>חשיפה ומודעות:</strong> 20–40 ₪ ליום מספיקים להתחלה. <strong>לידים:</strong> 40–80 ₪ ליום נותנים מספיק נתונים תוך שבוע. <strong>מכירות/חנות אונליין:</strong> כדאי 80 ₪+ ליום כדי שהאלגוריתם יוכל למצוא קונים. הסכומים האלה הם נקודת פתיחה, לא חוק.</p>
+    <p>אם התקציב ממש מצומצם — יש לנו מדריך ייעודי: <a href="marketing-digital-26.html" style="color:var(--primary);font-weight:600;">פרסום ממומן בפייסבוק ב-₪500</a>.</p>
+
+    <h2 id="s5">איך לא לשרוף את התקציב</h2>
+    <p>תני לקמפיין לרוץ <strong>3 ימים לפחות</strong> לפני שאת משנה משהו — האלגוריתם בשלב למידה. כבי בלי רחמים קריאייטיב עם CTR מתחת ל-1%. והכי חשוב: ודאי שדף הנחיתה טוב, אחרת תשלמי על קליקים שלא הופכים ללקוחות. הדיוק בקהל הוא חצי מהחיסכון — קראי על <a href="marketing-digital-29.html" style="color:var(--primary);font-weight:600;">טירגוט קהל יעד בפייסבוק</a>.</p>
+
+    <a class="pillar-cta" href="../prsum-memumam-facebook.html">📣 רוצה את התמונה המלאה? קראי את המדריך המקיף לפרסום ממומן בפייסבוק<span>תקציב, טירגוט, כתיבת מודעה ומדידה — הכל במקום אחד</span></a>` },
+  { id:67, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🎯', bg:'linear-gradient(135deg,#1A0A3E,#5B2D8C)', title:'טירגוט קהל יעד בפייסבוק — המדריך המעשי', excerpt:'קהל חם, קהל דומה וקהל קר — איך לבחור את מי שבאמת קונה ולא לבזבז תקציב.', author:'נועה גורן', authorIcon:'👩‍💻', read:8, date:'2026-06-18', views:0, url:'posts/marketing-digital-29.html', image:'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80', ld:['{"@context":"https://schema.org","@graph":[\r\n  {"@type":"Article","headline":"טירגוט קהל יעד בפייסבוק — המדריך המעשי לקהל שקונה","description":"מדריך מעשי לטירגוט קהל בפייסבוק — קהל חם, דומה וקר.","inLanguage":"he","url":"https://bezchut.co.il/posts/marketing-digital-29.html","image":"https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80","datePublished":"2026-06-18","author":{"@type":"Person","name":"נועה גורן"},"publisher":{"@type":"Organization","name":"בזכות עצמך","url":"https://bezchut.co.il"}},\r\n  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://bezchut.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מרקטינג דיגיטלי","item":"https://bezchut.co.il/marketing-digital.html"},{"@type":"ListItem","position":3,"name":"טירגוט קהל יעד בפייסבוק","item":"https://bezchut.co.il/posts/marketing-digital-29.html"}]}\r\n  ]}'], content:`<p>הסוד הכי גדול בפרסום ממומן הוא לא הקריאייטיב ולא התקציב — אלא <strong>למי מציגים את המודעה</strong>. אותה מודעה בדיוק תניב תוצאות מצוינות מול קהל אחד וכישלון מוחלט מול אחר. בכתבה הזו נסביר איך לבחור קהל יעד שבאמת קונה. זהו חלק מתוך <a href="../prsum-memumam-facebook.html" style="color:var(--primary);font-weight:600;">המדריך המלא לפרסום ממומן בפייסבוק</a>.</p>
+
+    <h2 id="s1">שלושת סוגי הקהלים בפייסבוק</h2>
+    <p>לפני שצוללים להגדרות, חשוב להבין שיש שלוש "טמפרטורות" של קהל — וכל אחת דורשת גישה אחרת.</p>
+
+    <h2 id="s2">קהל חם — הזהב שלך</h2>
+    <p>אלה אנשים שכבר מכירים אותך: ביקרו באתר, צפו בסרטון, נכנסו לעמוד או הגיבו לפוסט. זה הקהל <strong>הכי זול והכי ממיר</strong> כי הם כבר באמצע מערכת היחסים איתך. כדי לאסוף קהל חם צריך <a href="marketing-digital-30.html" style="color:var(--primary);font-weight:600;">פיקסל פייסבוק</a> מותקן באתר.</p>
+
+    <h2 id="s3">קהל דומה (Lookalike) — להרחיב בחוכמה</h2>
+    <p>פייסבוק לוקחת את הלקוחות הקיימות שלך ומוצאת אנשים שמתנהגים כמותם. זה אחד הכלים החזקים ביותר להרחבה מעבר לקהל החם. ככל שרשימת המקור איכותית יותר (למשל קונות בפועל, ולא סתם עוקבות) — כך הקהל הדומה ידייק יותר.</p>
+
+    <h2 id="s4">קהל קר — להגיע לחדשים</h2>
+    <p>אנשים שלא מכירים אותך בכלל. כאן הדיוק קריטי: גיל, מיקום, מגדר, תחומי עניין ושפה. <strong>אל תטרגטי "כל הנשים בישראל"</strong> — זה בזבוז. חשבי על הלקוחה האידיאלית שלך וצמצמי בהתאם.</p>
+
+    <h2 id="s5">טעויות טירגוט נפוצות</h2>
+    <p>קהל רחב מדי שמבזבז תקציב, קהל צר מדי שלא מאפשר לאלגוריתם ללמוד, ערבוב קהל חם וקר באותו קמפיין, וטירגוט לפי "תחושת בטן" במקום לפי נתונים. אחרי שקהל חם מתחמם — שווה לטרגט אותו מחדש עם <a href="marketing-digital-31.html" style="color:var(--primary);font-weight:600;">ריטרגטינג בפייסבוק</a>.</p>
+
+    <a class="pillar-cta" href="../prsum-memumam-facebook.html">📣 רוצה את התמונה המלאה? קראי את המדריך המקיף לפרסום ממומן בפייסבוק<span>תקציב, טירגוט, כתיבת מודעה ומדידה — הכל במקום אחד</span></a>` },
+  { id:68, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'📊', bg:'linear-gradient(135deg,#0A1A3E,#2D5B8C)', title:'פיקסל פייסבוק (Meta Pixel) — התקנה ושימוש', excerpt:'מה זה, למה הוא חיוני לפרסום ממומן, ואיך מתקינים אותו באתר שלב אחר שלב כדי למדוד תוצאות.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, url:'posts/marketing-digital-30.html', image:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80', ld:['{"@context":"https://schema.org","@graph":[\r\n  {"@type":"Article","headline":"פיקסל פייסבוק (Meta Pixel) — מדריך התקנה ושימוש","description":"מה זה פיקסל פייסבוק, למה הוא חיוני ואיך מתקינים אותו שלב אחר שלב.","inLanguage":"he","url":"https://bezchut.co.il/posts/marketing-digital-30.html","image":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80","datePublished":"2026-06-18","author":{"@type":"Person","name":"נועה גורן"},"publisher":{"@type":"Organization","name":"בזכות עצמך","url":"https://bezchut.co.il"}},\r\n  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://bezchut.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מרקטינג דיגיטלי","item":"https://bezchut.co.il/marketing-digital.html"},{"@type":"ListItem","position":3,"name":"פיקסל פייסבוק","item":"https://bezchut.co.il/posts/marketing-digital-30.html"}]}\r\n  ]}'], content:`<p>אם את מפרסמת בפייסבוק בלי פיקסל מותקן — את בעצם נוהגת עם עיניים עצומות. הפיקסל הוא הכלי שמאפשר לך למדוד מה קורה אחרי הקליק, לבנות קהלים חכמים, ולהגיד לפייסבוק את מי לחפש. בכתבה הזו נסביר מה זה ואיך מתקינים. זהו חלק מתוך <a href="../prsum-memumam-facebook.html" style="color:var(--primary);font-weight:600;">המדריך המלא לפרסום ממומן בפייסבוק</a>.</p>
+
+    <h2 id="s1">מה זה פיקסל פייסבוק</h2>
+    <p>הפיקסל (Meta Pixel) הוא קטע קוד קטן שמותקן באתר שלך. הוא "מדווח" לפייסבוק על פעולות של מבקרים — מי נכנס לעמוד, מי הוסיף לעגלה, מי השאיר פרטים, מי קנה. זו תשתית המדידה של כל פרסום ממומן רציני.</p>
+
+    <h2 id="s2">למה הוא חיוני</h2>
+    <p>בלי פיקסל אי אפשר: למדוד רכישות והמרות, לבנות <a href="marketing-digital-29.html" style="color:var(--primary);font-weight:600;">קהל חם וקהל דומה</a> איכותי, או להפעיל <a href="marketing-digital-31.html" style="color:var(--primary);font-weight:600;">ריטרגטינג</a> למי שכמעט קנה. בקיצור — הפיקסל הוא ההבדל בין פרסום מנחש לפרסום מבוסס נתונים.</p>
+
+    <h2 id="s3">איך מתקינים — שלב אחר שלב</h2>
+    <p><strong>1.</strong> היכנסי ל-Meta Events Manager וצרי "מקור נתונים" חדש מסוג פיקסל. <strong>2.</strong> העתיקי את קוד הפיקסל. <strong>3.</strong> הדביקי אותו בכל עמודי האתר (בתוך תגית ה-head). באתרי וורדפרס/שופיפיי יש תוסף ייעודי שמקל על זה. <strong>4.</strong> אם את משתמשת ב-Google Tag Manager — אפשר להזריק את הפיקסל דרכו בלי לגעת בקוד.</p>
+
+    <h2 id="s4">לוודא שזה עובד</h2>
+    <p>התקיני את התוסף Meta Pixel Helper לדפדפן כרום, היכנסי לאתר, וודאי שהפיקסל "נדלק" בירוק. בנוסף, ב-Events Manager תוכלי לראות אירועים נכנסים בזמן אמת. אם אין אירועים — ההתקנה לא הושלמה.</p>
+
+    <h2 id="s5">אירועי המרה — לדייק את המדידה</h2>
+    <p>מעבר להתקנה הבסיסית, כדאי להגדיר "אירועים" ספציפיים: רכישה, ליד, הוספה לעגלה. ככה פייסבוק יודעת בדיוק מה נחשב הצלחה ויכולה לבצע אופטימיזציה אליו. זה מה שמאפשר אחר כך למדוד את ה-ROAS האמיתי שלך.</p>
+
+    <a class="pillar-cta" href="../prsum-memumam-facebook.html">📣 רוצה את התמונה המלאה? קראי את המדריך המקיף לפרסום ממומן בפייסבוק<span>תקציב, טירגוט, כתיבת מודעה ומדידה — הכל במקום אחד</span></a>` },
+  { id:69, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🔁', bg:'linear-gradient(135deg,#0A2D1A,#1A6B4A)', title:'ריטרגטינג בפייסבוק — איך מחזירים לקוחות שכמעט קנו', excerpt:'הקמפיין הכי משתלם שיש — איך מחזירים מבקרים ונוטשי עגלה דרך רימרקטינג חכם.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, url:'posts/marketing-digital-31.html', image:'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1200&q=80', ld:['{"@context":"https://schema.org","@graph":[\r\n  {"@type":"Article","headline":"ריטרגטינג בפייסבוק — איך מחזירים לקוחות שכמעט קנו","description":"איך להחזיר לקוחות שביקרו באתר או נטשו עגלה — קמפיין הרימרקטינג הכי משתלם.","inLanguage":"he","url":"https://bezchut.co.il/posts/marketing-digital-31.html","image":"https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1200&q=80","datePublished":"2026-06-18","author":{"@type":"Person","name":"נועה גורן"},"publisher":{"@type":"Organization","name":"בזכות עצמך","url":"https://bezchut.co.il"}},\r\n  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://bezchut.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מרקטינג דיגיטלי","item":"https://bezchut.co.il/marketing-digital.html"},{"@type":"ListItem","position":3,"name":"ריטרגטינג בפייסבוק","item":"https://bezchut.co.il/posts/marketing-digital-31.html"}]}\r\n  ]}'], content:`<p>רוב האנשים לא קונים בביקור הראשון. הם מתעניינים, מהססים, ועוזבים. ריטרגטינג (רימרקטינג) הוא הדרך להחזיר אותם — ולרוב זהו <strong>הקמפיין הכי משתלם שיש</strong>, כי הוא פונה לאנשים שכבר גילו עניין. בכתבה הזו נסביר איך עושים את זה. זהו חלק מתוך <a href="../prsum-memumam-facebook.html" style="color:var(--primary);font-weight:600;">המדריך המלא לפרסום ממומן בפייסבוק</a>.</p>
+
+    <h2 id="s1">מה זה ריטרגטינג</h2>
+    <p>ריטרגטינג מציג מודעות דווקא לאנשים שכבר היו אצלך: ביקרו באתר, צפו בסרטון, הוסיפו מוצר לעגלה אך לא השלימו רכישה. במקום "לצוד" קהל חדש, את ממשיכה שיחה עם מי שכבר מכיר אותך — ולכן עלות ההמרה נמוכה משמעותית.</p>
+
+    <h2 id="s2">למה זה כל כך משתלם</h2>
+    <p>הקהל הזה כבר חם. הוא לא צריך להכיר אותך מאפס — רק תזכורת קטנה, אולי תמריץ. לכן ה-ROAS של קמפיין ריטרגטינג בדרך כלל גבוה בהרבה מקמפיין לקהל קר. זו הסיבה שכמעט כל עסק מצליח מריץ ריטרגטינג ברקע כל הזמן.</p>
+
+    <h2 id="s3">מה צריך כדי להתחיל</h2>
+    <p>שני דברים: <a href="marketing-digital-30.html" style="color:var(--primary);font-weight:600;">פיקסל פייסבוק</a> מותקן באתר (שאוסף את המבקרים), והגדרת <a href="marketing-digital-29.html" style="color:var(--primary);font-weight:600;">קהל מותאם אישית</a> מאותם מבקרים. בלי פיקסל — אין למי לעשות ריטרגטינג.</p>
+
+    <h2 id="s4">סוגי קהלי ריטרגטינג</h2>
+    <p><strong>מבקרי אתר</strong> ב-30/60/90 הימים האחרונים. <strong>נוטשי עגלה</strong> — הכי חמים, כמעט קנו. <strong>צופי סרטון</strong> שצפו ב-50%+. <strong>מתעניינים בעמוד</strong> שהגיבו או שלחו הודעה. לכל קהל אפשר להתאים מסר שונה.</p>
+
+    <h2 id="s5">המסר שמחזיר</h2>
+    <p>לנוטשי עגלה — תזכורת + אולי הטבה קטנה ("נשאר לך משהו בעגלה 🛒"). למבקרים כלליים — חיזוק אמון: ביקורות, סיפור לקוחה, אחריות. אל תחזרי על אותה מודעה מהקהל הקר — תני להם סיבה חדשה לחזור.</p>
+
+    <a class="pillar-cta" href="../prsum-memumam-facebook.html">📣 רוצה את התמונה המלאה? קראי את המדריך המקיף לפרסום ממומן בפייסבוק<span>תקציב, טירגוט, כתיבת מודעה ומדידה — הכל במקום אחד</span></a>` },
+  { id:70, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'🛠️', bg:'linear-gradient(135deg,#3E0A1A,#8C2D5B)', title:'למה הקמפיין שלי בפייסבוק לא עובד? 7 טעויות נפוצות', excerpt:'7 הטעויות שמבזבזות תקציב בפרסום ממומן — ואיך לתקן כל אחת מהן צעד אחר צעד.', author:'נועה גורן', authorIcon:'👩‍💻', read:7, date:'2026-06-18', views:0, url:'posts/marketing-digital-32.html', image:'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80', ld:['{"@context":"https://schema.org","@graph":[\r\n  {"@type":"Article","headline":"למה הקמפיין שלי בפייסבוק לא עובד? 7 טעויות נפוצות","description":"7 הטעויות שמבזבזות תקציב בפרסום ממומן — ואיך לתקן כל אחת.","inLanguage":"he","url":"https://bezchut.co.il/posts/marketing-digital-32.html","image":"https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80","datePublished":"2026-06-18","author":{"@type":"Person","name":"נועה גורן"},"publisher":{"@type":"Organization","name":"בזכות עצמך","url":"https://bezchut.co.il"}},\r\n  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://bezchut.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מרקטינג דיגיטלי","item":"https://bezchut.co.il/marketing-digital.html"},{"@type":"ListItem","position":3,"name":"למה הקמפיין שלי לא עובד","item":"https://bezchut.co.il/posts/marketing-digital-32.html"}]},\r\n  {"@type":"FAQPage","mainEntity":[\r\n  {"@type":"Question","name":"כמה זמן לחכות לפני ששופטים קמפיין בפייסבוק?","acceptedAnswer":{"@type":"Answer","text":"לפחות 3 ימים. בתקופה הזו האלגוריתם בשלב למידה ואסור לבצע שינויים — אחרת הלמידה מתאפסת."}},\r\n  {"@type":"Question","name":"מה לעשות אם יש קליקים אבל אין מכירות?","acceptedAnswer":{"@type":"Answer","text":"הבעיה כמעט תמיד בדף הנחיתה — איטי, לא ברור, או לא תואם להבטחת המודעה. שפרו את העמוד לפני שמגדילים תקציב."}}\r\n  ]}\r\n  ]}'], content:`<p>השקעת כסף, חיכית, וכלום? לפני שאת מוותרת על פרסום ממומן לגמרי — דעי שכמעט תמיד מדובר באחת משבע טעויות שאפשר לתקן. הנה הרשימה, לפי סדר השכיחות. זהו חלק מתוך <a href="../prsum-memumam-facebook.html" style="color:var(--primary);font-weight:600;">המדריך המלא לפרסום ממומן בפייסבוק</a>.</p>
+
+    <h2 id="s1">1. מטרת קמפיין שגויה</h2>
+    <p>בחרת "מעורבות" אבל רצית מכירות? פייסבוק תביא לך לייקים זולים — לא קונים. בחרי תמיד את המטרה שתואמת לתוצאה שאת באמת רוצה.</p>
+
+    <h2 id="s2">2. שינויים מהירים מדי</h2>
+    <p>הטעות הכי נפוצה. שינית תקציב או קהל אחרי יום? איפסת את שלב הלמידה של האלגוריתם. <strong>תני 3 ימים לפחות</strong> לפני כל שינוי.</p>
+
+    <h2 id="s3">3. קהל לא מדויק</h2>
+    <p>רחב מדי = בזבוז. צר מדי = האלגוריתם לא מצליח ללמוד. כיווני את <a href="marketing-digital-29.html" style="color:var(--primary);font-weight:600;">טירגוט הקהל</a> לפי הלקוחה האידיאלית, לא לפי תחושה.</p>
+
+    <h2 id="s4">4. קריאייטיב חלש</h2>
+    <p>אם ה-CTR מתחת ל-1%, הבעיה במודעה. כותרת שלא מדברת אל הכאב, תמונה משעממת, או הצעה לא ברורה. שפרי את <a href="marketing-digital-33.html" style="color:var(--primary);font-weight:600;">הקופי של המודעה</a>.</p>
+
+    <h2 id="s5">5. דף נחיתה גרוע</h2>
+    <p>יש קליקים אבל אין המרות? כמעט תמיד הבעיה כאן: עמוד איטי, לא ברור, או שלא מקיים את ההבטחה של המודעה. תקני את העמוד לפני שתגדילי תקציב.</p>
+
+    <h2 id="s6">6. תקציב נמוך מדי</h2>
+    <p>5 ₪ ליום לא ייתנו לאלגוריתם מספיק נתונים. אם בחרת מטרת מכירות — צריך תקציב שמאפשר לאסוף המרות. ראי <a href="marketing-digital-28.html" style="color:var(--primary);font-weight:600;">כמה עולה פרסום ממומן</a> ומה מתאים למטרה שלך.</p>
+
+    <h2 id="s7">7. אין פיקסל / אין מדידה</h2>
+    <p>בלי <a href="marketing-digital-30.html" style="color:var(--primary);font-weight:600;">פיקסל</a> את לא יכולה לדעת מה עבד, ולא לבצע אופטימיזציה להמרות. זו אולי הסיבה שאת מרגישה שאת "יורה באוויר".</p>
+
+    <a class="pillar-cta" href="../prsum-memumam-facebook.html">📣 רוצה את התמונה המלאה? קראי את המדריך המקיף לפרסום ממומן בפייסבוק<span>תקציב, טירגוט, כתיבת מודעה ומדידה — הכל במקום אחד</span></a>` },
+  { id:71, cat:'מרקטינג דיגיטלי', catColor:'#D64F8C', icon:'✍️', bg:'linear-gradient(135deg,#1A0A3E,#5B2D8C)', title:'כתיבת קופי למודעות פייסבוק שממירות', excerpt:'כותרת, גוף מודעה וקריאה לפעולה שגורמים לאנשים ללחוץ ולקנות. נוסחאות ודוגמאות מעשיות.', author:'נועה גורן', authorIcon:'👩‍💻', read:8, date:'2026-06-18', views:0, url:'posts/marketing-digital-33.html', image:'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80', ld:['{"@context":"https://schema.org","@graph":[\r\n  {"@type":"Article","headline":"כתיבת קופי למודעות פייסבוק שממירות","description":"איך לכתוב כותרת, גוף מודעה וקריאה לפעולה שגורמים לאנשים ללחוץ ולקנות.","inLanguage":"he","url":"https://bezchut.co.il/posts/marketing-digital-33.html","image":"https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80","datePublished":"2026-06-18","author":{"@type":"Person","name":"נועה גורן"},"publisher":{"@type":"Organization","name":"בזכות עצמך","url":"https://bezchut.co.il"}},\r\n  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://bezchut.co.il/bezchut-atzmech.html"},{"@type":"ListItem","position":2,"name":"מרקטינג דיגיטלי","item":"https://bezchut.co.il/marketing-digital.html"},{"@type":"ListItem","position":3,"name":"כתיבת קופי למודעות פייסבוק","item":"https://bezchut.co.il/posts/marketing-digital-33.html"}]}\r\n  ]}'], content:`<p>אפשר לטרגט קהל מושלם ולשים תקציב נדיב — ואם הקופי חלש, אף אחד לא ילחץ. המודעה היא מה שהלקוחה רואה, ובשנייה הראשונה היא מחליטה אם לעצור או להמשיך לגלול. בכתבה הזו תקבלי נוסחאות מעשיות לכתיבת מודעה שממירה. זהו חלק מתוך <a href="../prsum-memumam-facebook.html" style="color:var(--primary);font-weight:600;">המדריך המלא לפרסום ממומן בפייסבוק</a>.</p>
+
+    <h2 id="s1">הכותרת פונה לכאב, לא למוצר</h2>
+    <p>"את בעלת עסק שמרגישה שהפרסום פשוט לא עובד?" חזק בהרבה מ"שירותי שיווק דיגיטלי". דברי אל מה שהלקוחה <em>מרגישה</em>, לא אל מה שאת מוכרת. הכאב עוצר את הגלילה — המוצר רק פותר אותו אחר כך.</p>
+
+    <h2 id="s2">שלוש השניות הראשונות מכריעות</h2>
+    <p>השורה הראשונה ב-Primary Text והפריים הראשון של הסרטון הם הכל. פתחי בשאלה, בסטטיסטיקה מפתיעה, או באמירה נועזת. אם פתחת ב"שלום, אנחנו חברת..." — כבר הפסדת.</p>
+
+    <h2 id="s3">נוסחת PAS — כאב, החרפה, פתרון</h2>
+    <p><strong>Pain:</strong> נגעי בכאב. <strong>Agitate:</strong> החריפי אותו ("וזה רק מחמיר ככל שעובר הזמן"). <strong>Solution:</strong> הציגי את הפתרון שלך. זו אחת הנוסחאות העובדות ביותר בקופי, וקל ליישם אותה.</p>
+
+    <h2 id="s4">קריאה לפעולה אחת וברורה</h2>
+    <p>"הורידי את המדריך", "שלחי הודעה", "קני עכשיו" — אחת. לא שלוש קריאות שונות שמבלבלות. אמרי בדיוק מה את רוצה שהלקוחה תעשה עכשיו, ולמה כדאי לה לעשות את זה היום.</p>
+
+    <h2 id="s5">תמיד לבדוק כמה גרסאות (A/B)</h2>
+    <p>אל תתאהבי בכותרת אחת. כתבי 3–4 וריאציות ותני לפייסבוק לבחור את המנצחת. לפעמים שינוי מילה אחת בכותרת מוריד את עלות הקליק בחצי. הבדיקה היא חלק מ<a href="marketing-digital-32.html" style="color:var(--primary);font-weight:600;">פתרון בעיות בקמפיין</a> — אם ה-CTR נמוך, הקופי הוא החשוד הראשון. רוצה להעמיק? קראי גם את <a href="marketing-digital-21.html" style="color:var(--primary);font-weight:600;">7 עקרונות הקופי שמוכר</a>.</p>
+
+    <a class="pillar-cta" href="../prsum-memumam-facebook.html">📣 רוצה את התמונה המלאה? קראי את המדריך המקיף לפרסום ממומן בפייסבוק<span>תקציב, טירגוט, כתיבת מודעה ומדידה — הכל במקום אחד</span></a>` },
 
   // הסבה מקצועית
   { id:72, cat:'הסבה מקצועית', catColor:'#2563AB', icon:'🧭', bg:'linear-gradient(135deg,#0A1E3E,#2563AB)', title:'איזה מקצוע מתאים לך? מבחן עצמי להסבה מקצועית', excerpt:'ארבע שאלות פשוטות שיצמצמו את האפשרויות הבלתי-ספורות לכמה כיוונים קונקרטיים שמתאימים בדיוק לך.', author:'אורלי שגב', authorIcon:'👩‍💼', read:7, date:'2026-07-20', views:0, url:'posts/hasava-miktzoit-1.html', image:'https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=1200&q=80', ld:['{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"איך יודעים איזה מקצוע מתאים להסבה מקצועית?","acceptedAnswer":{"@type":"Answer","text":"מתחילים לא מ״מה יש ביקוש״ אלא מארבעה דברים עלייך: אילו כישורים כבר יש לך מהחיים והעבודה, כמה גמישות את צריכה, האם את נהנית יותר מעבודה עם אנשים או עם מסך, וכמה זמן ותקציב יש לך ללמידה. השילוב בין התשובות מצביע על כיוון מקצועי קונקרטי."}},{"@type":"Question","name":"מה אם אין לי שום ניסיון רלוונטי?","acceptedAnswer":{"@type":"Answer","text":"כמעט לכל אישה יש ניסיון רלוונטי, גם אם הוא לא נראה ״מקצועי״ על הנייר. ניהול בית, ניהול תקציב משפחתי, ארגון אירועים או תמיכה בבני משפחה הם כישורים אמיתיים שמתורגמים ישירות למקצועות כמו הנהלת חשבונות, ניהול פרויקטים או שירות לקוחות."}},{"@type":"Question","name":"כמה זמן לוקח לעשות את המבחן העצמי הזה?","acceptedAnswer":{"@type":"Answer","text":"בין 10 ל-15 דקות של חשיבה כנה. המטרה היא לא לתת תשובה מושלמת, אלא לצמצם את האפשרויות הבלתי-ספורות לשניים-שלושה כיוונים קונקרטיים שאפשר לבדוק לעומק."}}]}'], content:`<p>יש לך תחושה שאת רוצה לשנות משהו. אולי זה קרה אחרי פיטורים, אולי אחרי שהילדים גדלו וקצת התפנה זמן, ואולי פשוט הבוקר שבו התעוררת ואמרת לעצמך "אני לא יכולה לעשות את זה עוד עשר שנים." אבל כשמנסים לחשוב "למה בדיוק תרצי לעבור" — הראש מתרוקן. יש כל כך הרבה אפשרויות שהן בעצם שום אפשרות.</p>

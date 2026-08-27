@@ -33,6 +33,8 @@ const CAT_SLUG = {
 // mosach posts (ids 55-65) were hand-written with per-cluster numbering
 const MOSACH_URL_BY_ID = {};
 for (let i = 0; i < 11; i++) MOSACH_URL_BY_ID[55 + i] = `posts/mosach-nashim-${i + 1}.html`;
+// Facebook-ads cluster (ids 66-71) was generated earlier as marketing-digital-28..33
+for (let i = 0; i < 6; i++) MOSACH_URL_BY_ID[66 + i] = `posts/marketing-digital-${28 + i}.html`;
 
 // ── load data ────────────────────────────────────────────────────────────────
 const ctx = {};
@@ -85,10 +87,10 @@ console.log(`\n✓ חולץ תוכן מ-${extracted} קבצים, ${skipped} דו
 
 // ── serialize posts-data.js ──────────────────────────────────────────────────
 function q(s) { // single-quoted JS string
-  return "'" + String(s ?? '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n') + "'";
+  return "'" + String(s ?? '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\r/g, '\\r').replace(/\n/g, '\\n') + "'";
 }
-function bt(s) { // backtick template literal
-  return '`' + String(s ?? '').replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${') + '`';
+function bt(s) { // backtick template literal (raw \r breaks nothing inside backticks, but normalize anyway)
+  return '`' + String(s ?? '').replace(/\r\n/g, '\n').replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${') + '`';
 }
 
 function serializePost(p) {
