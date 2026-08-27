@@ -65,12 +65,13 @@ for (const rel of candidates) {
   if (/http-equiv="refresh"/i.test(html)) { excluded.redirect++; continue; }
   if (/<meta name="robots" content="[^"]*noindex/i.test(html)) { excluded.noindex++; continue; }
 
-  const expectedUrl = `${DOMAIN}/${rel.replace(/\\/g, '/')}`;
+  // index.html is served at the domain root — its URL is the bare domain
+  const expectedUrl = base === 'index.html' ? `${DOMAIN}/` : `${DOMAIN}/${rel.replace(/\\/g, '/')}`;
   const canonM = html.match(/<link rel="canonical" href="([^"]+)"/);
   if (canonM && canonM[1] !== expectedUrl) { excluded.canonicalElsewhere++; continue; }
 
   let priority, changefreq;
-  if (base === 'bezchut-atzmech.html') { priority = '1.0'; changefreq = 'weekly'; }
+  if (base === 'index.html')           { priority = '1.0'; changefreq = 'weekly'; }
   else if (CATEGORY_PAGES.has(base))   { priority = '0.9'; changefreq = 'weekly'; }
   else if (rel.startsWith('posts/'))   { priority = '0.8'; changefreq = 'monthly'; }
   else                                 { priority = '0.5'; changefreq = 'monthly'; }
