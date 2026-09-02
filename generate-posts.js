@@ -109,6 +109,16 @@ const CAT = {
     ],
     altPrefix: 'גירושין ועצמאות כלכלית',
   },
+  'דיור ונדל״ן': {
+    slug: 'diur-nadlan', page: 'diur-nadlan.html',
+    color: '#7A4A21', light: '#F8EFE3', dark: '#4E2E13',
+    images: [
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80',
+      'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1200&q=80',
+    ],
+    altPrefix: 'דיור ונדל״ן',
+  },
 };
 
 // Slug: prefer explicit url field (hand-written posts use per-cluster numbering)
@@ -513,6 +523,7 @@ ${extraLD}
   <a href="../mosach-nashim.html">🔧 מוסך ורכב</a>
   <a href="../hasava-miktzoit.html">🧭 הסבה מקצועית</a>
   <a href="../gerushin-atzmaut.html">🔑 גירושין ועצמאות</a>
+  <a href="../diur-nadlan.html">🏠 דיור ונדל״ן</a>
   <a href="../resources.html">🛠️ כלים ומשאבים</a>
 </div>
 
@@ -655,6 +666,7 @@ ${extraLD}
           <li><a href="../mosach-nashim.html">מוסך ורכב</a></li>
           <li><a href="../hasava-miktzoit.html">הסבה מקצועית</a></li>
           <li><a href="../gerushin-atzmaut.html">גירושין ועצמאות כלכלית</a></li>
+          <li><a href="../diur-nadlan.html">דיור ונדל״ן</a></li>
         </ul>
       </div>
       <div class="footer-col">
