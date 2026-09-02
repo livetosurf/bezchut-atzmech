@@ -119,6 +119,16 @@ const CAT = {
     ],
     altPrefix: 'דיור ונדל״ן',
   },
+  'זכויות בעבודה': {
+    slug: 'zchuyot-avoda', page: 'zchuyot-avoda.html',
+    color: '#1F4E79', light: '#E7EFF7', dark: '#12304A',
+    images: [
+      'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80',
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80',
+      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=80',
+    ],
+    altPrefix: 'זכויות בעבודה',
+  },
 };
 
 // Slug: prefer explicit url field (hand-written posts use per-cluster numbering)
@@ -524,6 +534,7 @@ ${extraLD}
   <a href="../hasava-miktzoit.html">🧭 הסבה מקצועית</a>
   <a href="../gerushin-atzmaut.html">🔑 גירושין ועצמאות</a>
   <a href="../diur-nadlan.html">🏠 דיור ונדל״ן</a>
+  <a href="../zchuyot-avoda.html">⚖️ זכויות בעבודה</a>
   <a href="../resources.html">🛠️ כלים ומשאבים</a>
 </div>
 
@@ -667,6 +678,7 @@ ${extraLD}
           <li><a href="../hasava-miktzoit.html">הסבה מקצועית</a></li>
           <li><a href="../gerushin-atzmaut.html">גירושין ועצמאות כלכלית</a></li>
           <li><a href="../diur-nadlan.html">דיור ונדל״ן</a></li>
+          <li><a href="../zchuyot-avoda.html">זכויות בעבודה</a></li>
         </ul>
       </div>
       <div class="footer-col">
