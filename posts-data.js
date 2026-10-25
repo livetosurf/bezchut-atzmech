@@ -5032,5 +5032,10 @@ var CAT_META = {
     color: "#1F4E79",
     icon: "⚖️",
     href: "zchuyot-avoda.html"
+  },
+  "מועדוני AI": {
+    color: "#4433A8",
+    icon: "🤖",
+    href: "moadonei-ai.html"
   }
 };
