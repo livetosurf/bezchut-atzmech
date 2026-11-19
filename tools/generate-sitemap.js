@@ -25,11 +25,22 @@ const EXCLUDE_FILES = new Set([
   'post.html',         // תבנית קוראת-id, לא עמוד תוכן עצמאי
 ]);
 
-const CATEGORY_PAGES = new Set([
-  'esek-viyazmanut.html', 'kaspim-vefinansim.html', 'marketing-digital.html',
-  'briut-veravaha.html', 'manhigut-nashit.html', 'lmida-vetzmikha.html',
-  'mosach-nashim.html', 'hasava-miktzoit.html', 'gerushin-atzmaut.html',
-]);
+// ── content dates from posts-data.js ─────────────────────────────────────────
+// A post's lastmod is its own updated/published date, not the last git commit:
+// regenerating every page for a template change must not make every page look "modified".
+const vm = require('vm');
+const dataCtx = {};
+vm.createContext(dataCtx);
+vm.runInContext(fs.readFileSync(path.join(ROOT, 'posts-data.js'), 'utf8'), dataCtx);
+const CATEGORY_PAGES = new Set(Object.values(dataCtx.CAT_META).map(m => m.href));
+const contentDates = {};
+for (const p of dataCtx.ALL_POSTS) {
+  const d = (p.updated || p.date || '').slice(0, 10);
+  if (!p.url || !/^\d{4}-\d{2}-\d{2}$/.test(d)) continue;
+  contentDates[p.url] = d;
+  const hub = (dataCtx.CAT_META[p.cat] || {}).href;      // a hub changes when its newest post does
+  if (hub && (!contentDates[hub] || d > contentDates[hub])) contentDates[hub] = d;
+}
 
 // ── git lastmod: one pass over history, first (=latest) date per file ────────
 const gitDates = {};
@@ -43,6 +54,7 @@ try {
 } catch { /* git unavailable — mtime fallback below */ }
 
 function lastmod(rel) {
+  if (contentDates[rel]) return contentDates[rel];
   if (gitDates[rel]) return gitDates[rel];
   const st = fs.statSync(path.join(ROOT, rel));
   return st.mtime.toISOString().slice(0, 10);

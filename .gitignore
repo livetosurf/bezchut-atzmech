@@ -3,3 +3,7 @@ devtek/
 *.xlsx
 .DS_Store
 Thumbs.db
+
+# internal docs / tool output — not part of the site
+report.md
+.playwright-mcp/

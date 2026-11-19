@@ -106,6 +106,7 @@ function serializePost(p) {
     `authorIcon:${q(p.authorIcon)}`,
     `read:${p.read}`,
     `date:${q(p.date)}`,
+    ...(p.updated ? [`updated:${q(p.updated)}`] : []),
     `views:${p.views || 0}`,
   ];
   if (p.url) parts.push(`url:${q(p.url)}`);

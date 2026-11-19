@@ -407,7 +407,9 @@ function generateHTML(post, allPosts) {
 
   // Related posts (same category, excl. current, up to 3)
   const sameCat = allPosts.filter(p => p.cat === post.cat);
-  const related = sameCat.filter(p => p.id !== post.id).slice(0, 3);
+  const catIdx  = sameCat.findIndex(p => p.id === post.id);
+  // neighbours in cluster order (wrapping) — spreads internal links evenly across the category
+  const related = [1, 2, 3].map(k => sameCat[(catIdx + k) % sameCat.length]).filter((p, i, a) => p && p.id !== post.id && a.indexOf(p) === i);
   const relatedHTML = related.map(r => {
     const rSlug = postSlug(r, cat);
     return `
@@ -421,20 +423,19 @@ function generateHTML(post, allPosts) {
   }).join('');
 
   // Prev/Next within same category
-  const catIdx  = sameCat.findIndex(p => p.id === post.id);
-  const prev    = catIdx > 0 ? sameCat[catIdx - 1] : null;
+  const prev   = catIdx > 0 ? sameCat[catIdx - 1] : null;
   const next    = catIdx < sameCat.length - 1 ? sameCat[catIdx + 1] : null;
   const prevH   = prev
-    ? `<div class="post-nav-card" onclick="window.location='${postSlug(prev, cat)}.html'">
+    ? `<a class="post-nav-card" href="${postSlug(prev, cat)}.html" style="text-decoration:none;color:inherit">
     <span class="nav-arrow">←</span>
     <div><div class="nav-direction">הכתבה הקודמת</div><div class="nav-title">${esc(prev.title)}</div></div>
-  </div>`
+  </a>`
     : '<div></div>';
   const nextH   = next
-    ? `<div class="post-nav-card next" onclick="window.location='${postSlug(next, cat)}.html'" style="justify-content:flex-end">
+    ? `<a class="post-nav-card next" href="${postSlug(next, cat)}.html" style="justify-content:flex-end;text-decoration:none;color:inherit">
     <div><div class="nav-direction">הכתבה הבאה</div><div class="nav-title">${esc(next.title)}</div></div>
     <span class="nav-arrow">→</span>
-  </div>`
+  </a>`
     : '<div></div>';
 
   // JSON-LD
@@ -442,14 +443,17 @@ function generateHTML(post, allPosts) {
     "@context":"https://schema.org","@type":"Article",
     headline: post.title, description: post.excerpt,
     inLanguage: "he", url, image: imgUrl,
-    datePublished: post.date, dateModified: post.date,
-    author: { "@type":"Person", name: post.author },
-    publisher: { "@type":"Organization", name:"בזכות עצמך", url:"https://bezchut.co.il" }
+    datePublished: post.date, dateModified: post.updated || post.date,
+    mainEntityOfPage: { "@type":"WebPage", "@id": url },
+    articleSection: post.cat,
+    author: { "@type":"Person", name: post.author, url:"https://bezchut.co.il/author.html" },
+    publisher: { "@type":"Organization", name:"בזכות עצמך", url:"https://bezchut.co.il/",
+      logo: { "@type":"ImageObject", url:"https://bezchut.co.il/og-image.jpg" } }
   });
   const breadcrumbLD = JSON.stringify({
     "@context":"https://schema.org","@type":"BreadcrumbList",
     itemListElement:[
-      { "@type":"ListItem", position:1, name:"בית", item:"https://bezchut.co.il/bezchut-atzmech.html" },
+      { "@type":"ListItem", position:1, name:"בית", item:"https://bezchut.co.il/" },
       { "@type":"ListItem", position:2, name: post.cat, item:`https://bezchut.co.il/${cat.page}` },
       { "@type":"ListItem", position:3, name: post.title, item: url }
     ]
@@ -474,6 +478,7 @@ function generateHTML(post, allPosts) {
   <title>${esc(post.title)} | בזכות עצמך</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
   <link rel="stylesheet" href="posts.css" />
   <style>
     :root { --cat:${cat.color}; --cat-light:${cat.light}; --cat-dark:${cat.dark}; }
@@ -506,7 +511,7 @@ ${extraLD}
 
 <header id="site-header">
   <nav>
-    <a href="../bezchut-atzmech.html" class="logo">בזכות <span>עצמך</span></a>
+    <a href="/" class="logo">בזכות <span>עצמך</span></a>
     <div class="nav-links">
       <a href="../esek-viyazmanut.html">עסקים</a>
       <a href="../kaspim-vefinansim.html">כספים</a>
@@ -523,7 +528,7 @@ ${extraLD}
 </header>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="../bezchut-atzmech.html">🏠 דף הבית</a>
+  <a href="/">🏠 דף הבית</a>
   <a href="../esek-viyazmanut.html">💼 עסקים ויזמות</a>
   <a href="../kaspim-vefinansim.html">💰 כספים ופיננסים</a>
   <a href="../marketing-digital.html">📱 מרקטינג דיגיטלי</a>
@@ -544,7 +549,7 @@ ${extraLD}
   <span class="hero-particle">💡</span>
   <div class="post-hero-inner">
     <div class="breadcrumb">
-      <a href="../bezchut-atzmech.html">בית</a>
+      <a href="/">בית</a>
       <span>›</span>
       <a href="../${cat.page}">${esc(post.cat)}</a>
       <span>›</span>
@@ -578,7 +583,7 @@ ${extraLD}
   <article id="article-body">
 
     <figure class="featured-image">
-      <img src="${imgUrl}" alt="${esc(imgAlt)}" width="800" height="360" loading="lazy" />
+      <img src="${imgUrl}" alt="${esc(imgAlt)}" width="800" height="360" fetchpriority="high" decoding="async" />
     </figure>
 
     ${content}
