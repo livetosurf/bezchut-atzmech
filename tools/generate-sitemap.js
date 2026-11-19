@@ -85,6 +85,7 @@ for (const rel of candidates) {
   let priority, changefreq;
   if (base === 'index.html')           { priority = '1.0'; changefreq = 'weekly'; }
   else if (CATEGORY_PAGES.has(base))   { priority = '0.9'; changefreq = 'weekly'; }
+  else if (base.startsWith('machshevon-')) { priority = '0.9'; changefreq = 'monthly'; } // calculators
   else if (rel.startsWith('posts/'))   { priority = '0.8'; changefreq = 'monthly'; }
   else                                 { priority = '0.5'; changefreq = 'monthly'; }
 
